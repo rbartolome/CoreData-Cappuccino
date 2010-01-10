@@ -1,0 +1,227 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		64200DBC0FD42578005D41CE /* AddressBook */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 64200DCB0FD425B7005D41CE /* Build configuration list for PBXAggregateTarget "AddressBook" */;
+			buildPhases = (
+				64200DE70FD428F4005D41CE /* Build Application */,
+			);
+			dependencies = (
+			);
+			name = AddressBook;
+			productName = AddressBook;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXFileReference section */
+		641D44E00FD437FB00EACBFF /* Frameworks */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Frameworks; sourceTree = SOURCE_ROOT; };
+		64200A490FD4250F005D41CE /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		64200A4A0FD4250F005D41CE /* main.j */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj; path = main.j; sourceTree = "<group>"; };
+		64200A4B0FD4250F005D41CE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64200A4C0FD4250F005D41CE /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		64200A4D0FD4250F005D41CE /* AppController.j */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj; path = AppController.j; sourceTree = "<group>"; };
+		644066BC10EB89070080077E /* ABContextController.j */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj; path = ABContextController.j; sourceTree = "<group>"; };
+		644066E710EB8EBE0080077E /* AddressBook.eomodeld */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AddressBook.eomodeld; sourceTree = "<group>"; };
+		648D987D10F4F00D00D9B371 /* AddressBook.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = AddressBook.xcdatamodel; sourceTree = "<group>"; };
+		64B168F30FD4E529001197CA /* index-debug.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "index-debug.html"; sourceTree = "<group>"; };
+		64FDDBE910EFB60E00B63414 /* date-segment-center.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "date-segment-center.png"; sourceTree = "<group>"; };
+		64FDDBEA10EFB60E00B63414 /* date-segment-left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "date-segment-left.png"; sourceTree = "<group>"; };
+		64FDDBEB10EFB60E00B63414 /* date-segment-right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "date-segment-right.png"; sourceTree = "<group>"; };
+		64FDDBEC10EFB60E00B63414 /* DatePickerSegment.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = DatePickerSegment.psd; sourceTree = "<group>"; };
+		64FDDBEE10EFB60E00B63414 /* stepper_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stepper_down.png; sourceTree = "<group>"; };
+		64FDDBEF10EFB60E00B63414 /* stepper_down_highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stepper_down_highlighted.png; sourceTree = "<group>"; };
+		64FDDBF010EFB60E00B63414 /* stepper_middle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stepper_middle.png; sourceTree = "<group>"; };
+		64FDDBF110EFB60E00B63414 /* stepper_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stepper_up.png; sourceTree = "<group>"; };
+		64FDDBF210EFB60E00B63414 /* stepper_up_highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stepper_up_highlighted.png; sourceTree = "<group>"; };
+		64FDDBF310EFB61C00B63414 /* DatePicker.j */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj; path = DatePicker.j; sourceTree = "<group>"; };
+		64FDDBF410EFB61C00B63414 /* Stepper.j */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj; path = Stepper.j; sourceTree = "<group>"; };
+		6F087B9A10CD4C00000C2CBC /* Rakefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Rakefile; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		64200A3A0FD424DD005D41CE = {
+			isa = PBXGroup;
+			children = (
+				64200DB90FD42540005D41CE /* Classes */,
+				64200DBA0FD4254B005D41CE /* Others */,
+				64200A470FD4250F005D41CE /* Resources */,
+				641D44E00FD437FB00EACBFF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		64200A470FD4250F005D41CE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				648D987D10F4F00D00D9B371 /* AddressBook.xcdatamodel */,
+				64FDDBE810EFB60E00B63414 /* DatePicker */,
+				64FDDBED10EFB60E00B63414 /* Stepper */,
+				644066E710EB8EBE0080077E /* AddressBook.eomodeld */,
+				64200A490FD4250F005D41CE /* MainMenu.xib */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		64200DB90FD42540005D41CE /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				64200A4D0FD4250F005D41CE /* AppController.j */,
+				644066BC10EB89070080077E /* ABContextController.j */,
+				64FDDBF310EFB61C00B63414 /* DatePicker.j */,
+				64FDDBF410EFB61C00B63414 /* Stepper.j */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		64200DBA0FD4254B005D41CE /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				64200A4A0FD4250F005D41CE /* main.j */,
+				64200A4B0FD4250F005D41CE /* Info.plist */,
+				64200A4C0FD4250F005D41CE /* index.html */,
+				64B168F30FD4E529001197CA /* index-debug.html */,
+				6F087B9A10CD4C00000C2CBC /* Rakefile */,
+			);
+			name = Others;
+			sourceTree = "<group>";
+		};
+		64FDDBE810EFB60E00B63414 /* DatePicker */ = {
+			isa = PBXGroup;
+			children = (
+				64FDDBE910EFB60E00B63414 /* date-segment-center.png */,
+				64FDDBEA10EFB60E00B63414 /* date-segment-left.png */,
+				64FDDBEB10EFB60E00B63414 /* date-segment-right.png */,
+				64FDDBEC10EFB60E00B63414 /* DatePickerSegment.psd */,
+			);
+			path = DatePicker;
+			sourceTree = "<group>";
+		};
+		64FDDBED10EFB60E00B63414 /* Stepper */ = {
+			isa = PBXGroup;
+			children = (
+				64FDDBEE10EFB60E00B63414 /* stepper_down.png */,
+				64FDDBEF10EFB60E00B63414 /* stepper_down_highlighted.png */,
+				64FDDBF010EFB60E00B63414 /* stepper_middle.png */,
+				64FDDBF110EFB60E00B63414 /* stepper_up.png */,
+				64FDDBF210EFB60E00B63414 /* stepper_up_highlighted.png */,
+			);
+			path = Stepper;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		64200A3C0FD424DD005D41CE /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 64200A3F0FD424DD005D41CE /* Build configuration list for PBXProject "AddressBook" */;
+			compatibilityVersion = "Xcode 2.4";
+			hasScannedForEncodings = 0;
+			mainGroup = 64200A3A0FD424DD005D41CE;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				64200DBC0FD42578005D41CE /* AddressBook */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		64200DE70FD428F4005D41CE /* Build Application */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Build Application";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\n\n#setup objj bin and Frameworks path\nif test -n \"$OBJJ_FRAMEWORKS_PATH\";\nthen\n\tdefaultPath=\"$OBJJ_FRAMEWORKS_PATH\";\nelse\n\tdefaultPath=\"/usr/local/narwhal/packages/cappuccino/Frameworks\";\nfi\n\nif test -n \"$OBJJ_BIN_PATH\";\nthen\n\tdefaultBinFolderPath=\"$OBJJ_BIN_PATH\";\nelse\n\tdefaultBinFolderPath=\"/usr/local/narwhal/bin\";\nfi\n\n### copy cappuccino frameworks\nif test -n \"$OBJJ_FRAMEWORKS_PATH\";\nthen\necho \"Use Cappuccino Installation at '$defaultPath'\";\necho \"Check Cappuccino Frameworks ...\";\n\nif test -d \"$defaultPath\";\nthen\n#\tif test \"$defaultPath\" -nt ./Frameworks;\n#\tthen\n#\t\trm -rf ./Frameworks; cp -rf $defaultPath .;\n#\t\techo \"Copied Cappuccino Frameworks from location '$defaultPath'\";\n#\telse\n#\t\techo \"Cappuccino Frameworks are up-to-date\";\n#\tfi\n\trm -rf ./Frameworks; cp -rf $defaultPath .;\n\techo \"Copied Cappuccino Frameworks from location '$defaultPath'\";\nfi\n\n### copy the objective-j runtime\nif test -d \"$OBJJ_RUNTIME_PATH\";\nthen\n\tcp -rf $OBJJ_RUNTIME_PATH/* Frameworks/\nfi\n\n## copy custom frameworks or files to Frameworks\ncp -rf $CUSTOM_FRAMEWORKS Frameworks/\n\n\n### setup PATH for binaries we need\nif test -d \"$defaultBinFolderPath\";\nthen\n\tPATH=${PATH}:$defaultBinFolderPath;\nfi\n\nif test -d \"$NARWHAL_BIN_PATH\";\nthen\n\tPATH=${PATH}:$NARWHAL_BIN_PATH;\nfi\n\necho \"Check Interface Builder Files ....\";\n\n\n### for xib files\nxibFiles=$(find . -type f -name \"*.xib\");\nfor xibFile in $xibFiles; do\n cibFile=$(echo $xibFile | sed -e 's/\\.xib$/.cib/');\n test $xibFile -nt $cibFile && nib2cib $xibFile || echo \"Interface Builder File '$cibFile' is up-to-date\";\ndone;\n\n### for nib files\nnibFiles=$(find . -type d -name \"*.nib\");\nfor nibFile in $nibFiles; do\n \tcibFile=$(echo $nibFile | sed -e 's/\\.nib$/.cib/');\n\ttest $nibFile -nt $cibFile && nib2cib $nibFile || echo \"Interface Builder File \\'$cibFile\\' is up-to-date\";\ndone;\nelse\n\techo \"Please setup your build settings key 'OBJJ_FRAMEWORKS_PATH' with your objj framework path\";\n\techo \"The default path is '/usr/local/narwhal/packages/cappuccino'\"\n\techo \"Also setup the build settings key 'OBJJ_BIN_PATH' with your objj bin path\";\n\terror 1;\nfi\n\n### convert CoreData model files\nxcdmodels=$(find . -type d -name \"*.xcdatamodel\");\nfor xcdmodel in $xcdmodels; do\n\txccpdfile=$(echo $xcdmodel | sed -e 's/\\.xcdatamodel$/.cxcdatamodel/');\n\t/Developer/usr/bin/momc $xcdmodel $xccpdfile\n\tplutil -convert xml1 $xccpdfile\ndone;";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		64200A3E0FD424DD005D41CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BROWSER_APP_NAME = Safari.app;
+				COPY_PHASE_STRIP = YES;
+				CUSTOM_FRAMEWORKS = "";
+				INDEX_FILE = index.html;
+				NARWHAL_BIN_PATH = /usr/local/narwhal/bin;
+				OBJJ_BIN_PATH = /usr/local/narwhal/packages/cappuccino/bin;
+				OBJJ_FRAMEWORKS_PATH = /usr/local/narwhal/packages/cappuccino/Frameworks;
+				OBJJ_RUNTIME_PATH = "/usr/local/narwhal/packages/objective-j/Frameworks";
+			};
+			name = Release;
+		};
+		64200DBE0FD42578005D41CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				CUSTOM_FRAMEWORKS = "/Users/raphael/Development/public/Cappuccino/Cappuccino-CoreData/CoreData";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PRODUCT_NAME = Untitled;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		64A306A10FD4E183000D6AD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BROWSER_APP_NAME = Safari.app;
+				COPY_PHASE_STRIP = YES;
+				CUSTOM_FRAMEWORKS = "";
+				INDEX_FILE = "index-debug.html";
+				NARWHAL_BIN_PATH = /usr/local/narwhal/bin;
+				OBJJ_BIN_PATH = /usr/local/narwhal/packages/cappuccino/bin;
+				OBJJ_FRAMEWORKS_PATH = /usr/local/narwhal/packages/cappuccino/Frameworks;
+				OBJJ_RUNTIME_PATH = "/usr/local/narwhal/packages/objective-j/Frameworks";
+			};
+			name = Debug;
+		};
+		64A306A20FD4E183000D6AD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PRODUCT_NAME = Untitled;
+				ZERO_LINK = NO;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		64200A3F0FD424DD005D41CE /* Build configuration list for PBXProject "AddressBook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64A306A10FD4E183000D6AD7 /* Debug */,
+				64200A3E0FD424DD005D41CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		64200DCB0FD425B7005D41CE /* Build configuration list for PBXAggregateTarget "AddressBook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64A306A20FD4E183000D6AD7 /* Debug */,
+				64200DBE0FD42578005D41CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 64200A3C0FD424DD005D41CE /* Project object */;
+}
