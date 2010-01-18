@@ -109,9 +109,10 @@ CPDObjectUnexpectedValueTypeForProperty = "CPDObjectUnexpectedValueTypeForProper
 
 - (id)storedValueForKey:(CPString)aKey
 {
-	
+	[self willAccessValueForKey:aKey];
 	if([self isPropertyOfTypeAttribute:aKey])
 	{
+		[self didAccessValueForKey:aKey];
 		return [_data objectForKey:aKey];
 	}
 	else if([self isPropertyOfTypeRelationship:aKey])
@@ -171,7 +172,7 @@ CPDObjectUnexpectedValueTypeForProperty = "CPDObjectUnexpectedValueTypeForProper
 						[resultSet addObject: regObject];
 				}
 			}
-			
+			[self didAccessValueForKey:aKey];
 			return resultSet;
 		}
 		else if([_data objectForKey:aKey] != nil)
@@ -197,11 +198,11 @@ CPDObjectUnexpectedValueTypeForProperty = "CPDObjectUnexpectedValueTypeForProper
 					[self _setChangedObject:nil forKey:aKey];
 				}
 			}
-			
+			[self didAccessValueForKey:aKey];
 			return regObject;
 		}
 	}
-
+	[self didAccessValueForKey:aKey];
 	return nil;
 }
 
@@ -210,7 +211,7 @@ CPDObjectUnexpectedValueTypeForProperty = "CPDObjectUnexpectedValueTypeForProper
 
 - (id)valueForKeyPath:(CPString)aKeyPath
 {
-	return [self storedValueForKeyPath:aKeyPath];
+	return [super valueForKeyPath:aKeyPath];
 }
 
 - (id)storedValueForKeyPath:(CPString)aKeyPath
@@ -464,6 +465,17 @@ CPDObjectUnexpectedValueTypeForProperty = "CPDObjectUnexpectedValueTypeForProper
 	}
 }
 
+
+/*
+ *	Detect changes and notify the context
+ */
+- (void)willAccessValueForKey:(CPString)aKey
+{
+}
+
+- (void)didAccessValueForKey:(CPString)aKey
+{
+}
 
 - (void)_unexpectedValueTypeError:(CPString) aKey expectedType:(CPString) expectedType receivedType:(CPString) receivedType
 {	
