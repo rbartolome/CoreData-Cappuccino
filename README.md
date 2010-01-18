@@ -45,7 +45,7 @@ EOModel:
 # Persistant Store #
 
 ## 1. Available stores ##
-### - CPDWebDAVStore  ###
+### CPDWebDAVStore ###
 **Configuration Dictionary:**
 
 1. 	*Key:* CPDWebDAVStoreConfigurationKeyBaseURL  
@@ -95,7 +95,7 @@ The Example work also without a server, in this case the data will store in memo
 **Notes:**  
 Currently accessing a user/password protected webdav is not supported, If you know how, please write me a mail.
 
-### - CPDWOStore  ###
+### CPDWOStore ###
 *!!! Currently not up-to-date with the latest implementation, I work on a update for both client and server side !!!*
 
 ## 2. Write your own Persistant Store ##
