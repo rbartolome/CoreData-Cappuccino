@@ -30,9 +30,10 @@
 		64200A4B0FD4250F005D41CE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64200A4C0FD4250F005D41CE /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		64200A4D0FD4250F005D41CE /* AppController.j */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj; path = AppController.j; sourceTree = "<group>"; };
+		6430ADDF1104B7610003B777 /* AddressBook.eomodeld */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AddressBook.eomodeld; sourceTree = "<group>"; };
+		6430AE0C1104BA8E0003B777 /* DatePicker.j */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj; path = DatePicker.j; sourceTree = "<group>"; };
+		6430AE0D1104BA8E0003B777 /* Stepper.j */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj; path = Stepper.j; sourceTree = "<group>"; };
 		644066BC10EB89070080077E /* ABContextController.j */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj; path = ABContextController.j; sourceTree = "<group>"; };
-		6454D8FE110477A8001B029C /* DatePicker.j */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj; path = DatePicker.j; sourceTree = "<group>"; };
-		6454D8FF110477A8001B029C /* Stepper.j */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj; path = Stepper.j; sourceTree = "<group>"; };
 		648D987D10F4F00D00D9B371 /* AddressBook.xcdatamodel */ = {isa = PBXFileReference; comments = xmod; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = AddressBook.xcdatamodel; sourceTree = "<group>"; };
 		64B168F30FD4E529001197CA /* index-debug.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "index-debug.html"; sourceTree = "<group>"; };
 		64FDDBE910EFB60E00B63414 /* date-segment-center.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "date-segment-center.png"; sourceTree = "<group>"; };
@@ -60,6 +61,7 @@
 		64200A470FD4250F005D41CE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6430ADDF1104B7610003B777 /* AddressBook.eomodeld */,
 				648D987D10F4F00D00D9B371 /* AddressBook.xcdatamodel */,
 				64FDDBE810EFB60E00B63414 /* DatePicker */,
 				64FDDBED10EFB60E00B63414 /* Stepper */,
@@ -71,7 +73,7 @@
 		64200DB90FD42540005D41CE /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				6454D8FD110477A8001B029C /* DatePicker */,
+				6430AE0B1104BA8E0003B777 /* DatePicker */,
 				64049F9410FF0E70009C3AE2 /* AppController.h */,
 				64200A4D0FD4250F005D41CE /* AppController.j */,
 				644066BC10EB89070080077E /* ABContextController.j */,
@@ -92,11 +94,11 @@
 			name = Others;
 			sourceTree = "<group>";
 		};
-		6454D8FD110477A8001B029C /* DatePicker */ = {
+		6430AE0B1104BA8E0003B777 /* DatePicker */ = {
 			isa = PBXGroup;
 			children = (
-				6454D8FE110477A8001B029C /* DatePicker.j */,
-				6454D8FF110477A8001B029C /* Stepper.j */,
+				6430AE0C1104BA8E0003B777 /* DatePicker.j */,
+				6430AE0D1104BA8E0003B777 /* Stepper.j */,
 			);
 			path = DatePicker;
 			sourceTree = "<group>";

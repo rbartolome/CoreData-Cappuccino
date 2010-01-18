@@ -22,9 +22,7 @@
 	{
 		//deserialize ObjectID
 		aObjectID = [[CPDObjectID alloc] init];
-		CPLog.debug("DEBUG-1");
 		[aObjectID setGlobalID:[aDictionary objectForKey:CPDglobalID]];
-		CPLog.debug("DEBUG-2");
 		[aObjectID setLocalID:[aDictionary objectForKey:CPDlocalID]];
 		[aObjectID setIsTemporary:[aDictionary objectForKey:CPDisTemporaryID]];
 		[aObjectID setContext:aContext];

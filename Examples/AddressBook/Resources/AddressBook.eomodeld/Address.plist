@@ -1,0 +1,36 @@
+{
+    attributes = (
+        {
+            allowsNull = Y; 
+            columnName = dateOfBirth; 
+            name = dateOfBirth; 
+            valueClassName = NSCalendarDate; 
+        }, 
+        {columnName = firstname; name = firstname; valueClassName = NSString; }, 
+        {columnName = id; name = id; valueClassName = NSNumber; valueType = l; }, 
+        {columnName = lastname; name = lastname; valueClassName = NSString; }, 
+        {
+            allowsNull = Y; 
+            columnName = phone; 
+            name = phone; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }
+    ); 
+    attributesUsedForLocking = (firstname, id, lastname, phone); 
+    className = Address; 
+    classProperties = (dateOfBirth, emails, firstname, lastname, phone); 
+    externalName = Address; 
+    fetchSpecificationDictionary = {}; 
+    name = Address; 
+    primaryKeyAttributes = (id); 
+    relationships = (
+        {
+            destination = EMail; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = addressI; sourceAttribute = id; }); 
+            name = emails; 
+        }
+    ); 
+}

@@ -156,13 +156,16 @@ var woprototypes_cp = [
 						//@TASK we need to modify this because this could be a problem for NSDate because NSCalendarDate
 						//isn't a supported class by capp currently
 						attributeClassValue = [valueClassName stringByReplacingOccurrencesOfString:@"NS" withString:@"CP"];
+						
+						if([attributeClassValue isEqualToString:@"CPCalendarDate"])
+							attributeClassValue = @"CPDate";
 					}
 				}
 				else
 				{
 					attributeClassValue = [self attibuteTypeForWOPrototype:prototypeName];
 				}
-
+					
 				[entity addAttributeWithName:attributeName classValue:attributeClassValue typeValue:[self valueTypeForEOValue:valueType] optional:isOptional];
 			}
 		}

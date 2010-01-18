@@ -33,7 +33,8 @@
 	{
 		//load your coredata model file
 		model = [CPDObjectModel objectModelWithModelNamed:@"AddressBook.xcdatamodel" bundle:nil];
-	
+		//model = [CPDObjectModel objectModelWithModelNamed:@"AddressBook.eomodeld" bundle:nil];
+		
 		//init the context with your configuration dictionary
 		context = [[CPDObjectContext alloc] initWithObjectModel: model 
 												  storeType: [CPDWebDAVStoreType class] 

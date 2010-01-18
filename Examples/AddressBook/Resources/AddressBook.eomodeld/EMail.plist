@@ -1,0 +1,29 @@
+{
+    attributes = (
+        {
+            columnName = address; 
+            name = addressI; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {columnName = id; name = id; valueClassName = NSNumber; valueType = l; }, 
+        {columnName = mail; name = mail; valueClassName = NSString; }
+    ); 
+    attributesUsedForLocking = (addressI, id, mail); 
+    className = EMail; 
+    classProperties = (address, mail); 
+    externalName = EMail; 
+    fetchSpecificationDictionary = {}; 
+    name = EMail; 
+    primaryKeyAttributes = (id); 
+    relationships = (
+        {
+            destination = Address; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = id; sourceAttribute = addressI; }); 
+            name = address; 
+        }
+    ); 
+}

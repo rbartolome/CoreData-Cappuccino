@@ -188,7 +188,6 @@ CPDchangedProperties = "CPDchangedProperties";
 			{
 				var aClass = [self attributeClassValue:aKey];	
 				
-				// CPLog.trace("Object class: " + [aObject className] + ", attributeClass: " + [aClass className]);
 				if(aClass.name == "CPDate")
 				{								
 					[result setObject:[CPDate dateWithTimeIntervalSince1970:aObject] forKey:aKey];
