@@ -1,13 +1,11 @@
 [xcode-template]: http://github.com/rbartolome/xcode-cappuccino
 
 # How to use CoreData for Cappuccino #
-****************************************
 Just copy the CoreData folder to your Project Frameworks folder and import the Framework in you Application Delegate file.
 
 	#import <CoreData/CoreData.j>  
 
 # Data Model #
-***************************
 
 ## 1. Supported Data Model Formats ##
 - CoreData - *.xcdatamodel (Cocoa Model File Format)
@@ -45,7 +43,6 @@ EOModel:
 	
 	
 # Persistant Store #
-***************************
 
 ## 1. Available stores ##
 ### - CPDWebDAVStore  ###
