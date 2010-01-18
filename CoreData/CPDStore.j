@@ -14,7 +14,7 @@
 	CPMutableDictionary _configuration;
 	CPMutableDictionary _metadata;
 
-	CPDObjectModel _model @accessors(property=model);
+	CPDObjectContext _context @accessors(property=context);
 }
 
 
@@ -86,7 +86,7 @@
 /*
  *	The CPDObjectContext calls this method before it closed
  */
-- (void) writeObjects:(CPSet) objects error:({CPError}) error
+- (void) saveAll:(CPSet) objects error:({CPError}) error
 {
 }
 
@@ -95,7 +95,7 @@
  *	and update and registrate the objects from reponse
  *	@return a set of CPDObjects with cheap relationship
  */
-- (CPSet) readObjects:(CPDictionary) properties error:({CPError}) error
+- (CPSet) load:(CPDictionary) properties error:({CPError}) error
 {
 	return [CPSet new];
 }

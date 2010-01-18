@@ -4,17 +4,14 @@
 //  Created by Raphael Bartolome on 06.01.10.
 //
 
-
-@implementation NSEntityDescription : CPObject
+@implementation NSEntityDescription : CPDEntity
 {
-    CPString _className @accessors(property=className);
-    CPString _name @accessors(property=name);
-    NSManagedObjectModel _model @accessors(property=model);
-    CPDictionary _properties @accessors(property=properties);
-    CPDictionary _subentities @accessors(property=subentities);
-    NSEntityDescription _superentity @accessors(property=superentity);
-    CPDictionary _userInfo @accessors(property=userInfo);
-    id _versionHashModifier;
+    NSManagedObjectModel ns_model;
+    CPDictionary ns_properties;
+    CPDictionary ns_subentities;
+    NSEntityDescription ns_superentity;
+    CPDictionary ns_userInfo;
+    id ns_versionHashModifier;
 }
 
 - (id)initWithCoder:(CPCoder)aCoder
@@ -23,17 +20,29 @@
 
 	if (self)
 	{		
-		_className = [aCoder decodeObjectForKey: @"NSClassNameForEntity"];
-		_name = [aCoder decodeObjectForKey: @"NSEntityName"];
-		_model = [aCoder decodeObjectForKey: @"NSManagedObjectModel"];
-		_properties = [aCoder decodeObjectForKey: @"NSProperties"];
-		_subentities = [aCoder decodeObjectForKey: @"NSSubentities"];
-		_superentity = [aCoder decodeObjectForKey: @"NSSuperentity"];
-		_userInfo = [aCoder decodeObjectForKey: @"NSUserInfo"];
-		_versionHashModifier = [aCoder decodeObjectForKey: @"NSVersionHashModifier"];		
+		[self setName:[aCoder decodeObjectForKey: @"NSEntityName"]];
+		[self setExternalName:[aCoder decodeObjectForKey: @"NSClassNameForEntity"]];
+		ns_model = [aCoder decodeObjectForKey: @"NSManagedObjectModel"];	//will set on addEntity in CPDObjectModel
+		ns_properties = [aCoder decodeObjectForKey: @"NSProperties"];
+		ns_subentities = [aCoder decodeObjectForKey: @"NSSubentities"];
+		ns_superentity = [aCoder decodeObjectForKey: @"NSSuperentity"];
+		ns_userInfo = [aCoder decodeObjectForKey: @"NSUserInfo"];
+		ns_versionHashModifier = [aCoder decodeObjectForKey: @"NSVersionHashModifier"];		
 	}
 	
 	return self;
+}
+
+- (void)NS_loadEntityDescription
+{
+	var keyEnumerator = [ns_properties keyEnumerator];
+	var aPropertyName;
+	while(aPropertyName = [keyEnumerator nextObject])
+	{
+		var aProperty = [ns_properties objectForKey:aPropertyName];
+		[aProperty setEntity:self];
+		[self addProperty:aProperty];
+	}
 }
 
 - (Class)classForKeyedArchiver

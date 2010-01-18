@@ -6,13 +6,16 @@
 
 @interface CPDRelationship : CPDProperty
 {
-	CPDEntity _destination @accessors(property=destination);
+	CPDString _inversePropertyName @accessors(property=inversePropertyName);
+	CPDString _destinationEntityName @accessors(property=destinationEntityName);
 	BOOL _toMany @accessors(property=isToMany);
-	BOOL _mandatory @accessors(property=isMandatory);
 	int _deleteRule @accessors(property=deleteRule);
 }
 
 - (Class)destinationClassType;
+- (CPDEntity)destination;
+- (BOOL)acceptValue:(id) aValue;
+
 - (CPString)stringRepresentation;
 
 @end

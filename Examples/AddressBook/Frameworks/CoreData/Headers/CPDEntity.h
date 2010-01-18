@@ -6,21 +6,23 @@
 
 @interface CPDEntity : CPObject
 {
+	CPDObjectModel _model @accessors(property=model);
 	CPString _name @accessors(property=name);
 	CPString _externalName @accessors(property=externalName);
 	CPMutableSet _properties @accessors(property=properties);
 }
 
 - (CPDObject)createObject;
-- (void)addRelationshipWithName:(CPString)name toMany:(BOOL)toMany mandatory:(BOOL)isMandatory deleteRule:(int) aDeleteRule destination:(CPDEntity)destinationEntity;
-- (void)addAttributeWithName:(CPString)name type:(CPString)type allowsNull:(BOOL)allowsNull;
+- (void)addRelationshipWithName:(CPString)name toMany:(BOOL)toMany optional:(BOOL)isOptional deleteRule:(int) aDeleteRule destination:(CPDEntity)destinationEntityName;
+- (void)addAttributeWithName:(CPString)name classValue:(CPString)aClassValue typeValue:(int)aAttributeType optional:(BOOL)isOptional;
 - (void)addProperty:(CPDProperty)property;
 - (CPDictionary)attributesByName;
 - (CPDictionary)relationshipsByName;
 - (CPDictionary)propertiesByName;
 - (CPArray)propertyNames;
-- (CPArray)notNullAttributes;
+- (CPArray)mandatoryAttributes;
 - (CPArray)mandatoryRelationships;
+- (BOOL)acceptValue:(id) aValue forProperty:(CPString) aKey;
 - (BOOL) isEqualTo:(CPDEntity)aEntity;
 - (CPString)stringRepresentation;
 

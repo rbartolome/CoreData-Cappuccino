@@ -4,10 +4,13 @@
 //  Created by Raphael Bartolome on 25.11.09.
 //
 
+CPDObjectUnexpectedValueTypeForProperty = "CPDObjectUnexpectedValueTypeForProperty";
+
 @interface CPDObject : CPObject
 {
 	CPDEntity _entity @accessors(property=entity);
 	CPDObjectContext _context @accessors(property=context);
+
 	CPDObjectID _objectID @accessors(property=objectID);
 	BOOL _isUpdated @accessors(getter=isUpdated, setter=setUpdated:);
 	BOOL _isDeleted @accessors(getter=isDeleted, setter=setDeleted:);
@@ -50,13 +53,13 @@
 - (void)didChangeValueForKey:(CPString)aKey;
 
 
-- (BOOL)isPropertyFromTypeAttribute:(CPString)aKey;
-- (BOOL)isPropertyFromTypeRelationship:(CPString)aKey;
-- (BOOL)isPropertyFromTypeToManyRelationship:(CPString)aKey;
-- (BOOL)isPropertyFromTypeToOneRelationship:(CPString)aKey;
-- (BOOL)isPropertyFromTypeAttribute:(CPString)aKey;
+- (BOOL)isPropertyOfTypeAttribute:(CPString)aKey;
+- (BOOL)isPropertyOfTypeRelationship:(CPString)aKey;
+- (BOOL)isPropertyOfTypeToManyRelationship:(CPString)aKey;
+- (BOOL)isPropertyOfTypeToOneRelationship:(CPString)aKey;
+- (BOOL)isPropertyOfTypeAttribute:(CPString)aKey;
 
-- (Class)attributeClassType:(CPString) key;
+- (Class)attributeClassValue:(CPString) key;
 - (Class)relationshipDestinationClassType:(CPString) key;
 - (CPDRelationship)realtionshipWithDestination:(CPDEntity)aEntity;
 @end

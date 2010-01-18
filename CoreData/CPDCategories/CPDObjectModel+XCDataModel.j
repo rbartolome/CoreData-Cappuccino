@@ -9,20 +9,23 @@
 
 @implementation CPDObjectModel (XCDataModel)
 
-- (void) parseCoreDataModel:(CPString) aModelName
++ (void) parseCoreDataModel:(CPString) aModelName
 {
-	if(![aModelName hasPrefix:@"cpxcdatamodel"])
+	if(![aModelName hasPrefix:@"cxcdatamodel"])
 	{
 		var modelNameComponents = [aModelName componentsSeparatedByString:@"."];
-		aModelName = [modelNameComponents objectAtIndex:0] + ".cpxcdatamodel";	
+		aModelName = [modelNameComponents objectAtIndex:0] + ".cxcdatamodel";	
 	}
 	
 	var data = [CPURLConnection sendSynchronousRequest:
 						[CPURLRequest requestWithURL:aModelName] returningResponse:nil error:nil];
 	var plistContents = [data string].replace(/\<key\>\s*CF\$UID\s*\<\/key\>/g, "<key>CP$UID</key>");
-
 	var unarchiver = [[CPKeyedUnarchiver alloc] initForReadingWithData:[CPData dataWithString:plistContents]]; 
-	var _rootObject = [unarchiver decodeObjectForKey: @"root"];
+	
+	var managedObjectModel = [unarchiver decodeObjectForKey: @"root"];
+	[managedObjectModel setNameFromFilePath: aModelName];	
+
+	return managedObjectModel;
 }
 
 @end

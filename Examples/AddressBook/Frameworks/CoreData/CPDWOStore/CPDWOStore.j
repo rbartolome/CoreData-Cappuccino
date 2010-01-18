@@ -85,16 +85,16 @@
 /*
  *	write all objects before store will close
  */
-- (void) writeObjects:(CPSet) object error:({CPError}) error
+- (void) saveAll:(CPSet) object error:({CPError}) error
 {
-	CPLog.debug(@"writeObjects");
+	CPLog.debug(@"saveAll");
 }
 
 
 /*
  *	Request prefetched objects from store
  */
-- (CPSet) readObjects:(CPDictionary) properties error:({CPError}) error
+- (CPSet) load:(CPDictionary) properties error:({CPError}) error
 {
 	CPLog.debug(@"readDefaultObjects");
 

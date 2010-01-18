@@ -12,6 +12,7 @@
 
 @implementation CPDEntity : CPObject
 {
+	CPDObjectModel _model @accessors(property=model);
 	CPString _name @accessors(property=name);
 	CPString _externalName @accessors(property=externalName);
 	CPMutableSet _properties @accessors(property=properties);
@@ -34,13 +35,13 @@
 	var objectClassWithName = CPClassFromString(_name);
 	var objectClassWithExternaName = CPClassFromString(_externalName);
 	
-	if(objectClassWithName != nil)
-	{
-		newObject = [[objectClassWithName alloc] initWithEntity:self];
-	}
-	else if(objectClassWithExternaName != nil)
+	if(objectClassWithExternaName != nil)
 	{
 		newObject = [[objectClassWithExternaName alloc] initWithEntity:self]
+	}
+	else if(objectClassWithName != nil)
+	{
+		newObject = [[objectClassWithName alloc] initWithEntity:self];
 	}
 	else
 	{
@@ -50,24 +51,27 @@
 	return newObject;
 }
 
-- (void)addRelationshipWithName:(CPString)name toMany:(BOOL)toMany mandatory:(BOOL)isMandatory deleteRule:(int) aDeleteRule destination:(CPDEntity)destinationEntity
+- (void)addRelationshipWithName:(CPString)name toMany:(BOOL)toMany optional:(BOOL)isOptional deleteRule:(int) aDeleteRule destination:(CPString)destinationEntityName
 {
 	var tmp = [[CPDRelationship alloc] init];
 	[tmp setName:name];
+	[tmp setEntity:self];
 	[tmp setIsToMany:toMany];
-	[tmp setIsMandatory:isMandatory];
+	[tmp setIsOptional:isOptional];
 	[tmp setDeleteRule:aDeleteRule];
-	[tmp setDestination:destinationEntity];
+	[tmp setDestinationEntityName:destinationEntityName];
 	
 	[self addProperty:tmp];
 }
 
-- (void)addAttributeWithName:(CPString)name type:(CPString)type allowsNull:(BOOL)allowsNull
+- (void)addAttributeWithName:(CPString)name classValue:(CPString)aClassValue typeValue:(int)aAttributeType optional:(BOOL)isOptional
 {
 	var tmp = [[CPDAttribute alloc] init];
 	[tmp setName:name];
-	[tmp setType:type];
-	[tmp setAllowsNull:allowsNull];
+	[tmp setEntity:self];
+	[tmp setTypeValue:aAttributeType];
+	[tmp setClassValue:aClassValue];
+	[tmp setIsOptional:isOptional];
 	
 	[self addProperty:[tmp copy]];
 }
@@ -76,7 +80,6 @@
 {
 	[_properties addObject:property];
 }
-
 
 - (CPDictionary)attributesByName
 {
@@ -99,7 +102,7 @@
 	return [[self _filteredPropertiesOfClass: Nil] allKeys];
 }
 
-- (CPArray)notNullAttributes
+- (CPArray)mandatoryAttributes
 {
 	var result = [[CPMutableArray alloc] init];
 	var allAttributes = [self attributesByName];
@@ -112,7 +115,7 @@
 		var aKey = [allKeys objectAtIndex:i];
 		var attribute = [allAttributes objectForKey:aKey];
 	
-		if(attribute != nil && ![attribute allowsNull])
+		if(attribute != nil && ![attribute isOptional])
 		{
 			[result addObject:aKey];
 		}
@@ -134,7 +137,7 @@
 		var aKey = [allKeys objectAtIndex:i];
 		var property = [allRC objectForKey:aKey];
 	
-		if(property != nil && [property isMandatory])
+		if(property != nil && ![property isOptional])
 		{
 			[result addObject:aKey];
 		}
@@ -156,12 +159,22 @@
     {
       if (aClass == Nil || [property isKindOfClass: aClass])
         {
-          [dict setObject: property forKey: [property name]];
+			[dict setObject: property forKey: [property name]];
         }
     }
 
 	return dict;
 }
+
+
+- (BOOL)acceptValue:(id) aValue forProperty:(CPString) aKey
+{
+	var result = NO;
+	var theProperty = [[self propertiesByName] objectForKey:aKey]
+	result = [theProperty acceptValue:aValue];
+	return result;
+}
+
 
 - (BOOL) isEqualTo:(CPDEntity)aEntity
 {

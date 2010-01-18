@@ -10,10 +10,9 @@
 @implementation CPDObjectID : CPObject
 {
 	CPDEntity _entity @accessors(property=entity);
-	CPDStore _store @accessors(property=store);
+	CPDObjectContext _context @accessors(property=context);
 	id _globalID @accessors(property=globalID);
 	id _localID @accessors(setter=setLocalID:);
-	
 	BOOL _isTemporary @accessors(property=isTemporary);
 }
 
@@ -42,12 +41,6 @@
 	}
 	
 	return self;
-}
-
-
-- (CPDStore) store
-{
-	return _store;
 }
 
 - (CPDEntity) entity

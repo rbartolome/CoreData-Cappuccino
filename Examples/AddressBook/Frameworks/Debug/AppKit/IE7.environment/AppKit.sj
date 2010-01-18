@@ -1,4 +1,4 @@
-@STATIC;1.0;u;57;Resources/_CPMenuBarWindow/_CPMenuBarWindowBackground.png89;mhtml:IE7.environment/AppKit.sj!Resources/_CPMenuBarWindow/_CPMenuBarWindowBackground.pngu;65;Resources/_CPMenuBarWindow/_CPMenuBarWindowBackgroundSelected.png97;mhtml:IE7.environment/AppKit.sj!Resources/_CPMenuBarWindow/_CPMenuBarWindowBackgroundSelected.pngu;42;Resources/_CPMenuWindow/_CPMenuWindow1.png74;mhtml:IE7.environment/AppKit.sj!Resources/_CPMenuWindow/_CPMenuWindow1.pngu;42;Resources/_CPMenuWindow/_CPMenuWindow3.png74;mhtml:IE7.environment/AppKit.sj!Resources/_CPMenuWindow/_CPMenuWindow3.pngu;42;Resources/_CPMenuWindow/_CPMenuWindow4.png74;mhtml:IE7.environment/AppKit.sj!Resources/_CPMenuWindow/_CPMenuWindow4.pngu;42;Resources/_CPMenuWindow/_CPMenuWindow5.png74;mhtml:IE7.environment/AppKit.sj!Resources/_CPMenuWindow/_CPMenuWindow5.pngu;42;Resources/_CPMenuWindow/_CPMenuWindow7.png74;mhtml:IE7.environment/AppKit.sj!Resources/_CPMenuWindow/_CPMenuWindow7.pngu;50;Resources/_CPMenuWindow/_CPMenuWindowMoreAbove.png82;mhtml:IE7.environment/AppKit.sj!Resources/_CPMenuWindow/_CPMenuWindowMoreAbove.pngu;50;Resources/_CPMenuWindow/_CPMenuWindowMoreBelow.png82;mhtml:IE7.environment/AppKit.sj!Resources/_CPMenuWindow/_CPMenuWindowMoreBelow.pngu;49;Resources/_CPMenuWindow/_CPMenuWindowRounded0.png81;mhtml:IE7.environment/AppKit.sj!Resources/_CPMenuWindow/_CPMenuWindowRounded0.pngu;49;Resources/_CPMenuWindow/_CPMenuWindowRounded2.png81;mhtml:IE7.environment/AppKit.sj!Resources/_CPMenuWindow/_CPMenuWindowRounded2.pngu;49;Resources/_CPMenuWindow/_CPMenuWindowRounded6.png81;mhtml:IE7.environment/AppKit.sj!Resources/_CPMenuWindow/_CPMenuWindowRounded6.pngu;49;Resources/_CPMenuWindow/_CPMenuWindowRounded8.png81;mhtml:IE7.environment/AppKit.sj!Resources/_CPMenuWindow/_CPMenuWindowRounded8.pngu;53;Resources/_CPToolbarView/_CPToolbarViewBackground.png85;mhtml:IE7.environment/AppKit.sj!Resources/_CPToolbarView/_CPToolbarViewBackground.pngu;67;Resources/_CPToolbarView/_CPToolbarViewExtraItemsAlternateImage.png99;mhtml:IE7.environment/AppKit.sj!Resources/_CPToolbarView/_CPToolbarViewExtraItemsAlternateImage.pngu;58;Resources/_CPToolbarView/_CPToolbarViewExtraItemsImage.png90;mhtml:IE7.environment/AppKit.sj!Resources/_CPToolbarView/_CPToolbarViewExtraItemsImage.pngu;56;Resources/_CPWindowView/_CPWindowViewResizeIndicator.png88;mhtml:IE7.environment/AppKit.sj!Resources/_CPWindowView/_CPWindowViewResizeIndicator.pngu;28;Resources/brightness_bar.png60;mhtml:IE7.environment/AppKit.sj!Resources/brightness_bar.pngu;24;Resources/color_well.png56;mhtml:IE7.environment/AppKit.sj!Resources/color_well.pngu;34;Resources/CPAlert/dialog-error.png66;mhtml:IE7.environment/AppKit.sj!Resources/CPAlert/dialog-error.pngu;40;Resources/CPAlert/dialog-information.png72;mhtml:IE7.environment/AppKit.sj!Resources/CPAlert/dialog-information.pngu;36;Resources/CPAlert/dialog-warning.png68;mhtml:IE7.environment/AppKit.sj!Resources/CPAlert/dialog-warning.pngu;31;Resources/CPApplication/New.png63;mhtml:IE7.environment/AppKit.sj!Resources/CPApplication/New.pngu;42;Resources/CPApplication/NewHighlighted.png74;mhtml:IE7.environment/AppKit.sj!Resources/CPApplication/NewHighlighted.pngu;32;Resources/CPApplication/Open.png64;mhtml:IE7.environment/AppKit.sj!Resources/CPApplication/Open.pngu;43;Resources/CPApplication/OpenHighlighted.png75;mhtml:IE7.environment/AppKit.sj!Resources/CPApplication/OpenHighlighted.pngu;32;Resources/CPApplication/Save.png64;mhtml:IE7.environment/AppKit.sj!Resources/CPApplication/Save.pngu;43;Resources/CPApplication/SaveHighlighted.png75;mhtml:IE7.environment/AppKit.sj!Resources/CPApplication/SaveHighlighted.pngu;53;Resources/CPImageView/CPImageViewBottomLeftShadow.png85;mhtml:IE7.environment/AppKit.sj!Resources/CPImageView/CPImageViewBottomLeftShadow.pngu;54;Resources/CPImageView/CPImageViewBottomRightShadow.png86;mhtml:IE7.environment/AppKit.sj!Resources/CPImageView/CPImageViewBottomRightShadow.pngu;49;Resources/CPImageView/CPImageViewBottomShadow.png81;mhtml:IE7.environment/AppKit.sj!Resources/CPImageView/CPImageViewBottomShadow.pngu;47;Resources/CPImageView/CPImageViewLeftShadow.png79;mhtml:IE7.environment/AppKit.sj!Resources/CPImageView/CPImageViewLeftShadow.pngu;48;Resources/CPImageView/CPImageViewRightShadow.png80;mhtml:IE7.environment/AppKit.sj!Resources/CPImageView/CPImageViewRightShadow.pngu;50;Resources/CPImageView/CPImageViewTopLeftShadow.png82;mhtml:IE7.environment/AppKit.sj!Resources/CPImageView/CPImageViewTopLeftShadow.pngu;51;Resources/CPImageView/CPImageViewTopRightShadow.png83;mhtml:IE7.environment/AppKit.sj!Resources/CPImageView/CPImageViewTopRightShadow.pngu;46;Resources/CPImageView/CPImageViewTopShadow.png78;mhtml:IE7.environment/AppKit.sj!Resources/CPImageView/CPImageViewTopShadow.pngu;42;Resources/CPMenuItem/CPMenuItemOnState.png74;mhtml:IE7.environment/AppKit.sj!Resources/CPMenuItem/CPMenuItemOnState.pngu;53;Resources/CPMenuItem/CPMenuItemOnStateHighlighted.png85;mhtml:IE7.environment/AppKit.sj!Resources/CPMenuItem/CPMenuItemOnStateHighlighted.pngu;66;Resources/CPProgressIndicator/CPProgressIndicatorBarBarRegular.png98;mhtml:IE7.environment/AppKit.sj!Resources/CPProgressIndicator/CPProgressIndicatorBarBarRegular.pngu;67;Resources/CPProgressIndicator/CPProgressIndicatorBarHUDBarSmall.png99;mhtml:IE7.environment/AppKit.sj!Resources/CPProgressIndicator/CPProgressIndicatorBarHUDBarSmall.pngu;75;Resources/CPProgressIndicator/CPProgressIndicatorBezelBorderBarRegular0.png107;mhtml:IE7.environment/AppKit.sj!Resources/CPProgressIndicator/CPProgressIndicatorBezelBorderBarRegular0.pngu;75;Resources/CPProgressIndicator/CPProgressIndicatorBezelBorderBarRegular1.png107;mhtml:IE7.environment/AppKit.sj!Resources/CPProgressIndicator/CPProgressIndicatorBezelBorderBarRegular1.pngu;75;Resources/CPProgressIndicator/CPProgressIndicatorBezelBorderBarRegular2.png107;mhtml:IE7.environment/AppKit.sj!Resources/CPProgressIndicator/CPProgressIndicatorBezelBorderBarRegular2.pngu;76;Resources/CPProgressIndicator/CPProgressIndicatorBezelBorderHUDBarSmall0.png108;mhtml:IE7.environment/AppKit.sj!Resources/CPProgressIndicator/CPProgressIndicatorBezelBorderHUDBarSmall0.pngu;76;Resources/CPProgressIndicator/CPProgressIndicatorBezelBorderHUDBarSmall1.png108;mhtml:IE7.environment/AppKit.sj!Resources/CPProgressIndicator/CPProgressIndicatorBezelBorderHUDBarSmall1.pngu;76;Resources/CPProgressIndicator/CPProgressIndicatorBezelBorderHUDBarSmall2.png108;mhtml:IE7.environment/AppKit.sj!Resources/CPProgressIndicator/CPProgressIndicatorBezelBorderHUDBarSmall2.pngu;73;Resources/CPProgressIndicator/CPProgressIndicatorSpinningStyleRegular.gif105;mhtml:IE7.environment/AppKit.sj!Resources/CPProgressIndicator/CPProgressIndicatorSpinningStyleRegular.gifu;47;Resources/CPSearchField/CPSearchFieldCancel.png79;mhtml:IE7.environment/AppKit.sj!Resources/CPSearchField/CPSearchFieldCancel.pngu;54;Resources/CPSearchField/CPSearchFieldCancelPressed.png86;mhtml:IE7.environment/AppKit.sj!Resources/CPSearchField/CPSearchFieldCancelPressed.pngu;45;Resources/CPSearchField/CPSearchFieldFind.png77;mhtml:IE7.environment/AppKit.sj!Resources/CPSearchField/CPSearchFieldFind.pngu;47;Resources/CPSearchField/CPSearchFieldSearch.png79;mhtml:IE7.environment/AppKit.sj!Resources/CPSearchField/CPSearchFieldSearch.pngu;50;Resources/CPShadowView/CPShadowViewHeavyBottom.png82;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewHeavyBottom.pngu;54;Resources/CPShadowView/CPShadowViewHeavyBottomLeft.png86;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewHeavyBottomLeft.pngu;55;Resources/CPShadowView/CPShadowViewHeavyBottomRight.png87;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewHeavyBottomRight.pngu;48;Resources/CPShadowView/CPShadowViewHeavyLeft.png80;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewHeavyLeft.pngu;49;Resources/CPShadowView/CPShadowViewHeavyRight.png81;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewHeavyRight.pngu;47;Resources/CPShadowView/CPShadowViewHeavyTop.png79;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewHeavyTop.pngu;51;Resources/CPShadowView/CPShadowViewHeavyTopLeft.png83;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewHeavyTopLeft.pngu;52;Resources/CPShadowView/CPShadowViewHeavyTopRight.png84;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewHeavyTopRight.pngu;50;Resources/CPShadowView/CPShadowViewLightBottom.png82;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewLightBottom.pngu;54;Resources/CPShadowView/CPShadowViewLightBottomLeft.png86;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewLightBottomLeft.pngu;55;Resources/CPShadowView/CPShadowViewLightBottomRight.png87;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewLightBottomRight.pngu;48;Resources/CPShadowView/CPShadowViewLightLeft.png80;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewLightLeft.pngu;49;Resources/CPShadowView/CPShadowViewLightRight.png81;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewLightRight.pngu;47;Resources/CPShadowView/CPShadowViewLightTop.png79;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewLightTop.pngu;51;Resources/CPShadowView/CPShadowViewLightTopLeft.png83;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewLightTopLeft.pngu;52;Resources/CPShadowView/CPShadowViewLightTopRight.png84;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewLightTopRight.pngu;47;Resources/CPSplitView/CPSplitViewHorizontal.png79;mhtml:IE7.environment/AppKit.sj!Resources/CPSplitView/CPSplitViewHorizontal.pngu;45;Resources/CPSplitView/CPSplitViewVertical.png77;mhtml:IE7.environment/AppKit.sj!Resources/CPSplitView/CPSplitViewVertical.pngu;51;Resources/CPTabView/_CPTabLabelBackgroundCenter.png83;mhtml:IE7.environment/AppKit.sj!Resources/CPTabView/_CPTabLabelBackgroundCenter.pngu;49;Resources/CPTabView/_CPTabLabelBackgroundLeft.png81;mhtml:IE7.environment/AppKit.sj!Resources/CPTabView/_CPTabLabelBackgroundLeft.pngu;50;Resources/CPTabView/_CPTabLabelBackgroundRight.png82;mhtml:IE7.environment/AppKit.sj!Resources/CPTabView/_CPTabLabelBackgroundRight.pngu;49;Resources/CPTabView/_CPTabLabelSelectedCenter.png81;mhtml:IE7.environment/AppKit.sj!Resources/CPTabView/_CPTabLabelSelectedCenter.pngu;47;Resources/CPTabView/_CPTabLabelSelectedLeft.png79;mhtml:IE7.environment/AppKit.sj!Resources/CPTabView/_CPTabLabelSelectedLeft.pngu;48;Resources/CPTabView/_CPTabLabelSelectedRight.png80;mhtml:IE7.environment/AppKit.sj!Resources/CPTabView/_CPTabLabelSelectedRight.pngu;46;Resources/CPTabView/_CPTabLabelsViewCenter.png78;mhtml:IE7.environment/AppKit.sj!Resources/CPTabView/_CPTabLabelsViewCenter.pngu;44;Resources/CPTabView/_CPTabLabelsViewLeft.png76;mhtml:IE7.environment/AppKit.sj!Resources/CPTabView/_CPTabLabelsViewLeft.pngu;45;Resources/CPTabView/_CPTabLabelsViewRight.png77;mhtml:IE7.environment/AppKit.sj!Resources/CPTabView/_CPTabLabelsViewRight.pngu;54;Resources/CPTabView/CPTabViewBezelBackgroundCenter.png86;mhtml:IE7.environment/AppKit.sj!Resources/CPTabView/CPTabViewBezelBackgroundCenter.pngu;44;Resources/CPTabView/CPTabViewBezelBorder.png76;mhtml:IE7.environment/AppKit.sj!Resources/CPTabView/CPTabViewBezelBorder.pngu;48;Resources/CPTabView/CPTabViewBezelBorderLeft.png80;mhtml:IE7.environment/AppKit.sj!Resources/CPTabView/CPTabViewBezelBorderLeft.pngu;49;Resources/CPTabView/CPTabViewBezelBorderRight.png81;mhtml:IE7.environment/AppKit.sj!Resources/CPTabView/CPTabViewBezelBorderRight.pngu;51;Resources/CPToolbarItem/CPToolbarItemSeparator0.png83;mhtml:IE7.environment/AppKit.sj!Resources/CPToolbarItem/CPToolbarItemSeparator0.pngu;51;Resources/CPToolbarItem/CPToolbarItemSeparator1.png83;mhtml:IE7.environment/AppKit.sj!Resources/CPToolbarItem/CPToolbarItemSeparator1.pngu;51;Resources/CPToolbarItem/CPToolbarItemSeparator2.png83;mhtml:IE7.environment/AppKit.sj!Resources/CPToolbarItem/CPToolbarItemSeparator2.pngu;38;Resources/CPWindow/CPWindowShadow0.png70;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/CPWindowShadow0.pngu;38;Resources/CPWindow/CPWindowShadow1.png70;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/CPWindowShadow1.pngu;38;Resources/CPWindow/CPWindowShadow2.png70;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/CPWindowShadow2.pngu;38;Resources/CPWindow/CPWindowShadow3.png70;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/CPWindowShadow3.pngu;38;Resources/CPWindow/CPWindowShadow4.png70;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/CPWindowShadow4.pngu;38;Resources/CPWindow/CPWindowShadow5.png70;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/CPWindowShadow5.pngu;38;Resources/CPWindow/CPWindowShadow6.png70;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/CPWindowShadow6.pngu;38;Resources/CPWindow/CPWindowShadow7.png70;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/CPWindowShadow7.pngu;38;Resources/CPWindow/CPWindowShadow8.png70;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/CPWindowShadow8.pngu;37;Resources/CPWindowResizeIndicator.png69;mhtml:IE7.environment/AppKit.sj!Resources/CPWindowResizeIndicator.pngu;31;Resources/FIXME_ImageShadow.png63;mhtml:IE7.environment/AppKit.sj!Resources/FIXME_ImageShadow.pngu;34;Resources/HUDTheme/WindowClose.png66;mhtml:IE7.environment/AppKit.sj!Resources/HUDTheme/WindowClose.pngu;40;Resources/HUDTheme/WindowCloseActive.png72;mhtml:IE7.environment/AppKit.sj!Resources/HUDTheme/WindowCloseActive.pngu;27;Resources/slider_button.png59;mhtml:IE7.environment/AppKit.sj!Resources/slider_button.pngu;29;Resources/slider_button_h.png61;mhtml:IE7.environment/AppKit.sj!Resources/slider_button_h.pngu;37;Resources/standardApplicationIcon.png69;mhtml:IE7.environment/AppKit.sj!Resources/standardApplicationIcon.pngu;25;Resources/wheel_black.png57;mhtml:IE7.environment/AppKit.sj!Resources/wheel_black.pngu;26;Resources/wheel_button.png58;mhtml:IE7.environment/AppKit.sj!Resources/wheel_button.pngu;28;Resources/wheel_button_h.png60;mhtml:IE7.environment/AppKit.sj!Resources/wheel_button_h.pngu;49;Resources/CPWindow/HUD/CPWindowHUDBackground0.png81;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/HUD/CPWindowHUDBackground0.pngu;49;Resources/CPWindow/HUD/CPWindowHUDBackground1.png81;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/HUD/CPWindowHUDBackground1.pngu;49;Resources/CPWindow/HUD/CPWindowHUDBackground2.png81;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/HUD/CPWindowHUDBackground2.pngu;49;Resources/CPWindow/HUD/CPWindowHUDBackground3.png81;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/HUD/CPWindowHUDBackground3.pngu;49;Resources/CPWindow/HUD/CPWindowHUDBackground4.png81;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/HUD/CPWindowHUDBackground4.pngu;49;Resources/CPWindow/HUD/CPWindowHUDBackground5.png81;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/HUD/CPWindowHUDBackground5.pngu;49;Resources/CPWindow/HUD/CPWindowHUDBackground6.png81;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/HUD/CPWindowHUDBackground6.pngu;49;Resources/CPWindow/HUD/CPWindowHUDBackground7.png81;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/HUD/CPWindowHUDBackground7.pngu;49;Resources/CPWindow/HUD/CPWindowHUDBackground8.png81;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/HUD/CPWindowHUDBackground8.pngu;59;Resources/CPWindow/Standard/CPWindowStandardCloseButton.png91;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/Standard/CPWindowStandardCloseButton.pngu;70;Resources/CPWindow/Standard/CPWindowStandardCloseButtonHighlighted.png102;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/Standard/CPWindowStandardCloseButtonHighlighted.pngu;66;Resources/CPWindow/Standard/CPWindowStandardCloseButtonUnsaved.png98;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/Standard/CPWindowStandardCloseButtonUnsaved.pngu;77;Resources/CPWindow/Standard/CPWindowStandardCloseButtonUnsavedHighlighted.png109;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/Standard/CPWindowStandardCloseButtonUnsavedHighlighted.pngu;62;Resources/CPWindow/Standard/CPWindowStandardMaximizeButton.png94;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/Standard/CPWindowStandardMaximizeButton.pngu;73;Resources/CPWindow/Standard/CPWindowStandardMaximizeButtonHighlighted.png105;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/Standard/CPWindowStandardMaximizeButtonHighlighted.pngu;62;Resources/CPWindow/Standard/CPWindowStandardMinimizeButton.png94;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/Standard/CPWindowStandardMinimizeButton.pngu;73;Resources/CPWindow/Standard/CPWindowStandardMinimizeButtonHighlighted.png105;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/Standard/CPWindowStandardMinimizeButtonHighlighted.pngu;52;Resources/CPWindow/Standard/CPWindowStandardTop0.png84;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/Standard/CPWindowStandardTop0.pngu;52;Resources/CPWindow/Standard/CPWindowStandardTop1.png84;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/Standard/CPWindowStandardTop1.pngu;52;Resources/CPWindow/Standard/CPWindowStandardTop2.png84;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/Standard/CPWindowStandardTop2.pngp;15;_CPCornerView.ji;8;CPView.jc;627;
+@STATIC;1.0;u;57;Resources/_CPMenuBarWindow/_CPMenuBarWindowBackground.png89;mhtml:IE7.environment/AppKit.sj!Resources/_CPMenuBarWindow/_CPMenuBarWindowBackground.pngu;65;Resources/_CPMenuBarWindow/_CPMenuBarWindowBackgroundSelected.png97;mhtml:IE7.environment/AppKit.sj!Resources/_CPMenuBarWindow/_CPMenuBarWindowBackgroundSelected.pngu;42;Resources/_CPMenuWindow/_CPMenuWindow1.png74;mhtml:IE7.environment/AppKit.sj!Resources/_CPMenuWindow/_CPMenuWindow1.pngu;42;Resources/_CPMenuWindow/_CPMenuWindow3.png74;mhtml:IE7.environment/AppKit.sj!Resources/_CPMenuWindow/_CPMenuWindow3.pngu;42;Resources/_CPMenuWindow/_CPMenuWindow4.png74;mhtml:IE7.environment/AppKit.sj!Resources/_CPMenuWindow/_CPMenuWindow4.pngu;42;Resources/_CPMenuWindow/_CPMenuWindow5.png74;mhtml:IE7.environment/AppKit.sj!Resources/_CPMenuWindow/_CPMenuWindow5.pngu;42;Resources/_CPMenuWindow/_CPMenuWindow7.png74;mhtml:IE7.environment/AppKit.sj!Resources/_CPMenuWindow/_CPMenuWindow7.pngu;50;Resources/_CPMenuWindow/_CPMenuWindowMoreAbove.png82;mhtml:IE7.environment/AppKit.sj!Resources/_CPMenuWindow/_CPMenuWindowMoreAbove.pngu;50;Resources/_CPMenuWindow/_CPMenuWindowMoreBelow.png82;mhtml:IE7.environment/AppKit.sj!Resources/_CPMenuWindow/_CPMenuWindowMoreBelow.pngu;49;Resources/_CPMenuWindow/_CPMenuWindowRounded0.png81;mhtml:IE7.environment/AppKit.sj!Resources/_CPMenuWindow/_CPMenuWindowRounded0.pngu;49;Resources/_CPMenuWindow/_CPMenuWindowRounded2.png81;mhtml:IE7.environment/AppKit.sj!Resources/_CPMenuWindow/_CPMenuWindowRounded2.pngu;49;Resources/_CPMenuWindow/_CPMenuWindowRounded6.png81;mhtml:IE7.environment/AppKit.sj!Resources/_CPMenuWindow/_CPMenuWindowRounded6.pngu;49;Resources/_CPMenuWindow/_CPMenuWindowRounded8.png81;mhtml:IE7.environment/AppKit.sj!Resources/_CPMenuWindow/_CPMenuWindowRounded8.pngu;53;Resources/_CPToolbarView/_CPToolbarViewBackground.png85;mhtml:IE7.environment/AppKit.sj!Resources/_CPToolbarView/_CPToolbarViewBackground.pngu;67;Resources/_CPToolbarView/_CPToolbarViewExtraItemsAlternateImage.png99;mhtml:IE7.environment/AppKit.sj!Resources/_CPToolbarView/_CPToolbarViewExtraItemsAlternateImage.pngu;58;Resources/_CPToolbarView/_CPToolbarViewExtraItemsImage.png90;mhtml:IE7.environment/AppKit.sj!Resources/_CPToolbarView/_CPToolbarViewExtraItemsImage.pngu;56;Resources/_CPWindowView/_CPWindowViewResizeIndicator.png88;mhtml:IE7.environment/AppKit.sj!Resources/_CPWindowView/_CPWindowViewResizeIndicator.pngu;28;Resources/brightness_bar.png60;mhtml:IE7.environment/AppKit.sj!Resources/brightness_bar.pngu;24;Resources/color_well.png56;mhtml:IE7.environment/AppKit.sj!Resources/color_well.pngu;34;Resources/CPAlert/dialog-error.png66;mhtml:IE7.environment/AppKit.sj!Resources/CPAlert/dialog-error.pngu;40;Resources/CPAlert/dialog-information.png72;mhtml:IE7.environment/AppKit.sj!Resources/CPAlert/dialog-information.pngu;36;Resources/CPAlert/dialog-warning.png68;mhtml:IE7.environment/AppKit.sj!Resources/CPAlert/dialog-warning.pngu;31;Resources/CPApplication/New.png63;mhtml:IE7.environment/AppKit.sj!Resources/CPApplication/New.pngu;42;Resources/CPApplication/NewHighlighted.png74;mhtml:IE7.environment/AppKit.sj!Resources/CPApplication/NewHighlighted.pngu;32;Resources/CPApplication/Open.png64;mhtml:IE7.environment/AppKit.sj!Resources/CPApplication/Open.pngu;43;Resources/CPApplication/OpenHighlighted.png75;mhtml:IE7.environment/AppKit.sj!Resources/CPApplication/OpenHighlighted.pngu;32;Resources/CPApplication/Save.png64;mhtml:IE7.environment/AppKit.sj!Resources/CPApplication/Save.pngu;43;Resources/CPApplication/SaveHighlighted.png75;mhtml:IE7.environment/AppKit.sj!Resources/CPApplication/SaveHighlighted.pngu;43;Resources/CPImage/CPImageNameColorPanel.png75;mhtml:IE7.environment/AppKit.sj!Resources/CPImage/CPImageNameColorPanel.pngu;54;Resources/CPImage/CPImageNameColorPanelHighlighted.png86;mhtml:IE7.environment/AppKit.sj!Resources/CPImage/CPImageNameColorPanelHighlighted.pngu;53;Resources/CPImageView/CPImageViewBottomLeftShadow.png85;mhtml:IE7.environment/AppKit.sj!Resources/CPImageView/CPImageViewBottomLeftShadow.pngu;54;Resources/CPImageView/CPImageViewBottomRightShadow.png86;mhtml:IE7.environment/AppKit.sj!Resources/CPImageView/CPImageViewBottomRightShadow.pngu;49;Resources/CPImageView/CPImageViewBottomShadow.png81;mhtml:IE7.environment/AppKit.sj!Resources/CPImageView/CPImageViewBottomShadow.pngu;47;Resources/CPImageView/CPImageViewLeftShadow.png79;mhtml:IE7.environment/AppKit.sj!Resources/CPImageView/CPImageViewLeftShadow.pngu;48;Resources/CPImageView/CPImageViewRightShadow.png80;mhtml:IE7.environment/AppKit.sj!Resources/CPImageView/CPImageViewRightShadow.pngu;50;Resources/CPImageView/CPImageViewTopLeftShadow.png82;mhtml:IE7.environment/AppKit.sj!Resources/CPImageView/CPImageViewTopLeftShadow.pngu;51;Resources/CPImageView/CPImageViewTopRightShadow.png83;mhtml:IE7.environment/AppKit.sj!Resources/CPImageView/CPImageViewTopRightShadow.pngu;46;Resources/CPImageView/CPImageViewTopShadow.png78;mhtml:IE7.environment/AppKit.sj!Resources/CPImageView/CPImageViewTopShadow.pngu;42;Resources/CPMenuItem/CPMenuItemOnState.png74;mhtml:IE7.environment/AppKit.sj!Resources/CPMenuItem/CPMenuItemOnState.pngu;53;Resources/CPMenuItem/CPMenuItemOnStateHighlighted.png85;mhtml:IE7.environment/AppKit.sj!Resources/CPMenuItem/CPMenuItemOnStateHighlighted.pngu;66;Resources/CPProgressIndicator/CPProgressIndicatorBarBarRegular.png98;mhtml:IE7.environment/AppKit.sj!Resources/CPProgressIndicator/CPProgressIndicatorBarBarRegular.pngu;67;Resources/CPProgressIndicator/CPProgressIndicatorBarHUDBarSmall.png99;mhtml:IE7.environment/AppKit.sj!Resources/CPProgressIndicator/CPProgressIndicatorBarHUDBarSmall.pngu;75;Resources/CPProgressIndicator/CPProgressIndicatorBezelBorderBarRegular0.png107;mhtml:IE7.environment/AppKit.sj!Resources/CPProgressIndicator/CPProgressIndicatorBezelBorderBarRegular0.pngu;75;Resources/CPProgressIndicator/CPProgressIndicatorBezelBorderBarRegular1.png107;mhtml:IE7.environment/AppKit.sj!Resources/CPProgressIndicator/CPProgressIndicatorBezelBorderBarRegular1.pngu;75;Resources/CPProgressIndicator/CPProgressIndicatorBezelBorderBarRegular2.png107;mhtml:IE7.environment/AppKit.sj!Resources/CPProgressIndicator/CPProgressIndicatorBezelBorderBarRegular2.pngu;76;Resources/CPProgressIndicator/CPProgressIndicatorBezelBorderHUDBarSmall0.png108;mhtml:IE7.environment/AppKit.sj!Resources/CPProgressIndicator/CPProgressIndicatorBezelBorderHUDBarSmall0.pngu;76;Resources/CPProgressIndicator/CPProgressIndicatorBezelBorderHUDBarSmall1.png108;mhtml:IE7.environment/AppKit.sj!Resources/CPProgressIndicator/CPProgressIndicatorBezelBorderHUDBarSmall1.pngu;76;Resources/CPProgressIndicator/CPProgressIndicatorBezelBorderHUDBarSmall2.png108;mhtml:IE7.environment/AppKit.sj!Resources/CPProgressIndicator/CPProgressIndicatorBezelBorderHUDBarSmall2.pngu;73;Resources/CPProgressIndicator/CPProgressIndicatorSpinningStyleRegular.gif105;mhtml:IE7.environment/AppKit.sj!Resources/CPProgressIndicator/CPProgressIndicatorSpinningStyleRegular.gifu;47;Resources/CPSearchField/CPSearchFieldCancel.png79;mhtml:IE7.environment/AppKit.sj!Resources/CPSearchField/CPSearchFieldCancel.pngu;54;Resources/CPSearchField/CPSearchFieldCancelPressed.png86;mhtml:IE7.environment/AppKit.sj!Resources/CPSearchField/CPSearchFieldCancelPressed.pngu;45;Resources/CPSearchField/CPSearchFieldFind.png77;mhtml:IE7.environment/AppKit.sj!Resources/CPSearchField/CPSearchFieldFind.pngu;47;Resources/CPSearchField/CPSearchFieldSearch.png79;mhtml:IE7.environment/AppKit.sj!Resources/CPSearchField/CPSearchFieldSearch.pngu;50;Resources/CPShadowView/CPShadowViewHeavyBottom.png82;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewHeavyBottom.pngu;54;Resources/CPShadowView/CPShadowViewHeavyBottomLeft.png86;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewHeavyBottomLeft.pngu;55;Resources/CPShadowView/CPShadowViewHeavyBottomRight.png87;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewHeavyBottomRight.pngu;48;Resources/CPShadowView/CPShadowViewHeavyLeft.png80;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewHeavyLeft.pngu;49;Resources/CPShadowView/CPShadowViewHeavyRight.png81;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewHeavyRight.pngu;47;Resources/CPShadowView/CPShadowViewHeavyTop.png79;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewHeavyTop.pngu;51;Resources/CPShadowView/CPShadowViewHeavyTopLeft.png83;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewHeavyTopLeft.pngu;52;Resources/CPShadowView/CPShadowViewHeavyTopRight.png84;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewHeavyTopRight.pngu;50;Resources/CPShadowView/CPShadowViewLightBottom.png82;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewLightBottom.pngu;54;Resources/CPShadowView/CPShadowViewLightBottomLeft.png86;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewLightBottomLeft.pngu;55;Resources/CPShadowView/CPShadowViewLightBottomRight.png87;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewLightBottomRight.pngu;48;Resources/CPShadowView/CPShadowViewLightLeft.png80;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewLightLeft.pngu;49;Resources/CPShadowView/CPShadowViewLightRight.png81;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewLightRight.pngu;47;Resources/CPShadowView/CPShadowViewLightTop.png79;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewLightTop.pngu;51;Resources/CPShadowView/CPShadowViewLightTopLeft.png83;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewLightTopLeft.pngu;52;Resources/CPShadowView/CPShadowViewLightTopRight.png84;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewLightTopRight.pngu;47;Resources/CPSplitView/CPSplitViewHorizontal.png79;mhtml:IE7.environment/AppKit.sj!Resources/CPSplitView/CPSplitViewHorizontal.pngu;45;Resources/CPSplitView/CPSplitViewVertical.png77;mhtml:IE7.environment/AppKit.sj!Resources/CPSplitView/CPSplitViewVertical.pngu;51;Resources/CPTabView/_CPTabLabelBackgroundCenter.png83;mhtml:IE7.environment/AppKit.sj!Resources/CPTabView/_CPTabLabelBackgroundCenter.pngu;49;Resources/CPTabView/_CPTabLabelBackgroundLeft.png81;mhtml:IE7.environment/AppKit.sj!Resources/CPTabView/_CPTabLabelBackgroundLeft.pngu;50;Resources/CPTabView/_CPTabLabelBackgroundRight.png82;mhtml:IE7.environment/AppKit.sj!Resources/CPTabView/_CPTabLabelBackgroundRight.pngu;49;Resources/CPTabView/_CPTabLabelSelectedCenter.png81;mhtml:IE7.environment/AppKit.sj!Resources/CPTabView/_CPTabLabelSelectedCenter.pngu;47;Resources/CPTabView/_CPTabLabelSelectedLeft.png79;mhtml:IE7.environment/AppKit.sj!Resources/CPTabView/_CPTabLabelSelectedLeft.pngu;48;Resources/CPTabView/_CPTabLabelSelectedRight.png80;mhtml:IE7.environment/AppKit.sj!Resources/CPTabView/_CPTabLabelSelectedRight.pngu;46;Resources/CPTabView/_CPTabLabelsViewCenter.png78;mhtml:IE7.environment/AppKit.sj!Resources/CPTabView/_CPTabLabelsViewCenter.pngu;44;Resources/CPTabView/_CPTabLabelsViewLeft.png76;mhtml:IE7.environment/AppKit.sj!Resources/CPTabView/_CPTabLabelsViewLeft.pngu;45;Resources/CPTabView/_CPTabLabelsViewRight.png77;mhtml:IE7.environment/AppKit.sj!Resources/CPTabView/_CPTabLabelsViewRight.pngu;54;Resources/CPTabView/CPTabViewBezelBackgroundCenter.png86;mhtml:IE7.environment/AppKit.sj!Resources/CPTabView/CPTabViewBezelBackgroundCenter.pngu;44;Resources/CPTabView/CPTabViewBezelBorder.png76;mhtml:IE7.environment/AppKit.sj!Resources/CPTabView/CPTabViewBezelBorder.pngu;48;Resources/CPTabView/CPTabViewBezelBorderLeft.png80;mhtml:IE7.environment/AppKit.sj!Resources/CPTabView/CPTabViewBezelBorderLeft.pngu;49;Resources/CPTabView/CPTabViewBezelBorderRight.png81;mhtml:IE7.environment/AppKit.sj!Resources/CPTabView/CPTabViewBezelBorderRight.pngu;51;Resources/CPToolbarItem/CPToolbarItemSeparator0.png83;mhtml:IE7.environment/AppKit.sj!Resources/CPToolbarItem/CPToolbarItemSeparator0.pngu;51;Resources/CPToolbarItem/CPToolbarItemSeparator1.png83;mhtml:IE7.environment/AppKit.sj!Resources/CPToolbarItem/CPToolbarItemSeparator1.pngu;51;Resources/CPToolbarItem/CPToolbarItemSeparator2.png83;mhtml:IE7.environment/AppKit.sj!Resources/CPToolbarItem/CPToolbarItemSeparator2.pngu;38;Resources/CPWindow/CPWindowShadow0.png70;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/CPWindowShadow0.pngu;38;Resources/CPWindow/CPWindowShadow1.png70;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/CPWindowShadow1.pngu;38;Resources/CPWindow/CPWindowShadow2.png70;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/CPWindowShadow2.pngu;38;Resources/CPWindow/CPWindowShadow3.png70;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/CPWindowShadow3.pngu;38;Resources/CPWindow/CPWindowShadow4.png70;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/CPWindowShadow4.pngu;38;Resources/CPWindow/CPWindowShadow5.png70;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/CPWindowShadow5.pngu;38;Resources/CPWindow/CPWindowShadow6.png70;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/CPWindowShadow6.pngu;38;Resources/CPWindow/CPWindowShadow7.png70;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/CPWindowShadow7.pngu;38;Resources/CPWindow/CPWindowShadow8.png70;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/CPWindowShadow8.pngu;37;Resources/CPWindowResizeIndicator.png69;mhtml:IE7.environment/AppKit.sj!Resources/CPWindowResizeIndicator.pngu;31;Resources/FIXME_ImageShadow.png63;mhtml:IE7.environment/AppKit.sj!Resources/FIXME_ImageShadow.pngu;25;Resources/GenericFile.png57;mhtml:IE7.environment/AppKit.sj!Resources/GenericFile.pngu;34;Resources/HUDTheme/WindowClose.png66;mhtml:IE7.environment/AppKit.sj!Resources/HUDTheme/WindowClose.pngu;40;Resources/HUDTheme/WindowCloseActive.png72;mhtml:IE7.environment/AppKit.sj!Resources/HUDTheme/WindowCloseActive.pngu;27;Resources/slider_button.png59;mhtml:IE7.environment/AppKit.sj!Resources/slider_button.pngu;29;Resources/slider_button_h.png61;mhtml:IE7.environment/AppKit.sj!Resources/slider_button_h.pngu;37;Resources/standardApplicationIcon.png69;mhtml:IE7.environment/AppKit.sj!Resources/standardApplicationIcon.pngu;25;Resources/wheel_black.png57;mhtml:IE7.environment/AppKit.sj!Resources/wheel_black.pngu;26;Resources/wheel_button.png58;mhtml:IE7.environment/AppKit.sj!Resources/wheel_button.pngu;28;Resources/wheel_button_h.png60;mhtml:IE7.environment/AppKit.sj!Resources/wheel_button_h.pngu;49;Resources/CPWindow/HUD/CPWindowHUDBackground0.png81;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/HUD/CPWindowHUDBackground0.pngu;49;Resources/CPWindow/HUD/CPWindowHUDBackground1.png81;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/HUD/CPWindowHUDBackground1.pngu;49;Resources/CPWindow/HUD/CPWindowHUDBackground2.png81;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/HUD/CPWindowHUDBackground2.pngu;49;Resources/CPWindow/HUD/CPWindowHUDBackground3.png81;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/HUD/CPWindowHUDBackground3.pngu;49;Resources/CPWindow/HUD/CPWindowHUDBackground4.png81;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/HUD/CPWindowHUDBackground4.pngu;49;Resources/CPWindow/HUD/CPWindowHUDBackground5.png81;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/HUD/CPWindowHUDBackground5.pngu;49;Resources/CPWindow/HUD/CPWindowHUDBackground6.png81;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/HUD/CPWindowHUDBackground6.pngu;49;Resources/CPWindow/HUD/CPWindowHUDBackground7.png81;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/HUD/CPWindowHUDBackground7.pngu;49;Resources/CPWindow/HUD/CPWindowHUDBackground8.png81;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/HUD/CPWindowHUDBackground8.pngu;59;Resources/CPWindow/Standard/CPWindowStandardCloseButton.png91;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/Standard/CPWindowStandardCloseButton.pngu;70;Resources/CPWindow/Standard/CPWindowStandardCloseButtonHighlighted.png102;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/Standard/CPWindowStandardCloseButtonHighlighted.pngu;66;Resources/CPWindow/Standard/CPWindowStandardCloseButtonUnsaved.png98;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/Standard/CPWindowStandardCloseButtonUnsaved.pngu;77;Resources/CPWindow/Standard/CPWindowStandardCloseButtonUnsavedHighlighted.png109;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/Standard/CPWindowStandardCloseButtonUnsavedHighlighted.pngu;62;Resources/CPWindow/Standard/CPWindowStandardMaximizeButton.png94;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/Standard/CPWindowStandardMaximizeButton.pngu;73;Resources/CPWindow/Standard/CPWindowStandardMaximizeButtonHighlighted.png105;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/Standard/CPWindowStandardMaximizeButtonHighlighted.pngu;62;Resources/CPWindow/Standard/CPWindowStandardMinimizeButton.png94;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/Standard/CPWindowStandardMinimizeButton.pngu;73;Resources/CPWindow/Standard/CPWindowStandardMinimizeButtonHighlighted.png105;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/Standard/CPWindowStandardMinimizeButtonHighlighted.pngu;52;Resources/CPWindow/Standard/CPWindowStandardTop0.png84;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/Standard/CPWindowStandardTop0.pngu;52;Resources/CPWindow/Standard/CPWindowStandardTop1.png84;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/Standard/CPWindowStandardTop1.pngu;52;Resources/CPWindow/Standard/CPWindowStandardTop2.png84;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/Standard/CPWindowStandardTop2.pngp;15;_CPCornerView.ji;8;CPView.jc;627;
 
 {var the_class = objj_allocateClassPair(CPView, "_CPCornerView"),
 meta_class = the_class.isa;objj_registerClassPair(the_class);
@@ -80,7 +80,7 @@ class_addMethods(meta_class, [new objj_method(sel_getUid("run"), function $_CPDi
 }
 objj_msgSend(_CPDisplayServer, "run");
 
-p;21;_CPImageAndTextView.jI;21;Foundation/CPString.ji;9;CPColor.ji;8;CPFont.ji;9;CPImage.ji;13;CPTextField.ji;8;CPView.jc;22839;
+p;21;_CPImageAndTextView.jI;21;Foundation/CPString.ji;9;CPColor.ji;8;CPFont.ji;9;CPImage.ji;13;CPTextField.ji;8;CPView.jc;23355;
 CPTopVerticalTextAlignment = 1,
 CPCenterVerticalTextAlignment = 2,
 CPBottomVerticalTextAlignment = 3;
@@ -277,11 +277,24 @@ class_addMethods(the_class, [new objj_method(sel_getUid("initWithFrame:control:"
 {
     if (_image == anImage)
         return;
+    if (objj_msgSend(_image, "delegate") === self)
+        objj_msgSend(_image, "setDelegate:", nil);
     _image = anImage;
     _flags |= _CPImageAndTextViewImageChangedFlag;
+    if (objj_msgSend(_image, "loadStatus") !== CPImageLoadStatusCompleted)
+        objj_msgSend(_image, "setDelegate:", self);
     objj_msgSend(self, "setNeedsLayout");
 }
-},["void","CPImage"]), new objj_method(sel_getUid("image"), function $_CPImageAndTextView__image(self, _cmd)
+},["void","CPImage"]), new objj_method(sel_getUid("imageDidLoad:"), function $_CPImageAndTextView__imageDidLoad_(self, _cmd, anImage)
+{ with(self)
+{
+    if (anImage === _image)
+    {
+        _flags |= _CPImageAndTextViewImageChangedFlag;
+        objj_msgSend(self, "setNeedsLayout");
+    }
+}
+},["void","id"]), new objj_method(sel_getUid("image"), function $_CPImageAndTextView__image(self, _cmd)
 { with(self)
 {
     return _image;
@@ -594,6 +607,121 @@ class_addMethods(the_class, [new objj_method(sel_getUid("initWithFrame:control:"
     objj_msgSend(self, "setFrameSize:", size);
 }
 },["void"])]);
+}
+
+p;29;_CPToolbarFlexibleSpaceItem.ji;15;CPToolbarItem.jc;1158;
+{var the_class = objj_allocateClassPair(CPToolbarItem, "_CPToolbarFlexibleSpaceItem"),
+meta_class = the_class.isa;objj_registerClassPair(the_class);
+objj_addClassForBundle(the_class, objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
+class_addMethods(the_class, [new objj_method(sel_getUid("initWithItemIdentifier:"), function $_CPToolbarFlexibleSpaceItem__initWithItemIdentifier_(self, _cmd, anIgnoredIdentifier)
+{ with(self)
+{
+    self = objj_msgSendSuper({ receiver:self, super_class:objj_getClass("CPToolbarItem") }, "initWithItemIdentifier:", CPToolbarFlexibleSpaceItemIdentifier);
+    if (self)
+    {
+        objj_msgSend(self, "setMinSize:", CGSizeMake(32.0, 32.0));
+        objj_msgSend(self, "setMaxSize:", CGSizeMake(10000.0, 32.0));
+    }
+    return self;
+}
+},["id","CPString"]), new objj_method(sel_getUid("initWithCoder:"), function $_CPToolbarFlexibleSpaceItem__initWithCoder_(self, _cmd, aCoder)
+{ with(self)
+{
+    return objj_msgSend(self, "init");
+}
+},["id","CPCoder"]), new objj_method(sel_getUid("encodeWithCoder:"), function $_CPToolbarFlexibleSpaceItem__encodeWithCoder_(self, _cmd, aCoder)
+{ with(self)
+{
+}
+},["void","CPCoder"])]);
+}
+
+p;25;_CPToolbarSeparatorItem.ji;15;CPToolbarItem.jc;1136;
+{var the_class = objj_allocateClassPair(CPToolbarItem, "_CPToolbarSeparatorItem"),
+meta_class = the_class.isa;objj_registerClassPair(the_class);
+objj_addClassForBundle(the_class, objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
+class_addMethods(the_class, [new objj_method(sel_getUid("initWithItemIdentifier:"), function $_CPToolbarSeparatorItem__initWithItemIdentifier_(self, _cmd, anIgnoredIdentifier)
+{ with(self)
+{
+    self = objj_msgSendSuper({ receiver:self, super_class:objj_getClass("CPToolbarItem") }, "initWithItemIdentifier:", CPToolbarSeparatorItemIdentifier);
+    if (self)
+    {
+        objj_msgSend(self, "setMinSize:", CGSizeMake(2.0, 0.0));
+        objj_msgSend(self, "setMaxSize:", CGSizeMake(2.0, 100000.0));
+    }
+    return self;
+}
+},["id","CPString"]), new objj_method(sel_getUid("initWithCoder:"), function $_CPToolbarSeparatorItem__initWithCoder_(self, _cmd, aCoder)
+{ with(self)
+{
+    return objj_msgSend(self, "init");
+}
+},["id","CPCoder"]), new objj_method(sel_getUid("encodeWithCoder:"), function $_CPToolbarSeparatorItem__encodeWithCoder_(self, _cmd, aCoder)
+{ with(self)
+{
+}
+},["void","CPCoder"])]);
+}
+
+p;26;_CPToolbarShowColorsItem.ji;15;CPToolbarItem.jc;1675;
+{var the_class = objj_allocateClassPair(CPToolbarItem, "_CPToolbarShowColorsItem"),
+meta_class = the_class.isa;objj_registerClassPair(the_class);
+objj_addClassForBundle(the_class, objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
+class_addMethods(the_class, [new objj_method(sel_getUid("initWithItemIdentifier:"), function $_CPToolbarShowColorsItem__initWithItemIdentifier_(self, _cmd, anIgnoredIdentifier)
+{ with(self)
+{
+    self = objj_msgSendSuper({ receiver:self, super_class:objj_getClass("CPToolbarItem") }, "initWithItemIdentifier:", CPToolbarShowColorsItemIdentifier);
+    if (self)
+    {
+        objj_msgSend(self, "setMinSize:", CGSizeMake(32.0, 32.0));
+        objj_msgSend(self, "setMaxSize:", CGSizeMake(32.0, 32.0));
+        objj_msgSend(self, "setLabel:", "Colors");
+        objj_msgSend(self, "setPaletteLabel:", "Show Colors");
+        objj_msgSend(self, "setTarget:", CPApp);
+        objj_msgSend(self, "setAction:", sel_getUid("orderFrontColorPanel:"));
+        objj_msgSend(self, "setImage:", objj_msgSend(CPImage, "imageNamed:", CPImageNameColorPanel));
+        objj_msgSend(self, "setAlternateImage:", objj_msgSend(CPImage, "imageNamed:", CPImageNameColorPanelHighlighted));
+        objj_msgSend(self, "setToolTip:", "Show the Colors panel.");
+    }
+    return self;
+}
+},["id","CPString"]), new objj_method(sel_getUid("initWithCoder:"), function $_CPToolbarShowColorsItem__initWithCoder_(self, _cmd, aCoder)
+{ with(self)
+{
+    return objj_msgSend(self, "init");
+}
+},["id","CPCoder"]), new objj_method(sel_getUid("encodeWithCoder:"), function $_CPToolbarShowColorsItem__encodeWithCoder_(self, _cmd, aCoder)
+{ with(self)
+{
+}
+},["void","CPCoder"])]);
+}
+
+p;21;_CPToolbarSpaceItem.ji;15;CPToolbarItem.jc;1115;
+{var the_class = objj_allocateClassPair(CPToolbarItem, "_CPToolbarSpaceItem"),
+meta_class = the_class.isa;objj_registerClassPair(the_class);
+objj_addClassForBundle(the_class, objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
+class_addMethods(the_class, [new objj_method(sel_getUid("initWithItemIdentifier:"), function $_CPToolbarSpaceItem__initWithItemIdentifier_(self, _cmd, anIgnoredIdentifier)
+{ with(self)
+{
+    self = objj_msgSendSuper({ receiver:self, super_class:objj_getClass("CPToolbarItem") }, "initWithItemIdentifier:", CPToolbarSpaceItemIdentifier);
+    if (self)
+    {
+        objj_msgSend(self, "setMinSize:", CGSizeMake(32.0, 32.0));
+        objj_msgSend(self, "setMaxSize:", CGSizeMake(32.0, 32.0));
+    }
+    return self;
+}
+},["id","CPString"]), new objj_method(sel_getUid("initWithCoder:"), function $_CPToolbarSpaceItem__initWithCoder_(self, _cmd, aCoder)
+{ with(self)
+{
+    return objj_msgSend(self, "init");
+}
+},["id","CPCoder"]), new objj_method(sel_getUid("encodeWithCoder:"), function $_CPToolbarSpaceItem__encodeWithCoder_(self, _cmd, aCoder)
+{ with(self)
+{
+}
+},["void","CPCoder"])]);
 }
 
 p;8;AppKit.ji;9;CALayer.ji;9;CPAlert.ji;13;CPAnimation.ji;15;CPApplication.ji;14;CPBezierPath.ji;7;CPBox.ji;10;CPButton.ji;13;CPButtonBar.ji;12;CPCheckBox.ji;7;CPCib.ji;16;CPCibConnector.ji;23;CPCibControlConnector.ji;14;CPCibLoading.ji;22;CPCibOutletConnector.ji;12;CPClipView.ji;22;CPCollectionViewItem.ji;18;CPCollectionView.ji;9;CPColor.ji;14;CPColorPanel.ji;13;CPColorWell.ji;17;CPCompatibility.ji;11;CPControl.ji;10;CPCookie.ji;10;CPCursor.ji;12;CPDocument.ji;22;CPDocumentController.ji;9;CPEvent.ji;14;CPFlashMovie.ji;13;CPFlashView.ji;8;CPFont.ji;15;CPFontManager.ji;12;CPGeometry.ji;9;CPImage.ji;13;CPImageView.ji;8;CPMenu.ji;12;CPMenuItem.ji;13;CPOpenPanel.ji;9;CPPanel.ji;14;CPPasteboard.ji;15;CPPopUpButton.ji;21;CPProgressIndicator.ji;9;CPRadio.ji;13;CPResponder.ji;15;CPSearchField.ji;14;CPScrollView.ji;12;CPScroller.ji;19;CPSecureTextField.ji;20;CPSegmentedControl.ji;10;CPShadow.ji;10;CPSlider.ji;13;CPSplitView.ji;11;CPTabView.ji;15;CPTableColumn.ji;13;CPTableView.ji;13;CPTextField.ji;11;CPToolbar.ji;15;CPToolbarItem.ji;8;CPView.ji;18;CPViewController.ji;11;CPWebView.ji;10;CPWindow.ji;20;CPWindowController.jp;17;CPAccordionView.jI;20;Foundation/CPArray.jI;21;Foundation/CPObject.jI;32;Foundation/CPKeyValueObserving.jI;23;Foundation/CPIndexSet.jI;21;Foundation/CPString.jI;15;AppKit/CPView.jc;14896;
@@ -1242,7 +1370,7 @@ var CubicBezierAtTime = CubicBezierAtTime= function(t,p1x,p1y,p2x,p2y,duration)
     return solve(t, solveEpsilon(duration));
 };
 
-p;15;CPApplication.jI;21;Foundation/CPBundle.ji;17;CPCompatibility.ji;9;CPEvent.ji;8;CPMenu.ji;13;CPResponder.ji;22;CPDocumentController.ji;14;CPThemeBlend.ji;14;CPCibLoading.ji;12;CPPlatform.jc;35039;
+p;15;CPApplication.jI;21;Foundation/CPBundle.ji;17;CPCompatibility.ji;9;CPEvent.ji;8;CPMenu.ji;13;CPResponder.ji;22;CPDocumentController.ji;14;CPThemeBlend.ji;14;CPCibLoading.ji;12;CPPlatform.jc;35235;
 var CPMainCibFile = "CPMainCibFile",
     CPMainCibFileHumanFriendly = "Main cib file base name";
 CPApp = nil;
@@ -1802,7 +1930,12 @@ class_addMethods(meta_class, [new objj_method(sel_getUid("sharedApplication"), f
         CPApp = objj_msgSend(objj_msgSend(CPApplication, "alloc"), "init");
     return CPApp;
 }
-},["CPApplication"])]);
+},["CPApplication"]), new objj_method(sel_getUid("defaultThemeName"), function $CPApplication__defaultThemeName(self, _cmd)
+{ with(self)
+{
+    return "Aristo.blend";
+}
+},["CPString"])]);
 }
 var _CPModalSessionMake = function(aWindow, aStopCode)
 {
@@ -1880,7 +2013,7 @@ class_addMethods(meta_class, [new objj_method(sel_getUid("actions"), function $_
 },["BOOL"]), new objj_method(sel_getUid("loadDefaultTheme"), function $_CPAppBootstrapper__loadDefaultTheme(self, _cmd)
 { with(self)
 {
-    var blend = objj_msgSend(objj_msgSend(CPThemeBlend, "alloc"), "initWithContentsOfURL:", objj_msgSend(objj_msgSend(CPBundle, "bundleForClass:", objj_msgSend(CPApplication, "class")), "pathForResource:", "Aristo.blend"));
+    var blend = objj_msgSend(objj_msgSend(CPThemeBlend, "alloc"), "initWithContentsOfURL:", objj_msgSend(objj_msgSend(CPBundle, "bundleForClass:", objj_msgSend(CPApplication, "class")), "pathForResource:", objj_msgSend(CPApplication, "defaultThemeName")));
     objj_msgSend(blend, "loadWithDelegate:", self);
     return YES;
 }
@@ -7085,9 +7218,9 @@ class_addMethods(meta_class, [new objj_method(sel_getUid("flashMovieWithFile:"),
 },["id","CPString"])]);
 }
 
-p;13;CPFlashView.ji;14;CPFlashMovie.ji;8;CPView.jc;2920;
+p;13;CPFlashView.ji;14;CPFlashMovie.ji;8;CPView.jc;4949;
 {var the_class = objj_allocateClassPair(CPView, "CPFlashView"),
-meta_class = the_class.isa;class_addIvars(the_class, [new objj_ivar("_flashMovie"), new objj_ivar("_DOMEmbedElement"), new objj_ivar("_DOMMParamElement"), new objj_ivar("_DOMObjectElement")]);
+meta_class = the_class.isa;class_addIvars(the_class, [new objj_ivar("_flashMovie"), new objj_ivar("_flashVars"), new objj_ivar("_params"), new objj_ivar("_paramElements"), new objj_ivar("_DOMEmbedElement"), new objj_ivar("_DOMMParamElement"), new objj_ivar("_DOMObjectElement")]);
 objj_registerClassPair(the_class);
 objj_addClassForBundle(the_class, objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
 class_addMethods(the_class, [new objj_method(sel_getUid("initWithFrame:"), function $CPFlashView__initWithFrame_(self, _cmd, aFrame)
@@ -7133,7 +7266,56 @@ class_addMethods(the_class, [new objj_method(sel_getUid("initWithFrame:"), funct
 {
     return _flashMovie;
 }
-},["CPFlashMovie"]), new objj_method(sel_getUid("mouseDragged:"), function $CPFlashView__mouseDragged_(self, _cmd, anEvent)
+},["CPFlashMovie"]), new objj_method(sel_getUid("setFlashVars:"), function $CPFlashView__setFlashVars_(self, _cmd, aDictionary)
+{ with(self)
+{
+    _flashVars = aDictionary;
+    var varString = "",
+        enumerator = objj_msgSend(_flashVars, "keyEnumerator");
+    var key;
+    while (key = objj_msgSend(enumerator, "nextObject"))
+        varString = objj_msgSend(varString, "stringByAppendingFormat:", "&%@=%@", key, objj_msgSend(_flashVars, "objectForKey:", key));
+    var param = document.createElement("param");
+    param.name = "flashvars";
+    param.value = varString;
+    _DOMObjectElement.appendChild(param);
+    if (_DOMEmbedElement)
+        _DOMEmbedElement.setAttribute("flashvars", varString);
+}
+},["void","CPDictionary"]), new objj_method(sel_getUid("flashVars"), function $CPFlashView__flashVars(self, _cmd)
+{ with(self)
+{
+    return _flashVars;
+}
+},["CPDictionary"]), new objj_method(sel_getUid("setParameters:"), function $CPFlashView__setParameters_(self, _cmd, aDictionary)
+{ with(self)
+{
+    if (_paramElements)
+    {
+        var elements = objj_msgSend(_paramElements, "allValues"),
+            count = objj_msgSend(elements, "count");
+        for (var i = 0; i < count; i++)
+            _DOMObjectElement.removeChild(objj_msgSend(elements, "objectAtIndex:", i));
+    }
+    _params = aDictionary;
+    _paramElements = objj_msgSend(CPDictionary, "dictionary");
+    var enumerator = objj_msgSend(_params, "keyEnumerator"),
+        key;
+    while (key = objj_msgSend(enumerator, "nextObject"))
+    {
+        var param = document.createElement("param");
+        param.name = key;
+        param.value = objj_msgSend(_params, "objectForKey:", key);
+        _DOMObjectElement.appendChild(param);
+        objj_msgSend(_paramElements, "setObject:forKey:", param, key);
+    }
+}
+},["void","CPDictionary"]), new objj_method(sel_getUid("parameters"), function $CPFlashView__parameters(self, _cmd)
+{ with(self)
+{
+    return _params;
+}
+},["CPDictionary"]), new objj_method(sel_getUid("mouseDragged:"), function $CPFlashView__mouseDragged_(self, _cmd, anEvent)
 { with(self)
 {
     objj_msgSend(objj_msgSend(objj_msgSend(self, "window"), "platformWindow"), "_propagateCurrentDOMEvent:", YES);
@@ -7151,8 +7333,9 @@ class_addMethods(the_class, [new objj_method(sel_getUid("initWithFrame:"), funct
 },["void","CPEvent"])]);
 }
 
-p;8;CPFont.jc;3864;var _CPFonts = {};
-    _CPFontSystemFontFace = "Arial";
+p;8;CPFont.jc;4550;var _CPFonts = {},
+    _CPFontSystemFontFace = "Arial, sans-serif",
+    _CPWrapRegExp = new RegExp("\\s*,\\s*", "g");
 {var the_class = objj_allocateClassPair(CPObject, "CPFont"),
 meta_class = the_class.isa;class_addIvars(the_class, [new objj_ivar("_name"), new objj_ivar("_size"), new objj_ivar("_isBold"), new objj_ivar("_cssString")]);
 objj_registerClassPair(the_class);
@@ -7166,7 +7349,7 @@ class_addMethods(the_class, [new objj_method(sel_getUid("_initWithName:size:bold
         _name = aName;
         _size = aSize;
         _isBold = isBold;
-        _cssString = (_isBold ? "bold " : "") + ROUND(aSize) + "px '" + aName + "'";
+        _cssString = (_isBold ? "bold " : "") + ROUND(_size) + "px " + ((_name === _CPFontSystemFontFace) ? _name : ("\"" + _name.replace(_CPWrapRegExp, '", "') + "\", " + _CPFontSystemFontFace));
         _CPFonts[_cssString] = self;
     }
     return self;
@@ -7190,22 +7373,22 @@ class_addMethods(the_class, [new objj_method(sel_getUid("_initWithName:size:bold
 class_addMethods(meta_class, [new objj_method(sel_getUid("fontWithName:size:"), function $CPFont__fontWithName_size_(self, _cmd, aName, aSize)
 { with(self)
 {
-    return _CPFonts[(NO ? "bold " : "") + ROUND(aSize) + "px '" + aName + "'"] || objj_msgSend(objj_msgSend(CPFont, "alloc"), "_initWithName:size:bold:", aName, aSize, NO);
+    return _CPFonts[(NO ? "bold " : "") + ROUND(aSize) + "px " + ((aName === _CPFontSystemFontFace) ? aName : ("\"" + aName.replace(_CPWrapRegExp, '", "') + "\", " + _CPFontSystemFontFace))] || objj_msgSend(objj_msgSend(CPFont, "alloc"), "_initWithName:size:bold:", aName, aSize, NO);
 }
 },["CPFont","CPString","float"]), new objj_method(sel_getUid("boldFontWithName:size:"), function $CPFont__boldFontWithName_size_(self, _cmd, aName, aSize)
 { with(self)
 {
-    return _CPFonts[(YES ? "bold " : "") + ROUND(aSize) + "px '" + aName + "'"] || objj_msgSend(objj_msgSend(CPFont, "alloc"), "_initWithName:size:bold:", aName, aSize, YES);
+    return _CPFonts[(YES ? "bold " : "") + ROUND(aSize) + "px " + ((aName === _CPFontSystemFontFace) ? aName : ("\"" + aName.replace(_CPWrapRegExp, '", "') + "\", " + _CPFontSystemFontFace))] || objj_msgSend(objj_msgSend(CPFont, "alloc"), "_initWithName:size:bold:", aName, aSize, YES);
 }
 },["CPFont","CPString","float"]), new objj_method(sel_getUid("systemFontOfSize:"), function $CPFont__systemFontOfSize_(self, _cmd, aSize)
 { with(self)
 {
-    return _CPFonts[(NO ? "bold " : "") + ROUND(aSize) + "px '" + _CPFontSystemFontFace + "'"] || objj_msgSend(objj_msgSend(CPFont, "alloc"), "_initWithName:size:bold:", _CPFontSystemFontFace, aSize, NO);
+    return _CPFonts[(NO ? "bold " : "") + ROUND(aSize) + "px " + ((_CPFontSystemFontFace === _CPFontSystemFontFace) ? _CPFontSystemFontFace : ("\"" + _CPFontSystemFontFace.replace(_CPWrapRegExp, '", "') + "\", " + _CPFontSystemFontFace))] || objj_msgSend(objj_msgSend(CPFont, "alloc"), "_initWithName:size:bold:", _CPFontSystemFontFace, aSize, NO);
 }
 },["CPFont","CPSize"]), new objj_method(sel_getUid("boldSystemFontOfSize:"), function $CPFont__boldSystemFontOfSize_(self, _cmd, aSize)
 { with(self)
 {
-    return _CPFonts[(YES ? "bold " : "") + ROUND(aSize) + "px '" + _CPFontSystemFontFace + "'"] || objj_msgSend(objj_msgSend(CPFont, "alloc"), "_initWithName:size:bold:", _CPFontSystemFontFace, aSize, YES);
+    return _CPFonts[(YES ? "bold " : "") + ROUND(aSize) + "px " + ((_CPFontSystemFontFace === _CPFontSystemFontFace) ? _CPFontSystemFontFace : ("\"" + _CPFontSystemFontFace.replace(_CPWrapRegExp, '", "') + "\", " + _CPFontSystemFontFace))] || objj_msgSend(objj_msgSend(CPFont, "alloc"), "_initWithName:size:bold:", _CPFontSystemFontFace, aSize, YES);
 }
 },["CPFont","CPSize"])]);
 }
@@ -7558,7 +7741,7 @@ class_addMethods(meta_class, [new objj_method(sel_getUid("currentContext"), func
 },["CPGraphicsContext","CGContext","BOOL"])]);
 }
 
-p;9;CPImage.jI;21;Foundation/CPBundle.jI;33;Foundation/CPNotificationCenter.jI;21;Foundation/CPObject.jI;22;Foundation/CPRunLoop.jI;21;Foundation/CPString.ji;12;CPGeometry.jc;12364;
+p;9;CPImage.jI;21;Foundation/CPBundle.jI;33;Foundation/CPNotificationCenter.jI;21;Foundation/CPObject.jI;22;Foundation/CPRunLoop.jI;21;Foundation/CPString.ji;12;CPGeometry.jc;13876;
 CPImageLoadStatusInitialized = 0;
 CPImageLoadStatusLoading = 1;
 CPImageLoadStatusCompleted = 2;
@@ -7567,6 +7750,12 @@ CPImageLoadStatusInvalidData = 4;
 CPImageLoadStatusUnexpectedEOF = 5;
 CPImageLoadStatusReadError = 6;
 CPImageDidLoadNotification = "CPImageDidLoadNotification";
+CPImageNameColorPanel = "CPImageNameColorPanel";
+CPImageNameColorPanelHighlighted = "CPImageNameColorPanelHighlighted";
+var imagesForNames = { },
+    AppKitImageForNames = { };
+AppKitImageForNames[CPImageNameColorPanel] = CGSizeMake(26.0, 29.0);
+AppKitImageForNames[CPImageNameColorPanelHighlighted] = CGSizeMake(26.0, 29.0);
 CPImageInBundle= function(aFilename, aSize, aBundle)
 {
     if (!aBundle)
@@ -7575,8 +7764,12 @@ CPImageInBundle= function(aFilename, aSize, aBundle)
         return objj_msgSend(objj_msgSend(CPImage, "alloc"), "initWithContentsOfFile:size:", objj_msgSend(aBundle, "pathForResource:", aFilename), aSize);
     return objj_msgSend(objj_msgSend(CPImage, "alloc"), "initWithContentsOfFile:", objj_msgSend(aBundle, "pathForResource:", aFilename));
 }
+CPAppKitImage= function(aFilename, aSize)
+{
+    return CPImageInBundle(aFilename, aSize, objj_msgSend(CPBundle, "bundleForClass:", objj_msgSend(CPView, "class")));
+}
 {var the_class = objj_allocateClassPair(CPObject, "CPImage"),
-meta_class = the_class.isa;class_addIvars(the_class, [new objj_ivar("_size"), new objj_ivar("_filename"), new objj_ivar("_delegate"), new objj_ivar("_loadStatus"), new objj_ivar("_image")]);
+meta_class = the_class.isa;class_addIvars(the_class, [new objj_ivar("_size"), new objj_ivar("_filename"), new objj_ivar("_name"), new objj_ivar("_delegate"), new objj_ivar("_loadStatus"), new objj_ivar("_image")]);
 objj_registerClassPair(the_class);
 objj_addClassForBundle(the_class, objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
 class_addMethods(the_class, [new objj_method(sel_getUid("init"), function $CPImage__init(self, _cmd)
@@ -7627,7 +7820,22 @@ class_addMethods(the_class, [new objj_method(sel_getUid("init"), function $CPIma
 {
     return _size;
 }
-},["CGSize"]), new objj_method(sel_getUid("setDelegate:"), function $CPImage__setDelegate_(self, _cmd, aDelegate)
+},["CGSize"]), new objj_method(sel_getUid("setName:"), function $CPImage__setName_(self, _cmd, aName)
+{ with(self)
+{
+    if (_name === aName)
+        return;
+    if (imagesForNames[aName] === self)
+        imagesForNames[aName] = nil;
+    _name = aName;
+    imagesForNames[aName] = self;
+}
+},["void","CPString"]), new objj_method(sel_getUid("name"), function $CPImage__name(self, _cmd)
+{ with(self)
+{
+    return _name;
+}
+},["CPString"]), new objj_method(sel_getUid("setDelegate:"), function $CPImage__setDelegate_(self, _cmd, aDelegate)
 { with(self)
 {
     _delegate = aDelegate;
@@ -7684,7 +7892,7 @@ class_addMethods(the_class, [new objj_method(sel_getUid("init"), function $CPIma
             objj_msgSend(self, "_derefFromImage");
         }
     _image.src = _filename;
-    isSynchronous = NO;
+    window.setTimeout(function() { isSynchronous = NO; }, 0);
 }
 },["void"]), new objj_method(sel_getUid("isThreePartImage"), function $CPImage__isThreePartImage(self, _cmd)
 { with(self)
@@ -7728,6 +7936,22 @@ class_addMethods(the_class, [new objj_method(sel_getUid("init"), function $CPIma
         objj_msgSend(_delegate, "imageDidAbort:", self);
 }
 },["void"])]);
+class_addMethods(meta_class, [new objj_method(sel_getUid("imageNamed:"), function $CPImage__imageNamed_(self, _cmd, aName)
+{ with(self)
+{
+    var image = imagesForNames[aName];
+    if (image)
+        return image;
+    var imageOrSize = AppKitImageForNames[aName];
+    if (!imageOrSize.isa)
+    {
+        imageOrSize = CPAppKitImage("CPImage/" + aName + ".png", imageOrSize);
+        objj_msgSend(imageOrSize, "setName:", aName);
+        AppKitImageForNames[aName] = imageOrSize;
+    }
+    return imageOrSize;
+}
+},["id","CPString"])]);
 }
 {
 var the_class = objj_getClass("CPImage")
@@ -13655,12 +13879,12 @@ var meta_class = the_class.isa;class_addMethods(the_class, [new objj_method(sel_
 },["CGSize","CPFont","float"])]);
 }
 
-p;15;CPTableColumn.jI;25;Foundation/CPDictionary.jI;21;Foundation/CPObject.jI;29;Foundation/CPSortDescriptor.jI;21;Foundation/CPString.ji;19;CPTableHeaderView.jc;12528;
+p;15;CPTableColumn.jI;25;Foundation/CPDictionary.jI;21;Foundation/CPObject.jI;29;Foundation/CPSortDescriptor.jI;21;Foundation/CPString.ji;19;CPTableHeaderView.jc;12907;
 CPTableColumnNoResizing = 0;
 CPTableColumnAutoresizingMask = 1;
 CPTableColumnUserResizingMask = 2;
 {var the_class = objj_allocateClassPair(CPObject, "CPTableColumn"),
-meta_class = the_class.isa;class_addIvars(the_class, [new objj_ivar("_tableView"), new objj_ivar("_headerView"), new objj_ivar("_dataView"), new objj_ivar("_dataViewData"), new objj_ivar("_width"), new objj_ivar("_minWidth"), new objj_ivar("_maxWidth"), new objj_ivar("_identifier"), new objj_ivar("_isEditable"), new objj_ivar("_sortDescriptorPrototype"), new objj_ivar("_isHidden"), new objj_ivar("_headerToolTip")]);
+meta_class = the_class.isa;class_addIvars(the_class, [new objj_ivar("_tableView"), new objj_ivar("_headerView"), new objj_ivar("_dataView"), new objj_ivar("_dataViewData"), new objj_ivar("_width"), new objj_ivar("_minWidth"), new objj_ivar("_maxWidth"), new objj_ivar("_resizingMask"), new objj_ivar("_identifier"), new objj_ivar("_isEditable"), new objj_ivar("_sortDescriptorPrototype"), new objj_ivar("_isHidden"), new objj_ivar("_headerToolTip")]);
 objj_registerClassPair(the_class);
 objj_addClassForBundle(the_class, objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
 class_addMethods(the_class, [new objj_method(sel_getUid("init"), function $CPTableColumn__init(self, _cmd)
@@ -13680,7 +13904,10 @@ class_addMethods(the_class, [new objj_method(sel_getUid("init"), function $CPTab
         _maxWidth = 1000000.0;
         objj_msgSend(self, "setIdentifier:", anIdentifier);
         objj_msgSend(self, "setHeaderView:", objj_msgSend(CPTextField, "new"));
-        objj_msgSend(self, "setDataView:", objj_msgSend(CPTextField, "new"));
+        var textDataView = objj_msgSend(CPTextField, "new");
+        objj_msgSend(textDataView, "setValue:forThemeAttribute:inState:", objj_msgSend(CPColor, "whiteColor"), "text-color", CPThemeStateHighlighted);
+        objj_msgSend(textDataView, "setValue:forThemeAttribute:inState:", objj_msgSend(CPFont, "boldSystemFontOfSize:", 12), "font", CPThemeStateHighlighted);
+        objj_msgSend(self, "setDataView:", textDataView);
     }
     return self;
 }
@@ -13767,7 +13994,7 @@ class_addMethods(the_class, [new objj_method(sel_getUid("init"), function $CPTab
 },["float"]), new objj_method(sel_getUid("sizeToFit"), function $CPTableColumn__sizeToFit(self, _cmd)
 { with(self)
 {
-    var width = _CGRectGetWidth(objj_msgSend(_headerView, "frame"));
+    var width = (objj_msgSend(_headerView, "frame").size.width);
     if (width < objj_msgSend(self, "minWidth"))
         objj_msgSend(self, "setMinWidth:", width);
     else if (width > objj_msgSend(self, "maxWidth"))
@@ -14062,7 +14289,7 @@ _tableView = newValue;
 },["void","CGRect"])]);
 }
 
-p;13;CPTableView.jI;20;Foundation/CPArray.ji;11;CPControl.ji;15;CPTableColumn.ji;15;_CPCornerView.ji;12;CPScroller.jc;103142;
+p;13;CPTableView.jI;20;Foundation/CPArray.ji;11;CPControl.ji;15;CPTableColumn.ji;15;_CPCornerView.ji;12;CPScroller.jc;102895;
 CPTableViewColumnDidMoveNotification = "CPTableViewColumnDidMoveNotification";
 CPTableViewColumnDidResizeNotification = "CPTableViewColumnDidResizeNotification";
 CPTableViewSelectionDidChangeNotification = "CPTableViewSelectionDidChangeNotification";
@@ -14133,7 +14360,7 @@ class_addMethods(the_class, [new objj_method(sel_getUid("initWithTableView:"), f
 },["void","CGRect"])]);
 }
 {var the_class = objj_allocateClassPair(CPControl, "CPTableView"),
-meta_class = the_class.isa;class_addIvars(the_class, [new objj_ivar("_dataSource"), new objj_ivar("_implementedDataSourceMethods"), new objj_ivar("_delegate"), new objj_ivar("_implementedDelegateMethods"), new objj_ivar("_tableColumns"), new objj_ivar("_tableColumnRanges"), new objj_ivar("_dirtyTableColumnRangeIndex"), new objj_ivar("_numberOfHiddenColumns"), new objj_ivar("_reloadAllRows"), new objj_ivar("_objectValues"), new objj_ivar("_exposedRows"), new objj_ivar("_exposedColumns"), new objj_ivar("_dataViewsForTableColumns"), new objj_ivar("_cachedDataViews"), new objj_ivar("_allowsColumnReordering"), new objj_ivar("_allowsColumnResizing"), new objj_ivar("_allowsMultipleSelection"), new objj_ivar("_allowsEmptySelection"), new objj_ivar("_intercellSpacing"), new objj_ivar("_rowHeight"), new objj_ivar("_usesAlternatingRowBackgroundColors"), new objj_ivar("_alternatingRowBackgroundColors"), new objj_ivar("_selectionHighlightMask"), new objj_ivar("_selectionHightlightColor"), new objj_ivar("_currentHighlightedTableColumn"), new objj_ivar("_gridStyleMask"), new objj_ivar("_gridColor"), new objj_ivar("_numberOfRows"), new objj_ivar("_headerView"), new objj_ivar("_cornerView"), new objj_ivar("_selectedColumnIndexes"), new objj_ivar("_selectedRowIndexes"), new objj_ivar("_selectionAnchorRow"), new objj_ivar("_previouslySelectedRowIndexes"), new objj_ivar("_startTrackingPoint"), new objj_ivar("_startTrackingTimestamp"), new objj_ivar("_trackingPointMovedOutOfClickSlop"), new objj_ivar("_editingCellIndex"), new objj_ivar("_tableDrawView"), new objj_ivar("_doubleAction"), new objj_ivar("_columnAutoResizingStyle"), new objj_ivar("_verticalMotionCanDrag"), new objj_ivar("_destinationDragStyle"), new objj_ivar("_isSelectingSession"), new objj_ivar("_draggedRowIndexes"), new objj_ivar("_dropOperationFeedbackView"), new objj_ivar("_dragOperationDefaultMask"), new objj_ivar("_retargetedDropRow"), new objj_ivar("_retargetedDropOperation")]);
+meta_class = the_class.isa;class_addIvars(the_class, [new objj_ivar("_dataSource"), new objj_ivar("_implementedDataSourceMethods"), new objj_ivar("_delegate"), new objj_ivar("_implementedDelegateMethods"), new objj_ivar("_tableColumns"), new objj_ivar("_tableColumnRanges"), new objj_ivar("_dirtyTableColumnRangeIndex"), new objj_ivar("_numberOfHiddenColumns"), new objj_ivar("_reloadAllRows"), new objj_ivar("_objectValues"), new objj_ivar("_exposedRows"), new objj_ivar("_exposedColumns"), new objj_ivar("_dataViewsForTableColumns"), new objj_ivar("_cachedDataViews"), new objj_ivar("_allowsColumnReordering"), new objj_ivar("_allowsColumnResizing"), new objj_ivar("_allowsMultipleSelection"), new objj_ivar("_allowsEmptySelection"), new objj_ivar("_intercellSpacing"), new objj_ivar("_rowHeight"), new objj_ivar("_usesAlternatingRowBackgroundColors"), new objj_ivar("_alternatingRowBackgroundColors"), new objj_ivar("_selectionHighlightMask"), new objj_ivar("_selectionHightlightColor"), new objj_ivar("_currentHighlightedTableColumn"), new objj_ivar("_gridStyleMask"), new objj_ivar("_gridColor"), new objj_ivar("_numberOfRows"), new objj_ivar("_headerView"), new objj_ivar("_cornerView"), new objj_ivar("_selectedColumnIndexes"), new objj_ivar("_selectedRowIndexes"), new objj_ivar("_selectionAnchorRow"), new objj_ivar("_previouslySelectedRowIndexes"), new objj_ivar("_startTrackingPoint"), new objj_ivar("_startTrackingTimestamp"), new objj_ivar("_trackingPointMovedOutOfClickSlop"), new objj_ivar("_editingCellIndex"), new objj_ivar("_tableDrawView"), new objj_ivar("_doubleAction"), new objj_ivar("_columnAutoResizingStyle")]);
 objj_registerClassPair(the_class);
 objj_addClassForBundle(the_class, objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
 class_addMethods(the_class, [new objj_method(sel_getUid("initWithFrame:"), function $CPTableView__initWithFrame_(self, _cmd, aFrame)
@@ -14147,7 +14374,6 @@ class_addMethods(the_class, [new objj_method(sel_getUid("initWithFrame:"), funct
         _allowsMultipleSelection = NO;
         _allowsEmptySelection = YES;
         _allowsColumnSelection = NO;
-        _draggedRowIndexes = nil;
         _tableViewFlags = 0;
         _selectionHighlightMask = CPTableViewSelectionHighlightStyleRegular;
         objj_msgSend(self, "setUsesAlternatingRowBackgroundColors:", NO);
@@ -14173,7 +14399,12 @@ class_addMethods(the_class, [new objj_method(sel_getUid("initWithFrame:"), funct
         _cornerView = objj_msgSend(objj_msgSend(_CPCornerView, "alloc"), "initWithFrame:", CGRectMake(0, 0, objj_msgSend(CPScroller, "scrollerWidth"), CGRectGetHeight(objj_msgSend(_headerView, "frame"))));
         _selectedColumnIndexes = objj_msgSend(CPIndexSet, "indexSet");
         _selectedRowIndexes = objj_msgSend(CPIndexSet, "indexSet");
+        _draggedRowIndexes = objj_msgSend(CPIndexSet, "indexSet");
         _verticalMotionCanDrag = YES;
+        _isSelectingSession = NO;
+        _retargetedDropRow = nil;
+        _retargetedDropOperation = nil;
+        _dragOperationDefaultMask = nil;
         _destinationDragStyle = CPTableViewDraggingDestinationFeedbackStyleRegular;
         _dropOperationFeedbackView = objj_msgSend(objj_msgSend(_dropOperationDrawingView, "alloc"), "initWithFrame:", { origin: { x:0.0, y:0.0 }, size: { width:0.0, height:0.0 } });
         objj_msgSend(self, "addSubview:", _dropOperationFeedbackView);
@@ -15744,7 +15975,6 @@ class_addMethods(the_class, [new objj_method(sel_getUid("initWithFrame:"), funct
 },["BOOL"]), new objj_method(sel_getUid("keyDown:"), function $CPTableView__keyDown_(self, _cmd, anEvent)
 { with(self)
 {
-    objj_msgSendSuper({ receiver:self, super_class:objj_getClass("CPControl") }, "keyDown:", anEvent);
     objj_msgSend(self, "interpretKeyEvents:", objj_msgSend(CPArray, "arrayWithObject:", anEvent));
 }
 },["void","CPEvent"]), new objj_method(sel_getUid("interpretKeyEvents:"), function $CPTableView__interpretKeyEvents_(self, _cmd, events)
@@ -15821,7 +16051,7 @@ class_addMethods(the_class, [new objj_method(sel_getUid("initWithFrame:"), funct
          {
             objj_msgSend(self, "scrollRowToVisible:", i);
             objj_msgSend(self, "_noteSelectionDidChange");
-          }
+         }
     }
     }
 }
@@ -17897,7 +18127,7 @@ return _themes;
 },["void","CPBundle"])]);
 }
 
-p;11;CPToolbar.jI;21;Foundation/CPObject.ji;15;CPPopUpButton.ji;15;CPToolbarItem.jc;33154;
+p;11;CPToolbar.jI;21;Foundation/CPObject.ji;15;CPPopUpButton.ji;15;CPToolbarItem.jc;35326;
 CPToolbarDisplayModeDefault = 0;
 CPToolbarDisplayModeIconAndLabel = 1;
 CPToolbarDisplayModeIconOnly = 2;
@@ -17966,7 +18196,7 @@ class_addMethods(the_class, [new objj_method(sel_getUid("init"), function $CPToo
 },["void","CPWindow"]), new objj_method(sel_getUid("setDelegate:"), function $CPToolbar__setDelegate_(self, _cmd, aDelegate)
 { with(self)
 {
-    if (_delegate == aDelegate)
+    if (_delegate === aDelegate)
         return;
     _delegate = aDelegate;
     objj_msgSend(self, "_reloadToolbarItems");
@@ -17990,25 +18220,28 @@ class_addMethods(the_class, [new objj_method(sel_getUid("init"), function $CPToo
 },["CPView"]), new objj_method(sel_getUid("_reloadToolbarItems"), function $CPToolbar___reloadToolbarItems(self, _cmd)
 { with(self)
 {
-    if (!_delegate)
-        return;
-    var count = objj_msgSend(_itemIdentifiers, "count");
-    if (!count)
+    _itemIdentifiers = objj_msgSend(_defaultItems, "valueForKey:", "itemIdentifier") || [];
+    if (_delegate)
     {
-         _itemIdentifiers = objj_msgSend(objj_msgSend(_delegate, "toolbarDefaultItemIdentifiers:", self), "mutableCopy");
-         count = objj_msgSend(_itemIdentifiers, "count");
+        var itemIdentifiersFromDelegate = objj_msgSend(objj_msgSend(_delegate, "toolbarDefaultItemIdentifiers:", self), "mutableCopy");
+        if (itemIdentifiersFromDelegate)
+            _itemIdentifiers = objj_msgSend(_itemIdentifiers, "arrayByAddingObjectsFromArray:", itemIdentifiersFromDelegate);
     }
+    var index = 0,
+        count = objj_msgSend(_itemIdentifiers, "count");
     _items = [];
-    var index = 0;
     for (; index < count; ++index)
     {
         var identifier = _itemIdentifiers[index],
             item = objj_msgSend(CPToolbarItem, "_standardItemWithItemIdentifier:", identifier);
         if (!item)
+            item = objj_msgSend(_identifiedItems, "objectForKey:", identifier);
+        if (!item && _delegate)
             item = objj_msgSend(_delegate, "toolbar:itemForItemIdentifier:willBeInsertedIntoToolbar:", self, identifier, YES);
         item = objj_msgSend(item, "copy");
-        if (item == nil)
-            objj_msgSend(CPException, "raise:reason:", CPInvalidArgumentException, sprintf("_delegate %s returned nil toolbar item returned for identifier %s", _delegate, identifier));
+        if (item === nil)
+            objj_msgSend(CPException, "raise:reason:", CPInvalidArgumentException, "Toolbar delegate " + _delegate + " returned nil toolbar item for identifier \"" + identifier + "\"");
+        item._toolbar = self;
         objj_msgSend(_items, "addObject:", item);
     }
     _itemsSortedByVisibilityPriority = objj_msgSend(_items, "sortedArrayUsingFunction:context:", _CPToolbarItemVisibilityPriorityCompare, NULL);
@@ -18065,12 +18298,36 @@ class_addMethods(the_class, [new objj_method(sel_getUid("init"), function $CPToo
 },["id","CPArray"]), new objj_method(sel_getUid("_defaultToolbarItems"), function $CPToolbar___defaultToolbarItems(self, _cmd)
 { with(self)
 {
-    if (!_defaultItems)
-        if (objj_msgSend(_delegate, "respondsToSelector:", sel_getUid("toolbarDefaultItemIdentifiers:")))
-            _defaultItems = objj_msgSend(self, "_itemsWithIdentifiers:", objj_msgSend(_delegate, "toolbarDefaultItemIdentifiers:", self));
+    if (!_defaultItems && objj_msgSend(_delegate, "respondsToSelector:", sel_getUid("toolbarDefaultItemIdentifiers:")))
+    {
+        _defaultItems = [];
+        var identifiers = objj_msgSend(_delegate, "toolbarDefaultItemIdentifiers:", self),
+            index = 0,
+            count = objj_msgSend(identifiers, "count");
+        for (; index < count; ++index)
+            objj_msgSend(_defaultItems, "addObject:", objj_msgSend(self, "_itemForItemIdentifier:willBeInsertedIntoToolbar:", identifiers[index], NO));
+    }
     return _defaultItems;
 }
-},["id"])]);
+},["id"]), new objj_method(sel_getUid("toolbarItemDidChange:"), function $CPToolbar__toolbarItemDidChange_(self, _cmd, anItem)
+{ with(self)
+{
+    if (objj_msgSend(_identifiedItems, "objectForKey:", objj_msgSend(anItem, "itemIdentifier")))
+        objj_msgSend(_identifiedItems, "setObject:forKey:", anItem, objj_msgSend(anItem, "itemIdentifier"));
+    var index = 0,
+        count = objj_msgSend(_items, "count");
+    for (; index <= count; ++index)
+    {
+        var item = _items[index];
+        if (objj_msgSend(item, "itemIdentifier") === objj_msgSend(anItem, "itemIdentifier"))
+        {
+            _items[index] = anItem;
+            _itemsSortedByVisibilityPriority = objj_msgSend(_items, "sortedArrayUsingFunction:context:", _CPToolbarItemVisibilityPriorityCompare, NULL);
+            objj_msgSend(_toolbarView, "reloadToolbarItems");
+        }
+    }
+}
+},["void","CPToolbarItem"])]);
 class_addMethods(meta_class, [new objj_method(sel_getUid("initialize"), function $CPToolbar__initialize(self, _cmd)
 { with(self)
 {
@@ -18120,9 +18377,11 @@ var meta_class = the_class.isa;class_addMethods(the_class, [new objj_method(sel_
         _defaultItems = objj_msgSend(aCoder, "decodeObjectForKey:", CPToolbarDefaultItemsKey);
         _allowedItems = objj_msgSend(aCoder, "decodeObjectForKey:", CPToolbarAllowedItemsKey);
         _selectableItems = objj_msgSend(aCoder, "decodeObjectForKey:", CPToolbarSelectableItemsKey);
+        objj_msgSend(objj_msgSend(_identifiedItems, "allValues"), "makeObjectsPerformSelector:withObject:", sel_getUid("_setToolbar:"), self);
         _items = [];
         objj_msgSend(CPToolbar, "_addToolbar:forIdentifier:", self, _identifier);
         objj_msgSend(self, "setDelegate:", objj_msgSend(aCoder, "decodeObjectForKey:", CPToolbarDelegateKey));
+        objj_msgSend(self, "_reloadToolbarItems");
     }
     return self;
 }
@@ -18367,7 +18626,7 @@ return _visibleItems;
 class_addMethods(meta_class, [new objj_method(sel_getUid("initialize"), function $_CPToolbarView__initialize(self, _cmd)
 { with(self)
 {
-    if (self != objj_msgSend(_CPToolbarView, "class"))
+    if (self !== objj_msgSend(_CPToolbarView, "class"))
         return;
     var bundle = objj_msgSend(CPBundle, "bundleForClass:", self);
     _CPToolbarViewExtraItemsImage = objj_msgSend(objj_msgSend(CPImage, "alloc"), "initWithContentsOfFile:size:",  objj_msgSend(bundle, "pathForResource:", "_CPToolbarView/_CPToolbarViewExtraItemsImage.png"),  CPSizeMake(10.0, 15.0));
@@ -18418,7 +18677,11 @@ return _maxSize;
         objj_msgSend(self, "addSubview:", _labelField);
         objj_msgSend(self, "updateFromItem");
         _toolbar = aToolbar;
-        objj_msgSend(_toolbarItem, "addObserver:forKeyPath:options:context:", self, "enabled", 0, NULL);
+        var keyPaths = ["label", "image", "alternateImage", "minSize", "maxSize", "target", "action", "enabled"],
+            index = 0,
+            count = objj_msgSend(keyPaths, "count");
+        for (; index < count; ++index)
+            objj_msgSend(_toolbarItem, "addObserver:forKeyPath:options:context:", self, keyPaths[index], 0, NULL);
     }
     return self;
 }
@@ -18572,22 +18835,28 @@ return _maxSize;
 {
     if (aKeyPath === "enabled")
         objj_msgSend(self, "setEnabled:", objj_msgSend(anObject, "isEnabled"));
+    else if (aKeyPath === "target")
+        objj_msgSend(self, "setTarget:", objj_msgSend(anObject, "target"));
+    else if (aKeyPath === "action")
+        objj_msgSend(self, "setAction:", objj_msgSend(anObject, "action"));
+    else
+        objj_msgSend(self, "updateFromItem");
 }
 },["void","CPString","id","CPDictionary","id"])]);
 }
 
-p;15;CPToolbarItem.jI;21;Foundation/CPObject.jI;21;Foundation/CPString.jI;16;AppKit/CPImage.jI;15;AppKit/CPView.jc;18384;
+p;15;CPToolbarItem.jI;21;Foundation/CPObject.jI;21;Foundation/CPString.jI;16;AppKit/CPImage.jI;15;AppKit/CPView.jc;18445;
 CPToolbarItemVisibilityPriorityStandard = 0;
 CPToolbarItemVisibilityPriorityLow = -1000;
 CPToolbarItemVisibilityPriorityHigh = 1000;
 CPToolbarItemVisibilityPriorityUser = 2000;
-CPToolbarSeparatorItemIdentifier = "CPToolbarSeparatorItemIdentifier";
-CPToolbarSpaceItemIdentifier = "CPToolbarSpaceItemIdentifier";
-CPToolbarFlexibleSpaceItemIdentifier = "CPToolbarFlexibleSpaceItemIdentifier";
-CPToolbarShowColorsItemIdentifier = "CPToolbarShowColorsItemIdentifier";
-CPToolbarShowFontsItemIdentifier = "CPToolbarShowFontsItemIdentifier";
-CPToolbarCustomizeToolbarItemIdentifier = "CPToolbarCustomizeToolbarItemIdentifier";
-CPToolbarPrintItemIdentifier = "CPToolbarPrintItemIdentifier";
+CPToolbarSeparatorItemIdentifier = "CPToolbarSeparatorItem";
+CPToolbarSpaceItemIdentifier = "CPToolbarSpaceItem";
+CPToolbarFlexibleSpaceItemIdentifier = "CPToolbarFlexibleSpaceItem";
+CPToolbarShowColorsItemIdentifier = "CPToolbarShowColorsItem";
+CPToolbarShowFontsItemIdentifier = "CPToolbarShowFontsItem";
+CPToolbarCustomizeToolbarItemIdentifier = "CPToolbarCustomizeToolbarItem";
+CPToolbarPrintItemIdentifier = "CPToolbarPrintItem";
 {var the_class = objj_allocateClassPair(CPObject, "CPToolbarItem"),
 meta_class = the_class.isa;class_addIvars(the_class, [new objj_ivar("_itemIdentifier"), new objj_ivar("_toolbar"), new objj_ivar("_label"), new objj_ivar("_paletteLabel"), new objj_ivar("_toolTip"), new objj_ivar("_tag"), new objj_ivar("_target"), new objj_ivar("_action"), new objj_ivar("_isEnabled"), new objj_ivar("_image"), new objj_ivar("_alternateImage"), new objj_ivar("_view"), new objj_ivar("_minSize"), new objj_ivar("_maxSize"), new objj_ivar("_visibilityPriority"), new objj_ivar("_autovalidates")]);
 objj_registerClassPair(the_class);
@@ -18609,6 +18878,7 @@ class_addMethods(the_class, [new objj_method(sel_getUid("init"), function $CPToo
         _minSize = CGSizeMakeZero();
         _maxSize = CGSizeMakeZero();
         _visibilityPriority = CPToolbarItemVisibilityPriorityStandard;
+        _autovalidates = YES;
     }
     return self;
 }
@@ -18622,7 +18892,12 @@ class_addMethods(the_class, [new objj_method(sel_getUid("init"), function $CPToo
 {
     return _toolbar;
 }
-},["CPToolbar"]), new objj_method(sel_getUid("label"), function $CPToolbarItem__label(self, _cmd)
+},["CPToolbar"]), new objj_method(sel_getUid("_setToolbar:"), function $CPToolbarItem___setToolbar_(self, _cmd, aToolbar)
+{ with(self)
+{
+    _toolbar = aToolbar;
+}
+},["void","CPToolbar"]), new objj_method(sel_getUid("label"), function $CPToolbarItem__label(self, _cmd)
 { with(self)
 {
     return _label;
@@ -18729,8 +19004,8 @@ class_addMethods(the_class, [new objj_method(sel_getUid("init"), function $CPToo
     _image = anImage;
     if (!_image)
         return;
-    if (_minSize.width == 0 && _minSize.height == 0 &&
-        _maxSize.width == 0 && _maxSize.height == 0)
+    if (_minSize.width === 0 && _minSize.height === 0 &&
+        _maxSize.width === 0 && _maxSize.height === 0)
     {
         var imageSize = objj_msgSend(_image, "size");
         if (imageSize.width > 0 || imageSize.height > 0)
@@ -18781,6 +19056,8 @@ class_addMethods(the_class, [new objj_method(sel_getUid("init"), function $CPToo
 },["CGSize"]), new objj_method(sel_getUid("setMinSize:"), function $CPToolbarItem__setMinSize_(self, _cmd, aMinSize)
 { with(self)
 {
+    if(!aMinSize.height || !aMinSize.width)
+        return;
     _minSize = CGSizeMakeCopy(aMinSize);
     _maxSize = CGSizeMake(MAX(_minSize.width, _maxSize.width), MAX(_minSize.height, _maxSize.height));
 }
@@ -18792,6 +19069,8 @@ class_addMethods(the_class, [new objj_method(sel_getUid("init"), function $CPToo
 },["CGSize"]), new objj_method(sel_getUid("setMaxSize:"), function $CPToolbarItem__setMaxSize_(self, _cmd, aMaxSize)
 { with(self)
 {
+    if(!aMaxSize.height || !aMaxSize.width)
+        return;
     _maxSize = CGSizeMakeCopy(aMaxSize);
     _minSize = CGSizeMake(MIN(_minSize.width, _maxSize.width), MIN(_minSize.height, _maxSize.height));
 }
@@ -18840,7 +19119,7 @@ class_addMethods(the_class, [new objj_method(sel_getUid("init"), function $CPToo
 }
 },["void","BOOL"])]);
 }
-var CPToolbarItemIdentifierKey = "CPToolbarItemIdentifierKey",
+var CPToolbarItemItemIdentifierKey = "CPToolbarItemItemIdentifierKey",
     CPToolbarItemLabelKey = "CPToolbarItemLabelKey",
     CPToolbarItemPaletteLabelKey = "CPToolbarItemPaletteLabelKey",
     CPToolbarItemToolTipKey = "CPToolbarItemToolTipKey",
@@ -18853,7 +19132,8 @@ var CPToolbarItemIdentifierKey = "CPToolbarItemIdentifierKey",
     CPToolbarItemViewKey = "CPToolbarItemViewKey",
     CPToolbarItemMinSizeKey = "CPToolbarItemMinSizeKey",
     CPToolbarItemMaxSizeKey = "CPToolbarItemMaxSizeKey",
-    CPToolbarItemVisibilityPriorityKey = "CPToolbarItemVisibilityPriorityKey";
+    CPToolbarItemVisibilityPriorityKey = "CPToolbarItemVisibilityPriorityKey",
+    CPToolbarItemAutovalidatesKey = "CPToolbarItemAutovalidatesKey";
 {
 var the_class = objj_getClass("CPToolbarItem")
 if(!the_class) objj_exception_throw(new objj_exception(OBJJClassNotFoundException, "*** Could not find definition for class \"CPToolbarItem\""));
@@ -18863,20 +19143,21 @@ var meta_class = the_class.isa;class_addMethods(the_class, [new objj_method(sel_
     self = objj_msgSendSuper({ receiver:self, super_class:objj_getClass("CPObject") }, "init");
     if (self)
     {
-        _itemIdentifier = objj_msgSend(aCoder, "decodeObjectForKey:", CPToolbarItemIdentifierKey);
+        _itemIdentifier = objj_msgSend(aCoder, "decodeObjectForKey:", CPToolbarItemItemIdentifierKey);
+        _minSize = objj_msgSend(aCoder, "decodeSizeForKey:", CPToolbarItemMinSizeKey);
+        _maxSize = objj_msgSend(aCoder, "decodeSizeForKey:", CPToolbarItemMaxSizeKey);
         objj_msgSend(self, "setLabel:", objj_msgSend(aCoder, "decodeObjectForKey:", CPToolbarItemLabelKey));
         objj_msgSend(self, "setPaletteLabel:", objj_msgSend(aCoder, "decodeObjectForKey:", CPToolbarItemPaletteLabelKey));
         objj_msgSend(self, "setToolTip:", objj_msgSend(aCoder, "decodeObjectForKey:", CPToolbarItemToolTipKey));
         objj_msgSend(self, "setTag:", objj_msgSend(aCoder, "decodeObjectForKey:", CPToolbarItemTagKey));
         objj_msgSend(self, "setTarget:", objj_msgSend(aCoder, "decodeObjectForKey:", CPToolbarItemTargetKey));
-        objj_msgSend(self, "setAction:", objj_msgSend(aCoder, "decodeObjectForKey:", CPToolbarItemActionKey));
+        objj_msgSend(self, "setAction:", CPSelectorFromString(objj_msgSend(aCoder, "decodeObjectForKey:", CPToolbarItemActionKey)));
         objj_msgSend(self, "setEnabled:", objj_msgSend(aCoder, "decodeBoolForKey:", CPToolbarItemEnabledKey));
-        objj_msgSend(self, "setImage:", objj_msgSend(aCoder, "decodeBoolForKey:", CPToolbarItemImageKey));
-        objj_msgSend(self, "setAlternateImage:", objj_msgSend(aCoder, "decodeBoolForKey:", CPToolbarItemAlternateImageKey));
+        objj_msgSend(self, "setImage:", objj_msgSend(aCoder, "decodeObjectForKey:", CPToolbarItemImageKey));
+        objj_msgSend(self, "setAlternateImage:", objj_msgSend(aCoder, "decodeObjectForKey:", CPToolbarItemAlternateImageKey));
         objj_msgSend(self, "setView:", objj_msgSend(aCoder, "decodeObjectForKey:", CPToolbarItemViewKey));
-        objj_msgSend(self, "setMinSize:", objj_msgSend(aCoder, "decodeSizeForKey:", CPToolbarItemMinSizeKey));
-        objj_msgSend(self, "setMaxSize:", objj_msgSend(aCoder, "decodeSizeForKey:", CPToolbarItemMaxSizeKey));
         objj_msgSend(self, "setVisibilityPriority:", objj_msgSend(aCoder, "decodeIntForKey:", CPToolbarItemVisibilityPriorityKey));
+        objj_msgSend(self, "setAutovalidates:", objj_msgSend(aCoder, "decodeBoolForKey:", CPToolbarItemAutovalidatesKey));
     }
     return self;
 }
@@ -18897,6 +19178,7 @@ var meta_class = the_class.isa;class_addMethods(the_class, [new objj_method(sel_
     objj_msgSend(aCoder, "encodeSize:forKey:", objj_msgSend(self, "minSize"), CPToolbarItemMinSizeKey);
     objj_msgSend(aCoder, "encodeSize:forKey:", objj_msgSend(self, "maxSize"), CPToolbarItemMaxSizeKey);
     objj_msgSend(aCoder, "encodeObject:forKey:", objj_msgSend(self, "visibilityPriority"), CPToolbarItemVisibilityPriorityKey);
+    objj_msgSend(aCoder, "encodeBool:forKey:", objj_msgSend(self, "autovalidates"), CPToolbarItemAutovalidatesKey);
 }
 },["void","CPCoder"])]);
 }
@@ -18909,6 +19191,7 @@ var meta_class = the_class.isa;class_addMethods(the_class, [new objj_method(sel_
     var copy = objj_msgSend(objj_msgSend(objj_msgSend(self, "class"), "alloc"), "initWithItemIdentifier:", _itemIdentifier);
     if (_view)
         objj_msgSend(copy, "setView:", objj_msgSend(CPKeyedUnarchiver, "unarchiveObjectWithData:", objj_msgSend(CPKeyedArchiver, "archivedDataWithRootObject:", _view)));
+    objj_msgSend(copy, "_setToolbar:", _toolbar);
     objj_msgSend(copy, "setLabel:", _label);
     objj_msgSend(copy, "setPaletteLabel:", _paletteLabel);
     objj_msgSend(copy, "setToolTip:", objj_msgSend(self, "toolTip"));
@@ -18920,7 +19203,8 @@ var meta_class = the_class.isa;class_addMethods(the_class, [new objj_method(sel_
     objj_msgSend(copy, "setAlternateImage:", objj_msgSend(self, "alternateImage"));
     objj_msgSend(copy, "setMinSize:", _minSize);
     objj_msgSend(copy, "setMaxSize:", _maxSize);
-    objj_msgSend(copy, "setVisibilityPriority:", _visibilityPriority);
+    objj_msgSend(copy, "setVisibilityPriority:", objj_msgSend(self, "visibilityPriority"));
+    objj_msgSend(copy, "setAutovalidates:", objj_msgSend(self, "autovalidates"));
     return copy;
 }
 },["id"])]);
@@ -18931,19 +19215,12 @@ if(!the_class) objj_exception_throw(new objj_exception(OBJJClassNotFoundExceptio
 var meta_class = the_class.isa;class_addMethods(meta_class, [new objj_method(sel_getUid("_standardItemWithItemIdentifier:"), function $CPToolbarItem___standardItemWithItemIdentifier_(self, _cmd, anItemIdentifier)
 { with(self)
 {
-    var item = objj_msgSend(objj_msgSend(CPToolbarItem, "alloc"), "initWithItemIdentifier:", anItemIdentifier);
     switch (anItemIdentifier)
     {
-        case CPToolbarSeparatorItemIdentifier: objj_msgSend(item, "setMinSize:", CGSizeMake(2.0, 0.0));
-                                                        objj_msgSend(item, "setMaxSize:", CGSizeMake(2.0, 100000.0));
-                                                        return item;
-        case CPToolbarSpaceItemIdentifier: objj_msgSend(item, "setMinSize:", CGSizeMake(32.0, 32.0));
-                                                        objj_msgSend(item, "setMaxSize:", CGSizeMake(32.0, 32.0));
-                                                        return item;
-        case CPToolbarFlexibleSpaceItemIdentifier: objj_msgSend(item, "setMinSize:", CGSizeMake(32.0, 32.0));
-                                                        objj_msgSend(item, "setMaxSize:", CGSizeMake(10000.0, 32.0));
-                                                        return item;
-        case CPToolbarShowColorsItemIdentifier: return nil;
+        case CPToolbarSeparatorItemIdentifier: return objj_msgSend(_CPToolbarSeparatorItem, "new");
+        case CPToolbarSpaceItemIdentifier: return objj_msgSend(_CPToolbarSpaceItem, "new");
+        case CPToolbarFlexibleSpaceItemIdentifier: return objj_msgSend(_CPToolbarFlexibleSpaceItem, "new");
+        case CPToolbarShowColorsItemIdentifier: return objj_msgSend(_CPToolbarShowColorsItem, "new");
         case CPToolbarShowFontsItemIdentifier: return nil;
         case CPToolbarCustomizeToolbarItemIdentifier: return nil;
         case CPToolbarPrintItemIdentifier: return nil;
@@ -18952,8 +19229,7 @@ var meta_class = the_class.isa;class_addMethods(meta_class, [new objj_method(sel
 }
 },["CPToolbarItem","CPString"])]);
 }
-
-p;12;CPTreeNode.jI;21;Foundation/CPObject.jc;5260;
+i;29;_CPToolbarFlexibleSpaceItem.ji;26;_CPToolbarShowColorsItem.ji;25;_CPToolbarSeparatorItem.ji;21;_CPToolbarSpaceItem.jp;12;CPTreeNode.jI;21;Foundation/CPObject.jc;5260;
 
 
 {var the_class = objj_allocateClassPair(CPObject, "CPTreeNode"),
@@ -30749,51 +31025,60 @@ CPStandardWindowShadowStyle = 0;
 CPMenuWindowShadowStyle = 1;
 CPPanelWindowShadowStyle = 2;
 CPCustomWindowShadowStyle = 3;
-i;15;_CPWindowView.ji;23;_CPStandardWindowView.ji;23;_CPDocModalWindowView.ji;18;_CPHUDWindowView.ji;25;_CPBorderlessWindowView.ji;31;_CPBorderlessBridgeWindowView.ji;14;CPDragServer.ji;8;CPView.jp;16;CPPlatform+DOM.jc;1355;var DOMSafeElement = NULL,
-    screenNeedsInitialization = objj_msgSend(CPPlatform, "isBrowser");
-{
-var the_class = objj_getClass("CPPlatform")
-if(!the_class) objj_exception_throw(new objj_exception(OBJJClassNotFoundException, "*** Could not find definition for class \"CPPlatform\""));
-var meta_class = the_class.isa;class_addMethods(meta_class, [new objj_method(sel_getUid("DOMSafeElement"), function $CPPlatform__DOMSafeElement(self, _cmd)
-{ with(self)
-{
-    if (!DOMSafeElement)
-    {
-        DOMSafeElement = document.createElement("div");
-        DOMSafeElement.style.position = "absolute";
-        DOMSafeElement.style.left = "-100000px";
-        DOMSafeElement.style.top = "-100000px";
-        DOMSafeElement.style.overflow = "visible";
-        document.body.appendChild(DOMSafeElement);
-    }
-    return DOMSafeElement;
-}
-},["DOMElement"]), new objj_method(sel_getUid("initializeScreenIfNecessary"), function $CPPlatform__initializeScreenIfNecessary(self, _cmd)
-{ with(self)
-{
-    if (!screenNeedsInitialization)
-        return;
-    screenNeedsInitialization = NO;
-    var body = document.body;
-    body.removeChild(DOMSafeElement);
-    body.innerHTML = "";
-    body.style.overflow = "hidden";
-    body.appendChild(DOMSafeElement);
-    if (document.documentElement)
-        document.documentElement.style.overflow = "hidden";
-}
-},["void"])]);
-}
-
-p;12;CPPlatform.jI;21;Foundation/CPObject.jc;2098;
-{var the_class = objj_allocateClassPair(CPObject, "CPPlatform"),
+i;15;_CPWindowView.ji;23;_CPStandardWindowView.ji;23;_CPDocModalWindowView.ji;18;_CPHUDWindowView.ji;25;_CPBorderlessWindowView.ji;31;_CPBorderlessBridgeWindowView.ji;14;CPDragServer.ji;8;CPView.jp;12;CPPlatform.jI;21;Foundation/CPObject.jc;4408;
+{var the_class = objj_allocateClassPair(CPObject, "CPBasePlatform"),
 meta_class = the_class.isa;objj_registerClassPair(the_class);
 objj_addClassForBundle(the_class, objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
-class_addMethods(meta_class, [new objj_method(sel_getUid("bootstrap"), function $CPPlatform__bootstrap(self, _cmd)
+class_addMethods(meta_class, [new objj_method(sel_getUid("bootstrap"), function $CPBasePlatform__bootstrap(self, _cmd)
 { with(self)
 {
     objj_msgSend(CPPlatformString, "bootstrap");
     objj_msgSend(CPPlatformWindow, "setPrimaryPlatformWindow:", objj_msgSend(objj_msgSend(CPPlatformWindow, "alloc"), "_init"));
+}
+},["void"]), new objj_method(sel_getUid("isBrowser"), function $CPBasePlatform__isBrowser(self, _cmd)
+{ with(self)
+{
+    return NO;
+}
+},["BOOL"]), new objj_method(sel_getUid("supportsDragAndDrop"), function $CPBasePlatform__supportsDragAndDrop(self, _cmd)
+{ with(self)
+{
+    return NO;
+}
+},["BOOL"]), new objj_method(sel_getUid("supportsNativeMainMenu"), function $CPBasePlatform__supportsNativeMainMenu(self, _cmd)
+{ with(self)
+{
+    return NO;
+}
+},["BOOL"]), new objj_method(sel_getUid("terminateApplication"), function $CPBasePlatform__terminateApplication(self, _cmd)
+{ with(self)
+{
+}
+},["void"]), new objj_method(sel_getUid("activateIgnoringOtherApps:"), function $CPBasePlatform__activateIgnoringOtherApps_(self, _cmd, shouldIgnoreOtherApps)
+{ with(self)
+{
+}
+},["void","BOOL"]), new objj_method(sel_getUid("hideOtherApplications:"), function $CPBasePlatform__hideOtherApplications_(self, _cmd, aSender)
+{ with(self)
+{
+}
+},["void","id"]), new objj_method(sel_getUid("hide:"), function $CPBasePlatform__hide_(self, _cmd, aSender)
+{ with(self)
+{
+}
+},["void","id"])]);
+}
+CPPlatformDidClearBodyElementNotification = "CPPlatformDidClearBodyElementNotification";
+var screenNeedsInitialization = NO;
+{var the_class = objj_allocateClassPair(CPBasePlatform, "CPPlatform"),
+meta_class = the_class.isa;objj_registerClassPair(the_class);
+objj_addClassForBundle(the_class, objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
+class_addMethods(meta_class, [new objj_method(sel_getUid("initialize"), function $CPPlatform__initialize(self, _cmd)
+{ with(self)
+{
+    if (self !== objj_msgSend(CPPlatform, "class"))
+        return;
+    screenNeedsInitialization = objj_msgSend(CPPlatform, "isBrowser");
 }
 },["void"]), new objj_method(sel_getUid("isBrowser"), function $CPPlatform__isBrowser(self, _cmd)
 { with(self)
@@ -30834,20 +31119,59 @@ class_addMethods(meta_class, [new objj_method(sel_getUid("bootstrap"), function 
     if (typeof window["cpHide"] === "function")
         window.cpHide();
 }
-},["void","id"])]);
+},["void","id"]), new objj_method(sel_getUid("initializeScreenIfNecessary"), function $CPPlatform__initializeScreenIfNecessary(self, _cmd)
+{ with(self)
+{
+    if (!screenNeedsInitialization)
+        return;
+
+    screenNeedsInitialization = NO;
+
+    var DOMBodyElement = document.body;
+
+
+    DOMBodyElement.innerHTML = "";
+    DOMBodyElement.style.overflow = "hidden";
+
+    if (document.documentElement)
+        document.documentElement.style.overflow = "hidden";
+
+    objj_msgSend(objj_msgSend(CPNotificationCenter, "defaultCenter"), "postNotificationName:object:", CPPlatformDidClearBodyElementNotification, self);
 }
-i;16;CPPlatform+DOM.jp;18;CPPlatformString.jI;21;Foundation/CPObject.jc;2935;
+},["void"])]);
+}
+
+p;18;CPPlatformString.jI;21;Foundation/CPObject.jc;4109;
+{var the_class = objj_allocateClassPair(CPObject, "CPBasePlatformString"),
+meta_class = the_class.isa;objj_registerClassPair(the_class);
+objj_addClassForBundle(the_class, objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
+class_addMethods(meta_class, [new objj_method(sel_getUid("bootstrap"), function $CPBasePlatformString__bootstrap(self, _cmd)
+{ with(self)
+{
+}
+},["void"]), new objj_method(sel_getUid("sizeOfString:withFont:forWidth:"), function $CPBasePlatformString__sizeOfString_withFont_forWidth_(self, _cmd, aString, aFont, aWidth)
+{ with(self)
+{
+    return { width:0.0, height:0.0 };
+}
+},["CGSize","CPString","CPFont","float"])]);
+}
 var DOMIFrameElement = nil,
     DOMSpanElement = nil,
     DefaultFont = nil;
-{var the_class = objj_allocateClassPair(CPObject, "CPPlatformString"),
+{var the_class = objj_allocateClassPair(CPBasePlatformString, "CPPlatformString"),
 meta_class = the_class.isa;objj_registerClassPair(the_class);
 objj_addClassForBundle(the_class, objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
 class_addMethods(meta_class, [new objj_method(sel_getUid("bootstrap"), function $CPPlatformString__bootstrap(self, _cmd)
 { with(self)
 {
-    var DOMSafeElement = objj_msgSend(CPPlatform, "DOMSafeElement");
-    DOMIFrameElement = document.createElement("iframe");
+    objj_msgSend(self, "createDOMElements");
+    objj_msgSend(objj_msgSend(CPNotificationCenter, "defaultCenter"), "addObserver:selector:name:object:", self, sel_getUid("platformDidClearBodyElement:"), CPPlatformDidClearBodyElementNotification, CPPlatform);
+}
+},["void"]), new objj_method(sel_getUid("createDOMElements"), function $CPPlatformString__createDOMElements(self, _cmd)
+{ with(self)
+{
+    var DOMIFrameElement = document.createElement("iframe");
     DOMIFrameElement.name = name = "iframe_" + FLOOR(RAND() * 10000);
     DOMIFrameElement.style.position = "absolute";
     DOMIFrameElement.style.left = "-100px";
@@ -30858,7 +31182,7 @@ class_addMethods(meta_class, [new objj_method(sel_getUid("bootstrap"), function 
     DOMIFrameElement.style.background = "blue";
     DOMIFrameElement.style.overflow = "hidden";
     DOMIFrameElement.style.zIndex = 100000000000;
-    DOMSafeElement.appendChild(DOMIFrameElement);
+    document.body.appendChild(DOMIFrameElement);
     var DOMIFrameDocument = (DOMIFrameElement.contentDocument || DOMIFrameElement.contentWindow.document);
     DOMIFrameDocument.write("<html><head></head><body></body></html>");
     DOMIFrameDocument.close();
@@ -30868,10 +31192,14 @@ class_addMethods(meta_class, [new objj_method(sel_getUid("bootstrap"), function 
     DOMSpanElement.style.visibility = "visible";
     DOMSpanElement.style.padding = "0px";
     DOMSpanElement.style.margin = "0px";
-    DOMSpanElement.style.background = "red";
     DOMIFrameDocument.body.appendChild(DOMSpanElement);
 }
-},["void"]), new objj_method(sel_getUid("sizeOfString:withFont:forWidth:"), function $CPPlatformString__sizeOfString_withFont_forWidth_(self, _cmd, aString, aFont, aWidth)
+},["void"]), new objj_method(sel_getUid("platformDidClearBodyElement:"), function $CPPlatformString__platformDidClearBodyElement_(self, _cmd, aNotification)
+{ with(self)
+{
+    objj_msgSend(self, "createDOMElements");
+}
+},["void","CPNotification"]), new objj_method(sel_getUid("sizeOfString:withFont:forWidth:"), function $CPPlatformString__sizeOfString_withFont_forWidth_(self, _cmd, aString, aFont, aWidth)
 { with(self)
 {
     if (!aFont)
@@ -31130,7 +31458,7 @@ class_addMethods(the_class, [new objj_method(sel_getUid("initWithLevel:"), funct
 },["CPArray"])]);
 }
 
-p;22;CPPlatformWindow+DOM.jI;21;Foundation/CPObject.jI;22;Foundation/CPRunLoop.ji;9;CPEvent.ji;17;CPCompatibility.ji;18;CPDOMWindowLayer.ji;12;CPPlatform.ji;18;CPPlatformWindow.ji;26;CPPlatformWindow+DOMKeys.jc;46233;
+p;22;CPPlatformWindow+DOM.jI;21;Foundation/CPObject.jI;22;Foundation/CPRunLoop.ji;9;CPEvent.ji;17;CPCompatibility.ji;18;CPDOMWindowLayer.ji;12;CPPlatform.ji;18;CPPlatformWindow.ji;26;CPPlatformWindow+DOMKeys.jc;46598;
 var PlatformWindows = objj_msgSend(CPSet, "set");
 var CPDOMEventGetClickCount,
     CPDOMEventStop,
@@ -31149,7 +31477,7 @@ if(!the_class) objj_exception_throw(new objj_exception(OBJJClassNotFoundExceptio
 var meta_class = the_class.isa;class_addMethods(the_class, [new objj_method(sel_getUid("_init"), function $CPPlatformWindow___init(self, _cmd)
 { with(self)
 {
-    self = objj_msgSendSuper({ receiver:self, super_class:objj_getClass("CPObject") }, "init");
+    self = objj_msgSendSuper({ receiver:self, super_class:objj_getClass("CPPlatformWindow").super_class }, "init");
     if (self)
     {
         _DOMWindow = window;
@@ -31208,34 +31536,39 @@ var meta_class = the_class.isa;class_addMethods(the_class, [new objj_method(sel_
     if (_DOMWindow)
         _DOMWindow.blur();
 }
-},["void","id"]), new objj_method(sel_getUid("DOMSafeElement"), function $CPPlatformWindow__DOMSafeElement(self, _cmd)
-{ with(self)
-{
-    if (_DOMWindow === window)
-        return objj_msgSend(CPPlatform, "DOMSafeElement");
-    return _DOMBodyElement;
-}
-},["void"]), new objj_method(sel_getUid("registerDOMWindow"), function $CPPlatformWindow__registerDOMWindow(self, _cmd)
+},["void","id"]), new objj_method(sel_getUid("createDOMElements"), function $CPPlatformWindow__createDOMElements(self, _cmd)
 { with(self)
 {
     var theDocument = _DOMWindow.document;
-    _DOMBodyElement = theDocument.getElementsByTagName("body")[0];
-    var DOMSafeElement = objj_msgSend(self, "DOMSafeElement");
-    if (objj_msgSend(CPPlatform, "supportsDragAndDrop"))
-        _DOMBodyElement.style["-khtml-user-select"] = "none";
-    _DOMBodyElement.webkitTouchCallout = "none";
     _DOMFocusElement = theDocument.createElement("input");
     _DOMFocusElement.style.position = "absolute";
     _DOMFocusElement.style.zIndex = "-1000";
     _DOMFocusElement.style.opacity = "0";
     _DOMFocusElement.style.filter = "alpha(opacity=0)";
-    DOMSafeElement.appendChild(_DOMFocusElement);
+    _DOMBodyElement.appendChild(_DOMFocusElement);
     _DOMPasteboardElement = theDocument.createElement("textarea");
     _DOMPasteboardElement.style.position = "absolute";
     _DOMPasteboardElement.style.top = "-10000px";
     _DOMPasteboardElement.style.zIndex = "999";
-    DOMSafeElement.appendChild(_DOMPasteboardElement);
+    _DOMBodyElement.appendChild(_DOMPasteboardElement);
     _DOMPasteboardElement.blur();
+}
+},["void"]), new objj_method(sel_getUid("platformDidClearBodyElement:"), function $CPPlatformWindow__platformDidClearBodyElement_(self, _cmd, aNotification)
+{ with(self)
+{
+    objj_msgSend(self, "createDOMElements");
+}
+},["void","CPNotification"]), new objj_method(sel_getUid("registerDOMWindow"), function $CPPlatformWindow__registerDOMWindow(self, _cmd)
+{ with(self)
+{
+    var theDocument = _DOMWindow.document;
+    _DOMBodyElement = theDocument.body;
+    if (objj_msgSend(CPPlatform, "supportsDragAndDrop"))
+        _DOMBodyElement.style["-khtml-user-select"] = "none";
+    _DOMBodyElement.webkitTouchCallout = "none";
+    objj_msgSend(self, "createDOMElements");
+    if (window === _DOMWindow)
+        objj_msgSend(objj_msgSend(CPNotificationCenter, "defaultCenter"), "addObserver:selector:name:object:", self, sel_getUid("platformDidClearBodyElement:"), CPPlatformDidClearBodyElementNotification, CPPlatform);
     objj_msgSend(self, "_addLayers");
     var theClass = objj_msgSend(self, "class"),
         dragEventImplementation = class_getMethodImplementation(theClass, sel_getUid("dragEvent:")),
@@ -31390,7 +31723,7 @@ var meta_class = the_class.isa;class_addMethods(the_class, [new objj_method(sel_
             DOMDragElement = draggedWindow._DOMElement;
         DOMDragElement.style.left = -(draggedWindowFrame.size.width) + "px";
         DOMDragElement.style.top = -(draggedWindowFrame.size.height) + "px";
-        document.getElementsByTagName("body")[0].appendChild(DOMDragElement);
+        document.body.appendChild(DOMDragElement);
         var draggingOffset = objj_msgSend(dragServer, "draggingOffset");
         aDOMEvent.dataTransfer.setDragImage(DOMDragElement, draggingOffset.width, draggingOffset.height);
         objj_msgSend(dragServer, "draggingStartedInPlatformWindow:globalLocation:", self, objj_msgSend(CPPlatform, "isBrowser") ? location : { x:aDOMEvent.screenX, y:aDOMEvent.screenY });
@@ -32358,6 +32691,16 @@ Content-Transfer-Encoding:base64
 
 iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAXBJREFUOE+lk09qwlAQxscXCC7cBUGwJCErt0IJOYLF0Bt0I8FVD+Eduuo2i+57hB6gBLLLUhoiLlQUxP/G9w08iYjJogM/Xpz5vnkzkog8z+k/iOFwSLVajXq9Xq4IgiAfjUZ3oOb7/gf0YDAYkCAZrut+OY5DlmWRbdvUbrep1Wox9XqdJpMJn6g1m833fr//Ch9CnE4nHuVwONB2u6X9fk9CCGo0Gsxut+M8TtTO5zMZhvHted4bNzgej5zECTDacrmkNE0ZmJDHiRqecYG88AWXcwM8KNBssVhQkiRMlmWk6zqfqBW13Kw4AdZYrValQFP0CCTUj/V6TaZplgKNagDv3QrdbreUhyuoSaqiqL1ZQf2BVVHU3qygJqkKdfN1hfl8fk3ihaoKaNRl8Io4jmmz2fDLoWkaRVFUCjTQwgMvvoWn6XT6+StDJpIwDMeSvweMoYEWHniFHCmV/MhxnmezWUdiS8wHoNaBFh54L4mHAQ/Vw7dXAAAAAElFTkSuQmCC
 --_ANY_STRING_WILL_DO_AS_A_SEPARATOR
+Content-Location:Resources/CPImage/CPImageNameColorPanel.png
+Content-Transfer-Encoding:base64
+
+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
+--_ANY_STRING_WILL_DO_AS_A_SEPARATOR
+Content-Location:Resources/CPImage/CPImageNameColorPanelHighlighted.png
+Content-Transfer-Encoding:base64
+
+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
+--_ANY_STRING_WILL_DO_AS_A_SEPARATOR
 Content-Location:Resources/CPImageView/CPImageViewBottomLeftShadow.png
 Content-Transfer-Encoding:base64
 
@@ -32697,6 +33040,11 @@ Content-Location:Resources/FIXME_ImageShadow.png
 Content-Transfer-Encoding:base64
 
 iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAdNJREFUeNrt3EFPwkAQhuHdpYB403jx//89Y9SIiNAus8msTGtbjCFe5p3kS1tSDn0y3Wwv0+ScA/X3aiC4EmCMsZxvJGtJ0kQTr5VNOkkr+ZLs5O092g4seA+Se0VcShYa74CtgdtLniVPkncLuJLcSR4lt5Ibg5icItquO5Suk2z1t7fhGpj0eq14GwVsHL/G9dU9aiPV82rSA4x609Jkpfckc48nvKDdVp+/4i3GAGsX1nWvMfHcgRWvNTZpqgNr0sTR6xqYBjuTyX1gHNm6eN/KxJFj/O1GOl649rAGzj4/XyJ8ygEIIIAUgAACCCAFIIAAAkgBCCCAAFIAAggggBSAAAIIIAUggAACSAEIIIAAUgACCCCAFIAAAgggBSCAAAIIIAUggAACSAEIIIAAUgACCCCA1PUA84Vrb5UvAeZBwuDcI1ge4PU8mgm8LvRHv5Wj5wmWnUme68A6L7TkGM7DB5Pj17ZTi9bkG3LYgXXYaslCf28DAxjrBN+DwfwB2OkNewWzw1e9z1CtjfWpOYwBVuUP07Z24KrnNbAuaQVvp07tELCovugfVgbPY/fNdWHBe9XzHuBeAbeBMfBhZnvXmqXuDFjmwmubUnzK/V+dAO2XkLvQMyBAAAAAAElFTkSuQmCC
+--_ANY_STRING_WILL_DO_AS_A_SEPARATOR
+Content-Location:Resources/GenericFile.png
+Content-Transfer-Encoding:base64
+
+iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFW0lEQVR4Ae2bPUhsRxTHZ11X12/UKCpEiDba+dWksbFPLeneexYpgggvXUACNkEwsX+VH4UQsBBSCmktg00I8gKKnU8xUfzY1c353ezxLebtvWfXe90vB45z986ZmXP+5z9n5q53Yy64xEQlLtKQrYN7PE3jTrrfiFBHXuoNM2S2t7e/mpyc/P7i4qLOoG9WyWQyLp1Ou1QqlSvp09PT3/f29n5ZWVn5TQYDjMhKEABEP3F9fT3c29s70draGroh9/f3D87f3t66m5sb19XVNdXT0/P1yMjIu6WlpR8ODw/PQp84O2AQAKglz8/PkxiGRFHu7u4cQMAIZUV9fX3T8PDw/OLiYvPc3Nx3Mu95FHNbKB0XilqAKtq+eDzuEHHaJRIJTxgMRgwODs6tra39JB87ip7Ap6MFAJ/u4TWp89QIgMCGy8tLNzo6+np9fT0SEMwAxGIxF7XgtDIAEOrq6pzkHy9RTk1NRQKCGYDwYu0/Uu5SAADyw9XVlWtra3Pj4+Ohg2AGIOro6/g4rcuAmvsKQEdHhweC5ISfBcZQcoIJAIlKRg2MuoYfgKBMoAaA5uZmBwDIxMTEq7BAMAHgT9pwWxVgZQIAcFCi5hzS3t7uCSBsbGw8mQllBQDOa1EgWAZ6RgAUQIAFADE2NvZkEMwAqEFR1jjP+DiqovPBAAo1AHR3d7vOzk5ywqvNzc2it8hIDziexQX8wVktuY7DgP39fe9cwDZJaWho8EBqaWkhJ7ze2trKzM7OvpWmgk6MZgDUIG/2CP9w+NG5iDYO88C0s7Pj5EjuXaOTTCYdzsOG/v5+19fX90Zygpufn397dnZmBsG0BISOz7YLqPMsAQAg0k1NTTwgOXlA8mgP9dkV0OWgdHx87A4ODjgrvFleXv5R4tMi8pFOPgEzM8BnjFCbFACNPpHmEETUGxsbPQaoDjVAkSjRhykDAwPfrK6uvl9YWFgVw9IiGT8Dyw4AjMUxjT40JwfABB6OcpcIevpZ+7FkhoaGvp2Zmfl1d3f3D7n/dADEmIclwERRFpyiAAARpxBhgOBYjMO6Q9CmW2TuI7X0G5yenv5SAPgTFfTyFTMDMEyNyzdYWPdxUOfjmuhDby3aRg0gOE87wnXWzs9EHwQ/dtQBcuqyBEDtgwUAQJSVDdqWddL7CAicFgGAOssQ/Q4TSuVdBmYAdOLnqNU5jTAOPS7apvcBCwAUNMkFOP7/jtohW5sAwAAmVMMejRHJx9y5iPCnSq4O7WojOQPhFn/8igkABlAQ/AaLqu2xo/nmyVLfcz7LgHyqD/cDKYKmGPDpEDwMUz4XgMBWmGVAoGFmBii9AkcsAwWcFyAC6Y+pJgaUgU8FmUCwBAQTa00M0PVvXYsFWRuBctZOEwNMAGBjJS2BQgJlBkBBiCBgJR2yKnNAIYhWLQCSt8JNgqBKMqyUYrW1cjyKCPmXJBgRsCUfVrbC8HNAIftrqRF4yQHGCNR8DjABoHtqJS0BIwGq82nQ6jx6NX8OqHkArDnAY1Ul5YCa3wZDPQhpUqkkBqjNQXXN54CaB8CUBJVGL0tAkaiiuuaXwAsAVcTmolyxMIDXY0zfrhRlQYk7WQAosYnRTl+1AOh3GEHwmc4B+mBRSecAtTkIgKplQJDj2m4CQCJv0tNBy6G22mxZApkPUo6Ojv6SV9AS8sKS6f/upQKBHUtekUmdnJx8EBt8X5LExiBnaOfnop+LfCHCy4f/vbgvF2Va+M0xzr8XORK5EMm7jQcBIH0dL+i3ibSL8OZluS8Hos5PXP8W+UckJZK3WABAB6eJvEU/72TP2EDEYQJg5I3+M9pTvlP9C04LfFSu/LkzAAAAAElFTkSuQmCC
 --_ANY_STRING_WILL_DO_AS_A_SEPARATOR
 Content-Location:Resources/HUDTheme/WindowClose.png
 Content-Transfer-Encoding:base64

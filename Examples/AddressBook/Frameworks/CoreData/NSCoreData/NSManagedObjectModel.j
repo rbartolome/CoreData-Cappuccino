@@ -5,11 +5,11 @@
 //
 
 
-@implementation NSManagedObjectModel : CPObject
+@implementation NSManagedObjectModel : CPDObjectModel
 {
-	CPMutableDictionary _entities @accessors(property=entities);
-	CPSet _versionIdentifier;
-	id _fetchRequestTemplates;
+	CPMutableDictionary ns_entities;
+	CPSet ns_versionIdentifier;
+	id ns_fetchRequestTemplates;
 }
 
 - (id)initWithCoder:(CPCoder)aCoder
@@ -18,13 +18,29 @@
 
 	if (self)
 	{
-		_entities = [aCoder decodeObjectForKey:@"NSEntities"];
-		_versionIdentifier = [aCoder decodeObjectForKey:@"NSVersionIdentifiers"];	
-		_fetchRequestTemplates = [aCoder decodeObjectForKey:@"NSFetchRequestTemplates"];
+		ns_entities = [aCoder decodeObjectForKey:@"NSEntities"];
+		ns_versionIdentifier = [aCoder decodeObjectForKey:@"NSVersionIdentifiers"];	
+		ns_fetchRequestTemplates = [aCoder decodeObjectForKey:@"NSFetchRequestTemplates"];
+		
+		[self NS_transformEntities];
 	}
 	
 	return self;
 }
+
+- (void)NS_transformEntities
+{	
+	var keyEnumerator = [ns_entities keyEnumerator];
+	var aName;
+	while(aName = [keyEnumerator nextObject])
+	{
+		var aNSEntity = [ns_entities objectForKey:aName];		
+		[self addEntity:aNSEntity];
+	}
+	
+	[[self entities] makeObjectsPerformSelector:@selector(NS_loadEntityDescription)];
+}
+
 
 - (Class)classForKeyedArchiver
 {

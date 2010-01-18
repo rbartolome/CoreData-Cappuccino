@@ -20,6 +20,7 @@ var CPDCOREDATAMODEL_SUFFIX = "cpxcdatamodel";
 
 @implementation CPDObjectModel : CPObject
 {
+	CPString _name @accessors(property=name);
 	CPMutableSet _entities @accessors(property=entities);
 }
 
@@ -47,15 +48,65 @@ var CPDCOREDATAMODEL_SUFFIX = "cpxcdatamodel";
 		else if([aModelName hasSuffix:COREDATAMODEL_SUFFIX] 
 					|| [aModelName hasSuffix:CPDCOREDATAMODEL_SUFFIX])
 		{
-			[objectModel parseCoreDataModel:modelURL];
+			objectModel = [CPDObjectModel parseCoreDataModel:modelURL];
 		}
 	}
 
+	CPLog.info("Data Model '" + [objectModel name] + "' loaded");
+	
 	return objectModel;
+}
+
+- (void)setNameFromFilePath:(CPString)aFilePath
+{
+	var pathComponents = [aFilePath componentsSeparatedByString:@"/"];
+	var pathComponentsEnum = [pathComponents objectEnumerator];
+	var aPathComponent;
+	while(aPathComponent = [pathComponentsEnum nextObject])
+	{
+		if([CPDObjectModel hasSupportedModelSuffix:aPathComponent])
+		{
+			var componentSuffix = [aPathComponent componentsSeparatedByString:@"."];
+			if([componentSuffix count] > 1)
+			{
+				[self setName:[componentSuffix objectAtIndex:0]];
+				break;
+			}
+		}
+	}
+}
+
++ (BOOL)hasSupportedModelSuffix:(CPString) aModelFile
+{
+	var result = NO;
+	if([aModelFile hasSuffix:EOMODEL_SUFFIX])
+	{
+		result = YES;
+	}
+	else if([aModelFile hasSuffix:COREDATAMODEL_SUFFIX])
+	{
+		result = YES;
+	}
+	else if([aModelFile hasSuffix:CPDCOREDATAMODEL_SUFFIX])
+	{
+		result = YES;
+	}
+	
+	return result;
+}
+
+- (BOOL)isModelAllowedForMergeByName:(CPString) aModelName
+{
+	var result = NO;
+	if([[self name] isEqualToString:aModelName])
+		result = YES;
+		
+	return result;
 }
 
 - (void)addEntity:(CPDEntity) entity
 {
+	[entity setModel:self];
 	[_entities addObject:entity];
 }
 
@@ -77,6 +128,20 @@ var CPDCOREDATAMODEL_SUFFIX = "cpxcdatamodel";
 	return result;
 }
 
+- (CPArray) entitiesByName
+{
+	var result = [[CPMutableArray alloc] init];
+	
+	var entitiesE = [_entities objectEnumerator];
+	var aEntity;
+	
+	while((aEntity = [entitiesE nextObject]))
+	{
+		[result addObject:[aEntity name]];
+	}	
+	
+	return result;
+}
 
 - (CPString)stringRepresentation
 {

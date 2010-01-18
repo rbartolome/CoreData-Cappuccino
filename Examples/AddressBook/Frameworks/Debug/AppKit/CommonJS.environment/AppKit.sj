@@ -80,7 +80,7 @@ class_addMethods(meta_class, [new objj_method(sel_getUid("run"), function $_CPDi
 }
 objj_msgSend(_CPDisplayServer, "run");
 
-p;21;_CPImageAndTextView.jI;21;Foundation/CPString.ji;9;CPColor.ji;8;CPFont.ji;9;CPImage.ji;13;CPTextField.ji;8;CPView.jc;11791;
+p;21;_CPImageAndTextView.jI;21;Foundation/CPString.ji;9;CPColor.ji;8;CPFont.ji;9;CPImage.ji;13;CPTextField.ji;8;CPView.jc;12307;
 CPTopVerticalTextAlignment = 1,
 CPCenterVerticalTextAlignment = 2,
 CPBottomVerticalTextAlignment = 3;
@@ -263,11 +263,24 @@ class_addMethods(the_class, [new objj_method(sel_getUid("initWithFrame:control:"
 {
     if (_image == anImage)
         return;
+    if (objj_msgSend(_image, "delegate") === self)
+        objj_msgSend(_image, "setDelegate:", nil);
     _image = anImage;
     _flags |= _CPImageAndTextViewImageChangedFlag;
+    if (objj_msgSend(_image, "loadStatus") !== CPImageLoadStatusCompleted)
+        objj_msgSend(_image, "setDelegate:", self);
     objj_msgSend(self, "setNeedsLayout");
 }
-},["void","CPImage"]), new objj_method(sel_getUid("image"), function $_CPImageAndTextView__image(self, _cmd)
+},["void","CPImage"]), new objj_method(sel_getUid("imageDidLoad:"), function $_CPImageAndTextView__imageDidLoad_(self, _cmd, anImage)
+{ with(self)
+{
+    if (anImage === _image)
+    {
+        _flags |= _CPImageAndTextViewImageChangedFlag;
+        objj_msgSend(self, "setNeedsLayout");
+    }
+}
+},["void","id"]), new objj_method(sel_getUid("image"), function $_CPImageAndTextView__image(self, _cmd)
 { with(self)
 {
     return _image;
@@ -371,6 +384,121 @@ class_addMethods(the_class, [new objj_method(sel_getUid("initWithFrame:control:"
     objj_msgSend(self, "setFrameSize:", size);
 }
 },["void"])]);
+}
+
+p;29;_CPToolbarFlexibleSpaceItem.ji;15;CPToolbarItem.jc;1158;
+{var the_class = objj_allocateClassPair(CPToolbarItem, "_CPToolbarFlexibleSpaceItem"),
+meta_class = the_class.isa;objj_registerClassPair(the_class);
+objj_addClassForBundle(the_class, objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
+class_addMethods(the_class, [new objj_method(sel_getUid("initWithItemIdentifier:"), function $_CPToolbarFlexibleSpaceItem__initWithItemIdentifier_(self, _cmd, anIgnoredIdentifier)
+{ with(self)
+{
+    self = objj_msgSendSuper({ receiver:self, super_class:objj_getClass("CPToolbarItem") }, "initWithItemIdentifier:", CPToolbarFlexibleSpaceItemIdentifier);
+    if (self)
+    {
+        objj_msgSend(self, "setMinSize:", CGSizeMake(32.0, 32.0));
+        objj_msgSend(self, "setMaxSize:", CGSizeMake(10000.0, 32.0));
+    }
+    return self;
+}
+},["id","CPString"]), new objj_method(sel_getUid("initWithCoder:"), function $_CPToolbarFlexibleSpaceItem__initWithCoder_(self, _cmd, aCoder)
+{ with(self)
+{
+    return objj_msgSend(self, "init");
+}
+},["id","CPCoder"]), new objj_method(sel_getUid("encodeWithCoder:"), function $_CPToolbarFlexibleSpaceItem__encodeWithCoder_(self, _cmd, aCoder)
+{ with(self)
+{
+}
+},["void","CPCoder"])]);
+}
+
+p;25;_CPToolbarSeparatorItem.ji;15;CPToolbarItem.jc;1136;
+{var the_class = objj_allocateClassPair(CPToolbarItem, "_CPToolbarSeparatorItem"),
+meta_class = the_class.isa;objj_registerClassPair(the_class);
+objj_addClassForBundle(the_class, objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
+class_addMethods(the_class, [new objj_method(sel_getUid("initWithItemIdentifier:"), function $_CPToolbarSeparatorItem__initWithItemIdentifier_(self, _cmd, anIgnoredIdentifier)
+{ with(self)
+{
+    self = objj_msgSendSuper({ receiver:self, super_class:objj_getClass("CPToolbarItem") }, "initWithItemIdentifier:", CPToolbarSeparatorItemIdentifier);
+    if (self)
+    {
+        objj_msgSend(self, "setMinSize:", CGSizeMake(2.0, 0.0));
+        objj_msgSend(self, "setMaxSize:", CGSizeMake(2.0, 100000.0));
+    }
+    return self;
+}
+},["id","CPString"]), new objj_method(sel_getUid("initWithCoder:"), function $_CPToolbarSeparatorItem__initWithCoder_(self, _cmd, aCoder)
+{ with(self)
+{
+    return objj_msgSend(self, "init");
+}
+},["id","CPCoder"]), new objj_method(sel_getUid("encodeWithCoder:"), function $_CPToolbarSeparatorItem__encodeWithCoder_(self, _cmd, aCoder)
+{ with(self)
+{
+}
+},["void","CPCoder"])]);
+}
+
+p;26;_CPToolbarShowColorsItem.ji;15;CPToolbarItem.jc;1675;
+{var the_class = objj_allocateClassPair(CPToolbarItem, "_CPToolbarShowColorsItem"),
+meta_class = the_class.isa;objj_registerClassPair(the_class);
+objj_addClassForBundle(the_class, objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
+class_addMethods(the_class, [new objj_method(sel_getUid("initWithItemIdentifier:"), function $_CPToolbarShowColorsItem__initWithItemIdentifier_(self, _cmd, anIgnoredIdentifier)
+{ with(self)
+{
+    self = objj_msgSendSuper({ receiver:self, super_class:objj_getClass("CPToolbarItem") }, "initWithItemIdentifier:", CPToolbarShowColorsItemIdentifier);
+    if (self)
+    {
+        objj_msgSend(self, "setMinSize:", CGSizeMake(32.0, 32.0));
+        objj_msgSend(self, "setMaxSize:", CGSizeMake(32.0, 32.0));
+        objj_msgSend(self, "setLabel:", "Colors");
+        objj_msgSend(self, "setPaletteLabel:", "Show Colors");
+        objj_msgSend(self, "setTarget:", CPApp);
+        objj_msgSend(self, "setAction:", sel_getUid("orderFrontColorPanel:"));
+        objj_msgSend(self, "setImage:", objj_msgSend(CPImage, "imageNamed:", CPImageNameColorPanel));
+        objj_msgSend(self, "setAlternateImage:", objj_msgSend(CPImage, "imageNamed:", CPImageNameColorPanelHighlighted));
+        objj_msgSend(self, "setToolTip:", "Show the Colors panel.");
+    }
+    return self;
+}
+},["id","CPString"]), new objj_method(sel_getUid("initWithCoder:"), function $_CPToolbarShowColorsItem__initWithCoder_(self, _cmd, aCoder)
+{ with(self)
+{
+    return objj_msgSend(self, "init");
+}
+},["id","CPCoder"]), new objj_method(sel_getUid("encodeWithCoder:"), function $_CPToolbarShowColorsItem__encodeWithCoder_(self, _cmd, aCoder)
+{ with(self)
+{
+}
+},["void","CPCoder"])]);
+}
+
+p;21;_CPToolbarSpaceItem.ji;15;CPToolbarItem.jc;1115;
+{var the_class = objj_allocateClassPair(CPToolbarItem, "_CPToolbarSpaceItem"),
+meta_class = the_class.isa;objj_registerClassPair(the_class);
+objj_addClassForBundle(the_class, objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
+class_addMethods(the_class, [new objj_method(sel_getUid("initWithItemIdentifier:"), function $_CPToolbarSpaceItem__initWithItemIdentifier_(self, _cmd, anIgnoredIdentifier)
+{ with(self)
+{
+    self = objj_msgSendSuper({ receiver:self, super_class:objj_getClass("CPToolbarItem") }, "initWithItemIdentifier:", CPToolbarSpaceItemIdentifier);
+    if (self)
+    {
+        objj_msgSend(self, "setMinSize:", CGSizeMake(32.0, 32.0));
+        objj_msgSend(self, "setMaxSize:", CGSizeMake(32.0, 32.0));
+    }
+    return self;
+}
+},["id","CPString"]), new objj_method(sel_getUid("initWithCoder:"), function $_CPToolbarSpaceItem__initWithCoder_(self, _cmd, aCoder)
+{ with(self)
+{
+    return objj_msgSend(self, "init");
+}
+},["id","CPCoder"]), new objj_method(sel_getUid("encodeWithCoder:"), function $_CPToolbarSpaceItem__encodeWithCoder_(self, _cmd, aCoder)
+{ with(self)
+{
+}
+},["void","CPCoder"])]);
 }
 
 p;8;AppKit.ji;9;CALayer.ji;9;CPAlert.ji;13;CPAnimation.ji;15;CPApplication.ji;14;CPBezierPath.ji;7;CPBox.ji;10;CPButton.ji;13;CPButtonBar.ji;12;CPCheckBox.ji;7;CPCib.ji;16;CPCibConnector.ji;23;CPCibControlConnector.ji;14;CPCibLoading.ji;22;CPCibOutletConnector.ji;12;CPClipView.ji;22;CPCollectionViewItem.ji;18;CPCollectionView.ji;9;CPColor.ji;14;CPColorPanel.ji;13;CPColorWell.ji;17;CPCompatibility.ji;11;CPControl.ji;10;CPCookie.ji;10;CPCursor.ji;12;CPDocument.ji;22;CPDocumentController.ji;9;CPEvent.ji;14;CPFlashMovie.ji;13;CPFlashView.ji;8;CPFont.ji;15;CPFontManager.ji;12;CPGeometry.ji;9;CPImage.ji;13;CPImageView.ji;8;CPMenu.ji;12;CPMenuItem.ji;13;CPOpenPanel.ji;9;CPPanel.ji;14;CPPasteboard.ji;15;CPPopUpButton.ji;21;CPProgressIndicator.ji;9;CPRadio.ji;13;CPResponder.ji;15;CPSearchField.ji;14;CPScrollView.ji;12;CPScroller.ji;19;CPSecureTextField.ji;20;CPSegmentedControl.ji;10;CPShadow.ji;10;CPSlider.ji;13;CPSplitView.ji;11;CPTabView.ji;15;CPTableColumn.ji;13;CPTableView.ji;13;CPTextField.ji;11;CPToolbar.ji;15;CPToolbarItem.ji;8;CPView.ji;18;CPViewController.ji;11;CPWebView.ji;10;CPWindow.ji;20;CPWindowController.jp;17;CPAccordionView.jI;20;Foundation/CPArray.jI;21;Foundation/CPObject.jI;32;Foundation/CPKeyValueObserving.jI;23;Foundation/CPIndexSet.jI;21;Foundation/CPString.jI;15;AppKit/CPView.jc;14896;
@@ -1019,7 +1147,7 @@ var CubicBezierAtTime = CubicBezierAtTime= function(t,p1x,p1y,p2x,p2y,duration)
     return solve(t, solveEpsilon(duration));
 };
 
-p;15;CPApplication.jI;21;Foundation/CPBundle.ji;17;CPCompatibility.ji;9;CPEvent.ji;8;CPMenu.ji;13;CPResponder.ji;22;CPDocumentController.ji;14;CPThemeBlend.ji;14;CPCibLoading.ji;12;CPPlatform.jc;35039;
+p;15;CPApplication.jI;21;Foundation/CPBundle.ji;17;CPCompatibility.ji;9;CPEvent.ji;8;CPMenu.ji;13;CPResponder.ji;22;CPDocumentController.ji;14;CPThemeBlend.ji;14;CPCibLoading.ji;12;CPPlatform.jc;35235;
 var CPMainCibFile = "CPMainCibFile",
     CPMainCibFileHumanFriendly = "Main cib file base name";
 CPApp = nil;
@@ -1579,7 +1707,12 @@ class_addMethods(meta_class, [new objj_method(sel_getUid("sharedApplication"), f
         CPApp = objj_msgSend(objj_msgSend(CPApplication, "alloc"), "init");
     return CPApp;
 }
-},["CPApplication"])]);
+},["CPApplication"]), new objj_method(sel_getUid("defaultThemeName"), function $CPApplication__defaultThemeName(self, _cmd)
+{ with(self)
+{
+    return "Aristo.blend";
+}
+},["CPString"])]);
 }
 var _CPModalSessionMake = function(aWindow, aStopCode)
 {
@@ -1657,7 +1790,7 @@ class_addMethods(meta_class, [new objj_method(sel_getUid("actions"), function $_
 },["BOOL"]), new objj_method(sel_getUid("loadDefaultTheme"), function $_CPAppBootstrapper__loadDefaultTheme(self, _cmd)
 { with(self)
 {
-    var blend = objj_msgSend(objj_msgSend(CPThemeBlend, "alloc"), "initWithContentsOfURL:", objj_msgSend(objj_msgSend(CPBundle, "bundleForClass:", objj_msgSend(CPApplication, "class")), "pathForResource:", "Aristo.blend"));
+    var blend = objj_msgSend(objj_msgSend(CPThemeBlend, "alloc"), "initWithContentsOfURL:", objj_msgSend(objj_msgSend(CPBundle, "bundleForClass:", objj_msgSend(CPApplication, "class")), "pathForResource:", objj_msgSend(CPApplication, "defaultThemeName")));
     objj_msgSend(blend, "loadWithDelegate:", self);
     return YES;
 }
@@ -6862,9 +6995,9 @@ class_addMethods(meta_class, [new objj_method(sel_getUid("flashMovieWithFile:"),
 },["id","CPString"])]);
 }
 
-p;13;CPFlashView.ji;14;CPFlashMovie.ji;8;CPView.jc;2920;
+p;13;CPFlashView.ji;14;CPFlashMovie.ji;8;CPView.jc;4949;
 {var the_class = objj_allocateClassPair(CPView, "CPFlashView"),
-meta_class = the_class.isa;class_addIvars(the_class, [new objj_ivar("_flashMovie"), new objj_ivar("_DOMEmbedElement"), new objj_ivar("_DOMMParamElement"), new objj_ivar("_DOMObjectElement")]);
+meta_class = the_class.isa;class_addIvars(the_class, [new objj_ivar("_flashMovie"), new objj_ivar("_flashVars"), new objj_ivar("_params"), new objj_ivar("_paramElements"), new objj_ivar("_DOMEmbedElement"), new objj_ivar("_DOMMParamElement"), new objj_ivar("_DOMObjectElement")]);
 objj_registerClassPair(the_class);
 objj_addClassForBundle(the_class, objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
 class_addMethods(the_class, [new objj_method(sel_getUid("initWithFrame:"), function $CPFlashView__initWithFrame_(self, _cmd, aFrame)
@@ -6910,7 +7043,56 @@ class_addMethods(the_class, [new objj_method(sel_getUid("initWithFrame:"), funct
 {
     return _flashMovie;
 }
-},["CPFlashMovie"]), new objj_method(sel_getUid("mouseDragged:"), function $CPFlashView__mouseDragged_(self, _cmd, anEvent)
+},["CPFlashMovie"]), new objj_method(sel_getUid("setFlashVars:"), function $CPFlashView__setFlashVars_(self, _cmd, aDictionary)
+{ with(self)
+{
+    _flashVars = aDictionary;
+    var varString = "",
+        enumerator = objj_msgSend(_flashVars, "keyEnumerator");
+    var key;
+    while (key = objj_msgSend(enumerator, "nextObject"))
+        varString = objj_msgSend(varString, "stringByAppendingFormat:", "&%@=%@", key, objj_msgSend(_flashVars, "objectForKey:", key));
+    var param = document.createElement("param");
+    param.name = "flashvars";
+    param.value = varString;
+    _DOMObjectElement.appendChild(param);
+    if (_DOMEmbedElement)
+        _DOMEmbedElement.setAttribute("flashvars", varString);
+}
+},["void","CPDictionary"]), new objj_method(sel_getUid("flashVars"), function $CPFlashView__flashVars(self, _cmd)
+{ with(self)
+{
+    return _flashVars;
+}
+},["CPDictionary"]), new objj_method(sel_getUid("setParameters:"), function $CPFlashView__setParameters_(self, _cmd, aDictionary)
+{ with(self)
+{
+    if (_paramElements)
+    {
+        var elements = objj_msgSend(_paramElements, "allValues"),
+            count = objj_msgSend(elements, "count");
+        for (var i = 0; i < count; i++)
+            _DOMObjectElement.removeChild(objj_msgSend(elements, "objectAtIndex:", i));
+    }
+    _params = aDictionary;
+    _paramElements = objj_msgSend(CPDictionary, "dictionary");
+    var enumerator = objj_msgSend(_params, "keyEnumerator"),
+        key;
+    while (key = objj_msgSend(enumerator, "nextObject"))
+    {
+        var param = document.createElement("param");
+        param.name = key;
+        param.value = objj_msgSend(_params, "objectForKey:", key);
+        _DOMObjectElement.appendChild(param);
+        objj_msgSend(_paramElements, "setObject:forKey:", param, key);
+    }
+}
+},["void","CPDictionary"]), new objj_method(sel_getUid("parameters"), function $CPFlashView__parameters(self, _cmd)
+{ with(self)
+{
+    return _params;
+}
+},["CPDictionary"]), new objj_method(sel_getUid("mouseDragged:"), function $CPFlashView__mouseDragged_(self, _cmd, anEvent)
 { with(self)
 {
     objj_msgSend(objj_msgSend(objj_msgSend(self, "window"), "platformWindow"), "_propagateCurrentDOMEvent:", YES);
@@ -6928,8 +7110,9 @@ class_addMethods(the_class, [new objj_method(sel_getUid("initWithFrame:"), funct
 },["void","CPEvent"])]);
 }
 
-p;8;CPFont.jc;3864;var _CPFonts = {};
-    _CPFontSystemFontFace = "Arial";
+p;8;CPFont.jc;4550;var _CPFonts = {},
+    _CPFontSystemFontFace = "Arial, sans-serif",
+    _CPWrapRegExp = new RegExp("\\s*,\\s*", "g");
 {var the_class = objj_allocateClassPair(CPObject, "CPFont"),
 meta_class = the_class.isa;class_addIvars(the_class, [new objj_ivar("_name"), new objj_ivar("_size"), new objj_ivar("_isBold"), new objj_ivar("_cssString")]);
 objj_registerClassPair(the_class);
@@ -6943,7 +7126,7 @@ class_addMethods(the_class, [new objj_method(sel_getUid("_initWithName:size:bold
         _name = aName;
         _size = aSize;
         _isBold = isBold;
-        _cssString = (_isBold ? "bold " : "") + ROUND(aSize) + "px '" + aName + "'";
+        _cssString = (_isBold ? "bold " : "") + ROUND(_size) + "px " + ((_name === _CPFontSystemFontFace) ? _name : ("\"" + _name.replace(_CPWrapRegExp, '", "') + "\", " + _CPFontSystemFontFace));
         _CPFonts[_cssString] = self;
     }
     return self;
@@ -6967,22 +7150,22 @@ class_addMethods(the_class, [new objj_method(sel_getUid("_initWithName:size:bold
 class_addMethods(meta_class, [new objj_method(sel_getUid("fontWithName:size:"), function $CPFont__fontWithName_size_(self, _cmd, aName, aSize)
 { with(self)
 {
-    return _CPFonts[(NO ? "bold " : "") + ROUND(aSize) + "px '" + aName + "'"] || objj_msgSend(objj_msgSend(CPFont, "alloc"), "_initWithName:size:bold:", aName, aSize, NO);
+    return _CPFonts[(NO ? "bold " : "") + ROUND(aSize) + "px " + ((aName === _CPFontSystemFontFace) ? aName : ("\"" + aName.replace(_CPWrapRegExp, '", "') + "\", " + _CPFontSystemFontFace))] || objj_msgSend(objj_msgSend(CPFont, "alloc"), "_initWithName:size:bold:", aName, aSize, NO);
 }
 },["CPFont","CPString","float"]), new objj_method(sel_getUid("boldFontWithName:size:"), function $CPFont__boldFontWithName_size_(self, _cmd, aName, aSize)
 { with(self)
 {
-    return _CPFonts[(YES ? "bold " : "") + ROUND(aSize) + "px '" + aName + "'"] || objj_msgSend(objj_msgSend(CPFont, "alloc"), "_initWithName:size:bold:", aName, aSize, YES);
+    return _CPFonts[(YES ? "bold " : "") + ROUND(aSize) + "px " + ((aName === _CPFontSystemFontFace) ? aName : ("\"" + aName.replace(_CPWrapRegExp, '", "') + "\", " + _CPFontSystemFontFace))] || objj_msgSend(objj_msgSend(CPFont, "alloc"), "_initWithName:size:bold:", aName, aSize, YES);
 }
 },["CPFont","CPString","float"]), new objj_method(sel_getUid("systemFontOfSize:"), function $CPFont__systemFontOfSize_(self, _cmd, aSize)
 { with(self)
 {
-    return _CPFonts[(NO ? "bold " : "") + ROUND(aSize) + "px '" + _CPFontSystemFontFace + "'"] || objj_msgSend(objj_msgSend(CPFont, "alloc"), "_initWithName:size:bold:", _CPFontSystemFontFace, aSize, NO);
+    return _CPFonts[(NO ? "bold " : "") + ROUND(aSize) + "px " + ((_CPFontSystemFontFace === _CPFontSystemFontFace) ? _CPFontSystemFontFace : ("\"" + _CPFontSystemFontFace.replace(_CPWrapRegExp, '", "') + "\", " + _CPFontSystemFontFace))] || objj_msgSend(objj_msgSend(CPFont, "alloc"), "_initWithName:size:bold:", _CPFontSystemFontFace, aSize, NO);
 }
 },["CPFont","CPSize"]), new objj_method(sel_getUid("boldSystemFontOfSize:"), function $CPFont__boldSystemFontOfSize_(self, _cmd, aSize)
 { with(self)
 {
-    return _CPFonts[(YES ? "bold " : "") + ROUND(aSize) + "px '" + _CPFontSystemFontFace + "'"] || objj_msgSend(objj_msgSend(CPFont, "alloc"), "_initWithName:size:bold:", _CPFontSystemFontFace, aSize, YES);
+    return _CPFonts[(YES ? "bold " : "") + ROUND(aSize) + "px " + ((_CPFontSystemFontFace === _CPFontSystemFontFace) ? _CPFontSystemFontFace : ("\"" + _CPFontSystemFontFace.replace(_CPWrapRegExp, '", "') + "\", " + _CPFontSystemFontFace))] || objj_msgSend(objj_msgSend(CPFont, "alloc"), "_initWithName:size:bold:", _CPFontSystemFontFace, aSize, YES);
 }
 },["CPFont","CPSize"])]);
 }
@@ -7335,7 +7518,7 @@ class_addMethods(meta_class, [new objj_method(sel_getUid("currentContext"), func
 },["CPGraphicsContext","CGContext","BOOL"])]);
 }
 
-p;9;CPImage.jI;21;Foundation/CPBundle.jI;33;Foundation/CPNotificationCenter.jI;21;Foundation/CPObject.jI;22;Foundation/CPRunLoop.jI;21;Foundation/CPString.ji;12;CPGeometry.jc;12364;
+p;9;CPImage.jI;21;Foundation/CPBundle.jI;33;Foundation/CPNotificationCenter.jI;21;Foundation/CPObject.jI;22;Foundation/CPRunLoop.jI;21;Foundation/CPString.ji;12;CPGeometry.jc;13876;
 CPImageLoadStatusInitialized = 0;
 CPImageLoadStatusLoading = 1;
 CPImageLoadStatusCompleted = 2;
@@ -7344,6 +7527,12 @@ CPImageLoadStatusInvalidData = 4;
 CPImageLoadStatusUnexpectedEOF = 5;
 CPImageLoadStatusReadError = 6;
 CPImageDidLoadNotification = "CPImageDidLoadNotification";
+CPImageNameColorPanel = "CPImageNameColorPanel";
+CPImageNameColorPanelHighlighted = "CPImageNameColorPanelHighlighted";
+var imagesForNames = { },
+    AppKitImageForNames = { };
+AppKitImageForNames[CPImageNameColorPanel] = CGSizeMake(26.0, 29.0);
+AppKitImageForNames[CPImageNameColorPanelHighlighted] = CGSizeMake(26.0, 29.0);
 CPImageInBundle= function(aFilename, aSize, aBundle)
 {
     if (!aBundle)
@@ -7352,8 +7541,12 @@ CPImageInBundle= function(aFilename, aSize, aBundle)
         return objj_msgSend(objj_msgSend(CPImage, "alloc"), "initWithContentsOfFile:size:", objj_msgSend(aBundle, "pathForResource:", aFilename), aSize);
     return objj_msgSend(objj_msgSend(CPImage, "alloc"), "initWithContentsOfFile:", objj_msgSend(aBundle, "pathForResource:", aFilename));
 }
+CPAppKitImage= function(aFilename, aSize)
+{
+    return CPImageInBundle(aFilename, aSize, objj_msgSend(CPBundle, "bundleForClass:", objj_msgSend(CPView, "class")));
+}
 {var the_class = objj_allocateClassPair(CPObject, "CPImage"),
-meta_class = the_class.isa;class_addIvars(the_class, [new objj_ivar("_size"), new objj_ivar("_filename"), new objj_ivar("_delegate"), new objj_ivar("_loadStatus"), new objj_ivar("_image")]);
+meta_class = the_class.isa;class_addIvars(the_class, [new objj_ivar("_size"), new objj_ivar("_filename"), new objj_ivar("_name"), new objj_ivar("_delegate"), new objj_ivar("_loadStatus"), new objj_ivar("_image")]);
 objj_registerClassPair(the_class);
 objj_addClassForBundle(the_class, objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
 class_addMethods(the_class, [new objj_method(sel_getUid("init"), function $CPImage__init(self, _cmd)
@@ -7404,7 +7597,22 @@ class_addMethods(the_class, [new objj_method(sel_getUid("init"), function $CPIma
 {
     return _size;
 }
-},["CGSize"]), new objj_method(sel_getUid("setDelegate:"), function $CPImage__setDelegate_(self, _cmd, aDelegate)
+},["CGSize"]), new objj_method(sel_getUid("setName:"), function $CPImage__setName_(self, _cmd, aName)
+{ with(self)
+{
+    if (_name === aName)
+        return;
+    if (imagesForNames[aName] === self)
+        imagesForNames[aName] = nil;
+    _name = aName;
+    imagesForNames[aName] = self;
+}
+},["void","CPString"]), new objj_method(sel_getUid("name"), function $CPImage__name(self, _cmd)
+{ with(self)
+{
+    return _name;
+}
+},["CPString"]), new objj_method(sel_getUid("setDelegate:"), function $CPImage__setDelegate_(self, _cmd, aDelegate)
 { with(self)
 {
     _delegate = aDelegate;
@@ -7461,7 +7669,7 @@ class_addMethods(the_class, [new objj_method(sel_getUid("init"), function $CPIma
             objj_msgSend(self, "_derefFromImage");
         }
     _image.src = _filename;
-    isSynchronous = NO;
+    window.setTimeout(function() { isSynchronous = NO; }, 0);
 }
 },["void"]), new objj_method(sel_getUid("isThreePartImage"), function $CPImage__isThreePartImage(self, _cmd)
 { with(self)
@@ -7505,6 +7713,22 @@ class_addMethods(the_class, [new objj_method(sel_getUid("init"), function $CPIma
         objj_msgSend(_delegate, "imageDidAbort:", self);
 }
 },["void"])]);
+class_addMethods(meta_class, [new objj_method(sel_getUid("imageNamed:"), function $CPImage__imageNamed_(self, _cmd, aName)
+{ with(self)
+{
+    var image = imagesForNames[aName];
+    if (image)
+        return image;
+    var imageOrSize = AppKitImageForNames[aName];
+    if (!imageOrSize.isa)
+    {
+        imageOrSize = CPAppKitImage("CPImage/" + aName + ".png", imageOrSize);
+        objj_msgSend(imageOrSize, "setName:", aName);
+        AppKitImageForNames[aName] = imageOrSize;
+    }
+    return imageOrSize;
+}
+},["id","CPString"])]);
 }
 {
 var the_class = objj_getClass("CPImage")
@@ -13316,12 +13540,12 @@ var meta_class = the_class.isa;class_addMethods(the_class, [new objj_method(sel_
 },["CGSize","CPFont","float"])]);
 }
 
-p;15;CPTableColumn.jI;25;Foundation/CPDictionary.jI;21;Foundation/CPObject.jI;29;Foundation/CPSortDescriptor.jI;21;Foundation/CPString.ji;19;CPTableHeaderView.jc;12528;
+p;15;CPTableColumn.jI;25;Foundation/CPDictionary.jI;21;Foundation/CPObject.jI;29;Foundation/CPSortDescriptor.jI;21;Foundation/CPString.ji;19;CPTableHeaderView.jc;12907;
 CPTableColumnNoResizing = 0;
 CPTableColumnAutoresizingMask = 1;
 CPTableColumnUserResizingMask = 2;
 {var the_class = objj_allocateClassPair(CPObject, "CPTableColumn"),
-meta_class = the_class.isa;class_addIvars(the_class, [new objj_ivar("_tableView"), new objj_ivar("_headerView"), new objj_ivar("_dataView"), new objj_ivar("_dataViewData"), new objj_ivar("_width"), new objj_ivar("_minWidth"), new objj_ivar("_maxWidth"), new objj_ivar("_identifier"), new objj_ivar("_isEditable"), new objj_ivar("_sortDescriptorPrototype"), new objj_ivar("_isHidden"), new objj_ivar("_headerToolTip")]);
+meta_class = the_class.isa;class_addIvars(the_class, [new objj_ivar("_tableView"), new objj_ivar("_headerView"), new objj_ivar("_dataView"), new objj_ivar("_dataViewData"), new objj_ivar("_width"), new objj_ivar("_minWidth"), new objj_ivar("_maxWidth"), new objj_ivar("_resizingMask"), new objj_ivar("_identifier"), new objj_ivar("_isEditable"), new objj_ivar("_sortDescriptorPrototype"), new objj_ivar("_isHidden"), new objj_ivar("_headerToolTip")]);
 objj_registerClassPair(the_class);
 objj_addClassForBundle(the_class, objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
 class_addMethods(the_class, [new objj_method(sel_getUid("init"), function $CPTableColumn__init(self, _cmd)
@@ -13341,7 +13565,10 @@ class_addMethods(the_class, [new objj_method(sel_getUid("init"), function $CPTab
         _maxWidth = 1000000.0;
         objj_msgSend(self, "setIdentifier:", anIdentifier);
         objj_msgSend(self, "setHeaderView:", objj_msgSend(CPTextField, "new"));
-        objj_msgSend(self, "setDataView:", objj_msgSend(CPTextField, "new"));
+        var textDataView = objj_msgSend(CPTextField, "new");
+        objj_msgSend(textDataView, "setValue:forThemeAttribute:inState:", objj_msgSend(CPColor, "whiteColor"), "text-color", CPThemeStateHighlighted);
+        objj_msgSend(textDataView, "setValue:forThemeAttribute:inState:", objj_msgSend(CPFont, "boldSystemFontOfSize:", 12), "font", CPThemeStateHighlighted);
+        objj_msgSend(self, "setDataView:", textDataView);
     }
     return self;
 }
@@ -13428,7 +13655,7 @@ class_addMethods(the_class, [new objj_method(sel_getUid("init"), function $CPTab
 },["float"]), new objj_method(sel_getUid("sizeToFit"), function $CPTableColumn__sizeToFit(self, _cmd)
 { with(self)
 {
-    var width = _CGRectGetWidth(objj_msgSend(_headerView, "frame"));
+    var width = (objj_msgSend(_headerView, "frame").size.width);
     if (width < objj_msgSend(self, "minWidth"))
         objj_msgSend(self, "setMinWidth:", width);
     else if (width > objj_msgSend(self, "maxWidth"))
@@ -13723,7 +13950,7 @@ _tableView = newValue;
 },["void","CGRect"])]);
 }
 
-p;13;CPTableView.jI;20;Foundation/CPArray.ji;11;CPControl.ji;15;CPTableColumn.ji;15;_CPCornerView.ji;12;CPScroller.jc;103142;
+p;13;CPTableView.jI;20;Foundation/CPArray.ji;11;CPControl.ji;15;CPTableColumn.ji;15;_CPCornerView.ji;12;CPScroller.jc;102895;
 CPTableViewColumnDidMoveNotification = "CPTableViewColumnDidMoveNotification";
 CPTableViewColumnDidResizeNotification = "CPTableViewColumnDidResizeNotification";
 CPTableViewSelectionDidChangeNotification = "CPTableViewSelectionDidChangeNotification";
@@ -13794,7 +14021,7 @@ class_addMethods(the_class, [new objj_method(sel_getUid("initWithTableView:"), f
 },["void","CGRect"])]);
 }
 {var the_class = objj_allocateClassPair(CPControl, "CPTableView"),
-meta_class = the_class.isa;class_addIvars(the_class, [new objj_ivar("_dataSource"), new objj_ivar("_implementedDataSourceMethods"), new objj_ivar("_delegate"), new objj_ivar("_implementedDelegateMethods"), new objj_ivar("_tableColumns"), new objj_ivar("_tableColumnRanges"), new objj_ivar("_dirtyTableColumnRangeIndex"), new objj_ivar("_numberOfHiddenColumns"), new objj_ivar("_reloadAllRows"), new objj_ivar("_objectValues"), new objj_ivar("_exposedRows"), new objj_ivar("_exposedColumns"), new objj_ivar("_dataViewsForTableColumns"), new objj_ivar("_cachedDataViews"), new objj_ivar("_allowsColumnReordering"), new objj_ivar("_allowsColumnResizing"), new objj_ivar("_allowsMultipleSelection"), new objj_ivar("_allowsEmptySelection"), new objj_ivar("_intercellSpacing"), new objj_ivar("_rowHeight"), new objj_ivar("_usesAlternatingRowBackgroundColors"), new objj_ivar("_alternatingRowBackgroundColors"), new objj_ivar("_selectionHighlightMask"), new objj_ivar("_selectionHightlightColor"), new objj_ivar("_currentHighlightedTableColumn"), new objj_ivar("_gridStyleMask"), new objj_ivar("_gridColor"), new objj_ivar("_numberOfRows"), new objj_ivar("_headerView"), new objj_ivar("_cornerView"), new objj_ivar("_selectedColumnIndexes"), new objj_ivar("_selectedRowIndexes"), new objj_ivar("_selectionAnchorRow"), new objj_ivar("_previouslySelectedRowIndexes"), new objj_ivar("_startTrackingPoint"), new objj_ivar("_startTrackingTimestamp"), new objj_ivar("_trackingPointMovedOutOfClickSlop"), new objj_ivar("_editingCellIndex"), new objj_ivar("_tableDrawView"), new objj_ivar("_doubleAction"), new objj_ivar("_columnAutoResizingStyle"), new objj_ivar("_verticalMotionCanDrag"), new objj_ivar("_destinationDragStyle"), new objj_ivar("_isSelectingSession"), new objj_ivar("_draggedRowIndexes"), new objj_ivar("_dropOperationFeedbackView"), new objj_ivar("_dragOperationDefaultMask"), new objj_ivar("_retargetedDropRow"), new objj_ivar("_retargetedDropOperation")]);
+meta_class = the_class.isa;class_addIvars(the_class, [new objj_ivar("_dataSource"), new objj_ivar("_implementedDataSourceMethods"), new objj_ivar("_delegate"), new objj_ivar("_implementedDelegateMethods"), new objj_ivar("_tableColumns"), new objj_ivar("_tableColumnRanges"), new objj_ivar("_dirtyTableColumnRangeIndex"), new objj_ivar("_numberOfHiddenColumns"), new objj_ivar("_reloadAllRows"), new objj_ivar("_objectValues"), new objj_ivar("_exposedRows"), new objj_ivar("_exposedColumns"), new objj_ivar("_dataViewsForTableColumns"), new objj_ivar("_cachedDataViews"), new objj_ivar("_allowsColumnReordering"), new objj_ivar("_allowsColumnResizing"), new objj_ivar("_allowsMultipleSelection"), new objj_ivar("_allowsEmptySelection"), new objj_ivar("_intercellSpacing"), new objj_ivar("_rowHeight"), new objj_ivar("_usesAlternatingRowBackgroundColors"), new objj_ivar("_alternatingRowBackgroundColors"), new objj_ivar("_selectionHighlightMask"), new objj_ivar("_selectionHightlightColor"), new objj_ivar("_currentHighlightedTableColumn"), new objj_ivar("_gridStyleMask"), new objj_ivar("_gridColor"), new objj_ivar("_numberOfRows"), new objj_ivar("_headerView"), new objj_ivar("_cornerView"), new objj_ivar("_selectedColumnIndexes"), new objj_ivar("_selectedRowIndexes"), new objj_ivar("_selectionAnchorRow"), new objj_ivar("_previouslySelectedRowIndexes"), new objj_ivar("_startTrackingPoint"), new objj_ivar("_startTrackingTimestamp"), new objj_ivar("_trackingPointMovedOutOfClickSlop"), new objj_ivar("_editingCellIndex"), new objj_ivar("_tableDrawView"), new objj_ivar("_doubleAction"), new objj_ivar("_columnAutoResizingStyle")]);
 objj_registerClassPair(the_class);
 objj_addClassForBundle(the_class, objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
 class_addMethods(the_class, [new objj_method(sel_getUid("initWithFrame:"), function $CPTableView__initWithFrame_(self, _cmd, aFrame)
@@ -13808,7 +14035,6 @@ class_addMethods(the_class, [new objj_method(sel_getUid("initWithFrame:"), funct
         _allowsMultipleSelection = NO;
         _allowsEmptySelection = YES;
         _allowsColumnSelection = NO;
-        _draggedRowIndexes = nil;
         _tableViewFlags = 0;
         _selectionHighlightMask = CPTableViewSelectionHighlightStyleRegular;
         objj_msgSend(self, "setUsesAlternatingRowBackgroundColors:", NO);
@@ -13834,7 +14060,12 @@ class_addMethods(the_class, [new objj_method(sel_getUid("initWithFrame:"), funct
         _cornerView = objj_msgSend(objj_msgSend(_CPCornerView, "alloc"), "initWithFrame:", CGRectMake(0, 0, objj_msgSend(CPScroller, "scrollerWidth"), CGRectGetHeight(objj_msgSend(_headerView, "frame"))));
         _selectedColumnIndexes = objj_msgSend(CPIndexSet, "indexSet");
         _selectedRowIndexes = objj_msgSend(CPIndexSet, "indexSet");
+        _draggedRowIndexes = objj_msgSend(CPIndexSet, "indexSet");
         _verticalMotionCanDrag = YES;
+        _isSelectingSession = NO;
+        _retargetedDropRow = nil;
+        _retargetedDropOperation = nil;
+        _dragOperationDefaultMask = nil;
         _destinationDragStyle = CPTableViewDraggingDestinationFeedbackStyleRegular;
         _dropOperationFeedbackView = objj_msgSend(objj_msgSend(_dropOperationDrawingView, "alloc"), "initWithFrame:", { origin: { x:0.0, y:0.0 }, size: { width:0.0, height:0.0 } });
         objj_msgSend(self, "addSubview:", _dropOperationFeedbackView);
@@ -15405,7 +15636,6 @@ class_addMethods(the_class, [new objj_method(sel_getUid("initWithFrame:"), funct
 },["BOOL"]), new objj_method(sel_getUid("keyDown:"), function $CPTableView__keyDown_(self, _cmd, anEvent)
 { with(self)
 {
-    objj_msgSendSuper({ receiver:self, super_class:objj_getClass("CPControl") }, "keyDown:", anEvent);
     objj_msgSend(self, "interpretKeyEvents:", objj_msgSend(CPArray, "arrayWithObject:", anEvent));
 }
 },["void","CPEvent"]), new objj_method(sel_getUid("interpretKeyEvents:"), function $CPTableView__interpretKeyEvents_(self, _cmd, events)
@@ -15482,7 +15712,7 @@ class_addMethods(the_class, [new objj_method(sel_getUid("initWithFrame:"), funct
          {
             objj_msgSend(self, "scrollRowToVisible:", i);
             objj_msgSend(self, "_noteSelectionDidChange");
-          }
+         }
     }
     }
 }
@@ -17413,7 +17643,7 @@ return _themes;
 },["void","CPBundle"])]);
 }
 
-p;11;CPToolbar.jI;21;Foundation/CPObject.ji;15;CPPopUpButton.ji;15;CPToolbarItem.jc;33154;
+p;11;CPToolbar.jI;21;Foundation/CPObject.ji;15;CPPopUpButton.ji;15;CPToolbarItem.jc;35326;
 CPToolbarDisplayModeDefault = 0;
 CPToolbarDisplayModeIconAndLabel = 1;
 CPToolbarDisplayModeIconOnly = 2;
@@ -17482,7 +17712,7 @@ class_addMethods(the_class, [new objj_method(sel_getUid("init"), function $CPToo
 },["void","CPWindow"]), new objj_method(sel_getUid("setDelegate:"), function $CPToolbar__setDelegate_(self, _cmd, aDelegate)
 { with(self)
 {
-    if (_delegate == aDelegate)
+    if (_delegate === aDelegate)
         return;
     _delegate = aDelegate;
     objj_msgSend(self, "_reloadToolbarItems");
@@ -17506,25 +17736,28 @@ class_addMethods(the_class, [new objj_method(sel_getUid("init"), function $CPToo
 },["CPView"]), new objj_method(sel_getUid("_reloadToolbarItems"), function $CPToolbar___reloadToolbarItems(self, _cmd)
 { with(self)
 {
-    if (!_delegate)
-        return;
-    var count = objj_msgSend(_itemIdentifiers, "count");
-    if (!count)
+    _itemIdentifiers = objj_msgSend(_defaultItems, "valueForKey:", "itemIdentifier") || [];
+    if (_delegate)
     {
-         _itemIdentifiers = objj_msgSend(objj_msgSend(_delegate, "toolbarDefaultItemIdentifiers:", self), "mutableCopy");
-         count = objj_msgSend(_itemIdentifiers, "count");
+        var itemIdentifiersFromDelegate = objj_msgSend(objj_msgSend(_delegate, "toolbarDefaultItemIdentifiers:", self), "mutableCopy");
+        if (itemIdentifiersFromDelegate)
+            _itemIdentifiers = objj_msgSend(_itemIdentifiers, "arrayByAddingObjectsFromArray:", itemIdentifiersFromDelegate);
     }
+    var index = 0,
+        count = objj_msgSend(_itemIdentifiers, "count");
     _items = [];
-    var index = 0;
     for (; index < count; ++index)
     {
         var identifier = _itemIdentifiers[index],
             item = objj_msgSend(CPToolbarItem, "_standardItemWithItemIdentifier:", identifier);
         if (!item)
+            item = objj_msgSend(_identifiedItems, "objectForKey:", identifier);
+        if (!item && _delegate)
             item = objj_msgSend(_delegate, "toolbar:itemForItemIdentifier:willBeInsertedIntoToolbar:", self, identifier, YES);
         item = objj_msgSend(item, "copy");
-        if (item == nil)
-            objj_msgSend(CPException, "raise:reason:", CPInvalidArgumentException, sprintf("_delegate %s returned nil toolbar item returned for identifier %s", _delegate, identifier));
+        if (item === nil)
+            objj_msgSend(CPException, "raise:reason:", CPInvalidArgumentException, "Toolbar delegate " + _delegate + " returned nil toolbar item for identifier \"" + identifier + "\"");
+        item._toolbar = self;
         objj_msgSend(_items, "addObject:", item);
     }
     _itemsSortedByVisibilityPriority = objj_msgSend(_items, "sortedArrayUsingFunction:context:", _CPToolbarItemVisibilityPriorityCompare, NULL);
@@ -17581,12 +17814,36 @@ class_addMethods(the_class, [new objj_method(sel_getUid("init"), function $CPToo
 },["id","CPArray"]), new objj_method(sel_getUid("_defaultToolbarItems"), function $CPToolbar___defaultToolbarItems(self, _cmd)
 { with(self)
 {
-    if (!_defaultItems)
-        if (objj_msgSend(_delegate, "respondsToSelector:", sel_getUid("toolbarDefaultItemIdentifiers:")))
-            _defaultItems = objj_msgSend(self, "_itemsWithIdentifiers:", objj_msgSend(_delegate, "toolbarDefaultItemIdentifiers:", self));
+    if (!_defaultItems && objj_msgSend(_delegate, "respondsToSelector:", sel_getUid("toolbarDefaultItemIdentifiers:")))
+    {
+        _defaultItems = [];
+        var identifiers = objj_msgSend(_delegate, "toolbarDefaultItemIdentifiers:", self),
+            index = 0,
+            count = objj_msgSend(identifiers, "count");
+        for (; index < count; ++index)
+            objj_msgSend(_defaultItems, "addObject:", objj_msgSend(self, "_itemForItemIdentifier:willBeInsertedIntoToolbar:", identifiers[index], NO));
+    }
     return _defaultItems;
 }
-},["id"])]);
+},["id"]), new objj_method(sel_getUid("toolbarItemDidChange:"), function $CPToolbar__toolbarItemDidChange_(self, _cmd, anItem)
+{ with(self)
+{
+    if (objj_msgSend(_identifiedItems, "objectForKey:", objj_msgSend(anItem, "itemIdentifier")))
+        objj_msgSend(_identifiedItems, "setObject:forKey:", anItem, objj_msgSend(anItem, "itemIdentifier"));
+    var index = 0,
+        count = objj_msgSend(_items, "count");
+    for (; index <= count; ++index)
+    {
+        var item = _items[index];
+        if (objj_msgSend(item, "itemIdentifier") === objj_msgSend(anItem, "itemIdentifier"))
+        {
+            _items[index] = anItem;
+            _itemsSortedByVisibilityPriority = objj_msgSend(_items, "sortedArrayUsingFunction:context:", _CPToolbarItemVisibilityPriorityCompare, NULL);
+            objj_msgSend(_toolbarView, "reloadToolbarItems");
+        }
+    }
+}
+},["void","CPToolbarItem"])]);
 class_addMethods(meta_class, [new objj_method(sel_getUid("initialize"), function $CPToolbar__initialize(self, _cmd)
 { with(self)
 {
@@ -17636,9 +17893,11 @@ var meta_class = the_class.isa;class_addMethods(the_class, [new objj_method(sel_
         _defaultItems = objj_msgSend(aCoder, "decodeObjectForKey:", CPToolbarDefaultItemsKey);
         _allowedItems = objj_msgSend(aCoder, "decodeObjectForKey:", CPToolbarAllowedItemsKey);
         _selectableItems = objj_msgSend(aCoder, "decodeObjectForKey:", CPToolbarSelectableItemsKey);
+        objj_msgSend(objj_msgSend(_identifiedItems, "allValues"), "makeObjectsPerformSelector:withObject:", sel_getUid("_setToolbar:"), self);
         _items = [];
         objj_msgSend(CPToolbar, "_addToolbar:forIdentifier:", self, _identifier);
         objj_msgSend(self, "setDelegate:", objj_msgSend(aCoder, "decodeObjectForKey:", CPToolbarDelegateKey));
+        objj_msgSend(self, "_reloadToolbarItems");
     }
     return self;
 }
@@ -17883,7 +18142,7 @@ return _visibleItems;
 class_addMethods(meta_class, [new objj_method(sel_getUid("initialize"), function $_CPToolbarView__initialize(self, _cmd)
 { with(self)
 {
-    if (self != objj_msgSend(_CPToolbarView, "class"))
+    if (self !== objj_msgSend(_CPToolbarView, "class"))
         return;
     var bundle = objj_msgSend(CPBundle, "bundleForClass:", self);
     _CPToolbarViewExtraItemsImage = objj_msgSend(objj_msgSend(CPImage, "alloc"), "initWithContentsOfFile:size:",  objj_msgSend(bundle, "pathForResource:", "_CPToolbarView/_CPToolbarViewExtraItemsImage.png"),  CPSizeMake(10.0, 15.0));
@@ -17934,7 +18193,11 @@ return _maxSize;
         objj_msgSend(self, "addSubview:", _labelField);
         objj_msgSend(self, "updateFromItem");
         _toolbar = aToolbar;
-        objj_msgSend(_toolbarItem, "addObserver:forKeyPath:options:context:", self, "enabled", 0, NULL);
+        var keyPaths = ["label", "image", "alternateImage", "minSize", "maxSize", "target", "action", "enabled"],
+            index = 0,
+            count = objj_msgSend(keyPaths, "count");
+        for (; index < count; ++index)
+            objj_msgSend(_toolbarItem, "addObserver:forKeyPath:options:context:", self, keyPaths[index], 0, NULL);
     }
     return self;
 }
@@ -18088,22 +18351,28 @@ return _maxSize;
 {
     if (aKeyPath === "enabled")
         objj_msgSend(self, "setEnabled:", objj_msgSend(anObject, "isEnabled"));
+    else if (aKeyPath === "target")
+        objj_msgSend(self, "setTarget:", objj_msgSend(anObject, "target"));
+    else if (aKeyPath === "action")
+        objj_msgSend(self, "setAction:", objj_msgSend(anObject, "action"));
+    else
+        objj_msgSend(self, "updateFromItem");
 }
 },["void","CPString","id","CPDictionary","id"])]);
 }
 
-p;15;CPToolbarItem.jI;21;Foundation/CPObject.jI;21;Foundation/CPString.jI;16;AppKit/CPImage.jI;15;AppKit/CPView.jc;18384;
+p;15;CPToolbarItem.jI;21;Foundation/CPObject.jI;21;Foundation/CPString.jI;16;AppKit/CPImage.jI;15;AppKit/CPView.jc;18445;
 CPToolbarItemVisibilityPriorityStandard = 0;
 CPToolbarItemVisibilityPriorityLow = -1000;
 CPToolbarItemVisibilityPriorityHigh = 1000;
 CPToolbarItemVisibilityPriorityUser = 2000;
-CPToolbarSeparatorItemIdentifier = "CPToolbarSeparatorItemIdentifier";
-CPToolbarSpaceItemIdentifier = "CPToolbarSpaceItemIdentifier";
-CPToolbarFlexibleSpaceItemIdentifier = "CPToolbarFlexibleSpaceItemIdentifier";
-CPToolbarShowColorsItemIdentifier = "CPToolbarShowColorsItemIdentifier";
-CPToolbarShowFontsItemIdentifier = "CPToolbarShowFontsItemIdentifier";
-CPToolbarCustomizeToolbarItemIdentifier = "CPToolbarCustomizeToolbarItemIdentifier";
-CPToolbarPrintItemIdentifier = "CPToolbarPrintItemIdentifier";
+CPToolbarSeparatorItemIdentifier = "CPToolbarSeparatorItem";
+CPToolbarSpaceItemIdentifier = "CPToolbarSpaceItem";
+CPToolbarFlexibleSpaceItemIdentifier = "CPToolbarFlexibleSpaceItem";
+CPToolbarShowColorsItemIdentifier = "CPToolbarShowColorsItem";
+CPToolbarShowFontsItemIdentifier = "CPToolbarShowFontsItem";
+CPToolbarCustomizeToolbarItemIdentifier = "CPToolbarCustomizeToolbarItem";
+CPToolbarPrintItemIdentifier = "CPToolbarPrintItem";
 {var the_class = objj_allocateClassPair(CPObject, "CPToolbarItem"),
 meta_class = the_class.isa;class_addIvars(the_class, [new objj_ivar("_itemIdentifier"), new objj_ivar("_toolbar"), new objj_ivar("_label"), new objj_ivar("_paletteLabel"), new objj_ivar("_toolTip"), new objj_ivar("_tag"), new objj_ivar("_target"), new objj_ivar("_action"), new objj_ivar("_isEnabled"), new objj_ivar("_image"), new objj_ivar("_alternateImage"), new objj_ivar("_view"), new objj_ivar("_minSize"), new objj_ivar("_maxSize"), new objj_ivar("_visibilityPriority"), new objj_ivar("_autovalidates")]);
 objj_registerClassPair(the_class);
@@ -18125,6 +18394,7 @@ class_addMethods(the_class, [new objj_method(sel_getUid("init"), function $CPToo
         _minSize = CGSizeMakeZero();
         _maxSize = CGSizeMakeZero();
         _visibilityPriority = CPToolbarItemVisibilityPriorityStandard;
+        _autovalidates = YES;
     }
     return self;
 }
@@ -18138,7 +18408,12 @@ class_addMethods(the_class, [new objj_method(sel_getUid("init"), function $CPToo
 {
     return _toolbar;
 }
-},["CPToolbar"]), new objj_method(sel_getUid("label"), function $CPToolbarItem__label(self, _cmd)
+},["CPToolbar"]), new objj_method(sel_getUid("_setToolbar:"), function $CPToolbarItem___setToolbar_(self, _cmd, aToolbar)
+{ with(self)
+{
+    _toolbar = aToolbar;
+}
+},["void","CPToolbar"]), new objj_method(sel_getUid("label"), function $CPToolbarItem__label(self, _cmd)
 { with(self)
 {
     return _label;
@@ -18245,8 +18520,8 @@ class_addMethods(the_class, [new objj_method(sel_getUid("init"), function $CPToo
     _image = anImage;
     if (!_image)
         return;
-    if (_minSize.width == 0 && _minSize.height == 0 &&
-        _maxSize.width == 0 && _maxSize.height == 0)
+    if (_minSize.width === 0 && _minSize.height === 0 &&
+        _maxSize.width === 0 && _maxSize.height === 0)
     {
         var imageSize = objj_msgSend(_image, "size");
         if (imageSize.width > 0 || imageSize.height > 0)
@@ -18297,6 +18572,8 @@ class_addMethods(the_class, [new objj_method(sel_getUid("init"), function $CPToo
 },["CGSize"]), new objj_method(sel_getUid("setMinSize:"), function $CPToolbarItem__setMinSize_(self, _cmd, aMinSize)
 { with(self)
 {
+    if(!aMinSize.height || !aMinSize.width)
+        return;
     _minSize = CGSizeMakeCopy(aMinSize);
     _maxSize = CGSizeMake(MAX(_minSize.width, _maxSize.width), MAX(_minSize.height, _maxSize.height));
 }
@@ -18308,6 +18585,8 @@ class_addMethods(the_class, [new objj_method(sel_getUid("init"), function $CPToo
 },["CGSize"]), new objj_method(sel_getUid("setMaxSize:"), function $CPToolbarItem__setMaxSize_(self, _cmd, aMaxSize)
 { with(self)
 {
+    if(!aMaxSize.height || !aMaxSize.width)
+        return;
     _maxSize = CGSizeMakeCopy(aMaxSize);
     _minSize = CGSizeMake(MIN(_minSize.width, _maxSize.width), MIN(_minSize.height, _maxSize.height));
 }
@@ -18356,7 +18635,7 @@ class_addMethods(the_class, [new objj_method(sel_getUid("init"), function $CPToo
 }
 },["void","BOOL"])]);
 }
-var CPToolbarItemIdentifierKey = "CPToolbarItemIdentifierKey",
+var CPToolbarItemItemIdentifierKey = "CPToolbarItemItemIdentifierKey",
     CPToolbarItemLabelKey = "CPToolbarItemLabelKey",
     CPToolbarItemPaletteLabelKey = "CPToolbarItemPaletteLabelKey",
     CPToolbarItemToolTipKey = "CPToolbarItemToolTipKey",
@@ -18369,7 +18648,8 @@ var CPToolbarItemIdentifierKey = "CPToolbarItemIdentifierKey",
     CPToolbarItemViewKey = "CPToolbarItemViewKey",
     CPToolbarItemMinSizeKey = "CPToolbarItemMinSizeKey",
     CPToolbarItemMaxSizeKey = "CPToolbarItemMaxSizeKey",
-    CPToolbarItemVisibilityPriorityKey = "CPToolbarItemVisibilityPriorityKey";
+    CPToolbarItemVisibilityPriorityKey = "CPToolbarItemVisibilityPriorityKey",
+    CPToolbarItemAutovalidatesKey = "CPToolbarItemAutovalidatesKey";
 {
 var the_class = objj_getClass("CPToolbarItem")
 if(!the_class) objj_exception_throw(new objj_exception(OBJJClassNotFoundException, "*** Could not find definition for class \"CPToolbarItem\""));
@@ -18379,20 +18659,21 @@ var meta_class = the_class.isa;class_addMethods(the_class, [new objj_method(sel_
     self = objj_msgSendSuper({ receiver:self, super_class:objj_getClass("CPObject") }, "init");
     if (self)
     {
-        _itemIdentifier = objj_msgSend(aCoder, "decodeObjectForKey:", CPToolbarItemIdentifierKey);
+        _itemIdentifier = objj_msgSend(aCoder, "decodeObjectForKey:", CPToolbarItemItemIdentifierKey);
+        _minSize = objj_msgSend(aCoder, "decodeSizeForKey:", CPToolbarItemMinSizeKey);
+        _maxSize = objj_msgSend(aCoder, "decodeSizeForKey:", CPToolbarItemMaxSizeKey);
         objj_msgSend(self, "setLabel:", objj_msgSend(aCoder, "decodeObjectForKey:", CPToolbarItemLabelKey));
         objj_msgSend(self, "setPaletteLabel:", objj_msgSend(aCoder, "decodeObjectForKey:", CPToolbarItemPaletteLabelKey));
         objj_msgSend(self, "setToolTip:", objj_msgSend(aCoder, "decodeObjectForKey:", CPToolbarItemToolTipKey));
         objj_msgSend(self, "setTag:", objj_msgSend(aCoder, "decodeObjectForKey:", CPToolbarItemTagKey));
         objj_msgSend(self, "setTarget:", objj_msgSend(aCoder, "decodeObjectForKey:", CPToolbarItemTargetKey));
-        objj_msgSend(self, "setAction:", objj_msgSend(aCoder, "decodeObjectForKey:", CPToolbarItemActionKey));
+        objj_msgSend(self, "setAction:", CPSelectorFromString(objj_msgSend(aCoder, "decodeObjectForKey:", CPToolbarItemActionKey)));
         objj_msgSend(self, "setEnabled:", objj_msgSend(aCoder, "decodeBoolForKey:", CPToolbarItemEnabledKey));
-        objj_msgSend(self, "setImage:", objj_msgSend(aCoder, "decodeBoolForKey:", CPToolbarItemImageKey));
-        objj_msgSend(self, "setAlternateImage:", objj_msgSend(aCoder, "decodeBoolForKey:", CPToolbarItemAlternateImageKey));
+        objj_msgSend(self, "setImage:", objj_msgSend(aCoder, "decodeObjectForKey:", CPToolbarItemImageKey));
+        objj_msgSend(self, "setAlternateImage:", objj_msgSend(aCoder, "decodeObjectForKey:", CPToolbarItemAlternateImageKey));
         objj_msgSend(self, "setView:", objj_msgSend(aCoder, "decodeObjectForKey:", CPToolbarItemViewKey));
-        objj_msgSend(self, "setMinSize:", objj_msgSend(aCoder, "decodeSizeForKey:", CPToolbarItemMinSizeKey));
-        objj_msgSend(self, "setMaxSize:", objj_msgSend(aCoder, "decodeSizeForKey:", CPToolbarItemMaxSizeKey));
         objj_msgSend(self, "setVisibilityPriority:", objj_msgSend(aCoder, "decodeIntForKey:", CPToolbarItemVisibilityPriorityKey));
+        objj_msgSend(self, "setAutovalidates:", objj_msgSend(aCoder, "decodeBoolForKey:", CPToolbarItemAutovalidatesKey));
     }
     return self;
 }
@@ -18413,6 +18694,7 @@ var meta_class = the_class.isa;class_addMethods(the_class, [new objj_method(sel_
     objj_msgSend(aCoder, "encodeSize:forKey:", objj_msgSend(self, "minSize"), CPToolbarItemMinSizeKey);
     objj_msgSend(aCoder, "encodeSize:forKey:", objj_msgSend(self, "maxSize"), CPToolbarItemMaxSizeKey);
     objj_msgSend(aCoder, "encodeObject:forKey:", objj_msgSend(self, "visibilityPriority"), CPToolbarItemVisibilityPriorityKey);
+    objj_msgSend(aCoder, "encodeBool:forKey:", objj_msgSend(self, "autovalidates"), CPToolbarItemAutovalidatesKey);
 }
 },["void","CPCoder"])]);
 }
@@ -18425,6 +18707,7 @@ var meta_class = the_class.isa;class_addMethods(the_class, [new objj_method(sel_
     var copy = objj_msgSend(objj_msgSend(objj_msgSend(self, "class"), "alloc"), "initWithItemIdentifier:", _itemIdentifier);
     if (_view)
         objj_msgSend(copy, "setView:", objj_msgSend(CPKeyedUnarchiver, "unarchiveObjectWithData:", objj_msgSend(CPKeyedArchiver, "archivedDataWithRootObject:", _view)));
+    objj_msgSend(copy, "_setToolbar:", _toolbar);
     objj_msgSend(copy, "setLabel:", _label);
     objj_msgSend(copy, "setPaletteLabel:", _paletteLabel);
     objj_msgSend(copy, "setToolTip:", objj_msgSend(self, "toolTip"));
@@ -18436,7 +18719,8 @@ var meta_class = the_class.isa;class_addMethods(the_class, [new objj_method(sel_
     objj_msgSend(copy, "setAlternateImage:", objj_msgSend(self, "alternateImage"));
     objj_msgSend(copy, "setMinSize:", _minSize);
     objj_msgSend(copy, "setMaxSize:", _maxSize);
-    objj_msgSend(copy, "setVisibilityPriority:", _visibilityPriority);
+    objj_msgSend(copy, "setVisibilityPriority:", objj_msgSend(self, "visibilityPriority"));
+    objj_msgSend(copy, "setAutovalidates:", objj_msgSend(self, "autovalidates"));
     return copy;
 }
 },["id"])]);
@@ -18447,19 +18731,12 @@ if(!the_class) objj_exception_throw(new objj_exception(OBJJClassNotFoundExceptio
 var meta_class = the_class.isa;class_addMethods(meta_class, [new objj_method(sel_getUid("_standardItemWithItemIdentifier:"), function $CPToolbarItem___standardItemWithItemIdentifier_(self, _cmd, anItemIdentifier)
 { with(self)
 {
-    var item = objj_msgSend(objj_msgSend(CPToolbarItem, "alloc"), "initWithItemIdentifier:", anItemIdentifier);
     switch (anItemIdentifier)
     {
-        case CPToolbarSeparatorItemIdentifier: objj_msgSend(item, "setMinSize:", CGSizeMake(2.0, 0.0));
-                                                        objj_msgSend(item, "setMaxSize:", CGSizeMake(2.0, 100000.0));
-                                                        return item;
-        case CPToolbarSpaceItemIdentifier: objj_msgSend(item, "setMinSize:", CGSizeMake(32.0, 32.0));
-                                                        objj_msgSend(item, "setMaxSize:", CGSizeMake(32.0, 32.0));
-                                                        return item;
-        case CPToolbarFlexibleSpaceItemIdentifier: objj_msgSend(item, "setMinSize:", CGSizeMake(32.0, 32.0));
-                                                        objj_msgSend(item, "setMaxSize:", CGSizeMake(10000.0, 32.0));
-                                                        return item;
-        case CPToolbarShowColorsItemIdentifier: return nil;
+        case CPToolbarSeparatorItemIdentifier: return objj_msgSend(_CPToolbarSeparatorItem, "new");
+        case CPToolbarSpaceItemIdentifier: return objj_msgSend(_CPToolbarSpaceItem, "new");
+        case CPToolbarFlexibleSpaceItemIdentifier: return objj_msgSend(_CPToolbarFlexibleSpaceItem, "new");
+        case CPToolbarShowColorsItemIdentifier: return objj_msgSend(_CPToolbarShowColorsItem, "new");
         case CPToolbarShowFontsItemIdentifier: return nil;
         case CPToolbarCustomizeToolbarItemIdentifier: return nil;
         case CPToolbarPrintItemIdentifier: return nil;
@@ -18468,8 +18745,7 @@ var meta_class = the_class.isa;class_addMethods(meta_class, [new objj_method(sel
 }
 },["CPToolbarItem","CPString"])]);
 }
-
-p;12;CPTreeNode.jI;21;Foundation/CPObject.jc;5260;
+i;29;_CPToolbarFlexibleSpaceItem.ji;26;_CPToolbarShowColorsItem.ji;25;_CPToolbarSeparatorItem.ji;21;_CPToolbarSpaceItem.jp;12;CPTreeNode.jI;21;Foundation/CPObject.jc;5260;
 
 
 {var the_class = objj_allocateClassPair(CPObject, "CPTreeNode"),
@@ -30084,102 +30360,72 @@ CPStandardWindowShadowStyle = 0;
 CPMenuWindowShadowStyle = 1;
 CPPanelWindowShadowStyle = 2;
 CPCustomWindowShadowStyle = 3;
-i;15;_CPWindowView.ji;23;_CPStandardWindowView.ji;23;_CPDocModalWindowView.ji;18;_CPHUDWindowView.ji;25;_CPBorderlessWindowView.ji;31;_CPBorderlessBridgeWindowView.ji;14;CPDragServer.ji;8;CPView.jp;16;CPPlatform+DOM.jc;1355;var DOMSafeElement = NULL,
-    screenNeedsInitialization = objj_msgSend(CPPlatform, "isBrowser");
-{
-var the_class = objj_getClass("CPPlatform")
-if(!the_class) objj_exception_throw(new objj_exception(OBJJClassNotFoundException, "*** Could not find definition for class \"CPPlatform\""));
-var meta_class = the_class.isa;class_addMethods(meta_class, [new objj_method(sel_getUid("DOMSafeElement"), function $CPPlatform__DOMSafeElement(self, _cmd)
-{ with(self)
-{
-    if (!DOMSafeElement)
-    {
-        DOMSafeElement = document.createElement("div");
-        DOMSafeElement.style.position = "absolute";
-        DOMSafeElement.style.left = "-100000px";
-        DOMSafeElement.style.top = "-100000px";
-        DOMSafeElement.style.overflow = "visible";
-        document.body.appendChild(DOMSafeElement);
-    }
-    return DOMSafeElement;
-}
-},["DOMElement"]), new objj_method(sel_getUid("initializeScreenIfNecessary"), function $CPPlatform__initializeScreenIfNecessary(self, _cmd)
-{ with(self)
-{
-    if (!screenNeedsInitialization)
-        return;
-    screenNeedsInitialization = NO;
-    var body = document.body;
-    body.removeChild(DOMSafeElement);
-    body.innerHTML = "";
-    body.style.overflow = "hidden";
-    body.appendChild(DOMSafeElement);
-    if (document.documentElement)
-        document.documentElement.style.overflow = "hidden";
-}
-},["void"])]);
-}
-
-p;12;CPPlatform.jI;21;Foundation/CPObject.jc;1781;
-{var the_class = objj_allocateClassPair(CPObject, "CPPlatform"),
+i;15;_CPWindowView.ji;23;_CPStandardWindowView.ji;23;_CPDocModalWindowView.ji;18;_CPHUDWindowView.ji;25;_CPBorderlessWindowView.ji;31;_CPBorderlessBridgeWindowView.ji;14;CPDragServer.ji;8;CPView.jp;12;CPPlatform.jI;21;Foundation/CPObject.jc;1825;
+{var the_class = objj_allocateClassPair(CPObject, "CPBasePlatform"),
 meta_class = the_class.isa;objj_registerClassPair(the_class);
 objj_addClassForBundle(the_class, objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
-class_addMethods(meta_class, [new objj_method(sel_getUid("bootstrap"), function $CPPlatform__bootstrap(self, _cmd)
+class_addMethods(meta_class, [new objj_method(sel_getUid("bootstrap"), function $CPBasePlatform__bootstrap(self, _cmd)
 { with(self)
 {
     objj_msgSend(CPPlatformString, "bootstrap");
     objj_msgSend(CPPlatformWindow, "setPrimaryPlatformWindow:", objj_msgSend(objj_msgSend(CPPlatformWindow, "alloc"), "_init"));
 }
-},["void"]), new objj_method(sel_getUid("isBrowser"), function $CPPlatform__isBrowser(self, _cmd)
+},["void"]), new objj_method(sel_getUid("isBrowser"), function $CPBasePlatform__isBrowser(self, _cmd)
 { with(self)
 {
-    return typeof window.cpIsDesktop === "undefined";
+    return NO;
 }
-},["BOOL"]), new objj_method(sel_getUid("supportsDragAndDrop"), function $CPPlatform__supportsDragAndDrop(self, _cmd)
+},["BOOL"]), new objj_method(sel_getUid("supportsDragAndDrop"), function $CPBasePlatform__supportsDragAndDrop(self, _cmd)
 { with(self)
 {
-    return CPFeatureIsCompatible(CPHTMLDragAndDropFeature);
+    return NO;
 }
-},["BOOL"]), new objj_method(sel_getUid("supportsNativeMainMenu"), function $CPPlatform__supportsNativeMainMenu(self, _cmd)
+},["BOOL"]), new objj_method(sel_getUid("supportsNativeMainMenu"), function $CPBasePlatform__supportsNativeMainMenu(self, _cmd)
 { with(self)
 {
-    return (typeof window["cpSetMainMenu"] === "function");
+    return NO;
 }
-},["BOOL"]), new objj_method(sel_getUid("terminateApplication"), function $CPPlatform__terminateApplication(self, _cmd)
-{ with(self)
-{
-    if (typeof window["cpTerminate"] === "function")
-        window.cpTerminate();
-}
-},["void"]), new objj_method(sel_getUid("activateIgnoringOtherApps:"), function $CPPlatform__activateIgnoringOtherApps_(self, _cmd, shouldIgnoreOtherApps)
+},["BOOL"]), new objj_method(sel_getUid("terminateApplication"), function $CPBasePlatform__terminateApplication(self, _cmd)
 { with(self)
 {
 }
-},["void","BOOL"]), new objj_method(sel_getUid("hideOtherApplications:"), function $CPPlatform__hideOtherApplications_(self, _cmd, aSender)
+},["void"]), new objj_method(sel_getUid("activateIgnoringOtherApps:"), function $CPBasePlatform__activateIgnoringOtherApps_(self, _cmd, shouldIgnoreOtherApps)
 { with(self)
 {
 }
-},["void","id"]), new objj_method(sel_getUid("hide:"), function $CPPlatform__hide_(self, _cmd, aSender)
+},["void","BOOL"]), new objj_method(sel_getUid("hideOtherApplications:"), function $CPBasePlatform__hideOtherApplications_(self, _cmd, aSender)
+{ with(self)
+{
+}
+},["void","id"]), new objj_method(sel_getUid("hide:"), function $CPBasePlatform__hide_(self, _cmd, aSender)
 { with(self)
 {
 }
 },["void","id"])]);
 }
-
-p;18;CPPlatformString.jI;21;Foundation/CPObject.jc;632;
-{var the_class = objj_allocateClassPair(CPObject, "CPPlatformString"),
+{var the_class = objj_allocateClassPair(CPBasePlatform, "CPPlatform"),
 meta_class = the_class.isa;objj_registerClassPair(the_class);
 objj_addClassForBundle(the_class, objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
-class_addMethods(meta_class, [new objj_method(sel_getUid("bootstrap"), function $CPPlatformString__bootstrap(self, _cmd)
+}
+
+p;18;CPPlatformString.jI;21;Foundation/CPObject.jc;876;
+{var the_class = objj_allocateClassPair(CPObject, "CPBasePlatformString"),
+meta_class = the_class.isa;objj_registerClassPair(the_class);
+objj_addClassForBundle(the_class, objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
+class_addMethods(meta_class, [new objj_method(sel_getUid("bootstrap"), function $CPBasePlatformString__bootstrap(self, _cmd)
 { with(self)
 {
 }
-},["void"]), new objj_method(sel_getUid("sizeOfString:withFont:forWidth:"), function $CPPlatformString__sizeOfString_withFont_forWidth_(self, _cmd, aString, aFont, aWidth)
+},["void"]), new objj_method(sel_getUid("sizeOfString:withFont:forWidth:"), function $CPBasePlatformString__sizeOfString_withFont_forWidth_(self, _cmd, aString, aFont, aWidth)
 { with(self)
 {
     return { width:0.0, height:0.0 };
 }
 },["CGSize","CPString","CPFont","float"])]);
+}
+{var the_class = objj_allocateClassPair(CPBasePlatformString, "CPPlatformString"),
+meta_class = the_class.isa;objj_registerClassPair(the_class);
+objj_addClassForBundle(the_class, objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
 }
 
 p;18;CPPlatformWindow.jI;21;Foundation/CPObject.jc;5570;
@@ -30391,7 +30637,7 @@ class_addMethods(the_class, [new objj_method(sel_getUid("initWithLevel:"), funct
 },["CPArray"])]);
 }
 
-p;22;CPPlatformWindow+DOM.jI;21;Foundation/CPObject.jI;22;Foundation/CPRunLoop.ji;9;CPEvent.ji;17;CPCompatibility.ji;18;CPDOMWindowLayer.ji;12;CPPlatform.ji;18;CPPlatformWindow.ji;26;CPPlatformWindow+DOMKeys.jc;46233;
+p;22;CPPlatformWindow+DOM.jI;21;Foundation/CPObject.jI;22;Foundation/CPRunLoop.ji;9;CPEvent.ji;17;CPCompatibility.ji;18;CPDOMWindowLayer.ji;12;CPPlatform.ji;18;CPPlatformWindow.ji;26;CPPlatformWindow+DOMKeys.jc;46598;
 var PlatformWindows = objj_msgSend(CPSet, "set");
 var CPDOMEventGetClickCount,
     CPDOMEventStop,
@@ -30410,7 +30656,7 @@ if(!the_class) objj_exception_throw(new objj_exception(OBJJClassNotFoundExceptio
 var meta_class = the_class.isa;class_addMethods(the_class, [new objj_method(sel_getUid("_init"), function $CPPlatformWindow___init(self, _cmd)
 { with(self)
 {
-    self = objj_msgSendSuper({ receiver:self, super_class:objj_getClass("CPObject") }, "init");
+    self = objj_msgSendSuper({ receiver:self, super_class:objj_getClass("CPPlatformWindow").super_class }, "init");
     if (self)
     {
         _DOMWindow = window;
@@ -30469,34 +30715,39 @@ var meta_class = the_class.isa;class_addMethods(the_class, [new objj_method(sel_
     if (_DOMWindow)
         _DOMWindow.blur();
 }
-},["void","id"]), new objj_method(sel_getUid("DOMSafeElement"), function $CPPlatformWindow__DOMSafeElement(self, _cmd)
-{ with(self)
-{
-    if (_DOMWindow === window)
-        return objj_msgSend(CPPlatform, "DOMSafeElement");
-    return _DOMBodyElement;
-}
-},["void"]), new objj_method(sel_getUid("registerDOMWindow"), function $CPPlatformWindow__registerDOMWindow(self, _cmd)
+},["void","id"]), new objj_method(sel_getUid("createDOMElements"), function $CPPlatformWindow__createDOMElements(self, _cmd)
 { with(self)
 {
     var theDocument = _DOMWindow.document;
-    _DOMBodyElement = theDocument.getElementsByTagName("body")[0];
-    var DOMSafeElement = objj_msgSend(self, "DOMSafeElement");
-    if (objj_msgSend(CPPlatform, "supportsDragAndDrop"))
-        _DOMBodyElement.style["-khtml-user-select"] = "none";
-    _DOMBodyElement.webkitTouchCallout = "none";
     _DOMFocusElement = theDocument.createElement("input");
     _DOMFocusElement.style.position = "absolute";
     _DOMFocusElement.style.zIndex = "-1000";
     _DOMFocusElement.style.opacity = "0";
     _DOMFocusElement.style.filter = "alpha(opacity=0)";
-    DOMSafeElement.appendChild(_DOMFocusElement);
+    _DOMBodyElement.appendChild(_DOMFocusElement);
     _DOMPasteboardElement = theDocument.createElement("textarea");
     _DOMPasteboardElement.style.position = "absolute";
     _DOMPasteboardElement.style.top = "-10000px";
     _DOMPasteboardElement.style.zIndex = "999";
-    DOMSafeElement.appendChild(_DOMPasteboardElement);
+    _DOMBodyElement.appendChild(_DOMPasteboardElement);
     _DOMPasteboardElement.blur();
+}
+},["void"]), new objj_method(sel_getUid("platformDidClearBodyElement:"), function $CPPlatformWindow__platformDidClearBodyElement_(self, _cmd, aNotification)
+{ with(self)
+{
+    objj_msgSend(self, "createDOMElements");
+}
+},["void","CPNotification"]), new objj_method(sel_getUid("registerDOMWindow"), function $CPPlatformWindow__registerDOMWindow(self, _cmd)
+{ with(self)
+{
+    var theDocument = _DOMWindow.document;
+    _DOMBodyElement = theDocument.body;
+    if (objj_msgSend(CPPlatform, "supportsDragAndDrop"))
+        _DOMBodyElement.style["-khtml-user-select"] = "none";
+    _DOMBodyElement.webkitTouchCallout = "none";
+    objj_msgSend(self, "createDOMElements");
+    if (window === _DOMWindow)
+        objj_msgSend(objj_msgSend(CPNotificationCenter, "defaultCenter"), "addObserver:selector:name:object:", self, sel_getUid("platformDidClearBodyElement:"), CPPlatformDidClearBodyElementNotification, CPPlatform);
     objj_msgSend(self, "_addLayers");
     var theClass = objj_msgSend(self, "class"),
         dragEventImplementation = class_getMethodImplementation(theClass, sel_getUid("dragEvent:")),
@@ -30651,7 +30902,7 @@ var meta_class = the_class.isa;class_addMethods(the_class, [new objj_method(sel_
             DOMDragElement = draggedWindow._DOMElement;
         DOMDragElement.style.left = -(draggedWindowFrame.size.width) + "px";
         DOMDragElement.style.top = -(draggedWindowFrame.size.height) + "px";
-        document.getElementsByTagName("body")[0].appendChild(DOMDragElement);
+        document.body.appendChild(DOMDragElement);
         var draggingOffset = objj_msgSend(dragServer, "draggingOffset");
         aDOMEvent.dataTransfer.setDragImage(DOMDragElement, draggingOffset.width, draggingOffset.height);
         objj_msgSend(dragServer, "draggingStartedInPlatformWindow:globalLocation:", self, objj_msgSend(CPPlatform, "isBrowser") ? location : { x:aDOMEvent.screenX, y:aDOMEvent.screenY });

@@ -28,14 +28,14 @@
 /*
  *	The CPDObjectContext calls this method before it closed
  */
-- (void) writeObjects:(CPSet) object error:({CPError}) error;
+- (void) saveAll:(CPSet) object error:({CPError}) error;
 
 /*
  *	The CPDObjectContext call this method through the instantiation
  *	and updates/registrates the objects in reponse
  *	@return a set of CPDObjects with cheap relationship
  */
-- (CPSet) readObjects:(CPDictionary) properties error:({CPError}) error;
+- (CPSet) load:(CPDictionary) properties error:({CPError}) error;
 
 /*
  *	Save objects, updated, inserted and deleted

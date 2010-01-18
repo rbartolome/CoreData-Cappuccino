@@ -17,16 +17,16 @@
 
 - (BOOL)_solveRelationshipsWithDeleteRules;
 - (void)_updateWithObject:(CPDObject) aObject;
-- (CPDictionary)_changedPropertiesData;
 - (void)_resetChangedDataForProperties;
 - (void)_applyToContext:(CPDObjectContext) context;
 
 - (CPArray)_properties;
 
-- (BOOL)_isKeyAProperty:(CPString) aKey;
+- (BOOL)_containsKey:(CPString) aKey;
 - (void)_resetObjectDataForProperties;
 
 */
+CPDObjectUnexpectedValueTypeForProperty = "CPDObjectUnexpectedValueTypeForProperty";
 
 @implementation CPDObject : CPObject
 {
@@ -38,8 +38,8 @@
 	BOOL _isDeleted @accessors(getter=isDeleted, setter=setDeleted:);
 	BOOL _isFault @accessors(getter=isFault, setter=setFault:);
 	
-	CPMutableDictionary _data @accessors(property=data);
-	CPMutableDictionary _changedData @accessors(property=changedData);
+	CPMutableDictionary _data @accessors(getter=data);
+	CPMutableDictionary _changedData @accessors(getter=changedData);
 }
 
 
@@ -94,7 +94,7 @@
 {
 	var result;
 
-	if([self _isKeyAProperty:aKey])
+	if([self _containsKey:aKey])
 	{
 		result = [self storedValueForKey:aKey];
 	}
@@ -110,11 +110,11 @@
 - (id)storedValueForKey:(CPString)aKey
 {
 	
-	if([self isPropertyFromTypeAttribute:aKey])
+	if([self isPropertyOfTypeAttribute:aKey])
 	{
 		return [_data objectForKey:aKey];
 	}
-	else if([self isPropertyFromTypeRelationship:aKey])
+	else if([self isPropertyOfTypeRelationship:aKey])
 	{
 		var value = [_data objectForKey:aKey];
 		var values = nil;
@@ -223,7 +223,7 @@
 
 - (void)setValue:(id)aValue forKey:(CPString)aKey
 {
-	if([self _isKeyAProperty:aKey])
+	if([self _containsKey:aKey])
 	{
 		[self takeStoredValue:aValue forKey:aKey];
 	}
@@ -235,7 +235,7 @@
 
 - (void)takeStoredValue:(id)value forKey:(CPString)aKey
 {
-	if([self isPropertyFromTypeRelationship: aKey])
+	if([self isPropertyOfTypeRelationship: aKey])
 	{		
 		var values;
 		if([value isKindOfClass:[CPSet class]])
@@ -256,15 +256,19 @@
 			[self addObject:value toBothSideOfRelationship:aKey];
 		}	
 	}
-	else if([self isPropertyFromTypeAttribute: aKey])
+	else if([self isPropertyOfTypeAttribute: aKey])
 	{
 		[self willChangeValueForKey:aKey];
-
-//		[_data setObject:value forKey:aKey];
-//		[_changedData setObject:value forKey:aKey];
-		[self _setChangedObject:value forKey:aKey];
 		
-		[self didChangeValueForKey:aKey];
+		if([[self entity] acceptValue:value forProperty:aKey])
+		{
+			[self _setChangedObject:value forKey:aKey];
+			[self didChangeValueForKey:aKey];
+		}
+		else
+		{
+			[self _unexpectedValueTypeError:aKey expectedType:[[self attributeClassValue:aKey] className] receivedType:[value className]];
+		}
 	}
 }
 
@@ -308,7 +312,7 @@
 		tmpObjectID = object;
 	}
 	
-	if(tmpObjectID != nil && [self isPropertyFromTypeRelationship: propertyName])
+	if(tmpObjectID != nil && [self isPropertyOfTypeRelationship: propertyName])
 	{		
 
 		[self willChangeValueForKey:propertyName];
@@ -362,10 +366,10 @@
 //		[_changedData setObject:propertyObject forKey:propertyName];
 		
 		//Add otherside
-		var localRelationshipDestinationName  = [[localRelationship destination] name];
+		var localRelationshipDestinationName  = [localRelationship destinationEntityName];
 		var foreignRelationship = [self realtionshipWithDestination:[localRelationship destination]];
 		
-		CPLog.info([[self objectID] stringRepresentation]);
+//		CPLog.info([[self objectID] stringRepresentation]);
 		var myObjectID = [[_context objectRegisteredForID:[self objectID]] objectID];
 
 		
@@ -456,8 +460,14 @@
 
 	if([_context autoSaveChanges])
 	{
-		[_context save];
+		[_context saveChanges];
 	}
+}
+
+
+- (void)_unexpectedValueTypeError:(CPString) aKey expectedType:(CPString) expectedType receivedType:(CPString) receivedType
+{	
+	CPLog.error("*** CPDObject Exception: expect value of type '" + expectedType + "', but received '" + receivedType + "' for property '" + aKey + "' ***");
 }
 
 
@@ -478,7 +488,7 @@
 		if([relationshipObject deleteRule] == CPDRelationshipDeleteRuleNullify)
 		{
 			CPLog.debug(@"The deletion rule for relationship '" + property + "' is CPDRelationshipDeleteRuleNullify.");
-			if([self isPropertyFromTypeToManyRelationship:property])
+			if([self isPropertyOfTypeToManyRelationship:property])
 			{
 				if(valueForProperty != nil && [valueForProperty count] > 0)
 				{
@@ -501,7 +511,7 @@
 		else if([relationshipObject deleteRule] == CPDRelationshipDeleteRuleCascade)
 		{
 			CPLog.debug(@"The deletion rule for relationship '" + property + "' is CPDRelationshipDeleteRuleCascade.");
-			if([self isPropertyFromTypeToManyRelationship:property])
+			if([self isPropertyOfTypeToManyRelationship:property])
 			{
 				if(valueForProperty != nil && [valueForProperty count] > 0)
 				{
@@ -526,7 +536,7 @@
 		else if([relationshipObject deleteRule] == CPDRelationshipDeleteRuleDeny)
 		{
 			CPLog.debug(@"The deletion rule for relationship '" + property + "' is CPDRelationshipDeleteRuleDeny.");
-			if([self isPropertyFromTypeToManyRelationship:property])
+			if([self isPropertyOfTypeToManyRelationship:property])
 			{
 				if(valueForProperty != nil && [valueForProperty count] > 0)
 				{
@@ -574,7 +584,7 @@
 		var valueForProperty = [self valueForKey:property];
 		if(valueForProperty != nil)
 		{
-			if([self isPropertyFromTypeToManyRelationship:property])
+			if([self isPropertyOfTypeToManyRelationship:property])
 			{
 				var valueForPropertyEnum = [valueForProperty objectEnumerator];
 				var objectFromValueForProperty;
@@ -643,7 +653,7 @@
 {
 	var result = YES;
 	
-	var notNullAttributes = [_entity notNullAttributes];
+	var mandatoryAttributes = [_entity mandatoryAttributes];
 	var mandatoryRelationships = [_entity mandatoryRelationships];
 	var relationships = [_entity relationshipsByName];
 	
@@ -653,7 +663,7 @@
 		var property = [[_data allKeys] objectAtIndex:i];
 		
 //		CPLog.debug("Validate property: " + property);
-		if([notNullAttributes containsObject:property])
+		if([mandatoryAttributes containsObject:property])
 		{
 			if([_data objectForKey:property] == nil && ![_changedData objectForKey:property])
 			{
@@ -711,12 +721,12 @@
 	{
 		var property = [[_data allKeys] objectAtIndex:i];
 		var valueForProperty = [_data objectForKey:property];
-		if([self isPropertyFromTypeToOneRelationship:property])
+		if([self isPropertyOfTypeToOneRelationship:property])
 		{
 			if(valueForProperty != nil && [valueForProperty isEqualToLocalID:aObjectID])
 				return YES;
 		}
-		else if([self isPropertyFromTypeToManyRelationship:property])
+		else if([self isPropertyOfTypeToManyRelationship:property])
 		{
 			if(valueForProperty != nil && [valueForProperty containsObject:aObjectID])
 				return YES;
@@ -725,12 +735,8 @@
 	return result;
 }
 
-- (CPDictionary)_changedPropertiesData
-{
-	return _changedData;
-}
-
-
+/*
+@deprecated
 - (void) _mergeChangedDataWithAllData
 {
 	var aEnum = [_data keyEnumerator];
@@ -744,7 +750,7 @@
 		}
 	}
 }
-
+*/
 - (void)_setChangedObject:(id) aObject forKey:(CPString) aKey
 {	
 	[_changedData setObject:aObject forKey:aKey];
@@ -764,6 +770,7 @@
 	if(_objectID == nil)
 	{
 		_objectID = [[CPDObjectID alloc] initWithEntity:_entity globalID:nil isTemporary:YES];
+		[_objectID setContext:context];
 	}
 }
 
@@ -775,11 +782,30 @@
 
 
 
-- (BOOL)_isKeyAProperty:(CPString) aKey
+- (BOOL)_containsKey:(CPString) aKey
 {
 	return [[_data allKeys] containsObject: aKey];
 }
 
+
+- (void)_setData:(CPDictionary) aDictionary
+{
+	_data = aDictionary;
+	var e = [[_entity properties] objectEnumerator];
+	var property;
+	
+	while ((property = [e nextObject]) != nil)
+    {
+		var propName = [property name];
+		if([_data objectForKey:propName] == nil)
+			[_data setObject:nil forKey:propName];
+	}
+}
+
+- (void)_setChangedData:(CPDictionary) aDictionary
+{
+	_changedData = aDictionary;
+}
 
 - (void)_resetObjectDataForProperties
 {
@@ -794,7 +820,7 @@
 	}
 }
 
-- (BOOL)isPropertyFromTypeAttribute:(CPString)aKey
+- (BOOL)isPropertyOfTypeAttribute:(CPString)aKey
 {
 	if([[_entity attributesByName] objectForKey:aKey] != nil)
 		return YES;
@@ -802,7 +828,7 @@
 	return NO;
 }
 
-- (BOOL)isPropertyFromTypeRelationship:(CPString)aKey
+- (BOOL)isPropertyOfTypeRelationship:(CPString)aKey
 {
 	if([[_entity relationshipsByName] objectForKey:aKey] != nil)
 		return YES;
@@ -810,7 +836,7 @@
 	return NO;
 }
 
-- (BOOL)isPropertyFromTypeToManyRelationship:(CPString)aKey
+- (BOOL)isPropertyOfTypeToManyRelationship:(CPString)aKey
 {
 	if([[_entity relationshipsByName] objectForKey:aKey] != nil)
 	{
@@ -823,7 +849,7 @@
 	return NO;
 }
 
-- (BOOL)isPropertyFromTypeToOneRelationship:(CPString)aKey
+- (BOOL)isPropertyOfTypeToOneRelationship:(CPString)aKey
 {
 	if([[_entity relationshipsByName] objectForKey:aKey] != nil)
 	{
@@ -836,14 +862,15 @@
 	return NO;
 }
 
-- (Class)attributeClassType:(CPString) aKey
+
+- (Class)attributeClassValue:(CPString) aKey
 {
 	var result = nil;
 	var att = [[_entity attributesByName] objectForKey:aKey];
 	
 	if(att != nil)
 	{
-		result = [att classType];
+		result = [att classValue];
 	}
 	
 	return result;

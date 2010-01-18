@@ -4,10 +4,12 @@
 //  Created by Raphael Bartolome on 25.11.09.
 //
 
+// Notifications.
 CPDObjectContextObjectsDidChangeNotification = "CPDObjectContextObjectsDidChangeNotification";
-CPDObjectContextDidSaveNotification = "CPDObjectContextDidSaveNotification"; //TODO currently unused
-CPDObjectContextDidReadObjectsNotification = "CPDObjectContextDidReadObjectsNotification";
-CPDObjectContextDidWriteObjectsNotification = "CPDObjectContextDidWriteObjectsNotification";
+CPDObjectContextDidSaveNotification = "CPDObjectContextDidSaveNotification";
+CPDObjectContextDidLoadObjectsNotification = "CPDObjectContextDidLoadObjectsNotification";
+CPDObjectContextDidSaveChangedObjectsNotification = "CPDObjectContextDidSaveChangedObjectsNotification";
+CPDObjectContextDidSaveAllObjectsNotification = "CPDObjectContextDidSaveAllObjectsNotification";
 
 CPDInsertedObjectsKey = "CPDInsertedObjectsKey";
 CPDUpdatedObjectsKey = "CPDUpdatedObjectsKey";
@@ -26,10 +28,11 @@ CPDDeletedObjectsKey = "CPDDeletedObjectsKey";
 - (BOOL) autoSaveChanges;
 - (void) setAutoSaveChanges:(BOOL)aState;
 
-- (void)writeObjects;
-- (void)readObjects;
+- (BOOL)saveChanges
+- (void)saveAll;
+- (BOOL)load;
 
-- (CPDObject)createAndInsertObjectByEntityNamed:(CPString) entity;
+- (CPDObject)insertNewObjectForEntityNamed:(CPString) entity;
 
 - (void) insertObject:({CPDObject}) aObject;
 - (void) deleteObject:({CPDObject}) aObject;
@@ -44,8 +47,8 @@ CPDDeletedObjectsKey = "CPDDeletedObjectsKey";
 - (void) reset;
 - (void) rollback;
 
-- (BOOL) save;
-- (BOOL) hasChanges;
+- (BOOL)saveAll;
+- (BOOL)hasChanges;
 
 - (CPSet) registeredObjects;
 - (CPSet) insertedObjects;
@@ -56,7 +59,7 @@ CPDDeletedObjectsKey = "CPDDeletedObjectsKey";
 - (CPDObject) updateObjectWithID:(CPDObjectID) aObjectID mergeChanges:(BOOL) mergeChanges
 - (CPSet) executeFetchRequest:(CPDFetchRequest)aRequest;	//TODO implement this method and CPDFetchRequest
 
-- (CPSet) objectsRegisteredWithEntityNamed:(String) aEntityName;
+- (CPSet) objectsForEntityNamed:(String) aEntityName;
 - (CPDObject) objectRegisteredForID:(CPDObjectID) aObjectID;
 
 @end

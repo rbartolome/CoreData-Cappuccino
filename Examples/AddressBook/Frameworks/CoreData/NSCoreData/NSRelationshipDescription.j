@@ -5,16 +5,17 @@
 //
 
 
-@implementation NSRelationshipDescription : CPObject
+@implementation NSRelationshipDescription : CPDRelationship
 {
-	int _deleteRule @accessors(property=className);
-    NSEntityDescription _destinationEntity @accessors(property=destinationEntity);
-    NSRelationshipDescription _inverseRelationship @accessors(property=inverseRelationship);
-    BOOL _optional @accessors(property=optional);
-    int _maxCount @accessors(property=maxCount);
-    int _minCount @accessors(property=minCount);
-    CPString _destinationEntityName @accessors(property=destinationEntityName);
-   	CPString _inverseRelationshipName @accessors(property=inverseRelationshipName);
+    NSEntityDescription _destinationEntity;
+    CPString _destinationEntityName
+
+    NSRelationshipDescription _inverseRelationship;
+   	CPString _inverseRelationshipName;
+	
+	NSRelationshipDescription ns_entity;
+    
+	int ns_minCount;
 }
 
 - (id)initWithCoder:(CPCoder)aCoder
@@ -22,26 +23,21 @@
 	self = [super init];
 
 	if (self)
-	{
-		_deleteRule = [aCoder decodeIntForKey: @"NSDeleteRule"];
-		_destinationEntity = [aCoder decodeObjectForKey: @"NSDestinationEntity"];
-		_entity = [aCoder decodeObjectForKey: @"NSEntity"];
-		_inverseRelationship = [aCoder decodeObjectForKey: @"NSInverseRelationship"];
-		_optional = [aCoder decodeBoolForKey: @"NSIsOptional"];
-		_maxCount = [aCoder decodeIntForKey: @"NSMaxCount"];
-		_minCount = [aCoder decodeIntForKey: @"NSMinCount"];
-		_propertyName = [[aCoder decodeObjectForKey: @"NSPropertyName"] retain];
-
-		_destinationEntityName = [aCoder decodeObjectForKey: @"_NSDestinationEntityName"];
-		_inverseRelationshipName = [aCoder decodeObjectForKey: @"_NSInverseRelationshipName"];
+	{	
+		[self setDestinationEntityName:[aCoder decodeObjectForKey: @"_NSDestinationEntityName"]];
+		[self setInversePropertyName:[aCoder decodeObjectForKey: @"_NSInverseRelationshipName"]];
+		[self setName:[aCoder decodeObjectForKey: @"NSPropertyName"]];
+		[self setIsOptional:[aCoder decodeBoolForKey: @"NSIsOptional"]];
+		[self setIsToMany:[self NS_isToMany:[aCoder decodeIntForKey: @"NSMaxCount"]]];
+		[self setDeleteRule:[self NS_deleteRule:[aCoder decodeIntForKey: @"NSDeleteRule"]]];
 	}
 	
 	return self;
 }
 
-- (BOOL) isToMany 
+- (BOOL)NS_isToMany:(int)count
 {    
-	if(_maxCount > 1)
+	if(count > 1)
 	{
 		return YES;
 	}
@@ -51,16 +47,16 @@
 	}
 }
 
-- (int) deleteRule
+- (int) NS_deleteRule:(int) aDeleteRule
 {
 	var result = CPDRelationshipDeleteRuleNullify;
-	if(_deleteRule == 3)
+	if(aDeleteRule == 3)
 		result = CPDRelationshipDeleteRuleDeny;
-	else if(_deleteRule == 2)
+	else if(aDeleteRule == 2)
 		result = CPDRelationshipDeleteRuleCascade;
-	else if(_deleteRule == 1)
+	else if(aDeleteRule == 1)
 		result = CPDRelationshipDeleteRuleNullify;
-	else if(_deleteRule == 0)
+	else if(aDeleteRule == 0)
 		result = CPDRelationshipDeleteRuleNoAction;
 
 	return result;

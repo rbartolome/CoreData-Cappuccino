@@ -14,8 +14,6 @@
 
 ***** HEADER *****
 @private
-- (BOOL) _writeObjects
-- (BOOL) _readDefaultObjects;
 - (CPDObject) _fetchObjectWithID:(CPDObjectID) aObjectID
 - (CPSet)_fetchObjectsWithEntityNamed:(CPString)aEntityName;
 - (CPSet)_fetchObjectsWithEntityNamed:(CPString)aEntityName qualifier:(CPString)aQualifier fetchLimit:(int)aFetchLimit:
@@ -32,9 +30,10 @@
 
 // Notifications.
 CPDObjectContextObjectsDidChangeNotification = "CPDObjectContextObjectsDidChangeNotification";
-CPDObjectContextDidSaveNotification = "CPDObjectContextDidSaveNotification"; //TODO currently unused
-CPDObjectContextDidReadObjectsNotification = "CPDObjectContextDidReadObjectsNotification";
-CPDObjectContextDidWriteObjectsNotification = "CPDObjectContextDidWriteObjectsNotification";
+CPDObjectContextDidSaveNotification = "CPDObjectContextDidSaveNotification";
+CPDObjectContextDidLoadObjectsNotification = "CPDObjectContextDidLoadObjectsNotification";
+CPDObjectContextDidSaveChangedObjectsNotification = "CPDObjectContextDidSaveChangedObjectsNotification";
+CPDObjectContextDidSaveAllObjectsNotification = "CPDObjectContextDidSaveAllObjectsNotification";
 
 CPDInsertedObjectsKey = "CPDInsertedObjectsKey";
 CPDUpdatedObjectsKey = "CPDUpdatedObjectsKey";
@@ -70,8 +69,8 @@ CPDDeletedObjectsKey = "CPDDeletedObjectsKey";
 		
 		_undoManager = [CPUndoManager new];
 		
-		[self _setStoreWithType:aStoreType configuration:aConfiguration];		
-		[self readObjects];
+		[self _createStoreWithType:aStoreType configuration:aConfiguration];		
+		[self load];
 	}
 	
 	return self;
@@ -84,29 +83,15 @@ CPDDeletedObjectsKey = "CPDDeletedObjectsKey";
 }
 
 
-- (void)writeObjects
-{
-	[self _writeObjects];
-}
-
-- (void)readObjects
-{
-	[self _readDefaultObjects];
-	[self hasChanges];
-	[[CPNotificationCenter defaultCenter] postNotificationName:CPDObjectContextDidReadObjectsNotification 
-														object: self 
-													  userInfo: nil];
-}
-
-
-- (CPStore) _setStoreWithType: (CPDStoreType) aStoreType
+- (CPStore) _createStoreWithType: (CPDStoreType) aStoreType
 			   configuration: (id) aConfiguration
 {	
 	var storeClass = [aStoreType storeClass];
 	var store = [[storeClass alloc] init];
 	[store setConfiguration: aConfiguration];
-	[store setModel:[self model]];
-	[self setStore:store]
+	[store setContext:self];
+	
+	[self setStore:store];
 	
 	return store;
 }
@@ -144,7 +129,7 @@ CPDDeletedObjectsKey = "CPDDeletedObjectsKey";
 	//method
 }   
 
-- (CPSet) objectsRegisteredWithEntityNamed:(String) aEntityName
+- (CPSet) objectsForEntityNamed:(String) aEntityName
 {	
 	var e;
 	var object;
@@ -203,8 +188,8 @@ CPDDeletedObjectsKey = "CPDDeletedObjectsKey";
 	[_insertedObjectIDs removeAllObjects];
 	[_deletedObjects removeAllObjects];
 				
-	CPLog.info(@"updatedObjectIDs " + [_updatedObjectIDs count] + ", insertedObjects " + [_insertedObjectIDs count]);
-	CPLog.info(@"registeredObjects " + [_registeredObjects count] + ", deletedObjects " + [_deletedObjects count]);
+	CPLog.debug(@"updatedObjectIDs " + [_updatedObjectIDs count] + ", insertedObjects " + [_insertedObjectIDs count]);
+	CPLog.debug(@"registeredObjects " + [_registeredObjects count] + ", deletedObjects " + [_deletedObjects count]);
 	
 	return result;
 }
@@ -264,18 +249,22 @@ CPDDeletedObjectsKey = "CPDDeletedObjectsKey";
 	return result;	
 }
 
-- (BOOL) _writeObjects
+- (BOOL)saveAll
 {
 	var result = YES;
 	var error = nil;
 	
-	[_store writeObjects:[self registeredObjects] error:error];
+	[_store saveAll:[self registeredObjects] error:error];
 	
+	[[CPNotificationCenter defaultCenter]
+						postNotificationName: CPDObjectContextDidSaveAllObjectsNotification
+									  object: self
+									userInfo: nil];
 	return result;
 }
 
 
-- (BOOL) _readDefaultObjects
+- (BOOL) load
 {
 	var error = nil;
 	var result = YES;
@@ -291,23 +280,27 @@ CPDDeletedObjectsKey = "CPDDeletedObjectsKey";
 		[propertiesDictionary setObject:propertiesFromEntity forKey:[aEntity name]];
 	}
 	
-	resultSet = [_store readObjects:propertiesDictionary error:error];
+	resultSet = [_store load:propertiesDictionary error:error];
 	if(resultSet != nil && [resultSet count] > 0 && error == nil)
-	{
-		var setEnum = [resultSet objectEnumerator];
+	{		
+		var resultEnumerator = [[resultSet allObjects] objectEnumerator];
 		var objectFromResponse;
-		
-		while((objectFromResponse = [setEnum nextObject]))
+				
+		while(objectFromResponse = [resultEnumerator nextObject])
 		{
 			[self _registerObject:objectFromResponse];	
 		}
 	}
 	
+	[self hasChanges];
+	[[CPNotificationCenter defaultCenter] postNotificationName:CPDObjectContextDidLoadObjectsNotification 
+														object: self 
+													  userInfo: nil];
 	return result;
 }
 
 			   
-- (BOOL)save
+- (BOOL)saveChanges
 {
 	var result = NO;
 	if([self hasChanges])
@@ -348,6 +341,13 @@ CPDDeletedObjectsKey = "CPDDeletedObjectsKey";
 				postNotificationName: CPDObjectContextDidSaveNotification
 							  object: self
 							userInfo: nil];
+							
+			[[CPNotificationCenter defaultCenter]
+								postNotificationName: CPDObjectContextDidSaveChangedObjectsNotification
+											  object: self
+											userInfo: nil];
+											
+		
 		}
 	}
 	
@@ -390,8 +390,8 @@ CPDDeletedObjectsKey = "CPDDeletedObjectsKey";
  */
 - (BOOL) hasChanges
 {
-	CPLog.info(@"updatedObjectIDs " + [_updatedObjectIDs count] + ", insertedObjects " + [_insertedObjectIDs count]);
-	CPLog.info(@"registeredObjects " + [_registeredObjects count] + ", deletedObjects " + [_deletedObjects count]);
+	CPLog.debug(@"updatedObjectIDs " + [_updatedObjectIDs count] + ", insertedObjects " + [_insertedObjectIDs count]);
+	CPLog.debug(@"registeredObjects " + [_registeredObjects count] + ", deletedObjects " + [_deletedObjects count]);
 
 	return ([_updatedObjectIDs count] > 0) ||
 			([_insertedObjectIDs count] > 0) ||
@@ -526,7 +526,7 @@ CPDDeletedObjectsKey = "CPDDeletedObjectsKey";
 /*
  *	Create new object from entity
  */
-- (CPDObject) createAndInsertObjectByEntityNamed:(CPString) entity
+- (CPDObject) insertNewObjectForEntityNamed:(CPString) entity
 {
 	var result_object;	
 	var tmpentity = [_model entityWithName:entity];
@@ -614,7 +614,7 @@ CPDDeletedObjectsKey = "CPDDeletedObjectsKey";
 									userInfo: userInfo];
 									
 			if(saveAfterDeletion && [self autoSaveChanges] && needToSave)
-				[self save];
+				[self saveChanges];
 		}
 	}
 	else
@@ -653,8 +653,8 @@ CPDDeletedObjectsKey = "CPDDeletedObjectsKey";
 						  object: self
 						userInfo: userInfo];
 						
-		CPLog.info(@"updatedObjectIDs " + [_updatedObjectIDs count] + ", insertedObjects " + [_insertedObjectIDs count]);
-		CPLog.info(@"registeredObjects " + [_registeredObjects count] + ", deletedObjects " + [_deletedObjects count]);
+		CPLog.debug(@"updatedObjectIDs " + [_updatedObjectIDs count] + ", insertedObjects " + [_insertedObjectIDs count]);
+		CPLog.debug(@"registeredObjects " + [_registeredObjects count] + ", deletedObjects " + [_deletedObjects count]);
 	}
 }
 

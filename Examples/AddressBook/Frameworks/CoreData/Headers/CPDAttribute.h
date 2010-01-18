@@ -6,11 +6,15 @@
 
 @interface CPDAttribute : CPDProperty
 {
-	CPString _type @accessors(property=type);
-	BOOL _allowsNull @accessors(property=allowsNull);
+	int _typeValue @accessors(property=typeValue);
+	id _defaultValue @accessors(property= defaultValue);
 }
 
-- (Class) classType;
+- (Class) classValue;
+- (CPString) classValueName;
+- (CPString) typeName;
+- (BOOL)acceptValue:(id) aValue;
+
 - (CPString)stringRepresentation;
 
 @end

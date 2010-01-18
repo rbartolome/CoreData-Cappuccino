@@ -8,7 +8,7 @@
 //
 //*****************************
 //
-// DatePicker source by
+// DatePicker source
 // 
 // Created by Randall Luecke.
 // Copyright 2009, RCL Concepts.
@@ -19,13 +19,16 @@
 
 @import <Foundation/CPObject.j>
 @import "ABContextController.j"
-@import "DatePicker.j"
+@import "DatePicker/DatePicker.j"
+@import "EmailsController.j"
 
 @implementation AppController : CPObject
 {
 	IBOutlet ABContextController addressBookContext;
 
-    IBOutlet CPWindow mainWindow;
+	IBOutlet id emailsController;
+
+	IBOutlet CPWindow mainWindow;
 	IBOutlet CPView mainView;
 	IBOutlet CPTableView tableView;
 	
@@ -35,7 +38,6 @@
 	IBOutlet CPTextField firstNameField;
 	IBOutlet CPTextField lastNameField;
 	IBOutlet DatePicker birthDateField;
-	IBOutlet CPTextField emailField;
 	IBOutlet CPTextField phoneField;
 	IBOutlet CPImageView imageView;
 	
@@ -77,7 +79,6 @@
 	//observe changes from user interface
 	[firstNameField addObserver:self forKeyPath:@"objectValue" options:(CPKeyValueObservingOptionNew) context:nil];
 	[lastNameField addObserver:self forKeyPath:@"objectValue" options:(CPKeyValueObservingOptionNew) context:nil]; 
-	[emailField addObserver:self forKeyPath:@"objectValue" options:(CPKeyValueObservingOptionNew) context:nil];
 	[phoneField addObserver:self forKeyPath:@"objectValue" options:(CPKeyValueObservingOptionNew) context:nil];
 
 }
@@ -90,16 +91,42 @@
  */
 - (IBAction)addNewAddress:(id)sender
 {
-	[addressBookContext addNewAddress];
+	var aAddress = [self addNewAddress];
 }
 
 - (IBAction)deleteSelectedAddress:(id)sender
 {
-	[addressBookContext deleteAddress:selectedAddress];
+	[self deleteAddress:selectedAddress];
 	[self setSelectedAddress:nil];	
 	[self reloadData];
 }
 
+- (IBAction)saveAction:(id)sender
+{
+	[[addressBookContext context] saveAll];
+}
+
+/*
+ *************************
+ * Address Context Methods
+ *************************
+ */
+- (CPDObject) addNewAddress
+{	
+	var aAddress = [[addressBookContext context] insertNewObjectForEntityNamed:@"Address"];
+	return aAddress;
+}
+
+- (void) deleteAddress:(CPDObject) aAddress
+{
+	[[addressBookContext context] deleteObject:aAddress];
+}
+
+- (CPArray) addresses
+{
+	var result = [[[addressBookContext context] objectsForEntityNamed:"Address"] allObjects];
+	return result;
+}
 
 /*
  ****************************
@@ -118,10 +145,6 @@
 	else if([anObject isEqual:lastNameField])
 	{
 		[selectedAddress setValue:[lastNameField stringValue] forKey:@"lastname"];
-	}	
-	else if([anObject isEqual:emailField])
-	{
-		[selectedAddress setValue:[emailField stringValue] forKey:@"email"];
 	}	
 	else if([anObject isEqual:phoneField])
 	{
@@ -145,7 +168,6 @@
 
 		[firstNameField setStringValue:@""];
 		[lastNameField setStringValue:@""];
-		[emailField setStringValue:@""];
 		[phoneField setStringValue:@""];
 		[birthDateField setDate:[CPDate date]];
 	}
@@ -155,10 +177,15 @@
 		
 		[firstNameField setStringValue:[selectedAddress valueForKey:@"firstname"]];
 		[lastNameField setStringValue:[selectedAddress valueForKey:@"lastname"]];
-		[emailField setStringValue:[selectedAddress valueForKey:@"email"]];
 		[phoneField setStringValue:[selectedAddress valueForKey:@"phone"]];
-//		[birthDateField setDate:[aAddress valueForKey:@"dateOfBirth"]];
+		
+		if([aAddress valueForKey:@"dateOfBirth"] != nil)
+			[birthDateField setDate:[aAddress valueForKey:@"dateOfBirth"]];
+		else
+			[birthDateField setDate:[CPDate date]];
 	}
+	
+	[emailsController setAddress:selectedAddress];
 }
 
 - (CPDObject)selectedAddress
@@ -179,13 +206,13 @@
 
 - (int)numberOfRowsInTableView:(CPTableView)aTableView
 {
-	return [[addressBookContext addresses] count];
+	return [[self addresses] count];
 }
 
 - (id)tableView:(CPTableView)aTableView objectValueForTableColumn:(CPTableColumn)aTableColumn row:(int)rowIndex
 {
-	var address = [[addressBookContext addresses] objectAtIndex:rowIndex];
-	
+	var address = [[self addresses] objectAtIndex:rowIndex];
+
 	if(address == nil || [[address valueForKey:@"firstname"] length] < 1|| [[address valueForKey:@"lastname"] length] < 1)
 	{
 		return "Untitled";
@@ -209,7 +236,7 @@
 	
 	if(selectedRow != -1)
 	{
-		[self setSelectedAddress:[[addressBookContext addresses] objectAtIndex:selectedRow]];
+		[self setSelectedAddress:[[self addresses] objectAtIndex:selectedRow]];
 	}
 	else
 	{

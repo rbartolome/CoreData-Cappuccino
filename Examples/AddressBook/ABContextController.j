@@ -17,11 +17,7 @@
 
 - (id)init
 {
-	if(self = [super init])
-	{
-		[self initializeContext];
-	}
-	
+	self = [self initWithContext];
 	return self;
 }
 
@@ -31,53 +27,47 @@
  * Context initialization
  ************************
  */
-- (void) initializeContext
+- (id) initWithContext
 {
-	model = [CPDObjectModel objectModelWithModelNamed:@"AddressBook.xcdatamodel" bundle:nil];
-	context = [[CPDObjectContext alloc] initWithObjectModel: model 
-												  storeType: [CPDJSONWebDAVStoreType class] 
-										 storeConfiguration: [ABContextController webDAVConfig]];
+	if(self = [super init])
+	{
+		//load your coredata model file
+		model = [CPDObjectModel objectModelWithModelNamed:@"AddressBook.xcdatamodel" bundle:nil];
 	
-	[context setAutoSaveChanges:YES];
+		//init the context with your configuration dictionary
+		context = [[CPDObjectContext alloc] initWithObjectModel: model 
+												  storeType: [CPDWebDAVStoreType class] 
+										 storeConfiguration: [ABContextController webDAVConfig]];
+		
+																			 	
+		[context setAutoSaveChanges:YES];
+	}
+	
+	return self;
 }
 
 /*
  *************************************************************************
  * WebDAV configuration
  * This will generate a addressbook.cpdjson file in the webdav root folder
+ *
+ *	Try different formats by replace the object 
+ *  for key 'CPDWebDAVStoreConfigurationKeyFileFormat' with:
+ *
+ *	- CPDSerializationJSONFormat
+ *	- CPDSerializationXMLFormat
+ *	- CPDSerialization280NPLISTFormat
  *************************************************************************
  */
 + (CPDictionary) webDAVConfig
 {
 	var result = [[CPMutableDictionary alloc] init];
 	
-	[result setObject:@"http://localhost:8080" forKey:@"baseURL"];
-	[result setObject:@"/addressbook.cpdjson" forKey:@"filePath"];
+	[result setObject:@"http://localhost:8080" forKey:CPDWebDAVStoreConfigurationKeyBaseURL];
+	[result setObject:@"addressbook.json" forKey:CPDWebDAVStoreConfigurationKeyFilePath];
+	[result setObject:CPDSerializationJSONFormat forKey:CPDWebDAVStoreConfigurationKeyFileFormat];
 	
 	return result
-}
-
-
-/*
- *************************************
- *	CoreData Context accessor methods
- *************************************
- */
-- (CPDObject) addNewAddress
-{	
-	var aAddress = [[self context] createAndInsertObjectByEntityNamed:@"Address"];				
-	return aAddress;
-}
-
-- (void) deleteAddress:(CPDObject) aAddress
-{
-	[[self context] deleteObject:aAddress];
-}
-
-- (CPArray) addresses
-{
-	var result = [[[self context] objectsRegisteredWithEntityNamed:"Address"] allObjects];
-	return result;
 }
 
 

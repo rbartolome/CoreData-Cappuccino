@@ -14,19 +14,19 @@ CPDRelationshipDeleteRuleCascade = 1;
 CPDRelationshipDeleteRuleDeny = 2;
 CPDRelationshipDeleteRuleNoAction = 3;
 
+
 @implementation CPDRelationship : CPDProperty
 {
-	CPDEntity _destination @accessors(property=destination);
+	CPDString _inversePropertyName @accessors(property=inversePropertyName);
+	CPDString _destinationEntityName @accessors(property=destinationEntityName);
 	BOOL _toMany @accessors(property=isToMany);
-	BOOL _mandatory @accessors(property=isMandatory);
-	
 	int _deleteRule @accessors(property=deleteRule);
 }
 
 - (Class)destinationClassType
 {
 	var result = [CPDObject class];
-	var classType = CPClassFromString([_destination name]);
+	var classType = CPClassFromString(_destinationEntityName);
 	
 	if(classType != nil)
 	{
@@ -36,6 +36,18 @@ CPDRelationshipDeleteRuleNoAction = 3;
 	return result
 }
 
+- (BOOL)acceptValue:(id) aValue
+{
+	var result = NO;
+	var theProperty = [[self propertiesByName] objectForKey:aKey]
+	result = [theProperty acceptValue:aValue];
+	return result;
+}
+
+- (CPDEntity)destination
+{
+	return [[[self entity] model] entityWithName:_destinationEntityName];
+}
 
 - (CPString)stringRepresentation
 {
@@ -46,11 +58,11 @@ CPDRelationshipDeleteRuleNoAction = 3;
 	result = result + "\n";
 	result = result + "name:" + [self name] + ";";
 	result = result + "\n";
-	result = result + "destination:" + [[self destination] name] + ";";
+	result = result + "destination:" + [self destinationEntityName] + ";";
 	result = result + "\n";
 	result = result + "isToMany:" + [self isToMany] + ";";
 	result = result + "\n";
-	result = result + "mandatory:" + [self isMandatory] + ";";
+	result = result + "optional:" + [self isOptional] + ";";
 	result = result + "\n";
 	result = result + "deleteRule:" + [self deleteRule] + ";";
 	return result;

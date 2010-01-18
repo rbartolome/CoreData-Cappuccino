@@ -2517,7 +2517,28 @@ function objj_import( pathOrPaths, isLocal, didCompleteCallback)
     context.evaluate();
 }
 if (window.OBJJ_MAIN_FILE)
-    objj_import(OBJJ_MAIN_FILE, YES, function() { main(); });
+{
+    var addOnload = function(handler)
+    {
+        if (window.addEventListener)
+            window.addEventListener("load", handler, false);
+        else if (window.attachEvent)
+            window.attachEvent("onload", handler);
+    }
+    var documentLoaded = NO;
+    var defaultHandler = function()
+    {
+        documentLoaded = YES;
+    }
+    addOnload(defaultHandler);
+    objj_import(OBJJ_MAIN_FILE, YES, function()
+    {
+        if (documentLoaded)
+            main();
+        else
+            addOnload(main);
+    });
+}
 function objj_debug_object_format(aReceiver)
 {
     return (aReceiver && aReceiver.isa) ? sprintf("<%s %#08x>", (((aReceiver.info & (CLS_META))) ? aReceiver : aReceiver.isa).name, aReceiver.__address) : String(aReceiver);

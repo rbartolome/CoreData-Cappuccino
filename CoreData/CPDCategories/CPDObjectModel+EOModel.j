@@ -71,7 +71,6 @@ var woprototypes_cp = [
 	"CPNumber"
 ];
 
-
 @implementation CPDObjectModel (EOModel)
 
 - (void) parseEOModel:(CPString) aModelName
@@ -91,9 +90,11 @@ var woprototypes_cp = [
 			[self validateEntity:[entity name] withDescription:entityDescDictionary];
 		}
 	}
+	
+	[self setNameFromFilePath: aModelName];
 }
 
-- (void) createPrototypesForEntitiesFromEOModel:(CPArray) entitiesFromModel
+- (BOOL) createPrototypesForEntitiesFromEOModel:(CPArray) entitiesFromModel
 {
 	var result = NO;
 	var i = 0;
@@ -137,29 +138,32 @@ var woprototypes_cp = [
 			var attributeName = [attribute objectForKey:@"name"];
 			if([classProperty isEqualToString:attributeName])
 			{
-				var attributeType;
-				var allowsNull = [attribute objectForKey:@"allowsNull"];
+				var attributeClassValue;
+				var valueType = [attribute objectForKey:@"valueType"];
+				var isOptional = [attribute objectForKey:@"allowsNull"];
 				var prototypeName = [attribute objectForKey:@"prototypeName"];
 				var valueClassName = [attribute objectForKey:@"valueClassName"];
+				var className = [attribute objectForKey:@"className"];
+				
 				if(prototypeName == null)
 				{
-					if(valueClassName != null)
+					if(className != null)
+					{
+						attributeClassValue = [className stringByReplacingOccurrencesOfString:@"NS" withString:@"CP"];	
+					}
+					else if(valueClassName != null)
 					{
 						//@TASK we need to modify this because this could be a problem for NSDate because NSCalendarDate
 						//isn't a supported class by capp currently
-						valueClassName = [valueClassName stringByReplacingOccurrencesOfString:@"NS" withString:@"CP"];
-					}
-					else
-					{
-						attributeType = [self attibuteTypeForWOPrototype:prototypeName];	
+						attributeClassValue = [valueClassName stringByReplacingOccurrencesOfString:@"NS" withString:@"CP"];
 					}
 				}
 				else
 				{
-					attributeType = [self attibuteTypeForWOPrototype:prototypeName];
+					attributeClassValue = [self attibuteTypeForWOPrototype:prototypeName];
 				}
 
-				[entity addAttributeWithName:attributeName type:attributeType allowsNull:allowsNull];
+				[entity addAttributeWithName:attributeName classValue:attributeClassValue typeValue:[self valueTypeForEOValue:valueType] optional:isOptional];
 			}
 		}
 		
@@ -173,20 +177,45 @@ var woprototypes_cp = [
 			{
 				var destination = [relationship objectForKey:@"destination"];
 				var isToMany = [relationship objectForKey:@"isToMany"];
-				var isMandatory = [relationship objectForKey:@"isMandatory"];
+				var isOptional = ![relationship objectForKey:@"isMandatory"];
 				var deleteRuleWO = [relationship objectForKey:@"deleteRule"];
 				var deleteRule = [self deleteRuleForWODescription:deleteRuleWO];
-				var destinationEntity = [self entityWithName:destination];
 				
 				[entity addRelationshipWithName:relationshipName 
 										toMany:isToMany 
-										mandatory:isMandatory 
+										optional:isOptional 
 										deleteRule:deleteRule 
-										destination:destinationEntity];				
+										destination:destination];				
 			}
 		}
 	}
 	
+}
+
+- (int) valueTypeForEOValue:(CPString) aEOValueType
+{
+	var result = CPDUndefinedAttributeType;
+	if(aEOValueType != null)
+	{	
+		if([aEOValueType isEqualToString:@"b"])
+			result = CPDBinaryDataAttributeType;
+		else if([aEOValueType isEqualToString:@"s"])
+			result = CPDIntegerAttributeType;
+		else if([aEOValueType isEqualToString:@"i"])
+			result = CPDIntegerAttributeType;
+		else if([aEOValueType isEqualToString:@"l"])
+			result = CPDIntegerAttributeType;
+		else if([aEOValueType isEqualToString:@"f"])
+			result = CPDFloatAttributeType;
+		else if([aEOValueType isEqualToString:@"d"])
+			result = CPDDoubleAttributeType;
+		else if([aEOValueType isEqualToString:@"B"])
+			result = CPDDecimalAttributeType;
+		else if([aEOValueType isEqualToString:@"c"])
+			result = CPDBooleanAttributeType;
+	}
+	
+	return result;
 }
 
 - (int) deleteRuleForWODescription:(CPString) aDescription

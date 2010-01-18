@@ -21,6 +21,9 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXFileReference section */
+		64049F9410FF0E70009C3AE2 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
+		64049FCF10FF1F40009C3AE2 /* EmailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmailsController.h; sourceTree = "<group>"; };
+		64049FD010FF1F40009C3AE2 /* EmailsController.j */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj; path = EmailsController.j; sourceTree = "<group>"; };
 		641D44E00FD437FB00EACBFF /* Frameworks */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Frameworks; sourceTree = SOURCE_ROOT; };
 		64200A490FD4250F005D41CE /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		64200A4A0FD4250F005D41CE /* main.j */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj; path = main.j; sourceTree = "<group>"; };
@@ -28,7 +31,8 @@
 		64200A4C0FD4250F005D41CE /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		64200A4D0FD4250F005D41CE /* AppController.j */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj; path = AppController.j; sourceTree = "<group>"; };
 		644066BC10EB89070080077E /* ABContextController.j */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj; path = ABContextController.j; sourceTree = "<group>"; };
-		644066E710EB8EBE0080077E /* AddressBook.eomodeld */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AddressBook.eomodeld; sourceTree = "<group>"; };
+		6454D8FE110477A8001B029C /* DatePicker.j */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj; path = DatePicker.j; sourceTree = "<group>"; };
+		6454D8FF110477A8001B029C /* Stepper.j */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj; path = Stepper.j; sourceTree = "<group>"; };
 		648D987D10F4F00D00D9B371 /* AddressBook.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = AddressBook.xcdatamodel; sourceTree = "<group>"; };
 		64B168F30FD4E529001197CA /* index-debug.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "index-debug.html"; sourceTree = "<group>"; };
 		64FDDBE910EFB60E00B63414 /* date-segment-center.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "date-segment-center.png"; sourceTree = "<group>"; };
@@ -40,9 +44,6 @@
 		64FDDBF010EFB60E00B63414 /* stepper_middle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stepper_middle.png; sourceTree = "<group>"; };
 		64FDDBF110EFB60E00B63414 /* stepper_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stepper_up.png; sourceTree = "<group>"; };
 		64FDDBF210EFB60E00B63414 /* stepper_up_highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stepper_up_highlighted.png; sourceTree = "<group>"; };
-		64FDDBF310EFB61C00B63414 /* DatePicker.j */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj; path = DatePicker.j; sourceTree = "<group>"; };
-		64FDDBF410EFB61C00B63414 /* Stepper.j */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj; path = Stepper.j; sourceTree = "<group>"; };
-		6F087B9A10CD4C00000C2CBC /* Rakefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Rakefile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -62,7 +63,6 @@
 				648D987D10F4F00D00D9B371 /* AddressBook.xcdatamodel */,
 				64FDDBE810EFB60E00B63414 /* DatePicker */,
 				64FDDBED10EFB60E00B63414 /* Stepper */,
-				644066E710EB8EBE0080077E /* AddressBook.eomodeld */,
 				64200A490FD4250F005D41CE /* MainMenu.xib */,
 			);
 			path = Resources;
@@ -71,10 +71,12 @@
 		64200DB90FD42540005D41CE /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				6454D8FD110477A8001B029C /* DatePicker */,
+				64049F9410FF0E70009C3AE2 /* AppController.h */,
 				64200A4D0FD4250F005D41CE /* AppController.j */,
 				644066BC10EB89070080077E /* ABContextController.j */,
-				64FDDBF310EFB61C00B63414 /* DatePicker.j */,
-				64FDDBF410EFB61C00B63414 /* Stepper.j */,
+				64049FCF10FF1F40009C3AE2 /* EmailsController.h */,
+				64049FD010FF1F40009C3AE2 /* EmailsController.j */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -86,9 +88,17 @@
 				64200A4B0FD4250F005D41CE /* Info.plist */,
 				64200A4C0FD4250F005D41CE /* index.html */,
 				64B168F30FD4E529001197CA /* index-debug.html */,
-				6F087B9A10CD4C00000C2CBC /* Rakefile */,
 			);
 			name = Others;
+			sourceTree = "<group>";
+		};
+		6454D8FD110477A8001B029C /* DatePicker */ = {
+			isa = PBXGroup;
+			children = (
+				6454D8FE110477A8001B029C /* DatePicker.j */,
+				6454D8FF110477A8001B029C /* Stepper.j */,
+			);
+			path = DatePicker;
 			sourceTree = "<group>";
 		};
 		64FDDBE810EFB60E00B63414 /* DatePicker */ = {
@@ -167,7 +177,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
-				CUSTOM_FRAMEWORKS = "/Users/raphael/Development/public/Cappuccino/Cappuccino-CoreData/CoreData";
+				CUSTOM_FRAMEWORKS = "/Users/raphael/Development/public/Cappuccino/CoreData-Cappuccino/CoreData";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				PRODUCT_NAME = Untitled;

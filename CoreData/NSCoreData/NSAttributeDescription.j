@@ -20,28 +20,24 @@ var xcprototypes = [
 ];
 
 var xcprototypes_cp = [
-    "CPObject", 
-    "CPNumber", 
-    "CPNumber", 
-    "CPNumber", 
-    "CPNumber", 
-    "CPNumber", 
-    "CPNumber", 
-    "CPString", 
-    "CPNumber", 
-    "CPDate", 
-    "CPData", 
-    "CPObject"
+	CPDUndefinedAttributeType, 		//NSUndefinedAttributeType
+	CPDIntegerAttributeType, 		//NSInteger16AttributeType
+	CPDIntegerAttributeType, 		//NSInteger32AttributeType
+	CPDIntegerAttributeType, 		//NSInteger64AttributeType
+	CPDDecimalAttributeType, 		//NSDecimalAttributeType
+	CPDDoubleAttributeType, 		//NSDoubleAttributeType
+	CPDFloatAttributeType, 			//NSFloatAttributeType
+	CPDStringAttributeType, 		//NSStringAttributeType
+	CPDBooleanAttributeType, 		//NSBooleanAttributeType
+	CPDDateAttributeType, 			//NSDateAttributeType
+	CPDBinaryDataAttributeType, 	//NSBinaryDataAttributeType
+	CPDTransformableAttributeType	//NSTransformableAttributeType
 ];
 
-@implementation NSAttributeDescription : CPObject
+@implementation NSAttributeDescription : CPDAttribute
 {
-	int _attributeType;
-    CPString _valueClassName;
-    id _defaultValue @accessors(property=defaultValue);
-    CPString _valueTransformerName @accessors(property=valueTransformerName);
-	NSEntityDescription _entity @accessors(property=entity);
-	CPString_propertyName @accessors(property=propertyName);
+    CPString ns_valueTransformerName @accessors(property=valueTransformerName);
+	NSEntityDescription ns_entity @accessors(property=entity);
 }
 
 - (id)initWithCoder:(CPCoder)aCoder
@@ -50,49 +46,35 @@ var xcprototypes_cp = [
 
 	if (self)
 	{
-       _attributeType = [aCoder decodeIntForKey: @"NSAttributeType"];
-       _valueClassName = [aCoder decodeObjectForKey: @"NSAttributeValueClassName"];
-       _defaultValue = [aCoder decodeObjectForKey: @"NSDefaultValue"];
-       _entity = [aCoder decodeObjectForKey: @"NSEntity"];
-       _propertyName = [aCoder decodeObjectForKey: @"NSPropertyName"];
-       _valueTransformerName = [aCoder decodeObjectForKey: @"NSValueTransformerName"];
+		[self setTypeValue:[self NS_attributeType:[aCoder decodeIntForKey: @"NSAttributeType"]]];
+		[self setIsOptional:[aCoder decodeBoolForKey: @"NSIsOptional"]];
+  		[self setClassValue:[[aCoder decodeObjectForKey: @"NSAttributeValueClassName"] stringByReplacingOccurrencesOfString:@"NS" withString:@"CP"]];
+		[self setDefaultValue:[aCoder decodeObjectForKey: @"NSDefaultValue"]];
+		[self setName:[aCoder decodeObjectForKey: @"NSPropertyName"]];
+
+		ns_valueTransformerName = [aCoder decodeObjectForKey: @"NSValueTransformerName"];
+		ns_entity = [aCoder decodeObjectForKey: @"NSEntity"];	//is set in NSEntityDescription		
 	}
 	
 	return self;
 }
 
-- (CPString) attributeType
+- (int)NS_attributeType:(int) aTypeValue
 {
-	var result = "CPString";
-
+	var result = 0;
 	var i = 0;
 	while(i < xcprototypes.length)
 	{
-		if(_attributeType == xcprototypes[i])
+		if(aTypeValue == xcprototypes[i])
 		{
 			result = xcprototypes_cp[i];
 			break;
 		}
 		i++;
 	}
-
 	return result;
 	
 }
-
-
-- (CPString) valueClassName
-{
-	var mappedClassName = "CPString";
-    if (_valueClassName.indexOf("NS") === 0)
-    {
-        mappedClassName = @"CP" + _valueClassName.substr(2);
-        CPLog.warn("Mapping " + aClassName + " to " + mappedClassName);
-    }	
-
-	return mappedClassName;
-}
-
 
 - (Class)classForKeyedArchiver
 {
