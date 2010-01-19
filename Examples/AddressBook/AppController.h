@@ -5,7 +5,6 @@
 //  Created by Raphael Bartolome on 14.01.10.
 //
 
-@import <Foundation/Foundation.j>
 
 @interface AppController : CPObject
 {
@@ -24,6 +23,7 @@
 	IBOutlet id birthDateField;
 	IBOutlet id phoneField;
 	IBOutlet id imageView;
+	
 }
 
 - (IBAction)addNewAddress:(id)sender;
