@@ -4,7 +4,7 @@
 //  Created by Raphael Bartolome on 06.01.10.
 //
 
-@implementation NSEntityDescription : CPDEntity
+@implementation NSEntityDescription : CPEntityDescription
 {
     NSManagedObjectModel ns_model;
     CPDictionary ns_properties;
@@ -22,7 +22,7 @@
 	{		
 		[self setName:[aCoder decodeObjectForKey: @"NSEntityName"]];
 		[self setExternalName:[aCoder decodeObjectForKey: @"NSClassNameForEntity"]];
-		ns_model = [aCoder decodeObjectForKey: @"NSManagedObjectModel"];	//will set on addEntity in CPDObjectModel
+		ns_model = [aCoder decodeObjectForKey: @"NSManagedObjectModel"];	//will set on addEntity in CPManagedObjectModel
 		ns_properties = [aCoder decodeObjectForKey: @"NSProperties"];
 		ns_subentities = [aCoder decodeObjectForKey: @"NSSubentities"];
 		ns_superentity = [aCoder decodeObjectForKey: @"NSSuperentity"];

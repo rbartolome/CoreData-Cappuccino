@@ -14,7 +14,7 @@
 	IBOutlet id removeButton;
 	IBOutlet id textField;
 	
-	CPDObject address;
+	CPManagedObject address;
 }
 
 - (IBAction)addEmailAddress:(id)sender;

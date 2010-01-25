@@ -5,7 +5,7 @@
 //
 
 
-@implementation NSRelationshipDescription : CPDRelationship
+@implementation NSRelationshipDescription : CPRelationshipDescription
 {
     NSEntityDescription _destinationEntity;
     CPString _destinationEntityName
@@ -49,15 +49,15 @@
 
 - (int) NS_deleteRule:(int) aDeleteRule
 {
-	var result = CPDRelationshipDeleteRuleNullify;
+	var result = CPRelationshipDescriptionDeleteRuleNullify;
 	if(aDeleteRule == 3)
-		result = CPDRelationshipDeleteRuleDeny;
+		result = CPRelationshipDescriptionDeleteRuleDeny;
 	else if(aDeleteRule == 2)
-		result = CPDRelationshipDeleteRuleCascade;
+		result = CPRelationshipDescriptionDeleteRuleCascade;
 	else if(aDeleteRule == 1)
-		result = CPDRelationshipDeleteRuleNullify;
+		result = CPRelationshipDescriptionDeleteRuleNullify;
 	else if(aDeleteRule == 0)
-		result = CPDRelationshipDeleteRuleNoAction;
+		result = CPRelationshipDescriptionDeleteRuleNoAction;
 
 	return result;
 }

@@ -16,11 +16,11 @@ The Data Model file must be stored in your Project `Resources` folder.
 
 CoreData:
 
-	var model = [CPDObjectModel objectModelWithModelNamed:@"YourModelFile.xcdatamodel" bundle:nil];
+	var model = [CPManagedObjectModel objectModelWithModelNamed:@"YourModelFile.xcdatamodel" bundle:nil];
 
 EOModel:
 
-	var model = [CPDObjectModel objectModelWithModelNamed:@"YourModelFile.eomodeld" bundle:nil];
+	var model = [CPManagedObjectModel objectModelWithModelNamed:@"YourModelFile.eomodeld" bundle:nil];
   
 ## 3. How to Compile and Convert a CoreData Model for Cappuccino ##
 *This instruction is not necessary if you use the latest [Xcode Cappuccino Templates][xcode-template].*  
@@ -56,7 +56,7 @@ EOModel:
 	
 3. 	*Key:* CPDWebDAVStoreConfigurationKeyFileFormat  
 	*Object:* The format of your store exp.:  
-	`CPDSerializationJSONFormat || CPDSerializationXMLFormat || CPDSerialization280NPLISTFormat`
+	`CoreDataSerializationJSONFormat || CoreDataSerializationXMLFormat || CoreDataSerialization280NPLISTFormat`
 
 **Implementation:**
 You can see a demo for this in the Addressbook Example ABContextController.j Class.
@@ -66,9 +66,9 @@ You can see a demo for this in the Addressbook Example ABContextController.j Cla
 		if(self = [super init])
 		{
 			//load your model file
-			model = [CPDObjectModel objectModelWithModelNamed:@"AddressBook.xcdatamodel" bundle:nil];
+			model = [CPManagedObjectModel objectModelWithModelNamed:@"AddressBook.xcdatamodel" bundle:nil];
 			//init the context with your configuration dictionary
-			context = [[CPDObjectContext alloc] initWithObjectModel: model 
+			context = [[CPManagedObjectContext alloc] initWithObjectModel: model 
 													  storeType: [CPDWebDAVStoreType class] 
 											 storeConfiguration: [ABContextController webDAVConfig]];
 																				 	
@@ -83,7 +83,7 @@ You can see a demo for this in the Addressbook Example ABContextController.j Cla
 
 		[result setObject:@"http://localhost:8080" forKey:CPDWebDAVStoreConfigurationKeyBaseURL];
 		[result setObject:@"addressbook.json" forKey:CPDWebDAVStoreConfigurationKeyFilePath];
-		[result setObject:CPDSerializationJSONFormat forKey:CPDWebDAVStoreConfigurationKeyFileFormat];
+		[result setObject:CoreDataSerializationJSONFormat forKey:CPDWebDAVStoreConfigurationKeyFileFormat];
 
 		return result
 	}

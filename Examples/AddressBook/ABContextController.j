@@ -10,8 +10,8 @@
 
 @implementation ABContextController : CPObject
 {
-	CPDObjectContext context @accessors(property=context);
-	CPDObjectModel model @accessors(property=model);
+	CPManagedObjectContext context @accessors(property=context);
+	CPManagedObjectModel model @accessors(property=model);
 }
 
 
@@ -32,11 +32,11 @@
 	if(self = [super init])
 	{
 		//load your coredata model file
-		model = [CPDObjectModel objectModelWithModelNamed:@"AddressBook.xcdatamodel" bundle:nil];
-		//model = [CPDObjectModel objectModelWithModelNamed:@"AddressBook.eomodeld" bundle:nil];
+		model = [CPManagedObjectModel objectModelWithModelNamed:@"AddressBook.xcdatamodel" bundle:nil];
+		//model = [CPManagedObjectModel objectModelWithModelNamed:@"AddressBook.eomodeld" bundle:nil];
 		
 		//init the context with your configuration dictionary
-		context = [[CPDObjectContext alloc] initWithObjectModel: model 
+		context = [[CPManagedObjectContext alloc] initWithObjectModel: model 
 												  storeType: [CPDWebDAVStoreType class] 
 										 storeConfiguration: [ABContextController webDAVConfig]];
 		
@@ -55,9 +55,9 @@
  *	Try different formats by replace the object 
  *  for key 'CPDWebDAVStoreConfigurationKeyFileFormat' with:
  *
- *	- CPDSerializationJSONFormat
- *	- CPDSerializationXMLFormat
- *	- CPDSerialization280NPLISTFormat
+ *	- CoreDataSerializationJSONFormat
+ *	- CoreDataSerializationXMLFormat
+ *	- CoreDataSerialization280NPLISTFormat
  *************************************************************************
  */
 + (CPDictionary) webDAVConfig
@@ -66,7 +66,7 @@
 	
 	[result setObject:@"http://localhost:8080" forKey:CPDWebDAVStoreConfigurationKeyBaseURL];
 	[result setObject:@"addressbook.json" forKey:CPDWebDAVStoreConfigurationKeyFilePath];
-	[result setObject:CPDSerializationJSONFormat forKey:CPDWebDAVStoreConfigurationKeyFileFormat];
+	[result setObject:CoreDataSerializationJSONFormat forKey:CPDWebDAVStoreConfigurationKeyFileFormat];
 	
 	return result
 }

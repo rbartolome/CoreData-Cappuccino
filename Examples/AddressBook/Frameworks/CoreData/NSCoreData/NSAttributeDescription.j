@@ -34,7 +34,7 @@ var xcprototypes_cp = [
 	CPDTransformableAttributeType	//NSTransformableAttributeType
 ];
 
-@implementation NSAttributeDescription : CPDAttribute
+@implementation NSAttributeDescription : CPAttributeDescription
 {
     CPString ns_valueTransformerName @accessors(property=valueTransformerName);
 	NSEntityDescription ns_entity @accessors(property=entity);

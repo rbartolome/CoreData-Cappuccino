@@ -6,30 +6,30 @@
 
 @import <Foundation/Foundation.j>
 
-@import "CPDStore.j"
-@import "CPDStoreType.j"
-@import "CPDObjectContext.j"
+@import "CPPersistantStore.j"
+@import "CPPersistantStoreType.j"
+@import "CPManagedObjectContext.j"
 
-@import "CPDObjectID.j"
-@import "CPDObject.j"
-@import "CPDObjectModel.j"
-@import "CPDEntity.j"
-@import "CPDAttribute.j"
-@import "CPDProperty.j"
-@import "CPDFetchRequest.j"
+@import "CPManagedObjectID.j"
+@import "CPManagedObject.j"
+@import "CPManagedObjectModel.j"
+@import "CPEntityDescription.j"
+@import "CPAttributeDescription.j"
+@import "CPPropertyDescription.j"
+@import "CPFetchRequest.j"
 
-@import "CPDCategories/CPDCategories.j"
+@import "CoreDataCategories/CoreDataCategories.j"
 @import "NSCoreData/NSCoreData.j"
 
 //Memory store
-@import "CPDMemoryStore/CPDMemoryStore.j"
-@import "CPDMemoryStore/CPDMemoryStoreType.j"
+@import "CoreDataPersistantStores/MemoryStore/CPDMemoryStore.j"
+@import "CoreDataPersistantStores/MemoryStore/CPDMemoryStoreType.j"
 
 //WebDAV store
-@import "CPDWebDAVStore/CPDWebDAVStoreType.j"
-@import "CPDWebDAVStore/CPDWebDAVStore.j"
+@import "CoreDataPersistantStores/WebDAVStore/CPDWebDAVStoreType.j"
+@import "CoreDataPersistantStores/WebDAVStore/CPDWebDAVStore.j"
 
 //WebObjects store
-@import "CPDWOStore/CPDWOStore.j"
-@import "CPDWOStore/CPDWOStoreType.j"
+@import "CoreDataPersistantStores/WOStore/CPDWOStore.j"
+@import "CoreDataPersistantStores/WOStore/CPDWOStoreType.j"
 

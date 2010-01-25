@@ -41,7 +41,7 @@
 	IBOutlet CPTextField phoneField;
 	IBOutlet CPImageView imageView;
 	
-	CPDObject selectedAddress;
+	CPManagedObject selectedAddress;
 }
 
 
@@ -68,7 +68,7 @@
 	//register context changes notification
 	[[CPNotificationCenter defaultCenter] addObserver:self 
 											selector:@selector(contextDidChange:)
-											name:@"CPDObjectContextObjectsDidChangeNotification"
+											name:@"CPManagedObjectContextObjectsDidChangeNotification"
 											object:nil];										
 
 	
@@ -111,13 +111,13 @@
  * Address Context Methods
  *************************
  */
-- (CPDObject) addNewAddress
+- (CPManagedObject) addNewAddress
 {	
 	var aAddress = [[addressBookContext context] insertNewObjectForEntityNamed:@"Address"];
 	return aAddress;
 }
 
-- (void) deleteAddress:(CPDObject) aAddress
+- (void) deleteAddress:(CPManagedObject) aAddress
 {
 	[[addressBookContext context] deleteObject:aAddress];
 }
@@ -158,7 +158,7 @@
  * Selected Address methods
  ***************************
  */
-- (void)setSelectedAddress:(CPDObject) aAddress
+- (void)setSelectedAddress:(CPManagedObject) aAddress
 {
 	selectedAddress = aAddress;
 
@@ -188,7 +188,7 @@
 	[emailsController setAddress:selectedAddress];
 }
 
-- (CPDObject)selectedAddress
+- (CPManagedObject)selectedAddress
 {
 	return selectedAddress;
 }
@@ -270,7 +270,7 @@
 -(void)datePickerDidChange:(id)sender
 {
 	[selectedAddress setValue:[birthDateField date] forKey:@"dateOfBirth"];	
-	CPLog.info(@"Value from cpdobject: " + [selectedAddress valueForKey:@"dateOfBirth"]);
+	CPLog.info(@"Value from CPManagedObject: " + [selectedAddress valueForKey:@"dateOfBirth"]);
 }
 
 @end

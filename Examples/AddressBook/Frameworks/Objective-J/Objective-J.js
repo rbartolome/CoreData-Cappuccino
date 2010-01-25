@@ -1284,10 +1284,13 @@ _CPPropertyList280NorthSerializers["dictionary"] = function(aDictionary, seriali
 }
 var OBJJ_ENVIRONMENTS = ["ObjJ"];
 var userAgent = window.navigator.userAgent;
-if (userAgent.indexOf("MSIE 7") !== -1)
-    OBJJ_ENVIRONMENTS.unshift("IE7");
-else if (userAgent.indexOf("MSIE 8") !== -1)
-    OBJJ_ENVIRONMENTS.unshift("IE8");
+if (userAgent.indexOf("MSIE") !== -1)
+{
+    if (userAgent.indexOf("MSIE 8") !== -1)
+        OBJJ_ENVIRONMENTS.unshift("IE8");
+    else
+        OBJJ_ENVIRONMENTS.unshift("IE7");
+}
 else
     OBJJ_ENVIRONMENTS.unshift("W3C");
 function objj_mostEligibleEnvironmentFromArray(environments)
@@ -2525,4 +2528,25 @@ function objj_import( pathOrPaths, isLocal, didCompleteCallback)
     context.evaluate();
 }
 if (window.OBJJ_MAIN_FILE)
-    objj_import(OBJJ_MAIN_FILE, YES, function() { main(); });
+{
+    var addOnload = function(handler)
+    {
+        if (window.addEventListener)
+            window.addEventListener("load", handler, false);
+        else if (window.attachEvent)
+            window.attachEvent("onload", handler);
+    }
+    var documentLoaded = NO;
+    var defaultHandler = function()
+    {
+        documentLoaded = YES;
+    }
+    addOnload(defaultHandler);
+    objj_import(OBJJ_MAIN_FILE, YES, function()
+    {
+        if (documentLoaded)
+            main();
+        else
+            addOnload(main);
+    });
+}

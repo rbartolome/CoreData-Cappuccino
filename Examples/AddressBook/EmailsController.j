@@ -15,11 +15,11 @@
 	IBOutlet id removeButton;
 	IBOutlet CPTextField textField;
 	
-	CPDObject address;
-	CPDObject selectedEmail @accessors(property=selectedEmail);
+	CPManagedObject address;
+	CPManagedObject selectedEmail @accessors(property=selectedEmail);
 }
 
-- (void)setAddress:(CPDObject)aAddress
+- (void)setAddress:(CPManagedObject)aAddress
 {
 	address = aAddress;
 	[self reloadData];

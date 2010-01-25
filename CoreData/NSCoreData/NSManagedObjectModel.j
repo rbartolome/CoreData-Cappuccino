@@ -5,7 +5,7 @@
 //
 
 
-@implementation NSManagedObjectModel : CPDObjectModel
+@implementation NSManagedObjectModel : CPManagedObjectModel
 {
 	CPMutableDictionary ns_entities;
 	CPSet ns_versionIdentifier;
