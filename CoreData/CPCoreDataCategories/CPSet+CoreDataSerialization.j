@@ -15,7 +15,7 @@
  *	XML format
  * ************
  */
-+ (id)deserializeFromXML:(CPData) data withContext:(CPDContext) aContext
++ (id)deserializeFromXML:(CPData) data withContext:(CPManagedObjectContext) aContext
 {
 	var errorString;
 	var resultSet = [[CPMutableSet alloc] init];
@@ -40,7 +40,7 @@
  *	280NPLIST format
  * *****************
  */
-+ (id)deserializeFrom280NPLIST:(CPData) data withContext:(CPDContext) aContext
++ (id)deserializeFrom280NPLIST:(CPData) data withContext:(CPManagedObjectContext) aContext
 {
 	var errorString;
 	var resultSet = [[CPMutableSet alloc] init];
@@ -66,10 +66,9 @@
  *	JSON format
  * ************
  */
-+ (id)deserializeFromJSON:(id) aArray withContext:(CPDContext) aContext
++ (id)deserializeFromJSON:(id) aArray withContext:(CPManagedObjectContext) aContext
 {
 	var resultSet =  [[CPMutableSet alloc] init];
-		
 	var i = 0;
 	for (i = 0; i < aArray.length; i++) 
 	{
@@ -94,7 +93,7 @@
  *	Dictionary format
  * ******************
  */
-+ (id)deserializeFromArrayWithDictionaries:(CPArray) aArray withContext:(CPDContext) aContext
++ (id)deserializeFromArrayWithDictionaries:(CPArray) aArray withContext:(CPManagedObjectContext) aContext
 {
 	var resultSet = [[CPMutableSet alloc] init];
 

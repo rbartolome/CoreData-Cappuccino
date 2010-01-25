@@ -38,7 +38,7 @@
 {
 	if([[textField stringValue] length] > 1)
 	{
-		var mail = [[address context] insertNewObjectForEntityNamed:@"EMail"];
+		var mail = [[address context] insertNewObjectForEntityForName:@"EMail"];
 		[mail setValue:[textField stringValue] forKey:@"mail"];
 		[textField setStringValue:@""];
 		[address addObject:mail toBothSideOfRelationship:@"emails"];

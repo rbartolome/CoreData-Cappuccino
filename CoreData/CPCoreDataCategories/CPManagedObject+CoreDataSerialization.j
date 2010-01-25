@@ -15,16 +15,16 @@ CoreDataSerializationDictionaryFormat = "CoreDataSerializationDictionaryFormat";
 
 //private keys for serialization
 CPManagedObjectIDKey = "CPManagedObjectID";
-CPDglobalID = "CPDglobalID";
-CPDlocalID = "CPDlocalID";
-CPDisTemporaryID = "CPDisTemporaryID";
+CPglobalID = "CPglobalID";
+CPlocalID = "CPlocalID";
+CPisTemporaryID = "CPisTemporaryID";
 CPEntityDescriptionName = "CPEntityDescriptionName";
-CPDmodelName = "CPDmodelName";
-CPDisUpdated = "CPDisUpdated";
-CPDisDeleted = "CPDisDeleted";
-CPDisFault = "CPDisFault";
-CPDallProperties = "CPDallProperties";
-CPDchangedProperties = "CPDchangedProperties";
+CPmodelName = "CPmodelName";
+CPisUpdated = "CPisUpdated";
+CPisDeleted = "CPisDeleted";
+CPisFault = "CPisFault";
+CPallProperties = "CPallProperties";
+CPchangedProperties = "CPchangedProperties";
 
 
 @implementation CPManagedObject (CoreDataSerialization)
@@ -35,7 +35,7 @@ CPDchangedProperties = "CPDchangedProperties";
  *	XML format
  * ************
  */
-+ (id)deserializeFromXML:(CPData) data withContext:(CPDContext) aContext
++ (id)deserializeFromXML:(CPData) data withContext:(CPManagedObjectContext) aContext
 {
 	var errorString;
 	var propertyListFromData = [CPPropertyListSerialization propertyListFromData:data
@@ -60,7 +60,7 @@ CPDchangedProperties = "CPDchangedProperties";
  *	280NPLIST format
  * *****************
  */
-+ (id)deserializeFrom280NPLIST:(CPData) data withContext:(CPDContext) aContext
++ (id)deserializeFrom280NPLIST:(CPData) data withContext:(CPManagedObjectContext) aContext
 {
 	var errorString;
 	var propertyListFromData = [CPPropertyListSerialization propertyListFromData:data
@@ -85,7 +85,7 @@ CPDchangedProperties = "CPDchangedProperties";
  *	JSON format
  * ************
  */
-+ (id)deserializeFromJSON:(id) jsonObject withContext:(CPDContext) aContext
++ (id)deserializeFromJSON:(id) jsonObject withContext:(CPManagedObjectContext) aContext
 {
 	var aDictionary = [CPDictionary dictionaryWithJSObject:jsonObject recursively:YES];
 	var aObject = [CPManagedObject deserializeFromDictionary:aDictionary withContext:aContext];
@@ -106,25 +106,25 @@ CPDchangedProperties = "CPDchangedProperties";
  *	Dictionary format
  * ******************
  */
-+ (id)deserializeFromDictionary:(CPDictionary) aDictionary withContext:(CPDContext) aContext
++ (id)deserializeFromDictionary:(CPDictionary) aDictionary withContext:(CPManagedObjectContext) aContext
 {
 	var aCPManagedObject = nil;
 	
 	if(aDictionary != nil)
 	{
-		var aModelName = [aDictionary objectForKey:CPDmodelName];
+		var aModelName = [aDictionary objectForKey:CPmodelName];
 		var aModel = nil;
 		if([[aContext model] isModelAllowedForMergeByName: aModelName])
 		{		
 			var aEntityName = [aDictionary objectForKey:CPEntityDescriptionName];
 			var aEntity = [[aContext model] entityWithName:aEntityName];
 
-			var allProperties = [aDictionary objectForKey:CPDallProperties];
-			var changedProperties = [aDictionary objectForKey:CPDchangedProperties];
+			var allProperties = [aDictionary objectForKey:CPallProperties];
+			var changedProperties = [aDictionary objectForKey:CPchangedProperties];
 
-			var objIsDeleted = [aDictionary objectForKey:CPDisDeleted];
-			var objIsUpdated = [aDictionary objectForKey:CPDisUpdated];
-			var objIsFault = [aDictionary objectForKey:CPDisFault];
+			var objIsDeleted = [aDictionary objectForKey:CPisDeleted];
+			var objIsUpdated = [aDictionary objectForKey:CPisUpdated];
+			var objIsFault = [aDictionary objectForKey:CPisFault];
 
 			//deserialize the ObjectID
 			var aObjectID = [CPManagedObjectID deserializeFromDictionary: [aDictionary objectForKey:CPManagedObjectIDKey] withContext:aContext];
@@ -159,16 +159,16 @@ CPDchangedProperties = "CPDchangedProperties";
 		
 	[result setObject:[[self objectID] serializeToDictionary] forKey:CPManagedObjectIDKey];
 	[result setObject:[[self entity] name] forKey:CPEntityDescriptionName];
-	[result setObject:[self isFault] forKey:CPDisFault];
-	[result setObject:[self isUpdated] forKey:CPDisUpdated];
-	[result setObject:[self isDeleted] forKey:CPDisDeleted];
+	[result setObject:[self isFault] forKey:CPisFault];
+	[result setObject:[self isUpdated] forKey:CPisUpdated];
+	[result setObject:[self isDeleted] forKey:CPisDeleted];
 	
-	[result setObject:[[[self entity] model] name] forKey:CPDmodelName];
+	[result setObject:[[[self entity] model] name] forKey:CPmodelName];
 	
 	if(containsAllProperties)
-		[result setObject:[self serializeProperties:[self data]] forKey:CPDallProperties];
+		[result setObject:[self serializeProperties:[self data]] forKey:CPallProperties];
 		
-	[result setObject:[self serializeProperties:[self changedData]] forKey:CPDchangedProperties];
+	[result setObject:[self serializeProperties:[self changedData]] forKey:CPchangedProperties];
 	 	
 	return result;
 }
@@ -256,10 +256,10 @@ CPDchangedProperties = "CPDchangedProperties";
 						var aDict = [[CPMutableDictionary alloc] init];
 
 						if([aObj globalID] != nil)
-							[aDict setObject:[aObj globalID] forKey:CPDglobalID];
+							[aDict setObject:[aObj globalID] forKey:CPglobalID];
 
-						[aDict setObject:[aObj localID] forKey:CPDlocalID];	
-						[aDict setObject:[aObj isTemporary] forKey:CPDisTemporaryID];		
+						[aDict setObject:[aObj localID] forKey:CPlocalID];	
+						[aDict setObject:[aObj isTemporary] forKey:CPisTemporaryID];		
 
 						[aDict setObject:[[aObj entity] name] forKey:CPEntityDescriptionName];
 
@@ -274,10 +274,10 @@ CPDchangedProperties = "CPDchangedProperties";
 				var aObjID = [[CPMutableDictionary alloc] init];
 				
 				if([aObject globalID] != nil)
-					[aObjID setObject:[aObject globalID] forKey:CPDglobalID];
+					[aObjID setObject:[aObject globalID] forKey:CPglobalID];
 				 
-				[aObjID setObject:[aObject localID] forKey:CPDlocalID];	
-				[aObjID setObject:[aObject isTemporary] forKey:CPDisTemporaryID];		
+				[aObjID setObject:[aObject localID] forKey:CPlocalID];	
+				[aObjID setObject:[aObject isTemporary] forKey:CPisTemporaryID];		
 				
 				[aObjID setObject:[[aObject entity] name] forKey:CPEntityDescriptionName];
 				 

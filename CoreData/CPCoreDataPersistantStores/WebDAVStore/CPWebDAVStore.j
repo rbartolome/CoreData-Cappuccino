@@ -99,7 +99,7 @@
 }
 
 
-- (CPSet)load:(CPDictionary) properties error:({CPError}) error
+- (CPSet)loadAll:(CPDictionary) properties inManagedObjectContext:(CPManagedObjectContext) aContext error:({CPError}) error
 {
 	var resultSet = nil;
 	
@@ -108,18 +108,18 @@
 	{
 		if([[self format] isEqualToString:CoreDataSerializationXMLFormat])
 		{
-			resultSet = [CPSet deserializeFromXML:data withContext:[self context]];
+			resultSet = [CPSet deserializeFromXML:data withContext:aContext];
 			error = nil;
 		}
 		else if([[self format] isEqualToString:CoreDataSerialization280NPLISTFormat])
 		{
-			resultSet = [CPSet deserializeFrom280NPLIST:data withContext:[self context]];
+			resultSet = [CPSet deserializeFrom280NPLIST:data withContext:aContext];
 			error = nil;
 		}
 		else if([[self format] isEqualToString:CoreDataSerializationJSONFormat])
 		{
 			var jsonArray = JSON.parse([data description]); 		
-			resultSet = [CPSet deserializeFromJSON:jsonArray withContext:[self context]];
+			resultSet = [CPSet deserializeFromJSON:jsonArray withContext:aContext];
 		}
 		else if([[self format] isEqualToString:CoreDataSerializationDictionaryFormat])
 		{

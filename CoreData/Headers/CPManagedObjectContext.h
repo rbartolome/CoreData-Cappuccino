@@ -19,7 +19,7 @@ CPDDeletedObjectsKey = "CPDDeletedObjectsKey";
 {
 	CPManagedObjectModel _model @accessors(property=model);
 	CPPersistantStore _store @accessors(property=store);
-	CPPersistentStoreCoordinator _storeCoordinator @accessors(property=storeCoordinator);;
+	CPPersistentStoreCoordinator _storeCoordinator @accessors(property=storeCoordinator);
 }
 
 - (id) initWithManagedObjectModel:(CPManagedObjectModel)model
@@ -33,7 +33,7 @@ CPDDeletedObjectsKey = "CPDDeletedObjectsKey";
 - (void)saveAll;
 - (BOOL)load;
 
-- (CPManagedObject)insertNewObjectForEntityNamed:(CPString) entity;
+- (CPManagedObject)insertNewObjectForEntityForName:(CPString) entity;
 
 - (void) insertObject:({CPManagedObject}) aObject;
 - (void) deleteObject:({CPManagedObject}) aObject;

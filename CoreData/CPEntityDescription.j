@@ -28,6 +28,12 @@
 	return self;
 }
 
++ (CPManagedObject)insertNewObjectForEntityForName:(CPString)aEntityName inManagedObjectContext:(CPManagedObjectContext) aContext
+{
+	var result = [aContext insertNewObjectForEntityForName:aEntityName];
+	
+	return result;
+}
 
 - (CPManagedObject)createObject
 {

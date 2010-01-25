@@ -21,7 +21,7 @@ CPManagedObjectUnexpectedValueTypeForProperty = "CPManagedObjectUnexpectedValueT
 }
 
 - (id)initWithEntity:(CPEntityDescription)entity;
-- (id)initWithEntityNamed:(CPEntityDescription)entity insertIntoManagedObjectContext:(CPManagedObjectContext)aContext;
+- (id)initWithEntityNamed:(CPEntityDescription)entity inManagedObjectContext:(CPManagedObjectContext)aContext;
 
 - (id)valueForKey:(CPString)aKey;
 - (id)valueForKeyPath:(CPString)aKey;

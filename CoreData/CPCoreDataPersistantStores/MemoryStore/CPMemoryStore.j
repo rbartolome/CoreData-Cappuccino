@@ -95,7 +95,7 @@
  *	and update and registrate the objects from reponse
  *	@return a set of CPManagedObjects with cheap relationship
  */
-- (CPSet) load:(CPDictionary) properties error:({CPError}) error
+- (CPSet)loadAll:(CPDictionary) properties inManagedObjectContext:(CPManagedObjectContext) aContext error:({CPError}) error
 {
 	return [CPSet new];
 }
@@ -121,6 +121,7 @@
 						fetchProperties:(CPDictionary) properties
 						 fetchQualifier:(CPString) aQualifier
 							 fetchLimit:(int) aFetchLimit
+				 inManagedObjectContext:(CPManagedObjectContext) aContext
 								  error:({CPError}) error
 {
 	return [CPSet new];
@@ -133,6 +134,7 @@
  */
 - (CPSet) fetchObjectsWithID:(CPSet) objectIDs
 			   fetchProperties:(CPDictionary) properties
+		inManagedObjectContext:(CPManagedObjectContext) aContext
 						 error:({CPError}) error
 {
 	return [CPSet new];

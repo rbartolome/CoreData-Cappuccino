@@ -16,6 +16,7 @@
 @import "CPEntityDescription.j"
 @import "CPAttributeDescription.j"
 @import "CPPropertyDescription.j"
+@import "CPFetchPropertyDescription.j"
 @import "CPFetchRequest.j"
 @import "CPPersistentStoreCoordinator.j"
 

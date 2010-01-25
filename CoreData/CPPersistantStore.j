@@ -14,7 +14,7 @@
 	CPMutableDictionary _configuration;
 	CPMutableDictionary _metadata;
 
-	CPManagedObjectContext _context @accessors(property=context);
+	CPPersistantStoreCoordinator _storeCoordinator @accessors(property=storeCoordinator);
 }
 
 
@@ -84,18 +84,18 @@
 
 
 /*
- *	The CPManagedObjectContext calls this method before it closed
+ *	Will save all objects
  */
 - (void) saveAll:(CPSet) objects error:({CPError}) error
 {
 }
 
 /*
- *	The CPManagedObjectContext call this method through the instantiation
+ *	This method will be called through the instantiation
  *	and update and registrate the objects from reponse
  *	@return a set of CPManagedObjects with cheap relationship
  */
-- (CPSet) load:(CPDictionary) properties error:({CPError}) error
+- (CPSet)loadAll:(CPDictionary) properties inManagedObjectContext:(CPManagedObjectContext) aContext error:({CPError}) error
 {
 	return [CPSet new];
 }
@@ -121,6 +121,7 @@
 						fetchProperties:(CPDictionary) properties
 						 fetchQualifier:(CPString) aQualifier
 							 fetchLimit:(int) aFetchLimit
+				 inManagedObjectContext:(CPManagedObjectContext) aContext
 								  error:({CPError}) error
 {
 	return [CPSet new];
@@ -133,6 +134,7 @@
  */
 - (CPSet) fetchObjectsWithID:(CPSet) objectIDs
 			   fetchProperties:(CPDictionary) properties
+		inManagedObjectContext:(CPManagedObjectContext) aContext
 						 error:({CPError}) error
 {
 	return [CPSet new];

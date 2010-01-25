@@ -113,7 +113,7 @@
  */
 - (CPManagedObject) addNewAddress
 {	
-	var aAddress = [[addressBookContext context] insertNewObjectForEntityNamed:@"Address"];
+	var aAddress = [CPEntityDescription insertNewObjectForEntityForName:@"Address" inManagedObjectContext:[addressBookContext context]];
 	return aAddress;
 }
 

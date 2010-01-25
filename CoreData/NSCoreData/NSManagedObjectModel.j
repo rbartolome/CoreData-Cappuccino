@@ -34,11 +34,12 @@
 	var aName;
 	while(aName = [keyEnumerator nextObject])
 	{
-		var aNSEntity = [ns_entities objectForKey:aName];		
+		var aNSEntity = [ns_entities objectForKey:aName];	
+		CPLog.debug(aNSEntity);	
 		[self addEntity:aNSEntity];
 	}
 	
-	[[self entities] makeObjectsPerformSelector:@selector(NS_loadEntityDescription)];
+	[[self entities] makeObjectsPerformSelector:@selector(NS_loadEntityDescription)];	
 }
 
 

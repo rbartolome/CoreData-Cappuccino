@@ -6,7 +6,7 @@
 
 @interface CPPersistantStore : CPObject
 {
-	CPManagedObjectModel _model @accessors(property=model);
+	CPManagedObjectModel [self model] @accessors(property=model);
 }
 
 - (id)initWithStoreID:(CPString)aStoreID configuration:(CPDictionary)configuration;
@@ -35,7 +35,7 @@
  *	and updates/registrates the objects in reponse
  *	@return a set of CPManagedObjects with cheap relationship
  */
-- (CPSet) load:(CPDictionary) properties error:({CPError}) error;
+- (CPSet)loadAll:(CPDictionary) properties inManagedObjectContext:(CPManagedObjectContext) aContext error:({CPError}) error
 
 /*
  *	Save objects, updated, inserted and deleted
@@ -55,6 +55,7 @@
 						fetchProperties:(CPDictionary) properties
 						 fetchQualifier:(CPString) aQualifier
 							 fetchLimit:(int) aFetchLimit
+	  			 inManagedObjectContext:(CPManagedObjectContext) aContext
 								  error:({CPError}) error;
 
 

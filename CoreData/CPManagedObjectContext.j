@@ -43,11 +43,7 @@ CPDDeletedObjectsKey = "CPDDeletedObjectsKey";
 @implementation CPManagedObjectContext : CPObject
 {
 	BOOL _autoSaveChanges;
-	CPManagedObjectModel _model @accessors(property=model);
-	CPPersistantStore _store @accessors(property=store);
-	CPPersistentStoreCoordinator _storeCoordinator @accessors(property=storeCoordinator);;
-
-	CPUndoManager _undoManager;
+	CPPersistentStoreCoordinator _storeCoordinator @accessors(property=storeCoordinator);
 	
 	CPMutableSet _registeredObjects;
 	CPMutableSet _insertedObjectIDs;
@@ -55,46 +51,50 @@ CPDDeletedObjectsKey = "CPDDeletedObjectsKey";
 	CPMutableSet _deletedObjects;
 }
 
-- (id) initWithManagedObjectModel:(CPManagedObjectModel)model
-				 storeType:(CPPersistantStoreType) aStoreType
-		storeConfiguration:(id) aConfiguration
+- (id) init
 {
 	if ((self = [super init]))
 	{
 		_autoSaveChanges = false;
-		_model = model
 		_registeredObjects = [CPMutableSet new];
 		_insertedObjectIDs = [CPMutableSet new];
 		_updatedObjectIDs = [CPMutableSet new];
 		_deletedObjects = [CPMutableSet new];
-		
-		_undoManager = [CPUndoManager new];
-		
-		[self _createStoreWithType:aStoreType configuration:aConfiguration];		
-		[self load];
 	}
 	
 	return self;
 }
 
+- (id) initWithPersistantStoreCoordinator:(CPPersistentStoreCoordinator)aStoreCoordinator
+{
+	if ((self = [super init]))
+	{
+		_autoSaveChanges = false;
+		_registeredObjects = [CPMutableSet new];
+		_insertedObjectIDs = [CPMutableSet new];
+		_updatedObjectIDs = [CPMutableSet new];
+		_deletedObjects = [CPMutableSet new];
+		
+		_storeCoordinator = aStoreCoordinator;
+		[self loadAll];
+	}
+	
+	return self;
+}
 
 - (void)dealloc
 {
 	[super dealloc];
 }
 
+- (CPManagedObjectModel)model
+{
+	return [_storeCoordinator managedObjectModel];
+}
 
-- (CPStore) _createStoreWithType: (CPPersistantStoreType) aStoreType
-			   configuration: (id) aConfiguration
-{	
-	var storeClass = [aStoreType storeClass];
-	var store = [[storeClass alloc] init];
-	[store setConfiguration: aConfiguration];
-	[store setContext:self];
-	
-	[self setStore:store];
-	
-	return store;
+- (CPPersistantStore)store
+{
+	return [_storeCoordinator persistantStore];
 }
 
 - (BOOL) autoSaveChanges
@@ -157,28 +157,6 @@ CPDDeletedObjectsKey = "CPDDeletedObjectsKey";
 	return resultSet;
 }
 
-- (CPUndoManager) undoManager
-{
-  return _undoManager;
-}
-
-- (void) setUndoManager: (CPUndoManager) aManager
-{
-	_undoManager = aManager;
-}
-
-
-- (void) undo
-{
-	[_undoManager undo];
-}
-
-- (void) redo
-{
-	[_undoManager redo];
-}
-
-
 - (void) reset
 {
 	var result = YES;
@@ -223,7 +201,7 @@ CPDDeletedObjectsKey = "CPDDeletedObjectsKey";
 	var newProperitesDict = properties;
 	if(properties == nil)
 	{
-		var localEntity = [_model entityWithName:aEntityName];
+		var localEntity = [[self model] entityWithName:aEntityName];
 		var localProperties = [CPSet setWithArray: [localEntity propertyNames]]; 
 		
 		newProperitesDict = [[CPMutableDictionary alloc] init];
@@ -231,10 +209,11 @@ CPDDeletedObjectsKey = "CPDDeletedObjectsKey";
 	}
 	
 	var error = nil;	
-	var resultSet = [_store fetchObjectsWithEntityNamed:aEntityName
+	var resultSet = [[self store] fetchObjectsWithEntityNamed:aEntityName
 										  fetchProperties:newProperitesDict
 										   fetchQualifier:localQualifierModification
 											   fetchLimit:aFetchLimit
+								   inManagedObjectContext:self
 														error:error];
 					  
 	if(resultSet != nil && [resultSet count] > 0 && error == nil)
@@ -255,7 +234,7 @@ CPDDeletedObjectsKey = "CPDDeletedObjectsKey";
 	var result = YES;
 	var error = nil;
 	
-	[_store saveAll:[self registeredObjects] error:error];
+	[[self store] saveAll:[self registeredObjects] error:error];
 	
 	[[CPNotificationCenter defaultCenter]
 						postNotificationName: CPManagedObjectContextDidSaveAllObjectsNotification
@@ -265,14 +244,14 @@ CPDDeletedObjectsKey = "CPDDeletedObjectsKey";
 }
 
 
-- (BOOL) load
+- (BOOL) loadAll
 {
 	var error = nil;
 	var result = YES;
 	var resultSet = nil;
 	var propertiesDictionary = [[CPMutableDictionary alloc] init];
 	
-	var allEntities = [[_model entities] objectEnumerator];
+	var allEntities = [[[self model] entities] objectEnumerator];
 	var aEntity;
 	
 	while((aEntity = [allEntities nextObject]))
@@ -280,8 +259,8 @@ CPDDeletedObjectsKey = "CPDDeletedObjectsKey";
 		var propertiesFromEntity = [CPSet setWithArray: [aEntity propertyNames]]; 
 		[propertiesDictionary setObject:propertiesFromEntity forKey:[aEntity name]];
 	}
-	
-	resultSet = [_store load:propertiesDictionary error:error];
+
+	resultSet = [[self store] loadAll:propertiesDictionary inManagedObjectContext:self error:error];
 	if(resultSet != nil && [resultSet count] > 0 && error == nil)
 	{		
 		var resultEnumerator = [[resultSet allObjects] objectEnumerator];
@@ -315,7 +294,7 @@ CPDDeletedObjectsKey = "CPDDeletedObjectsKey";
 		
 		if([updatedObjects count] > 0 || [insertedObjects count] > 0 || [deletedObjects count] > 0)
 		{
-			var resultSet = [_store saveObjectsUpdated:updatedObjects
+			var resultSet = [[self store] saveObjectsUpdated:updatedObjects
 												inserted:insertedObjects
 												 deleted:deletedObjects
 												   error:error];
@@ -440,13 +419,13 @@ CPDDeletedObjectsKey = "CPDDeletedObjectsKey";
 			[setWithObjIDs addObject:aObjectID];
 
 			var newPropertiesDict = [[CPMutableDictionary alloc] init];
-			var localEntity = [_model entityWithName:[[aObjectID entity] name]];
+			var localEntity = [[self model] entityWithName:[[aObjectID entity] name]];
 			var localProperties = [CPSet setWithArray: [localEntity propertyNames]]; 
 			[newPropertiesDict setObject:localProperties forKey:[[aObjectID entity] name]];
 
 		
 			var error = nil;
-			var resultSet = [_store fetchObjectsWithID:setWithObjIDs fetchProperties:newPropertiesDict error:error];
+			var resultSet = [[self store] fetchObjectsWithID:setWithObjIDs fetchProperties:newPropertiesDict error:error];
 			if(resultSet != nil && [resultSet count] > 0 && error == nil)
 			{
 				var objectEnum = [resultSet objectEnumerator];
@@ -527,10 +506,10 @@ CPDDeletedObjectsKey = "CPDDeletedObjectsKey";
 /*
  *	Create new object from entity
  */
-- (CPManagedObject) insertNewObjectForEntityNamed:(CPString) entity
+- (CPManagedObject) insertNewObjectForEntityForName:(CPString) entity
 {
 	var result_object;	
-	var tmpentity = [_model entityWithName:entity];
+	var tmpentity = [[self model] entityWithName:entity];
 	if(tmpentity != nil)
 	{
 		result_object = [tmpentity createObject];

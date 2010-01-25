@@ -32,7 +32,8 @@ CPManagedObjectUnexpectedValueTypeForProperty = "CPManagedObjectUnexpectedValueT
 {
 	CPEntityDescription _entity @accessors(property=entity);
 	CPManagedObjectContext _context @accessors(property=context);
-
+	CPPersistantStore _store @accessors(property=store);
+	
 	CPManagedObjectID _objectID @accessors(property=objectID);
 	BOOL _isUpdated @accessors(getter=isUpdated, setter=setUpdated:);
 	BOOL _isDeleted @accessors(getter=isDeleted, setter=setDeleted:);
@@ -67,7 +68,7 @@ CPManagedObjectUnexpectedValueTypeForProperty = "CPManagedObjectUnexpectedValueT
 	return self;
 }
 
-- (id)initWithEntity:(CPEntityDescription)entity insertIntoManagedObjectContext:(CPManagedObjectContext)aContext
+- (id)initWithEntity:(CPEntityDescription)entity inManagedObjectContext:(CPManagedObjectContext)aContext
 {
 	if(self = [super init])
 	{
@@ -783,6 +784,7 @@ CPManagedObjectUnexpectedValueTypeForProperty = "CPManagedObjectUnexpectedValueT
 	{
 		_objectID = [[CPManagedObjectID alloc] initWithEntity:_entity globalID:nil isTemporary:YES];
 		[_objectID setContext:context];
+		[_objectID setStore:[context store]];
 	}
 }
 

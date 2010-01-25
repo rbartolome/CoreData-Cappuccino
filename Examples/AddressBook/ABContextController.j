@@ -35,13 +35,13 @@
 		model = [CPManagedObjectModel modelWithModelNamed:@"AddressBook.xcdatamodel" bundle:nil];
 		//model = [CPManagedObjectModel modelWithModelNamed:@"AddressBook.eomodeld" bundle:nil];
 		
+		var coordinator = [[CPPersistentStoreCoordinator alloc] initWithManagedObjectModel: model 
+																			storeType: [CPWebDAVStoreType class] 
+																   storeConfiguration: [ABContextController webDAVConfig]];
+																   
 		//init the context with your configuration dictionary
-		context = [[CPManagedObjectContext alloc] initWithManagedObjectModel: model 
-												  storeType: [CPWebDAVStoreType class] 
-										 storeConfiguration: [ABContextController webDAVConfig]];
-		
-																			 	
-		[context setAutoSaveChanges:YES];
+		context = [[CPManagedObjectContext alloc] initWithPersistantStoreCoordinator: coordinator];
+		[context setAutoSaveChanges:YES];		
 	}
 	
 	return self;

@@ -94,7 +94,7 @@
 /*
  *	Request prefetched objects from store
  */
-- (CPSet) load:(CPDictionary) properties error:({CPError}) error
+- (CPSet)loadAll:(CPDictionary) properties inManagedObjectContext:(CPManagedObjectContext) aContext error:({CPError}) error
 {
 	CPLog.debug(@"readDefaultObjects");
 
@@ -172,6 +172,7 @@
 						fetchProperties:(CPDictionary) properties
 						 fetchQualifier:(CPString) aQualifier
 							 fetchLimit:(int) aFetchLimit
+				 inManagedObjectContext:(CPManagedObjectContext) aContext
 								  error:({CPError}) error
 {
 	CPLog.debug(@"fetchObjectsWithEntityNamed:fetchQualifier:fetchLimit");
@@ -208,6 +209,7 @@
  */
 - (CPSet) fetchObjectsWithID:(CPSet) objectIDs
 			   fetchProperties:(CPDictionary) properties
+		inManagedObjectContext:(CPManagedObjectContext) aContext
 						 error:({CPError}) error
 {
 	CPLog.debug(@"fetchObjectsWithID:fetchProperties");
@@ -235,7 +237,6 @@
 	
 	return resultSet;
 }
-
 
 /*
  *	custom convert json objects

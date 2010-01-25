@@ -11,8 +11,24 @@ CPPropertyDescriptionKey = "CPPropertyDescriptionKey";
 @implementation CPPropertyDescription : CPObject
 {
 	CPString _name @accessors(property=name);
-	BOOL _isOptional @accessors(property=isOptional);
+	BOOL _isOptional;
 	CPEntityDescription _entity @accessors(property=entity);
 }
 
+- (BOOL)isOptional
+{
+	return _isOptional;
+}
+
+- (void)setIsOptional:(BOOL)isOptional
+{
+	if(isOptional == null)
+	{
+		_isOptional = false;
+	}
+	else
+	{
+		_isOptional = isOptional;
+	}
+}
 @end

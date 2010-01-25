@@ -14,7 +14,7 @@
  *	Dictionary format
  * ******************
  */
-+ (id)deserializeFromDictionary:(CPDictionary) aDictionary withContext:(CPDContext) aContext
++ (id)deserializeFromDictionary:(CPDictionary) aDictionary withContext:(CPManagedObjectContext) aContext
 {
 	var aObjectID = nil;
 	
@@ -22,9 +22,9 @@
 	{
 		//deserialize ObjectID
 		aObjectID = [[CPManagedObjectID alloc] init];
-		[aObjectID setGlobalID:[aDictionary objectForKey:CPDglobalID]];
-		[aObjectID setLocalID:[aDictionary objectForKey:CPDlocalID]];
-		[aObjectID setIsTemporary:[aDictionary objectForKey:CPDisTemporaryID]];
+		[aObjectID setGlobalID:[aDictionary objectForKey:CPglobalID]];
+		[aObjectID setLocalID:[aDictionary objectForKey:CPlocalID]];
+		[aObjectID setIsTemporary:[aDictionary objectForKey:CPisTemporaryID]];
 		[aObjectID setContext:aContext];
 		[aObjectID setEntity:[[[aObjectID context] model] entityWithName:[aDictionary objectForKey:CPEntityDescriptionName]]];
 	}
@@ -37,10 +37,10 @@
 	var result = [[CPMutableDictionary alloc] init];
 
 	if([self globalID] != nil)
-		[result setObject:[self globalID] forKey:CPDglobalID];
+		[result setObject:[self globalID] forKey:CPglobalID];
 	
-	[result setObject:[self localID] forKey:CPDlocalID];	
-	[result setObject:[self isTemporary] forKey:CPDisTemporaryID];	
+	[result setObject:[self localID] forKey:CPlocalID];	
+	[result setObject:[self isTemporary] forKey:CPisTemporaryID];	
 	[result setObject:[[self entity] name] forKey:CPEntityDescriptionName];
 
 	return result;
