@@ -11,7 +11,6 @@
 @implementation ABContextController : CPObject
 {
 	CPManagedObjectContext context @accessors(property=context);
-	CPManagedObjectModel model @accessors(property=model);
 }
 
 
@@ -32,7 +31,7 @@
 	if(self = [super init])
 	{
 		//load your coredata model file
-		model = [CPManagedObjectModel modelWithModelNamed:@"AddressBook.xcdatamodel" bundle:nil];
+		var model = [CPManagedObjectModel modelWithModelNamed:@"AddressBook.xcdatamodel" bundle:nil];
 		//model = [CPManagedObjectModel modelWithModelNamed:@"AddressBook.eomodeld" bundle:nil];
 		
 		var coordinator = [[CPPersistentStoreCoordinator alloc] initWithManagedObjectModel: model 

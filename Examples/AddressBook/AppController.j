@@ -43,7 +43,7 @@
 	
 	CPManagedObject selectedAddress;
 	
-	CPFetchRequest addressRequest;
+	CPFetchRequest allAddressFetchRequest;
 }
 
 
@@ -109,32 +109,31 @@
 }
 
 /*
- *************************
- * Address Context Methods
- *************************
+ *****************
+ * Address Methods
+ *****************
  */
 - (CPManagedObject) addNewAddress
 {	
-	var aAddress = [CPEntityDescription insertNewObjectForEntityForName:@"Address" inManagedObjectContext:[addressBookContext context]];
+	var aAddress = [CPEntityDescription insertNewObjectForEntityForName:@"Address" 
+												 inManagedObjectContext:[addressBookContext context]];
 	return aAddress;
 }
 
 - (void) deleteAddress:(CPManagedObject) aAddress
 {
-	
 	[[addressBookContext context] deleteObject:aAddress];
 }
 
 - (CPArray) addresses
 {
-	if(!addressRequest)
+	if(!allAddressFetchRequest)
 	{
 		var aEntity = [[[addressBookContext context] model] entityWithName:@"Address"];
-		addressRequest = [[CPFetchRequest alloc] initWithEntity:aEntity predicate:nil];
+		allAddressFetchRequest = [[CPFetchRequest alloc] initWithEntity:aEntity predicate:nil];
 	}
 	
-	var result = [[addressBookContext context] executeFetchRequest:addressRequest];
-	return result;
+	return [[addressBookContext context] executeFetchRequest:allAddressFetchRequest];
 }
 
 /*
