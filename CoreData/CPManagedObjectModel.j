@@ -34,7 +34,7 @@ var CPDCOREDATAMODEL_SUFFIX = "cpxcdatamodel";
 	return self;
 }
 
-+ (id)objectModelWithModelNamed:(CPString) aModelName bundle:(CPBundle)aBundle
++ (id)modelWithModelNamed:(CPString) aModelName bundle:(CPBundle)aBundle
 {
 	var objectModel = [[CPManagedObjectModel alloc] init];
 	var modelURL = [aBundle || [CPBundle mainBundle] pathForResource:aModelName];
@@ -55,6 +55,19 @@ var CPDCOREDATAMODEL_SUFFIX = "cpxcdatamodel";
 	CPLog.info("Data Model '" + [objectModel name] + "' loaded");
 	
 	return objectModel;
+}
+
++ (id) mergedModelFromBundles: (CPArray) bundles 
+{
+    //Unimplemented
+	return nil
+}
+
+
++ (id) modelByMergingModels: (CPArray) models 
+{
+	//Unimplemented
+    return nil;
 }
 
 - (void)setNameFromFilePath:(CPString)aFilePath

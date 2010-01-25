@@ -17,19 +17,20 @@
 @import "CPAttributeDescription.j"
 @import "CPPropertyDescription.j"
 @import "CPFetchRequest.j"
+@import "CPPersistentStoreCoordinator.j"
 
-@import "CoreDataCategories/CoreDataCategories.j"
+@import "CPCoreDataCategories/CPCoreDataCategories.j"
 @import "NSCoreData/NSCoreData.j"
 
 //Memory store
-@import "CoreDataPersistantStores/MemoryStore/CPDMemoryStore.j"
-@import "CoreDataPersistantStores/MemoryStore/CPDMemoryStoreType.j"
+@import "CPCoreDataPersistantStores/MemoryStore/CPMemoryStore.j"
+@import "CPCoreDataPersistantStores/MemoryStore/CPMemoryStoreType.j"
 
 //WebDAV store
-@import "CoreDataPersistantStores/WebDAVStore/CPDWebDAVStoreType.j"
-@import "CoreDataPersistantStores/WebDAVStore/CPDWebDAVStore.j"
+@import "CPCoreDataPersistantStores/WebDAVStore/CPWebDAVStoreType.j"
+@import "CPCoreDataPersistantStores/WebDAVStore/CPWebDAVStore.j"
 
 //WebObjects store
-@import "CoreDataPersistantStores/WOStore/CPDWOStore.j"
-@import "CoreDataPersistantStores/WOStore/CPDWOStoreType.j"
+@import "CPCoreDataPersistantStores/WOStore/CPWOStore.j"
+@import "CPCoreDataPersistantStores/WOStore/CPWOStoreType.j"
 

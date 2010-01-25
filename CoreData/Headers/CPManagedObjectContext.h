@@ -19,9 +19,10 @@ CPDDeletedObjectsKey = "CPDDeletedObjectsKey";
 {
 	CPManagedObjectModel _model @accessors(property=model);
 	CPPersistantStore _store @accessors(property=store);
+	CPPersistentStoreCoordinator _storeCoordinator @accessors(property=storeCoordinator);;
 }
 
-- (id) initWithObjectModel:(CPManagedObjectModel)model
+- (id) initWithManagedObjectModel:(CPManagedObjectModel)model
 				 storeType:(CPPersistantStoreType) aStoreType
 		storeConfiguration:(id) aConfiguration;
 

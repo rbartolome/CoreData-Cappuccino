@@ -1,5 +1,5 @@
 //
-//  CPDWOStoreType.j
+//  CPWOStoreType.j
 //
 //  Created by Raphael Bartolome on 09.10.09.
 //
@@ -8,18 +8,18 @@
 @import <CoreData/CoreData.j>
 
 
-@implementation CPDWOStoreType : CPPersistantStoreType
+@implementation CPWOStoreType : CPPersistantStoreType
 {
 }
 
 + (CPString)type
 {
-	return "CPDWOStore";
+	return "CPWOStore";
 }
 
 + (Class)storeClass
 {
-	return [CPDWOStore class];
+	return [CPWOStore class];
 }
 
 @end

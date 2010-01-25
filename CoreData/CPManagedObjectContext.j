@@ -45,6 +45,7 @@ CPDDeletedObjectsKey = "CPDDeletedObjectsKey";
 	BOOL _autoSaveChanges;
 	CPManagedObjectModel _model @accessors(property=model);
 	CPPersistantStore _store @accessors(property=store);
+	CPPersistentStoreCoordinator _storeCoordinator @accessors(property=storeCoordinator);;
 
 	CPUndoManager _undoManager;
 	
@@ -54,7 +55,7 @@ CPDDeletedObjectsKey = "CPDDeletedObjectsKey";
 	CPMutableSet _deletedObjects;
 }
 
-- (id) initWithObjectModel:(CPManagedObjectModel)model
+- (id) initWithManagedObjectModel:(CPManagedObjectModel)model
 				 storeType:(CPPersistantStoreType) aStoreType
 		storeConfiguration:(id) aConfiguration
 {
@@ -187,10 +188,10 @@ CPDDeletedObjectsKey = "CPDDeletedObjectsKey";
 	[_updatedObjectIDs removeAllObjects];
 	[_insertedObjectIDs removeAllObjects];
 	[_deletedObjects removeAllObjects];
-				
-	CPLog.debug(@"updatedObjectIDs " + [_updatedObjectIDs count] + ", insertedObjects " + [_insertedObjectIDs count]);
-	CPLog.debug(@"registeredObjects " + [_registeredObjects count] + ", deletedObjects " + [_deletedObjects count]);
-	
+	// 			
+	// CPLog.debug(@"updatedObjectIDs " + [_updatedObjectIDs count] + ", insertedObjects " + [_insertedObjectIDs count]);
+	// CPLog.debug(@"registeredObjects " + [_registeredObjects count] + ", deletedObjects " + [_deletedObjects count]);
+	// 
 	return result;
 }
 

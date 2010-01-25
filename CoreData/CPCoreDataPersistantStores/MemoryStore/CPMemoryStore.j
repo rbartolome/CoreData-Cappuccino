@@ -1,5 +1,5 @@
 //
-//  CPDMemoryStore.j
+//  CPMemoryStore.j
 //
 //  Created by Raphael Bartolome on 11.01.10.
 //
@@ -7,7 +7,7 @@
 @import <Foundation/Foundation.j>
 
 
-@implementation CPDMemoryStore : CPPersistantStore
+@implementation CPMemoryStore : CPPersistantStore
 {
 	CPString _storeID;
 	CPURL _URL;

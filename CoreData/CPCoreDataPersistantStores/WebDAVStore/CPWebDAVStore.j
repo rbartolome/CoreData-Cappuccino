@@ -1,5 +1,5 @@
 //
-//  CPDWebDAVStore.j
+//  CPWebDAVStore.j
 //
 //  Created by Raphael Bartolome on 10.01.10.
 //
@@ -9,7 +9,7 @@
 @import <CoreData/CPWebDAVRequest.j>
 
 
-@implementation CPDWebDAVStore : CPPersistantStore
+@implementation CPWebDAVStore : CPPersistantStore
 {
 	CPWebDAVRequest _davManager;
 }
@@ -19,7 +19,7 @@
 {
 	if(_configuration != nil)
 	{
-		var result = [_configuration objectForKey:CPDWebDAVStoreConfigurationKeyBaseURL];
+		var result = [_configuration objectForKey:CPWebDAVStoreConfigurationKeyBaseURL];
 		var lastCharacter = [result characterAtIndex:[result length]-1];
 		
 		if(![lastCharacter isEqualToString:@"/"])
@@ -36,7 +36,7 @@
 {
 	if(_configuration != nil)
 	{
-		var result = [_configuration objectForKey:CPDWebDAVStoreConfigurationKeyFilePath];
+		var result = [_configuration objectForKey:CPWebDAVStoreConfigurationKeyFilePath];
 		var firstCharacter = [result characterAtIndex:0];
 		
 		if([firstCharacter isEqualToString:@"/"])
@@ -52,7 +52,7 @@
 {
 	if(_configuration != nil)
 	{
-		return [_configuration objectForKey:CPDWebDAVStoreConfigurationKeyFileFormat];
+		return [_configuration objectForKey:CPWebDAVStoreConfigurationKeyFileFormat];
 	}
 }
 

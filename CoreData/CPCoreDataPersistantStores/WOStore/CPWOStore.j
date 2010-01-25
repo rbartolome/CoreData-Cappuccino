@@ -1,5 +1,5 @@
 //
-//  CPDWOStore.j
+//  CPWOStore.j
 //
 //  Created by Raphael Bartolome on 07.10.09.
 //
@@ -12,7 +12,7 @@
  *	persistantStore
  *	customConnectionURL
  */
-@implementation CPDWOStore : CPPersistantStore
+@implementation CPWOStore : CPPersistantStore
 {
 }
 

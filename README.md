@@ -16,11 +16,11 @@ The Data Model file must be stored in your Project `Resources` folder.
 
 CoreData:
 
-	var model = [CPManagedObjectModel objectModelWithModelNamed:@"YourModelFile.xcdatamodel" bundle:nil];
+	var model = [CPManagedObjectModel modelWithModelNamed:@"YourModelFile.xcdatamodel" bundle:nil];
 
 EOModel:
 
-	var model = [CPManagedObjectModel objectModelWithModelNamed:@"YourModelFile.eomodeld" bundle:nil];
+	var model = [CPManagedObjectModel modelWithModelNamed:@"YourModelFile.eomodeld" bundle:nil];
   
 ## 3. How to Compile and Convert a CoreData Model for Cappuccino ##
 *This instruction is not necessary if you use the latest [Xcode Cappuccino Templates][xcode-template].*  
@@ -45,16 +45,16 @@ EOModel:
 # Persistant Store #
 
 ## 1. Available stores ##
-### CPDWebDAVStore ###
+### CPWebDAVStore ###
 **Configuration Dictionary:**
 
-1. 	*Key:* CPDWebDAVStoreConfigurationKeyBaseURL  
+1. 	*Key:* CPWebDAVStoreConfigurationKeyBaseURL  
 	*Object:* is the base URL for exp.: `@"http://localhost:8080"`  
 	
-2. 	*Key:* CPDWebDAVStoreConfigurationKeyFilePath  
+2. 	*Key:* CPWebDAVStoreConfigurationKeyFilePath  
 	*Object:*  file path/name.suffix exp.: `@"addressbook.json"`
 	
-3. 	*Key:* CPDWebDAVStoreConfigurationKeyFileFormat  
+3. 	*Key:* CPWebDAVStoreConfigurationKeyFileFormat  
 	*Object:* The format of your store exp.:  
 	`CoreDataSerializationJSONFormat || CoreDataSerializationXMLFormat || CoreDataSerialization280NPLISTFormat`
 
@@ -66,10 +66,10 @@ You can see a demo for this in the Addressbook Example ABContextController.j Cla
 		if(self = [super init])
 		{
 			//load your model file
-			model = [CPManagedObjectModel objectModelWithModelNamed:@"AddressBook.xcdatamodel" bundle:nil];
+			model = [CPManagedObjectModel modelWithModelNamed:@"AddressBook.xcdatamodel" bundle:nil];
 			//init the context with your configuration dictionary
-			context = [[CPManagedObjectContext alloc] initWithObjectModel: model 
-													  storeType: [CPDWebDAVStoreType class] 
+			context = [[CPManagedObjectContext alloc] initWithManagedObjectModel: model 
+													  storeType: [CPWebDAVStoreType class] 
 											 storeConfiguration: [ABContextController webDAVConfig]];
 																				 	
 		}
@@ -81,9 +81,9 @@ You can see a demo for this in the Addressbook Example ABContextController.j Cla
 	{
 		var result = [[CPMutableDictionary alloc] init];
 
-		[result setObject:@"http://localhost:8080" forKey:CPDWebDAVStoreConfigurationKeyBaseURL];
-		[result setObject:@"addressbook.json" forKey:CPDWebDAVStoreConfigurationKeyFilePath];
-		[result setObject:CoreDataSerializationJSONFormat forKey:CPDWebDAVStoreConfigurationKeyFileFormat];
+		[result setObject:@"http://localhost:8080" forKey:CPWebDAVStoreConfigurationKeyBaseURL];
+		[result setObject:@"addressbook.json" forKey:CPWebDAVStoreConfigurationKeyFilePath];
+		[result setObject:CoreDataSerializationJSONFormat forKey:CPWebDAVStoreConfigurationKeyFileFormat];
 
 		return result
 	}
@@ -95,7 +95,7 @@ The Example work also without a server, in this case the data will store in memo
 **Notes:**  
 Currently accessing a user/password protected webdav is not supported, If you know how, please write me a mail.
 
-### CPDWOStore ###
+### CPWOStore ###
 *!!! Currently not up-to-date with the latest implementation, I work on a update for both client and server side !!!*
 
 ## 2. Write your own Persistant Store ##

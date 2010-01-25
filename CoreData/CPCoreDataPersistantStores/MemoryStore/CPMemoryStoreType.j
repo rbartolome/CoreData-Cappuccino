@@ -1,5 +1,5 @@
 //
-//  CPDMemoryStoreType.j
+//  CPMemoryStoreType.j
 //
 //  Created by Raphael Bartolome on 11.01.10.
 //
@@ -7,18 +7,18 @@
 @import <Foundation/CPObject.j>
 
 
-@implementation CPDMemoryStoreType : CPPersistantStoreType
+@implementation CPMemoryStoreType : CPPersistantStoreType
 {
 }
 
 + (CPString)type
 {
-	return "CPDMemoryStore";
+	return "CPMemoryStore";
 }
 
 + (Class)storeClass
 {
-	return [CPDMemoryStore class];
+	return [CPMemoryStore class];
 }
 
 @end
