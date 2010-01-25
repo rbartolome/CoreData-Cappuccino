@@ -36,3 +36,9 @@
 @import "CPCoreDataPersistantStores/WOStore/CPWOStore.j"
 @import "CPCoreDataPersistantStores/WOStore/CPWOStoreType.j"
 
+
+//Note: the following framework is from cacaodev and is only implemented until it will be merged into cappuccino
+@import "CPPredicate/CPPredicate.j"
+@import "CPPredicate/CPComparisonPredicate.j"
+@import "CPPredicate/CPCompoundPredicate.j"
+@import "CPPredicate/CPExpression.j"
