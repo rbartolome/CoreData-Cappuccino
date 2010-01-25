@@ -26550,7 +26550,7 @@ with(_14){
 return _windows;
 }
 })]);
-p;22;CPPlatformWindow+DOM.jI;21;Foundation/CPObject.jI;22;Foundation/CPRunLoop.ji;9;CPEvent.ji;17;CPCompatibility.ji;18;CPDOMWindowLayer.ji;12;CPPlatform.ji;18;CPPlatformWindow.ji;26;CPPlatformWindow+DOMKeys.jc;27710;
+p;22;CPPlatformWindow+DOM.jI;21;Foundation/CPObject.jI;22;Foundation/CPRunLoop.ji;9;CPEvent.ji;17;CPCompatibility.ji;18;CPDOMWindowLayer.ji;12;CPPlatform.ji;18;CPPlatformWindow.ji;26;CPPlatformWindow+DOMKeys.jc;27690;
 var _1=objj_msgSend(CPSet,"set");
 var _2,_3,_4;
 var _5={},_6={},_7={61:187,59:186};
@@ -26563,7 +26563,7 @@ objj_exception_throw(new objj_exception(OBJJClassNotFoundException,"*** Could no
 var _a=_9.isa;
 class_addMethods(_9,[new objj_method(sel_getUid("_init"),function(_b,_c){
 with(_b){
-_b=objj_msgSendSuper({receiver:_b,super_class:objj_getClass("CPPlatformWindow").super_class},"init");
+_b=objj_msgSendSuper({receiver:_b,super_class:objj_getClass("CPObject")},"init");
 if(_b){
 _DOMWindow=window;
 _contentRect={origin:{x:0,y:0},size:{width:0,height:0}};
