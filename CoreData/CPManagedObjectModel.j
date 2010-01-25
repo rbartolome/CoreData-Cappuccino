@@ -156,6 +156,12 @@ var CPDCOREDATAMODEL_SUFFIX = "cpxcdatamodel";
 	return result;
 }
 
+- (CPFetchRequest)fetchRequestFromTemplateWithName:(CPString) aTemplateName
+{
+	//Unimplemented
+	return nil;
+}
+
 - (CPString)stringRepresentation
 {
 	var result = "CPObjectModel";

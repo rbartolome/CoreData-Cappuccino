@@ -9,3 +9,6 @@
 @import "NSEntityDescription.j"
 @import "NSAttributeDescription.j"
 @import "NSRelationshipDescription.j"
+@import "NSFetchRequestTemplates.j"
+@import "NSFetchRequest.j"
+@import "NSFetchedPropertyDescription.j"

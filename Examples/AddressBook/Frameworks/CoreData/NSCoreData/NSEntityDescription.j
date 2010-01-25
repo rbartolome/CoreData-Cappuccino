@@ -27,7 +27,7 @@
 		ns_subentities = [aCoder decodeObjectForKey: @"NSSubentities"];
 		ns_superentity = [aCoder decodeObjectForKey: @"NSSuperentity"];
 		ns_userInfo = [aCoder decodeObjectForKey: @"NSUserInfo"];
-		ns_versionHashModifier = [aCoder decodeObjectForKey: @"NSVersionHashModifier"];		
+		ns_versionHashModifier = [aCoder decodeObjectForKey: @"NSVersionHashModifier"];	
 	}
 	
 	return self;

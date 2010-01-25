@@ -20,8 +20,8 @@
 	{
 		ns_entities = [aCoder decodeObjectForKey:@"NSEntities"];
 		ns_versionIdentifier = [aCoder decodeObjectForKey:@"NSVersionIdentifiers"];	
-		ns_fetchRequestTemplates = [aCoder decodeObjectForKey:@"NSFetchRequestTemplates"];
-		
+		ns_fetchRequestTemplates = [aCoder decodeObjectForKey:@"NSFetchRequestTemplate"];
+
 		[self NS_transformEntities];
 	}
 	
@@ -35,7 +35,6 @@
 	while(aName = [keyEnumerator nextObject])
 	{
 		var aNSEntity = [ns_entities objectForKey:aName];	
-		CPLog.debug(aNSEntity);	
 		[self addEntity:aNSEntity];
 	}
 	
