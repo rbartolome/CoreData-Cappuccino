@@ -128,6 +128,11 @@ CPDDeletedObjectsKey = "CPDDeletedObjectsKey";
 {
 	//TODO use the _fetchObjectsWithEntityNamed:(CPString)aEntityName  fetchProperties:(CPDictionary)properties qualifier:(CPString)aQualifier fetchLimit:(int)aFetchLimit 
 	//method
+	var aSetResult = [self objectsForEntityNamed:[[aRequest entity] name]];
+	if(!aSetResult)
+		aSetResult = [CPSet new];
+		
+	return [aSetResult allObjects];
 }   
 
 - (CPSet) objectsForEntityNamed:(String) aEntityName

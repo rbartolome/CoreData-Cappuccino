@@ -42,6 +42,8 @@
 	IBOutlet CPImageView imageView;
 	
 	CPManagedObject selectedAddress;
+	
+	CPFetchRequest addressRequest;
 }
 
 
@@ -119,12 +121,19 @@
 
 - (void) deleteAddress:(CPManagedObject) aAddress
 {
+	
 	[[addressBookContext context] deleteObject:aAddress];
 }
 
 - (CPArray) addresses
 {
-	var result = [[[addressBookContext context] objectsForEntityNamed:"Address"] allObjects];
+	if(!addressRequest)
+	{
+		var aEntity = [[[addressBookContext context] model] entityWithName:@"Address"];
+		addressRequest = [[CPFetchRequest alloc] initWithEntity:aEntity predicate:nil];
+	}
+	
+	var result = [[addressBookContext context] executeFetchRequest:addressRequest];
 	return result;
 }
 

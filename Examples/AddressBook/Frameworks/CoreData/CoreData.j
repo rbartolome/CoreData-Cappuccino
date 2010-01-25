@@ -35,4 +35,3 @@
 //WebObjects store
 @import "CPCoreDataPersistantStores/WOStore/CPWOStore.j"
 @import "CPCoreDataPersistantStores/WOStore/CPWOStoreType.j"
-

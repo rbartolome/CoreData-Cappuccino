@@ -73,11 +73,15 @@ You can see a demo for this in the Addressbook Example ABContextController.j Cla
 		if(self = [super init])
 		{
 			//load your model file
-			model = [CPManagedObjectModel modelWithModelNamed:@"AddressBook.xcdatamodel" bundle:nil];
-			//init the context with your configuration dictionary
-			context = [[CPManagedObjectContext alloc] initWithManagedObjectModel: model 
-													  storeType: [CPWebDAVStoreType class] 
-											 storeConfiguration: [ABContextController webDAVConfig]];
+			var model = [CPManagedObjectModel modelWithModelNamed:@"AddressBook.xcdatamodel" bundle:nil];
+			var coordinator = [[CPPersistentStoreCoordinator alloc] 
+										initWithManagedObjectModel:model 
+														 storeType:[CPWebDAVStoreType class] 
+												storeConfiguration:[ABContextController webDAVConfig]];
+
+			//init the context with the coordinator
+			context = [[CPManagedObjectContext alloc] initWithPersistantStoreCoordinator: coordinator];
+			[context setAutoSaveChanges:YES];
 																				 	
 		}
 	

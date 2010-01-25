@@ -39,7 +39,7 @@
 																			storeType: [CPWebDAVStoreType class] 
 																   storeConfiguration: [ABContextController webDAVConfig]];
 																   
-		//init the context with your configuration dictionary
+		//init the context with the coordinator
 		context = [[CPManagedObjectContext alloc] initWithPersistantStoreCoordinator: coordinator];
 		[context setAutoSaveChanges:YES];		
 	}
