@@ -44,6 +44,13 @@ EOModel:
 	
 # Persistant Store #
 
+Every store depends on two parts: 
+
+1. Type Class: This should be named as the store plus a name suffix 'Type'.  
+*For Example: CPWebDAVStore.j and the Type class is CPWebDAVStoreType.j*
+2. Configuration Dictionary. This dictionary defines the configuration for the store.  
+*For Example see the 'CPWebDAVStore Configuration Dictionary' section*
+
 ## 1. Available stores ##
 ### CPWebDAVStore ###
 **Configuration Dictionary:**
