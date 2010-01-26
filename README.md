@@ -63,7 +63,7 @@ Every store depends on two parts:
 	
 3. 	*Key:* CPWebDAVStoreConfigurationKeyFileFormat  
 	*Object:* The format of your store exp.:  
-	`CoreDataSerializationJSONFormat || CoreDataSerializationXMLFormat || CoreDataSerialization280NPLISTFormat`
+	`CPCoreDataSerializationJSONFormat || CPCoreDataSerializationXMLFormat || CPCoreDataSerialization280NPLISTFormat`
 
 **Implementation:**
 You can see a demo for this in the Addressbook Example ABContextController.j Class.
@@ -94,7 +94,7 @@ You can see a demo for this in the Addressbook Example ABContextController.j Cla
 
 		[result setObject:@"http://localhost:8080" forKey:CPWebDAVStoreConfigurationKeyBaseURL];
 		[result setObject:@"addressbook.json" forKey:CPWebDAVStoreConfigurationKeyFilePath];
-		[result setObject:CoreDataSerializationJSONFormat forKey:CPWebDAVStoreConfigurationKeyFileFormat];
+		[result setObject:CPCoreDataSerializationJSONFormat forKey:CPWebDAVStoreConfigurationKeyFileFormat];
 
 		return result
 	}

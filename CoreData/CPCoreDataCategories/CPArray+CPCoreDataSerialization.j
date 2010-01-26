@@ -1,5 +1,5 @@
 //
-//  CPArray+CoreDataSerialization.j
+//  CPArray+CPCoreDataSerialization.j
 //
 //  Created by Raphael Bartolome on 14.01.10.
 //
@@ -7,7 +7,7 @@
 @import <Foundation/Foundation.j>
 
 
-@implementation CPArray (CoreDataSerialization)
+@implementation CPArray (CPCoreDataSerialization)
 
 
 - (JSObject)toJSObject

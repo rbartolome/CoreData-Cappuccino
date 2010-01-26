@@ -1,5 +1,5 @@
 //
-//  CPSet+CoreDataSerialization.j
+//  CPSet+CPCoreDataSerialization.j
 //
 //  Created by Raphael Bartolome on 15.01.10.
 //
@@ -7,7 +7,7 @@
 @import <Foundation/CPObject.j>
 
 
-@implementation CPSet (CoreDataSerialization)
+@implementation CPSet (CPCoreDataSerialization)
 
 
 /*

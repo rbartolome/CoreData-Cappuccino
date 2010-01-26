@@ -1,5 +1,5 @@
 //
-//  CPManagedObjectID+CoreDataSerialization.j
+//  CPManagedObjectID+CPCoreDataSerialization.j
 //
 //  Created by Raphael Bartolome on 15.01.10.
 //
@@ -7,7 +7,7 @@
 @import <Foundation/CPObject.j>
 
 
-@implementation CPManagedObjectID (CoreDataSerialization)
+@implementation CPManagedObjectID (CPCoreDataSerialization)
 
 /*
  * ******************

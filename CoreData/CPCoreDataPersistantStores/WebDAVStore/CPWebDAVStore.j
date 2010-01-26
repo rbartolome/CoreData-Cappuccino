@@ -80,19 +80,19 @@
 - (void) saveAll:(CPSet) objects error:({CPError}) error
 {
 	CPLog.error("write all to path: " + [self storeID]);
-	if([[self format] isEqualToString:CoreDataSerializationXMLFormat])
+	if([[self format] isEqualToString:CPCoreDataSerializationXMLFormat])
 	{
 		[[self davManager] writeFileWithStringContent:[objects serializeToXML:YES] toPath:[self storeID]];
 	}
-	else if([[self format] isEqualToString:CoreDataSerialization280NPLISTFormat])
+	else if([[self format] isEqualToString:CPCoreDataSerialization280NPLISTFormat])
 	{
 		[[self davManager] writeFileWithStringContent:[objects serializeTo280NPLIST:YES] toPath:[self storeID]];
 	}
-	else if([[self format] isEqualToString:CoreDataSerializationJSONFormat])
+	else if([[self format] isEqualToString:CPCoreDataSerializationJSONFormat])
 	{
 		[[self davManager] writeFileWithStringContent:[objects serializeToJSON:YES] toPath:[self storeID]];		
 	}	
-	else if([[self format] isEqualToString:CoreDataSerializationDictionaryFormat])
+	else if([[self format] isEqualToString:CPCoreDataSerializationDictionaryFormat])
 	{
 		CPLog.error("*** Dictionary Format is unimplemented for WebDAV ***");
 	}
@@ -106,22 +106,22 @@
 	var data = [[self davManager] contentOfFileAtPath:[self storeID]];
 	if([data length] > 0)
 	{
-		if([[self format] isEqualToString:CoreDataSerializationXMLFormat])
+		if([[self format] isEqualToString:CPCoreDataSerializationXMLFormat])
 		{
 			resultSet = [CPSet deserializeFromXML:data withContext:aContext];
 			error = nil;
 		}
-		else if([[self format] isEqualToString:CoreDataSerialization280NPLISTFormat])
+		else if([[self format] isEqualToString:CPCoreDataSerialization280NPLISTFormat])
 		{
 			resultSet = [CPSet deserializeFrom280NPLIST:data withContext:aContext];
 			error = nil;
 		}
-		else if([[self format] isEqualToString:CoreDataSerializationJSONFormat])
+		else if([[self format] isEqualToString:CPCoreDataSerializationJSONFormat])
 		{
 			var jsonArray = JSON.parse([data description]); 		
 			resultSet = [CPSet deserializeFromJSON:jsonArray withContext:aContext];
 		}
-		else if([[self format] isEqualToString:CoreDataSerializationDictionaryFormat])
+		else if([[self format] isEqualToString:CPCoreDataSerializationDictionaryFormat])
 		{
 			CPLog.error("*** Unimplemented Format ***");
 		}

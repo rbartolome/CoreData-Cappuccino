@@ -54,9 +54,9 @@
  *	Try different formats by replace the object 
  *  for key 'CPWebDAVStoreConfigurationKeyFileFormat' with:
  *
- *	- CoreDataSerializationJSONFormat
- *	- CoreDataSerializationXMLFormat
- *	- CoreDataSerialization280NPLISTFormat
+ *	- CPCoreDataSerializationJSONFormat
+ *	- CPCoreDataSerializationXMLFormat
+ *	- CPCoreDataSerialization280NPLISTFormat
  *************************************************************************
  */
 + (CPDictionary) webDAVConfig
@@ -65,7 +65,7 @@
 	
 	[result setObject:@"http://localhost:8080" forKey:CPWebDAVStoreConfigurationKeyBaseURL];
 	[result setObject:@"addressbook.json" forKey:CPWebDAVStoreConfigurationKeyFilePath];
-	[result setObject:CoreDataSerializationJSONFormat forKey:CPWebDAVStoreConfigurationKeyFileFormat];
+	[result setObject:CPCoreDataSerializationJSONFormat forKey:CPWebDAVStoreConfigurationKeyFileFormat];
 	
 	return result
 }

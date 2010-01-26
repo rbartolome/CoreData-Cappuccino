@@ -1,5 +1,5 @@
 //
-//  CPDictionary+CoreDataSerialization.j
+//  CPDictionary+CPCoreDataSerialization.j
 //
 //  Created by Raphael Bartolome on 14.01.10.
 //
@@ -7,7 +7,7 @@
 @import <Foundation/Foundation.j>
 
 
-@implementation CPDictionary (CoreDataSerialization)
+@implementation CPDictionary (CPCoreDataSerialization)
 
 +(id)dictionaryWithJSObject:(id)object recursively:(BOOL)recursively
 {

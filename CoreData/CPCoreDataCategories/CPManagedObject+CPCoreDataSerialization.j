@@ -1,5 +1,5 @@
 //
-//  CPManagedObject+CoreDataSerialization.j
+//  CPManagedObject+CPCoreDataSerialization.j
 //
 //  Created by Raphael Bartolome on 14.01.10.
 //
@@ -7,10 +7,10 @@
 @import <Foundation/Foundation.j>
 
 //global keys for serialization formats
-CoreDataSerializationXMLFormat = "CoreDataSerializationXMLFormat";
-CoreDataSerializationJSONFormat = "CoreDataSerializationJSONFormat";
-CoreDataSerialization280NPLISTFormat = "CoreDataSerialization280NPLISTFormat";
-CoreDataSerializationDictionaryFormat = "CoreDataSerializationDictionaryFormat";
+CPCoreDataSerializationXMLFormat = "CPCoreDataSerializationXMLFormat";
+CPCoreDataSerializationJSONFormat = "CPCoreDataSerializationJSONFormat";
+CPCoreDataSerialization280NPLISTFormat = "CPCoreDataSerialization280NPLISTFormat";
+CPCoreDataSerializationDictionaryFormat = "CPCoreDataSerializationDictionaryFormat";
 
 
 //private keys for serialization
@@ -27,7 +27,7 @@ CPallProperties = "CPallProperties";
 CPchangedProperties = "CPchangedProperties";
 
 
-@implementation CPManagedObject (CoreDataSerialization)
+@implementation CPManagedObject (CPCoreDataSerialization)
 
 
 /*
