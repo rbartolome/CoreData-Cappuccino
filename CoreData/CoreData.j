@@ -35,3 +35,9 @@
 //WebObjects store
 @import "CPCoreDataPersistantStores/WOStore/CPWOStore.j"
 @import "CPCoreDataPersistantStores/WOStore/CPWOStoreType.j"
+
+
+//CPPredicate from cocaodev @ github
+@import "CPPredicate/CPPredicate.j"
+@import "CPPredicate/CPScanner.j"
+@import "CPPredicate/CPCharacterSet.j"

@@ -5703,7 +5703,7 @@ MIN = Math.min;
 MAX = Math.max;
 ABS = Math.abs;
 
-p;13;CPOperation.jI;21;Foundation/CPObject.jc;5867;
+p;13;CPOperation.jI;21;Foundation/CPObject.jc;6037;
 CPOperationQueuePriorityVeryLow = -8;
 CPOperationQueuePriorityLow = -4;
 CPOperationQueuePriorityNormal = 0;
@@ -5777,7 +5777,12 @@ class_addMethods(the_class, [new objj_method(sel_getUid("main"), function $CPOpe
 {
     return _ready;
 }
-},["BOOL"]), new objj_method(sel_getUid("setCompletionFunction:"), function $CPOperation__setCompletionFunction_(self, _cmd, aJavaScriptFunction)
+},["BOOL"]), new objj_method(sel_getUid("completionFunction"), function $CPOperation__completionFunction(self, _cmd)
+{ with(self)
+{
+    return _completionFunction;
+}
+},["JSObject"]), new objj_method(sel_getUid("setCompletionFunction:"), function $CPOperation__setCompletionFunction_(self, _cmd, aJavaScriptFunction)
 { with(self)
 {
     _completionFunction = aJavaScriptFunction;

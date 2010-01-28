@@ -160,7 +160,6 @@
 	}	
 }
 
-
 /*
  ***************************
  * Selected Address methods
@@ -181,6 +180,7 @@
 	}
 	else
 	{
+
 		[deleteButton setEnabled:YES];
 		
 		[firstNameField setStringValue:[selectedAddress valueForKey:@"firstname"]];

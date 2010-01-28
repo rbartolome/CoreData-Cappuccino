@@ -9934,11 +9934,12 @@ var meta_class = the_class.isa;class_addMethods(the_class, [new objj_method(sel_
 },["void","CPCoder"])]);
 }
 
-p;13;CPResponder.jI;21;Foundation/CPObject.jc;8819;
+p;13;CPResponder.jI;21;Foundation/CPObject.jc;8840;
 CPDeleteKeyCode = 8;
 CPTabKeyCode = 9;
 CPReturnKeyCode = 13;
 CPEscapeKeyCode = 27;
+CPSpaceKeyCode = 32;
 CPLeftArrowKeyCode = 37;
 CPUpArrowKeyCode = 38;
 CPRightArrowKeyCode = 39;
@@ -13129,7 +13130,7 @@ class_addMethods(the_class, [new objj_method(sel_getUid("initWithPickerMask:colo
 },["CPImage"])]);
 }
 
-p;13;CPSplitView.ji;9;CPImage.ji;8;CPView.jc;23457;
+p;13;CPSplitView.ji;9;CPImage.ji;8;CPView.jc;23999;
 CPSplitViewDidResizeSubviewsNotification = "CPSplitViewDidResizeSubviewsNotification";
 CPSplitViewWillResizeSubviewsNotification = "CPSplitViewWillResizeSubviewsNotification";
 var CPSplitViewHorizontalImage = nil,
@@ -13200,6 +13201,8 @@ class_addMethods(the_class, [new objj_method(sel_getUid("initWithFrame:"), funct
     if (_isPaneSplitter == shouldBePaneSplitter)
         return;
     _isPaneSplitter = shouldBePaneSplitter;
+    if(_DOMDividerElements[_drawingDivider])
+        objj_msgSend(self, "_setupDOMDivider")
     _needsResizeSubviews = YES;
     objj_msgSend(self, "setNeedsDisplay:", YES);
 }
@@ -13246,7 +13249,21 @@ class_addMethods(the_class, [new objj_method(sel_getUid("initWithFrame:"), funct
 { with(self)
 {
 }
-},["void","CGRect"]), new objj_method(sel_getUid("viewWillDraw"), function $CPSplitView__viewWillDraw(self, _cmd)
+},["void","CGRect"]), new objj_method(sel_getUid("_setupDOMDivider"), function $CPSplitView___setupDOMDivider(self, _cmd)
+{ with(self)
+{
+    if (_isPaneSplitter)
+    {
+        _DOMDividerElements[_drawingDivider].style.backgroundColor = "#A5A5A5";
+        _DOMDividerElements[_drawingDivider].style.backgroundImage = "";
+    }
+    else
+    {
+        _DOMDividerElements[_drawingDivider].style.backgroundColor = "";
+        _DOMDividerElements[_drawingDivider].style.backgroundImage = "url('"+_dividerImagePath+"')";
+    }
+}
+},["void"]), new objj_method(sel_getUid("viewWillDraw"), function $CPSplitView__viewWillDraw(self, _cmd)
 { with(self)
 {
     objj_msgSend(self, "_adjustSubviewsWithCalculatedSize");
@@ -13479,8 +13496,6 @@ class_addMethods(the_class, [new objj_method(sel_getUid("initWithFrame:"), funct
             }
             else if (totalSizableSpace && !isSizable)
                 viewFrame.size[_sizeComponent] = objj_msgSend(view, "frame").size[_sizeComponent];
-            else
-                alert("SHOULD NEVER GET HERE");
         bounds.origin[_originComponent] += viewFrame.size[_sizeComponent] + dividerThickness;
         objj_msgSend(view, "setFrame:", viewFrame);
     }
@@ -13986,7 +14001,7 @@ _tableView = newValue;
 },["void","CGRect"])]);
 }
 
-p;13;CPTableView.jI;20;Foundation/CPArray.ji;11;CPControl.ji;15;CPTableColumn.ji;15;_CPCornerView.ji;12;CPScroller.jc;105913;
+p;13;CPTableView.jI;20;Foundation/CPArray.ji;11;CPControl.ji;15;CPTableColumn.ji;15;_CPCornerView.ji;12;CPScroller.jc;106148;
 CPTableViewColumnDidMoveNotification = "CPTableViewColumnDidMoveNotification";
 CPTableViewColumnDidResizeNotification = "CPTableViewColumnDidResizeNotification";
 CPTableViewSelectionDidChangeNotification = "CPTableViewSelectionDidChangeNotification";
@@ -15412,10 +15427,7 @@ window.setTimeout(function(){
         _trackingPointMovedOutOfClickSlop = NO;
     }
     if(!(_implementedDataSourceMethods & CPTableViewDataSource_tableView_writeRowsWithIndexes_toPasteboard_))
-    {
-        _previouslySelectedRowIndexes = nil;
         objj_msgSend(self, "_updateSelectionWithMouseAtRow:", row);
-    }
     objj_msgSend(objj_msgSend(self, "window"), "makeFirstResponder:", self);
     return YES;
 }
@@ -15487,7 +15499,7 @@ window.setTimeout(function(){
                 _draggedRowIndexes = nil;
                 return;
             }
-            _previouslySelectedRowIndexes = nil;
+             _previouslySelectedRowIndexes = objj_msgSend(_selectedRowIndexes, "copy");
             objj_msgSend(self, "_updateSelectionWithMouseAtRow:", rowIndex);
         }
     }
@@ -15713,8 +15725,6 @@ window.setTimeout(function(){
         return;
     if (objj_msgSend(newSelection, "isEqualToIndexSet:", _selectedRowIndexes))
         return;
-    if (!_previouslySelectedRowIndexes)
-        _previouslySelectedRowIndexes = objj_msgSend(_selectedRowIndexes, "copy");
     objj_msgSend(self, "selectRowIndexes:byExtendingSelection:", newSelection, NO);
     objj_msgSend(self, "_noteSelectionIsChanging");
 }
@@ -15746,6 +15756,9 @@ window.setTimeout(function(){
 },["void","CPEvent"]), new objj_method(sel_getUid("moveDown:"), function $CPTableView__moveDown_(self, _cmd, sender)
 { with(self)
 {
+    if (_implementedDelegateMethods & CPTableViewDelegate_selectionShouldChangeInTableView_ &&
+        !objj_msgSend(_delegate, "selectionShouldChangeInTableView:", self))
+        return;
     var anEvent = objj_msgSend(CPApp, "currentEvent");
     if(objj_msgSend(objj_msgSend(self, "selectedRowIndexes"), "count") > 0)
     {
@@ -15781,6 +15794,9 @@ window.setTimeout(function(){
 },["void","id"]), new objj_method(sel_getUid("moveUp:"), function $CPTableView__moveUp_(self, _cmd, sender)
 { with(self)
 {
+    if (_implementedDelegateMethods & CPTableViewDelegate_selectionShouldChangeInTableView_ &&
+        !objj_msgSend(_delegate, "selectionShouldChangeInTableView:", self))
+        return;
     var anEvent = objj_msgSend(CPApp, "currentEvent");
     if(objj_msgSend(objj_msgSend(self, "selectedRowIndexes"), "count") > 0)
  {
@@ -30888,7 +30904,7 @@ class_addMethods(the_class, [new objj_method(sel_getUid("initWithLevel:"), funct
 },["CPArray"])]);
 }
 
-p;22;CPPlatformWindow+DOM.jI;21;Foundation/CPObject.jI;22;Foundation/CPRunLoop.ji;9;CPEvent.ji;17;CPCompatibility.ji;18;CPDOMWindowLayer.ji;12;CPPlatform.ji;18;CPPlatformWindow.ji;26;CPPlatformWindow+DOMKeys.jc;46690;
+p;22;CPPlatformWindow+DOM.jI;21;Foundation/CPObject.jI;22;Foundation/CPRunLoop.ji;9;CPEvent.ji;17;CPCompatibility.ji;18;CPDOMWindowLayer.ji;12;CPPlatform.ji;18;CPPlatformWindow.ji;26;CPPlatformWindow+DOMKeys.jc;46670;
 var PlatformWindows = objj_msgSend(CPSet, "set");
 var CPDOMEventGetClickCount,
     CPDOMEventStop,
@@ -30907,7 +30923,7 @@ if(!the_class) objj_exception_throw(new objj_exception(OBJJClassNotFoundExceptio
 var meta_class = the_class.isa;class_addMethods(the_class, [new objj_method(sel_getUid("_init"), function $CPPlatformWindow___init(self, _cmd)
 { with(self)
 {
-    self = objj_msgSendSuper({ receiver:self, super_class:objj_getClass("CPPlatformWindow").super_class }, "init");
+    self = objj_msgSendSuper({ receiver:self, super_class:objj_getClass("CPObject") }, "init");
     if (self)
     {
         _DOMWindow = window;
@@ -31126,8 +31142,8 @@ var meta_class = the_class.isa;class_addMethods(the_class, [new objj_method(sel_
         _DOMWindow.cpSetHasShadow(_hasShadow);
         _DOMWindow.cpSetShadowStyle(_shadowStyle);
     }
-    _DOMBodyElement.style.cursor = objj_msgSend(objj_msgSend(CPCursor, "currentCursor"), "_cssString");
     objj_msgSend(self, "registerDOMWindow");
+    _DOMBodyElement.style.cursor = objj_msgSend(objj_msgSend(CPCursor, "currentCursor"), "_cssString");
 }
 },["void","id"]), new objj_method(sel_getUid("orderOut:"), function $CPPlatformWindow__orderOut_(self, _cmd, aSender)
 { with(self)
