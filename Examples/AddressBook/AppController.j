@@ -133,7 +133,7 @@
 		allAddressFetchRequest = [[CPFetchRequest alloc] initWithEntity:aEntity 
 															predicate:nil
 															sortDescriptors:nil 
-															fetchLimit:nil];
+															fetchLimit:0];
 	}
 	
 	return [[addressBookContext context] executeFetchRequest:allAddressFetchRequest];

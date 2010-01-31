@@ -10,7 +10,7 @@
 @implementation CPFetchRequest : CPObject
 {
  	CPEntityDescription _entity @accessors(property=entity);
-	int _fetchLimit @accessors(property=fetchLimit);
+	CPInteger _fetchLimit @accessors(property=fetchLimit);
   	CPPredicate _predicate @accessors(property=predicate);
 	CPArray _sortDescriptors @accessors(property=sortDescriptors);
 }
@@ -18,14 +18,14 @@
 - (id)initWithEntity:(CPEntityDescription)aEntity 
 		   predicate:(CPPredicate)aPredicate 
 	 sortDescriptors:(CPArray)sortDescriptors  
-		  fetchLimit:(int) aFetchLimit
+		  fetchLimit:(CPInteger) aFetchLimit
 {
 	if(self = [super init])
 	{
 		_entity = aEntity;
 		_predicate = aPredicate;
-		sortDescriptors = sortDescriptors;
-		fetchLimit = aFetchLimit;
+		_sortDescriptors = sortDescriptors;
+		_fetchLimit = aFetchLimit;
 	}
 	
 	return self;
@@ -38,8 +38,8 @@
 	{
 		_entity = aEntity;
 		_predicate = aPredicate;
-		sortDescriptors = nil;
-		fetchLimit = 0;
+		_sortDescriptors = nil;
+		_fetchLimit = 0;
 	}
 	
 	return self;

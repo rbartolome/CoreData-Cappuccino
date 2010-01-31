@@ -127,37 +127,27 @@ CPDDeletedObjectsKey = "CPDDeletedObjectsKey";
 {
 	var result = nil;
 	
-	if([aFetchRequest fetchLimit] == 0)
-	{
-		//unlimited fetch
-		var localSetResult = [self _executeLocalFetchRequest:aFetchRequest];
-		var remoteSetResult = [self _executeStoreFetchRequest:aFetchRequest];
-		
-		result = [[remoteSetResult unionSet:localSetResult] allObjects];
-	}
-	else
-	{
-		//limited fetch
-		var localSetResult = [self _executeLocalFetchRequest:aFetchRequest];
-		var remoteSetResult = [self _executeStoreFetchRequest:aFetchRequest];
-		
-		result = [[remoteSetResult unionSet:localSetResult] allObjects];
-		
-		result = [remoteSetResult allObjects];
-	}
-
+	var localSetResult = [self _executeLocalFetchRequest:aFetchRequest];
+	var remoteSetResult = [self _executeStoreFetchRequest:aFetchRequest];
+	[remoteSetResult unionSet:localSetResult];
 	
+	var unsortedResult = [remoteSetResult allObjects];
+		
 	if([aFetchRequest sortDescriptors] != nil)
-		return [result sortedArrayUsingDescriptors:[aFetchRequest sortDescriptors]];
+		result = [unsortedResult sortedArrayUsingDescriptors:[aFetchRequest sortDescriptors]];
+	else
+		result = unsortedResult;
 	
+	if([aFetchRequest fetchLimit] > 0 && [result count] > [aFetchRequest fetchLimit])
+		return [result subarrayWithRange:CPMakeRange(0,[aFetchRequest fetchLimit])];
+		
 	return result;
 }   
 
 
 - (CPSet) _executeLocalFetchRequest:(CPFetchRequest) aFetchRequest
 {	
-	var resultSet = [[CPMutableSet alloc] init];
-	
+	var resultArray = [[CPMutableArray alloc] init];
 	var searchPredicate = nil;
 	var entityPredicate = [CPPredicate predicateWithFormat:@"%K like %@", @"entity.name", [[aFetchRequest entity] name]];
 	
@@ -170,9 +160,17 @@ CPDDeletedObjectsKey = "CPDDeletedObjectsKey";
 		searchPredicate = [CPCompoundPredicate andPredicateWithSubpredicates:[entityPredicate, [aFetchRequest predicate]]];
 	}
 	
-	resultSet = [CPSet setWithArray:[[_registeredObjects allObjects] filteredArrayUsingPredicate:searchPredicate]];
-	
-	return resultSet;
+	var unsortedResult = [[_registeredObjects allObjects] filteredArrayUsingPredicate:searchPredicate];
+
+	if([aFetchRequest sortDescriptors] != nil)
+		resultArray = [unsortedResult sortedArrayUsingDescriptors:[aFetchRequest sortDescriptors]];
+	else
+		resultArray = unsortedResult;
+			
+	if([aFetchRequest fetchLimit] > 0 && [resultArray count] > [aFetchRequest fetchLimit])
+		return [CPSet setWithArray:[resultArray subarrayWithRange:CPMakeRange(0,[aFetchRequest fetchLimit])]];
+		
+	return [CPSet setWithArray:resultArray];
 }
 
 
