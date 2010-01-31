@@ -152,6 +152,7 @@ CPDDeletedObjectsKey = "CPDDeletedObjectsKey";
 	return result;
 }   
 
+
 - (CPSet) _executeLocalFetchRequest:(CPFetchRequest) aFetchRequest
 {	
 	var resultSet = [[CPMutableSet alloc] init];
@@ -163,11 +164,16 @@ CPDDeletedObjectsKey = "CPDDeletedObjectsKey";
 	{
 		searchPredicate = entityPredicate;	
 	}
+	else
+	{
+		searchPredicate = [CPCompoundPredicate andPredicateWithSubpredicates:[entityPredicate, [aFetchRequest predicate]]];
+	}
 	
 	resultSet = [CPSet setWithArray:[[_registeredObjects allObjects] filteredArrayUsingPredicate:searchPredicate]];
 	
 	return resultSet;
 }
+
 
 //@TODO write store fetching
 - (CPSet) _executeStoreFetchRequest:(CPFetchRequest) aFetchRequest

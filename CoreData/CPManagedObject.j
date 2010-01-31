@@ -915,7 +915,7 @@ CPManagedObjectUnexpectedValueTypeForProperty = "CPManagedObjectUnexpectedValueT
 		var key = [allKeys objectAtIndex:i];
 		var tmpRel = [relationshipDict objectForKey: key];
 		
-		if([[tmpRel destination] isEqualTo: _entity])
+		if([[tmpRel destination] isEqual: _entity])
 		{
 			return tmpRel;
 		}

@@ -182,7 +182,7 @@
 }
 
 
-- (BOOL) isEqualTo:(CPEntityDescription)aEntity
+- (BOOL) isEqual:(CPEntityDescription)aEntity
 {
 	if([[aEntity name] isEqualToString:_name])
 	{

@@ -94,7 +94,7 @@
 }
 
 //TODO check if this method is necessary
-- (BOOL) isEqualTo: (CPManagedObjectID) otherID
+- (BOOL) isEqual: (CPManagedObjectID) otherID
 {
 	if(![[self globalID] isEqual:[otherID globalID]] &&
 		[self isEqualToLocalID: otherID])

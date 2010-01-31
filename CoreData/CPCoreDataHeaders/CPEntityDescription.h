@@ -23,7 +23,7 @@
 - (CPArray)mandatoryAttributes;
 - (CPArray)mandatoryRelationships;
 - (BOOL)acceptValue:(id) aValue forProperty:(CPString) aKey;
-- (BOOL) isEqualTo:(CPEntityDescription)aEntity;
+- (BOOL) isEqual:(CPEntityDescription)aEntity;
 - (CPString)stringRepresentation;
 
 @end

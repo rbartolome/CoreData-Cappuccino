@@ -131,7 +131,7 @@
 	{
 		var aEntity = [[[addressBookContext context] model] entityWithName:@"Address"];
 		allAddressFetchRequest = [[CPFetchRequest alloc] initWithEntity:aEntity 
-															predicate:nil 
+															predicate:nil
 															sortDescriptors:nil 
 															fetchLimit:nil];
 	}
