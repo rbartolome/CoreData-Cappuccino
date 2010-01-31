@@ -166,6 +166,21 @@
 
 
 /*
+ *	Fetch objects with request
+ *	@return a set of CPManagedObjects with cheap relationship
+ */
+- (CPSet) executeFetchRequest:(CPFetchRequest) aFetchRequest
+	   inManagedObjectContext:(CPManagedObjectContext) aContext
+					  	error:({CPError}) error
+{
+	return [CPSet new];
+}
+
+/*
+ * the following methods are @deprecated
+ */
+
+/*
  *	Fetch properties from objects with id
  */
 - (CPSet) fetchObjectsWithEntityNamed:(CPString) aName

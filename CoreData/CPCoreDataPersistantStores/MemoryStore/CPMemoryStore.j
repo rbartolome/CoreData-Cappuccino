@@ -114,32 +114,15 @@
 
 
 /*
- *	Fetch objects with predicate
+ *	Fetch objects with request
  *	@return a set of CPManagedObjects with cheap relationship
  */
-- (CPSet) fetchObjectsWithEntityNamed:(CPString) aName
-						fetchProperties:(CPDictionary) properties
-						 fetchQualifier:(CPString) aQualifier
-							 fetchLimit:(int) aFetchLimit
-				 inManagedObjectContext:(CPManagedObjectContext) aContext
-								  error:({CPError}) error
+- (CPSet) executeFetchRequest:(CPFetchRequest) aFetchRequest
+	   inManagedObjectContext:(CPManagedObjectContext) aContext
+					  	error:({CPError}) error
 {
 	return [CPSet new];
 }
-
-
-/*
- *	Fetch properties from objects with id
- *	@return a set of CPManagedObjects with cheap relationship
- */
-- (CPSet) fetchObjectsWithID:(CPSet) objectIDs
-			   fetchProperties:(CPDictionary) properties
-		inManagedObjectContext:(CPManagedObjectContext) aContext
-						 error:({CPError}) error
-{
-	return [CPSet new];
-}
-
 
 
 @end

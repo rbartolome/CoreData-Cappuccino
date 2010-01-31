@@ -13,10 +13,13 @@
 /* 
 
 ***** HEADER *****
+@public
+- (CPArray) executeFetchRequest:(CPFetchRequest)aRequest;
+
 @private
-- (CPManagedObject) _fetchObjectWithID:(CPManagedObjectID) aObjectID
-- (CPSet)_fetchObjectsWithEntityNamed:(CPString)aEntityName;
-- (CPSet)_fetchObjectsWithEntityNamed:(CPString)aEntityName qualifier:(CPString)aQualifier fetchLimit:(int)aFetchLimit:
+- (CPSet) _executeLocalFetchRequest:(CPFetchRequest) aFetchRequest;
+- (CPSet) _executeStoreFetchRequest:(CPFetchRequest) aFetchRequest;
+
 - (CPManagedObject) _insertedObjectWithID:(CPManagedObjectID) aObjectID;
 - (CPManagedObject) _updatedObjectWithID:(CPManagedObjectID) aObjectID;
 - (CPManagedObject) _deletedObjectWithID:(CPManagedObjectID) aObjectID;
@@ -107,60 +110,109 @@ CPDDeletedObjectsKey = "CPDDeletedObjectsKey";
 	_autoSaveChanges = aState;
 }
 
-  
+// @TODO update methods to use _executeStoreFetchRequest
 - (CPManagedObject) updateObject:(CPManagedObject) aObject mergeChanges:(BOOL) mergeChanges
 {
-	//TODO currently mergeChanges ignored
-	var result = [self _fetchObjectWithID: [aObject objectID]];
-	return result;
+	return nil;
 }
 
-
+// @TODO update methods to use _executeStoreFetchRequest
 - (CPManagedObject) updateObjectWithID:(CPManagedObjectID) aObjectID mergeChanges:(BOOL) mergeChanges
 {
-	//TODO currently mergeChanges ignored
-	var result = [self _fetchObjectWithID: aObjectID];
-	return result;
+	return nil;
 }
 
 
-- (CPSet) executeFetchRequest:(CPFetchRequest)aRequest
+- (CPArray) executeFetchRequest:(CPFetchRequest)aRequest
 {
-	//TODO use the _fetchObjectsWithEntityNamed:(CPString)aEntityName  fetchProperties:(CPDictionary)properties qualifier:(CPString)aQualifier fetchLimit:(int)aFetchLimit 
-	//method
-	var aSetResult = [self objectsForEntityNamed:[[aRequest entity] name]];
-	if(!aSetResult)
-		aSetResult = [CPSet new];
+	var result = nil;
+	
+	//@TODO think about fetch from remote if it is necessary
+	if([aRequest fetchLimit] == 0)
+	{
+		//unlimited fetch
+		var localSetResult = [self _executeLocalFetchRequest:aRequest];
+		var remoteSetResult = [self _executeStoreFetchRequest:aRequest];
 		
-	return [aSetResult allObjects];
+		result = [[remoteSetResult unionSet:localSetResult] allObjects];
+	}
+	else
+	{
+		//limited fetch
+		var localSetResult = [self _executeLocalFetchRequest:aRequest];
+		var remoteSetResult = [self _executeStoreFetchRequest:aRequest];
+		
+		[remoteSetResult unionSet:localSetResult];
+		
+		result = [remoteSetResult allObjects];
+	}
+
+	
+					
+	return result;
 }   
 
-- (CPSet) objectsForEntityNamed:(String) aEntityName
+- (CPSet) _executeLocalFetchRequest:(CPFetchRequest) aFetchRequest
 {	
-	var e;
-	var object;
 	var resultSet = [[CPMutableSet alloc] init];
 	
-	e = [_registeredObjects objectEnumerator];
-	while ((object = [e nextObject]) != nil)
+	var searchPredicate = nil;
+	var entityPredicate = [CPPredicate predicateWithFormat:@"%K like %@", @"entity.name", [[aFetchRequest entity] name]];
+	
+	if([aFetchRequest predicate] == nil)
 	{
-		if(object != nil && object != nil)
-		{
-			if ([[[object entity] name] isEqualToString: aEntityName] == YES)
-			{
-				[resultSet addObject:object];
-			}
-		}
+		searchPredicate = entityPredicate;	
 	}
-
-	if([resultSet count] == 0)
-	{
-		//let us try it remote
-		resultSet = [self _fetchObjectsWithEntityNamed:aEntityName];
-	}
+	
+	resultSet = [CPSet setWithArray:[[_registeredObjects allObjects] filteredArrayUsingPredicate:searchPredicate]];
 	
 	return resultSet;
 }
+
+//@TODO write store fetching
+- (CPSet) _executeStoreFetchRequest:(CPFetchRequest) aFetchRequest
+{
+	
+/*
+var result = [[CPMutableSet alloc] init];
+
+var localQualifierModification = aQualifier;
+if(aQualifier == nil)
+{
+	localQualifierModification = "*";
+}
+
+var newProperitesDict = properties;
+if(properties == nil)
+{
+	var localEntity = [[self model] entityWithName:aEntityName];
+	var localProperties = [CPSet setWithArray: [localEntity propertyNames]]; 
+
+	newProperitesDict = [[CPMutableDictionary alloc] init];
+	[newProperitesDict setObject:localProperties forKey:aEntityName];
+}
+
+var error = nil;	
+var resultSet = [[self store] fetchObjectsWithEntityNamed:aEntityName
+									  fetchProperties:newProperitesDict
+									   fetchQualifier:localQualifierModification
+										   fetchLimit:aFetchLimit
+							   inManagedObjectContext:self
+													error:error];
+
+if(resultSet != nil && [resultSet count] > 0 && error == nil)
+{
+	var objectEnum = [resultSet objectEnumerator];
+	var objectFromResponse;
+	while((objectFromResponse = [objectEnum nextObject]))
+	{
+		[result addObject:[self _registerObject:objectFromResponse]];
+	}
+}
+*/
+	return [CPSet new];
+}
+
 
 - (void) reset
 {
@@ -181,57 +233,6 @@ CPDDeletedObjectsKey = "CPDDeletedObjectsKey";
 
 - (void) rollback
 { 
-}
-
-
-/*
- *	Store request methods
- */
-- (CPSet)_fetchObjectsWithEntityNamed:(CPString)aEntityName
-{	
-	return [self _fetchObjectsWithEntityNamed:aEntityName fetchProperties:nil qualifier:nil fetchLimit:0];
-}
-
-
-- (CPSet)_fetchObjectsWithEntityNamed:(CPString)aEntityName  fetchProperties:(CPDictionary)properties qualifier:(CPString)aQualifier fetchLimit:(int)aFetchLimit
-{
-	var result = [[CPMutableSet alloc] init];
-		
-	var localQualifierModification = aQualifier;
-	if(aQualifier == nil)
-	{
-		localQualifierModification = "*";
-	}
-	
-	var newProperitesDict = properties;
-	if(properties == nil)
-	{
-		var localEntity = [[self model] entityWithName:aEntityName];
-		var localProperties = [CPSet setWithArray: [localEntity propertyNames]]; 
-		
-		newProperitesDict = [[CPMutableDictionary alloc] init];
-		[newProperitesDict setObject:localProperties forKey:aEntityName];
-	}
-	
-	var error = nil;	
-	var resultSet = [[self store] fetchObjectsWithEntityNamed:aEntityName
-										  fetchProperties:newProperitesDict
-										   fetchQualifier:localQualifierModification
-											   fetchLimit:aFetchLimit
-								   inManagedObjectContext:self
-														error:error];
-					  
-	if(resultSet != nil && [resultSet count] > 0 && error == nil)
-	{
-		var objectEnum = [resultSet objectEnumerator];
-		var objectFromResponse;
-		while((objectFromResponse = [objectEnum nextObject]))
-		{
-			[result addObject:[self _registerObject:objectFromResponse]];
-		}
-	}
-	
-	return result;	
 }
 
 - (BOOL)saveAll
