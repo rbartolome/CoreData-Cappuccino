@@ -151,7 +151,7 @@
 /* = Scanning with CPCharacterSet = */
 /* ================================ */
 
-- (BOOL)scanCharactersFromSet:(CPCharacterSet)scanSet intoString:(id)ref
+- (BOOL)scanCharactersFromSet:(CPCharacterSet)scanSet intoString:({id})ref
 {
     return [self _performScanWithSelector:@selector(scanCharactersFromSet:) withObject:scanSet into:ref];
 }
@@ -251,7 +251,7 @@
     }
 }
 
-- (BOOL)scanUpToString:(CPString)aString intoString:(id)ref
+- (BOOL)scanUpToString:(CPString)aString intoString:({id})ref
 {
     return [self _performScanWithSelector:@selector(scanUpToString:) withObject:aString into:ref];
 }
@@ -375,7 +375,7 @@
     return [self _performScanWithSelector:@selector(scanFloat) withObject:nil into:intoFloat];
 }
 
-- (BOOL)scanDouble:(float)intoDouble
+- (BOOL)scanDouble:({float})intoDouble
 {
     return [self scanFloat:intoDouble];
 }

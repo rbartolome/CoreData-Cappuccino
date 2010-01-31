@@ -39,6 +39,7 @@
         [CPException raise:CPInvalidArgumentException reason:_cmd + " the format can't be 'nil'"];
     
     var args = Array.prototype.slice.call(arguments, 3);
+
     return [self predicateWithFormat:arguments[2] argumentArray:args];
 }
 
@@ -189,15 +190,6 @@
 @end
 
 
-//#define REFERENCE(variable) \
-var REFERENCE = function(newValue)
-{
-    var oldValue = variable;
-    if (typeof newValue != 'undefined')
-    variable = newValue;
-    return oldValue;
-}
-    
 @implementation CPPredicateScanner : CPScanner
 {
     CPEnumerator    _args;
@@ -263,15 +255,15 @@ var REFERENCE = function(newValue)
 }
 
 - (CPPredicate) parsePredicate
-{
+{	
     return [self parseAnd];
 }
 
 - (CPPredicate) parseAnd
 {
     var l = [self parseOr];
-    
-    while ([self scanPredicateKeyword:@"AND"] || [self scanPredicateKeyword:@"&&"])
+ 
+   while ([self scanPredicateKeyword:@"AND"] || [self scanPredicateKeyword:@"&&"])
     {
         var r = [self parseOr];
         
@@ -296,6 +288,7 @@ var REFERENCE = function(newValue)
             l = [CPCompoundPredicate andPredicateWithSubpredicates:[CPArray arrayWithObjects:l, r, nil]];
         }
     }
+
     return l;
 }
 
@@ -323,13 +316,14 @@ var REFERENCE = function(newValue)
     {
         return [CPPredicate predicateWithValue:NO];
     }
-    
+
     return [self parseComparison];
 }
 
 - (CPPredicate) parseOr
 {
     var l = [self parseNot];
+
     while ([self scanPredicateKeyword:@"OR"] || [self scanPredicateKeyword:@"||"])
     {
         var r = [self parseNot];
@@ -387,8 +381,9 @@ var REFERENCE = function(newValue)
         modifier = CPAllPredicateModifier;
         negate = YES;
     }
-    
+	
     left = [self parseExpression];
+
     if ([self scanString:@"!=" intoString:NULL] || [self scanString:@"<>" intoString:NULL])
     {
         type = CPNotEqualToPredicateOperatorType;
@@ -491,7 +486,7 @@ var REFERENCE = function(newValue)
         left = right;
         right = tmp;
     }
-    
+
     p = [CPComparisonPredicate predicateWithLeftExpression:left 
          rightExpression:right
          modifier:modifier 
@@ -513,9 +508,11 @@ var REFERENCE = function(newValue)
     var ident;
     var dbl;
     
-    if ([self scanDouble:REFERENCE(dbl)])
-        return [CPExpression expressionForConstantValue:[CPNumber numberWithDouble:dbl]];
-    
+    if ([self scanDouble:dbl])
+	{
+		return [CPExpression expressionForConstantValue:[CPNumber numberWithDouble:dbl]];
+	}
+
     // FIXME: handle integer, hex constants, 0x 0o 0b
     if ([self scanString:@"-" intoString:NULL])
     return [CPExpression expressionForFunction:@"chs" arguments:[CPArray arrayWithObject:[self parseExpression]]];
@@ -645,7 +642,7 @@ var REFERENCE = function(newValue)
         var str;
         
         [self setCharactersToBeSkipped:nil];
-        if ([self scanUpToString:@"\"" intoString:REFERENCE(str)] == NO)
+        if ([self scanUpToString:@"\"" intoString:str] == NO)
         {
             [self setCharactersToBeSkipped:skip];
             [CPException raise:CPInvalidArgumentException reason:@"Invalid double quoted literal at "+location];
@@ -662,7 +659,7 @@ var REFERENCE = function(newValue)
         var str;
         
         [self setCharactersToBeSkipped:nil];
-        if ([self scanUpToString:@"'" intoString:REFERENCE(str)] == NO)
+        if ([self scanUpToString:@"'" intoString:str] == NO)
         {
             [self setCharactersToBeSkipped:skip];
             [CPException raise:CPInvalidArgumentException reason:@"Invalid single quoted literal at "+location];
@@ -690,7 +687,7 @@ var REFERENCE = function(newValue)
         _identifier = [CPCharacterSet characterSetWithCharactersInString:@"_$abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"];
     }
     
-    if (![self scanCharactersFromSet:_identifier intoString:REFERENCE(ident)])
+    if (![self scanCharactersFromSet:_identifier intoString:ident])
         [CPException raise:CPInvalidArgumentException reason:@"Missing identifier: "+[[self string] substringFromIndex:[self scanLocation]]];
     
     return [CPExpression expressionForKeyPath:ident];
@@ -822,8 +819,9 @@ var REFERENCE = function(newValue)
 
 - (CPExpression)parseAdditionExpression
 {
-    var left = [self parseMultiplicationExpression];
     
+    var left = [self parseMultiplicationExpression];
+	
     while (YES)
     {
         var right;

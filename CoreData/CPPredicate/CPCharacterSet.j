@@ -5,8 +5,6 @@
 // (the GNU Lesser General Public License, version 2.1).
 // Please see Cappuccino's LICENSE file for details.
 
-@import <Foundation/CPObject.j>
-
 // CPCharacterSet is a class cluster. Concrete implementations
 // follow after the main abstract class.
 
