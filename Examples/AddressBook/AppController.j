@@ -130,7 +130,10 @@
 	if(!allAddressFetchRequest)
 	{
 		var aEntity = [[[addressBookContext context] model] entityWithName:@"Address"];
-		allAddressFetchRequest = [[CPFetchRequest alloc] initWithEntity:aEntity predicate:nil];
+		allAddressFetchRequest = [[CPFetchRequest alloc] initWithEntity:aEntity 
+															predicate:nil 
+															sortDescriptors:nil 
+															fetchLimit:nil];
 	}
 	
 	return [[addressBookContext context] executeFetchRequest:allAddressFetchRequest];
