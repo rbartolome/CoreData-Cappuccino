@@ -14,7 +14,7 @@
 
 ***** HEADER *****
 @public
-- (CPArray) executeFetchRequest:(CPFetchRequest)aRequest;
+- (CPArray) executeFetchRequest:(CPFetchRequest)aFetchRequest;
 
 @private
 - (CPSet) _executeLocalFetchRequest:(CPFetchRequest) aFetchRequest;
@@ -122,33 +122,34 @@ CPDDeletedObjectsKey = "CPDDeletedObjectsKey";
 	return nil;
 }
 
-
-- (CPArray) executeFetchRequest:(CPFetchRequest)aRequest
+// @TODO fetchLimit is missing
+- (CPArray) executeFetchRequest:(CPFetchRequest)aFetchRequest
 {
 	var result = nil;
 	
-	//@TODO think about fetch from remote if it is necessary
-	if([aRequest fetchLimit] == 0)
+	if([aFetchRequest fetchLimit] == 0)
 	{
 		//unlimited fetch
-		var localSetResult = [self _executeLocalFetchRequest:aRequest];
-		var remoteSetResult = [self _executeStoreFetchRequest:aRequest];
+		var localSetResult = [self _executeLocalFetchRequest:aFetchRequest];
+		var remoteSetResult = [self _executeStoreFetchRequest:aFetchRequest];
 		
 		result = [[remoteSetResult unionSet:localSetResult] allObjects];
 	}
 	else
 	{
 		//limited fetch
-		var localSetResult = [self _executeLocalFetchRequest:aRequest];
-		var remoteSetResult = [self _executeStoreFetchRequest:aRequest];
+		var localSetResult = [self _executeLocalFetchRequest:aFetchRequest];
+		var remoteSetResult = [self _executeStoreFetchRequest:aFetchRequest];
 		
-		[remoteSetResult unionSet:localSetResult];
+		result = [[remoteSetResult unionSet:localSetResult] allObjects];
 		
 		result = [remoteSetResult allObjects];
 	}
 
 	
-					
+	if([aFetchRequest sortDescriptors] != nil)
+		return [result sortedArrayUsingDescriptors:[aFetchRequest sortDescriptors]];
+	
 	return result;
 }   
 
@@ -178,43 +179,42 @@ CPDDeletedObjectsKey = "CPDDeletedObjectsKey";
 //@TODO write store fetching
 - (CPSet) _executeStoreFetchRequest:(CPFetchRequest) aFetchRequest
 {
-	
 /*
-var result = [[CPMutableSet alloc] init];
+		var result = [[CPMutableSet alloc] init];
 
-var localQualifierModification = aQualifier;
-if(aQualifier == nil)
-{
-	localQualifierModification = "*";
-}
+		var localQualifierModification = aQualifier;
+		if(aQualifier == nil)
+		{
+			localQualifierModification = "*";
+		}
 
-var newProperitesDict = properties;
-if(properties == nil)
-{
-	var localEntity = [[self model] entityWithName:aEntityName];
-	var localProperties = [CPSet setWithArray: [localEntity propertyNames]]; 
+		var newProperitesDict = properties;
+		if(properties == nil)
+		{
+			var localEntity = [[self model] entityWithName:aEntityName];
+			var localProperties = [CPSet setWithArray: [localEntity propertyNames]]; 
 
-	newProperitesDict = [[CPMutableDictionary alloc] init];
-	[newProperitesDict setObject:localProperties forKey:aEntityName];
-}
+			newProperitesDict = [[CPMutableDictionary alloc] init];
+			[newProperitesDict setObject:localProperties forKey:aEntityName];
+		}
 
-var error = nil;	
-var resultSet = [[self store] fetchObjectsWithEntityNamed:aEntityName
-									  fetchProperties:newProperitesDict
-									   fetchQualifier:localQualifierModification
-										   fetchLimit:aFetchLimit
-							   inManagedObjectContext:self
-													error:error];
+		var error = nil;	
+		var resultSet = [[self store] fetchObjectsWithEntityNamed:aEntityName
+											  fetchProperties:newProperitesDict
+											   fetchQualifier:localQualifierModification
+												   fetchLimit:aFetchLimit
+									   inManagedObjectContext:self
+															error:error];
 
-if(resultSet != nil && [resultSet count] > 0 && error == nil)
-{
-	var objectEnum = [resultSet objectEnumerator];
-	var objectFromResponse;
-	while((objectFromResponse = [objectEnum nextObject]))
-	{
-		[result addObject:[self _registerObject:objectFromResponse]];
-	}
-}
+		if(resultSet != nil && [resultSet count] > 0 && error == nil)
+		{
+			var objectEnum = [resultSet objectEnumerator];
+			var objectFromResponse;
+			while((objectFromResponse = [objectEnum nextObject]))
+			{
+				[result addObject:[self _registerObject:objectFromResponse]];
+			}
+		}
 */
 	return [CPSet new];
 }

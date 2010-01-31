@@ -58,7 +58,7 @@ CPDDeletedObjectsKey = "CPDDeletedObjectsKey";
 
 - (CPManagedObject) updateObject:(CPManagedObject) aObject mergeChanges:(BOOL) mergeChanges;
 - (CPManagedObject) updateObjectWithID:(CPManagedObjectID) aObjectID mergeChanges:(BOOL) mergeChanges
-- (CPSet) executeFetchRequest:(CPFetchRequest)aRequest;	//TODO implement this method and CPFetchRequest
+- (CPSet) executeFetchRequest:(CPFetchRequest)aFetchRequest;	//TODO implement this method and CPFetchRequest
 
 - (CPSet) objectsForEntityNamed:(String) aEntityName;
 - (CPManagedObject) objectRegisteredForID:(CPManagedObjectID) aObjectID;
