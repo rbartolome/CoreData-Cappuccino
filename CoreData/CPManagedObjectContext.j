@@ -293,7 +293,8 @@ CPDDeletedObjectsKey = "CPDDeletedObjectsKey";
 - (BOOL)saveChanges
 {
 	var result = NO;
-	if([self hasChanges])
+
+	if([self hasChanges] &&  [[self store] respondsToSelector: @selector(saveObjectsUpdated:inserted:deleted:error:)])
 	{
 		var error = nil;	
 		var updatedObjects = [self updatedObjects];
@@ -307,6 +308,7 @@ CPDDeletedObjectsKey = "CPDDeletedObjectsKey";
 			var resultSet = [[self store] saveObjectsUpdated:updatedObjects
 												inserted:insertedObjects
 												 deleted:deletedObjects
+								  inManagedObjectContext:self
 												   error:error];
 					  
 			if(resultSet != nil && [resultSet count] > 0 && error == nil)
@@ -339,6 +341,10 @@ CPDDeletedObjectsKey = "CPDDeletedObjectsKey";
 											
 		
 		}
+	}
+	else
+	{
+		result = [self saveAll];
 	}
 	
 	return result;

@@ -78,11 +78,9 @@
 	[birthDateField displayPreset:1];
 	[birthDateField setDelegate:self];
 	
-	//observe changes from user interface
-	[firstNameField addObserver:self forKeyPath:@"objectValue" options:(CPKeyValueObservingOptionNew) context:nil];
-	[lastNameField addObserver:self forKeyPath:@"objectValue" options:(CPKeyValueObservingOptionNew) context:nil]; 
-	[phoneField addObserver:self forKeyPath:@"objectValue" options:(CPKeyValueObservingOptionNew) context:nil];
-
+	[firstNameField setDelegate:self];
+	[lastNameField setDelegate:self];
+	[phoneField setDelegate:self];
 }
 
 
@@ -140,28 +138,20 @@
 }
 
 /*
- ****************************
- * UI fields changes Observer
- ****************************
+ *******************
+ * UI fields changes 
+ *******************
  */
-- (void)observeValueForKeyPath:(CPString)aKeyPath
-                      ofObject:(id)anObject
-                        change:(CPDictionary)aChange
-                       context:(id)aContext
+- (void)controlTextDidEndEditing:(CPNotification)aNotification
 {
-	if([anObject isEqual:firstNameField])
-	{
+	if([[aNotification object] isEqual:firstNameField])
 		[selectedAddress setValue:[firstNameField stringValue] forKey:@"firstname"];
-	}
-	else if([anObject isEqual:lastNameField])
-	{
+	else if([[aNotification object] isEqual:lastNameField])
 		[selectedAddress setValue:[lastNameField stringValue] forKey:@"lastname"];
-	}	
-	else if([anObject isEqual:phoneField])
-	{
+	else if([[aNotification object] isEqual:phoneField])
 		[selectedAddress setValue:[CPNumber numberWithInt:[[phoneField stringValue] intValue]] forKey:@"phone"];
-	}	
 }
+
 
 /*
  ***************************

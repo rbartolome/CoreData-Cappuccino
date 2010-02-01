@@ -18,6 +18,6 @@
 }
 
 - (IBAction)addEmailAddress:(id)sender;
-- (IBAction)remoteEmailAddress:(id)sender;
+- (IBAction)removeEmailAddress:(id)sender;
 
 @end

@@ -79,7 +79,6 @@
 
 - (void) saveAll:(CPSet) objects error:({CPError}) error
 {
-	CPLog.error("write all to path: " + [self storeID]);
 	if([[self format] isEqualToString:CPCoreDataSerializationXMLFormat])
 	{
 		[[self davManager] writeFileWithStringContent:[objects serializeToXML:YES] toPath:[self storeID]];

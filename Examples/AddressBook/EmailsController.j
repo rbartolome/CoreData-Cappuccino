@@ -46,7 +46,7 @@
 	}
 }
 
-- (IBAction)remoteEmailAddress:(id)sender
+- (IBAction)removeEmailAddress:(id)sender
 {
 	if(selectedEmail != nil)
 	{

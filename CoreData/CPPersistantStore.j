@@ -86,43 +86,44 @@
 /*
  *	Will save all objects
  */
-- (void) saveAll:(CPSet) objects error:({CPError}) error
-{
-}
+// - (void) saveAll:(CPSet) objects error:({CPError}) error
+// {
+// }
 
 /*
  *	This method will be called through the instantiation
  *	and update and registrate the objects from reponse
  *	@return a set of CPManagedObjects with cheap relationship
  */
-- (CPSet)loadAll:(CPDictionary) properties inManagedObjectContext:(CPManagedObjectContext) aContext error:({CPError}) error
-{
-	return [CPSet new];
-}
+// - (CPSet)loadAll:(CPDictionary) properties inManagedObjectContext:(CPManagedObjectContext) aContext error:({CPError}) error
+// {
+// 	return [CPSet new];
+// }
 
 /*
  *	Save objects, updated, inserted and deleted
  *	@return a set of CPManagedObjects with cheap relationship
  */
-- (CPSet) saveObjectsUpdated:(CPSet) updatedObjects
-			       inserted:(CPSet) insertedObjects
-				    deleted:(CPSet) deletedObjects
-					  error:({CPError}) error
-{
-	return [CPSet new];
-}
+// - (CPSet) saveObjectsUpdated:(CPSet) updatedObjects
+// 			       inserted:(CPSet) insertedObjects
+// 				    deleted:(CPSet) deletedObjects
+// 	 inManagedObjectContext:(CPManagedObjectContext) aContext
+// 					  error:({CPError}) error
+// {
+// 	return [CPSet new];
+// }
 
 
 /*
  *	Fetch objects with request
  *	@return a set of CPManagedObjects with cheap relationship
  */
-- (CPSet) executeFetchRequest:(CPFetchRequest) aFetchRequest
-	   inManagedObjectContext:(CPManagedObjectContext) aContext
-					  	error:({CPError}) error
-{
-	return [CPSet new];
-}
+// - (CPSet) executeFetchRequest:(CPFetchRequest) aFetchRequest
+// 	   inManagedObjectContext:(CPManagedObjectContext) aContext
+// 					  	error:({CPError}) error
+// {
+// 	return [CPSet new];
+// }
 
 
 
