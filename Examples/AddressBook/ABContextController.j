@@ -37,13 +37,36 @@
 		var coordinator = [[CPPersistentStoreCoordinator alloc] initWithManagedObjectModel: model 
 																			storeType: [CPWebDAVStoreType class] 
 																   storeConfiguration: [ABContextController webDAVConfig]];
-																   
+
+//		var coordinator = [[CPPersistentStoreCoordinator alloc] initWithManagedObjectModel: model 
+//																			storeType: [CPHTML5StoreType class] 
+//																   storeConfiguration: [ABContextController html5Config]];
+																   																   
 		//init the context with the coordinator
 		context = [[CPManagedObjectContext alloc] initWithPersistantStoreCoordinator: coordinator];
 		[context setAutoSaveChanges:YES];		
 	}
 	
 	return self;
+}
+
+
+/*
+ *************************************************************************
+ * HTML5 configuration
+ * This will generate a HTML5 offline store by name
+ *
+ * The base RLOfflineDataStore.j is written by Randy Luecke the creator of http://www.timetableapp.com/
+ * github : http://github.com/Me1000/RLOfflineDataStore
+ *************************************************************************
+ */
++ (CPDictionary) html5Config
+{
+	var result = [[CPMutableDictionary alloc] init];
+	
+	[result setObject:"AddressBook" forKey:CPHTML5StoreName];
+	
+	return result;
 }
 
 /*

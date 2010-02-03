@@ -81,15 +81,15 @@
 {
 	if([[self format] isEqualToString:CPCoreDataSerializationXMLFormat])
 	{
-		[[self davManager] writeFileWithStringContent:[objects serializeToXML:YES] toPath:[self storeID]];
+		[[self davManager] writeFileWithStringContent:[objects serializeToXML:YES containsChangedProperties:YES] toPath:[self storeID]];
 	}
 	else if([[self format] isEqualToString:CPCoreDataSerialization280NPLISTFormat])
 	{
-		[[self davManager] writeFileWithStringContent:[objects serializeTo280NPLIST:YES] toPath:[self storeID]];
+		[[self davManager] writeFileWithStringContent:[objects serializeTo280NPLIST:YES containsChangedProperties:YES] toPath:[self storeID]];
 	}
 	else if([[self format] isEqualToString:CPCoreDataSerializationJSONFormat])
 	{
-		[[self davManager] writeFileWithStringContent:[objects serializeToJSON:YES] toPath:[self storeID]];		
+		[[self davManager] writeFileWithStringContent:[objects serializeToJSON:YES containsChangedProperties:YES] toPath:[self storeID]];		
 	}	
 	else if([[self format] isEqualToString:CPCoreDataSerializationDictionaryFormat])
 	{

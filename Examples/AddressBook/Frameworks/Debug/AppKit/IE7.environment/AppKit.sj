@@ -1,4 +1,4 @@
-@STATIC;1.0;u;57;Resources/_CPMenuBarWindow/_CPMenuBarWindowBackground.png89;mhtml:IE7.environment/AppKit.sj!Resources/_CPMenuBarWindow/_CPMenuBarWindowBackground.pngu;65;Resources/_CPMenuBarWindow/_CPMenuBarWindowBackgroundSelected.png97;mhtml:IE7.environment/AppKit.sj!Resources/_CPMenuBarWindow/_CPMenuBarWindowBackgroundSelected.pngu;42;Resources/_CPMenuWindow/_CPMenuWindow1.png74;mhtml:IE7.environment/AppKit.sj!Resources/_CPMenuWindow/_CPMenuWindow1.pngu;42;Resources/_CPMenuWindow/_CPMenuWindow3.png74;mhtml:IE7.environment/AppKit.sj!Resources/_CPMenuWindow/_CPMenuWindow3.pngu;42;Resources/_CPMenuWindow/_CPMenuWindow4.png74;mhtml:IE7.environment/AppKit.sj!Resources/_CPMenuWindow/_CPMenuWindow4.pngu;42;Resources/_CPMenuWindow/_CPMenuWindow5.png74;mhtml:IE7.environment/AppKit.sj!Resources/_CPMenuWindow/_CPMenuWindow5.pngu;42;Resources/_CPMenuWindow/_CPMenuWindow7.png74;mhtml:IE7.environment/AppKit.sj!Resources/_CPMenuWindow/_CPMenuWindow7.pngu;50;Resources/_CPMenuWindow/_CPMenuWindowMoreAbove.png82;mhtml:IE7.environment/AppKit.sj!Resources/_CPMenuWindow/_CPMenuWindowMoreAbove.pngu;50;Resources/_CPMenuWindow/_CPMenuWindowMoreBelow.png82;mhtml:IE7.environment/AppKit.sj!Resources/_CPMenuWindow/_CPMenuWindowMoreBelow.pngu;49;Resources/_CPMenuWindow/_CPMenuWindowRounded0.png81;mhtml:IE7.environment/AppKit.sj!Resources/_CPMenuWindow/_CPMenuWindowRounded0.pngu;49;Resources/_CPMenuWindow/_CPMenuWindowRounded2.png81;mhtml:IE7.environment/AppKit.sj!Resources/_CPMenuWindow/_CPMenuWindowRounded2.pngu;49;Resources/_CPMenuWindow/_CPMenuWindowRounded6.png81;mhtml:IE7.environment/AppKit.sj!Resources/_CPMenuWindow/_CPMenuWindowRounded6.pngu;49;Resources/_CPMenuWindow/_CPMenuWindowRounded8.png81;mhtml:IE7.environment/AppKit.sj!Resources/_CPMenuWindow/_CPMenuWindowRounded8.pngu;53;Resources/_CPToolbarView/_CPToolbarViewBackground.png85;mhtml:IE7.environment/AppKit.sj!Resources/_CPToolbarView/_CPToolbarViewBackground.pngu;67;Resources/_CPToolbarView/_CPToolbarViewExtraItemsAlternateImage.png99;mhtml:IE7.environment/AppKit.sj!Resources/_CPToolbarView/_CPToolbarViewExtraItemsAlternateImage.pngu;58;Resources/_CPToolbarView/_CPToolbarViewExtraItemsImage.png90;mhtml:IE7.environment/AppKit.sj!Resources/_CPToolbarView/_CPToolbarViewExtraItemsImage.pngu;56;Resources/_CPWindowView/_CPWindowViewResizeIndicator.png88;mhtml:IE7.environment/AppKit.sj!Resources/_CPWindowView/_CPWindowViewResizeIndicator.pngu;28;Resources/brightness_bar.png60;mhtml:IE7.environment/AppKit.sj!Resources/brightness_bar.pngu;24;Resources/color_well.png56;mhtml:IE7.environment/AppKit.sj!Resources/color_well.pngu;34;Resources/CPAlert/dialog-error.png66;mhtml:IE7.environment/AppKit.sj!Resources/CPAlert/dialog-error.pngu;40;Resources/CPAlert/dialog-information.png72;mhtml:IE7.environment/AppKit.sj!Resources/CPAlert/dialog-information.pngu;36;Resources/CPAlert/dialog-warning.png68;mhtml:IE7.environment/AppKit.sj!Resources/CPAlert/dialog-warning.pngu;31;Resources/CPApplication/New.png63;mhtml:IE7.environment/AppKit.sj!Resources/CPApplication/New.pngu;42;Resources/CPApplication/NewHighlighted.png74;mhtml:IE7.environment/AppKit.sj!Resources/CPApplication/NewHighlighted.pngu;32;Resources/CPApplication/Open.png64;mhtml:IE7.environment/AppKit.sj!Resources/CPApplication/Open.pngu;43;Resources/CPApplication/OpenHighlighted.png75;mhtml:IE7.environment/AppKit.sj!Resources/CPApplication/OpenHighlighted.pngu;32;Resources/CPApplication/Save.png64;mhtml:IE7.environment/AppKit.sj!Resources/CPApplication/Save.pngu;43;Resources/CPApplication/SaveHighlighted.png75;mhtml:IE7.environment/AppKit.sj!Resources/CPApplication/SaveHighlighted.pngu;43;Resources/CPImage/CPImageNameColorPanel.png75;mhtml:IE7.environment/AppKit.sj!Resources/CPImage/CPImageNameColorPanel.pngu;54;Resources/CPImage/CPImageNameColorPanelHighlighted.png86;mhtml:IE7.environment/AppKit.sj!Resources/CPImage/CPImageNameColorPanelHighlighted.pngu;53;Resources/CPImageView/CPImageViewBottomLeftShadow.png85;mhtml:IE7.environment/AppKit.sj!Resources/CPImageView/CPImageViewBottomLeftShadow.pngu;54;Resources/CPImageView/CPImageViewBottomRightShadow.png86;mhtml:IE7.environment/AppKit.sj!Resources/CPImageView/CPImageViewBottomRightShadow.pngu;49;Resources/CPImageView/CPImageViewBottomShadow.png81;mhtml:IE7.environment/AppKit.sj!Resources/CPImageView/CPImageViewBottomShadow.pngu;47;Resources/CPImageView/CPImageViewLeftShadow.png79;mhtml:IE7.environment/AppKit.sj!Resources/CPImageView/CPImageViewLeftShadow.pngu;48;Resources/CPImageView/CPImageViewRightShadow.png80;mhtml:IE7.environment/AppKit.sj!Resources/CPImageView/CPImageViewRightShadow.pngu;50;Resources/CPImageView/CPImageViewTopLeftShadow.png82;mhtml:IE7.environment/AppKit.sj!Resources/CPImageView/CPImageViewTopLeftShadow.pngu;51;Resources/CPImageView/CPImageViewTopRightShadow.png83;mhtml:IE7.environment/AppKit.sj!Resources/CPImageView/CPImageViewTopRightShadow.pngu;46;Resources/CPImageView/CPImageViewTopShadow.png78;mhtml:IE7.environment/AppKit.sj!Resources/CPImageView/CPImageViewTopShadow.pngu;42;Resources/CPMenuItem/CPMenuItemOnState.png74;mhtml:IE7.environment/AppKit.sj!Resources/CPMenuItem/CPMenuItemOnState.pngu;53;Resources/CPMenuItem/CPMenuItemOnStateHighlighted.png85;mhtml:IE7.environment/AppKit.sj!Resources/CPMenuItem/CPMenuItemOnStateHighlighted.pngu;66;Resources/CPProgressIndicator/CPProgressIndicatorBarBarRegular.png98;mhtml:IE7.environment/AppKit.sj!Resources/CPProgressIndicator/CPProgressIndicatorBarBarRegular.pngu;67;Resources/CPProgressIndicator/CPProgressIndicatorBarHUDBarSmall.png99;mhtml:IE7.environment/AppKit.sj!Resources/CPProgressIndicator/CPProgressIndicatorBarHUDBarSmall.pngu;75;Resources/CPProgressIndicator/CPProgressIndicatorBezelBorderBarRegular0.png107;mhtml:IE7.environment/AppKit.sj!Resources/CPProgressIndicator/CPProgressIndicatorBezelBorderBarRegular0.pngu;75;Resources/CPProgressIndicator/CPProgressIndicatorBezelBorderBarRegular1.png107;mhtml:IE7.environment/AppKit.sj!Resources/CPProgressIndicator/CPProgressIndicatorBezelBorderBarRegular1.pngu;75;Resources/CPProgressIndicator/CPProgressIndicatorBezelBorderBarRegular2.png107;mhtml:IE7.environment/AppKit.sj!Resources/CPProgressIndicator/CPProgressIndicatorBezelBorderBarRegular2.pngu;76;Resources/CPProgressIndicator/CPProgressIndicatorBezelBorderHUDBarSmall0.png108;mhtml:IE7.environment/AppKit.sj!Resources/CPProgressIndicator/CPProgressIndicatorBezelBorderHUDBarSmall0.pngu;76;Resources/CPProgressIndicator/CPProgressIndicatorBezelBorderHUDBarSmall1.png108;mhtml:IE7.environment/AppKit.sj!Resources/CPProgressIndicator/CPProgressIndicatorBezelBorderHUDBarSmall1.pngu;76;Resources/CPProgressIndicator/CPProgressIndicatorBezelBorderHUDBarSmall2.png108;mhtml:IE7.environment/AppKit.sj!Resources/CPProgressIndicator/CPProgressIndicatorBezelBorderHUDBarSmall2.pngu;73;Resources/CPProgressIndicator/CPProgressIndicatorSpinningStyleRegular.gif105;mhtml:IE7.environment/AppKit.sj!Resources/CPProgressIndicator/CPProgressIndicatorSpinningStyleRegular.gifu;47;Resources/CPSearchField/CPSearchFieldCancel.png79;mhtml:IE7.environment/AppKit.sj!Resources/CPSearchField/CPSearchFieldCancel.pngu;54;Resources/CPSearchField/CPSearchFieldCancelPressed.png86;mhtml:IE7.environment/AppKit.sj!Resources/CPSearchField/CPSearchFieldCancelPressed.pngu;45;Resources/CPSearchField/CPSearchFieldFind.png77;mhtml:IE7.environment/AppKit.sj!Resources/CPSearchField/CPSearchFieldFind.pngu;47;Resources/CPSearchField/CPSearchFieldSearch.png79;mhtml:IE7.environment/AppKit.sj!Resources/CPSearchField/CPSearchFieldSearch.pngu;50;Resources/CPShadowView/CPShadowViewHeavyBottom.png82;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewHeavyBottom.pngu;54;Resources/CPShadowView/CPShadowViewHeavyBottomLeft.png86;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewHeavyBottomLeft.pngu;55;Resources/CPShadowView/CPShadowViewHeavyBottomRight.png87;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewHeavyBottomRight.pngu;48;Resources/CPShadowView/CPShadowViewHeavyLeft.png80;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewHeavyLeft.pngu;49;Resources/CPShadowView/CPShadowViewHeavyRight.png81;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewHeavyRight.pngu;47;Resources/CPShadowView/CPShadowViewHeavyTop.png79;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewHeavyTop.pngu;51;Resources/CPShadowView/CPShadowViewHeavyTopLeft.png83;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewHeavyTopLeft.pngu;52;Resources/CPShadowView/CPShadowViewHeavyTopRight.png84;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewHeavyTopRight.pngu;50;Resources/CPShadowView/CPShadowViewLightBottom.png82;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewLightBottom.pngu;54;Resources/CPShadowView/CPShadowViewLightBottomLeft.png86;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewLightBottomLeft.pngu;55;Resources/CPShadowView/CPShadowViewLightBottomRight.png87;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewLightBottomRight.pngu;48;Resources/CPShadowView/CPShadowViewLightLeft.png80;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewLightLeft.pngu;49;Resources/CPShadowView/CPShadowViewLightRight.png81;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewLightRight.pngu;47;Resources/CPShadowView/CPShadowViewLightTop.png79;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewLightTop.pngu;51;Resources/CPShadowView/CPShadowViewLightTopLeft.png83;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewLightTopLeft.pngu;52;Resources/CPShadowView/CPShadowViewLightTopRight.png84;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewLightTopRight.pngu;47;Resources/CPSplitView/CPSplitViewHorizontal.png79;mhtml:IE7.environment/AppKit.sj!Resources/CPSplitView/CPSplitViewHorizontal.pngu;45;Resources/CPSplitView/CPSplitViewVertical.png77;mhtml:IE7.environment/AppKit.sj!Resources/CPSplitView/CPSplitViewVertical.pngu;51;Resources/CPTabView/_CPTabLabelBackgroundCenter.png83;mhtml:IE7.environment/AppKit.sj!Resources/CPTabView/_CPTabLabelBackgroundCenter.pngu;49;Resources/CPTabView/_CPTabLabelBackgroundLeft.png81;mhtml:IE7.environment/AppKit.sj!Resources/CPTabView/_CPTabLabelBackgroundLeft.pngu;50;Resources/CPTabView/_CPTabLabelBackgroundRight.png82;mhtml:IE7.environment/AppKit.sj!Resources/CPTabView/_CPTabLabelBackgroundRight.pngu;49;Resources/CPTabView/_CPTabLabelSelectedCenter.png81;mhtml:IE7.environment/AppKit.sj!Resources/CPTabView/_CPTabLabelSelectedCenter.pngu;47;Resources/CPTabView/_CPTabLabelSelectedLeft.png79;mhtml:IE7.environment/AppKit.sj!Resources/CPTabView/_CPTabLabelSelectedLeft.pngu;48;Resources/CPTabView/_CPTabLabelSelectedRight.png80;mhtml:IE7.environment/AppKit.sj!Resources/CPTabView/_CPTabLabelSelectedRight.pngu;46;Resources/CPTabView/_CPTabLabelsViewCenter.png78;mhtml:IE7.environment/AppKit.sj!Resources/CPTabView/_CPTabLabelsViewCenter.pngu;44;Resources/CPTabView/_CPTabLabelsViewLeft.png76;mhtml:IE7.environment/AppKit.sj!Resources/CPTabView/_CPTabLabelsViewLeft.pngu;45;Resources/CPTabView/_CPTabLabelsViewRight.png77;mhtml:IE7.environment/AppKit.sj!Resources/CPTabView/_CPTabLabelsViewRight.pngu;54;Resources/CPTabView/CPTabViewBezelBackgroundCenter.png86;mhtml:IE7.environment/AppKit.sj!Resources/CPTabView/CPTabViewBezelBackgroundCenter.pngu;44;Resources/CPTabView/CPTabViewBezelBorder.png76;mhtml:IE7.environment/AppKit.sj!Resources/CPTabView/CPTabViewBezelBorder.pngu;48;Resources/CPTabView/CPTabViewBezelBorderLeft.png80;mhtml:IE7.environment/AppKit.sj!Resources/CPTabView/CPTabViewBezelBorderLeft.pngu;49;Resources/CPTabView/CPTabViewBezelBorderRight.png81;mhtml:IE7.environment/AppKit.sj!Resources/CPTabView/CPTabViewBezelBorderRight.pngu;51;Resources/CPToolbarItem/CPToolbarItemSeparator0.png83;mhtml:IE7.environment/AppKit.sj!Resources/CPToolbarItem/CPToolbarItemSeparator0.pngu;51;Resources/CPToolbarItem/CPToolbarItemSeparator1.png83;mhtml:IE7.environment/AppKit.sj!Resources/CPToolbarItem/CPToolbarItemSeparator1.pngu;51;Resources/CPToolbarItem/CPToolbarItemSeparator2.png83;mhtml:IE7.environment/AppKit.sj!Resources/CPToolbarItem/CPToolbarItemSeparator2.pngu;38;Resources/CPWindow/CPWindowShadow0.png70;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/CPWindowShadow0.pngu;38;Resources/CPWindow/CPWindowShadow1.png70;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/CPWindowShadow1.pngu;38;Resources/CPWindow/CPWindowShadow2.png70;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/CPWindowShadow2.pngu;38;Resources/CPWindow/CPWindowShadow3.png70;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/CPWindowShadow3.pngu;38;Resources/CPWindow/CPWindowShadow4.png70;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/CPWindowShadow4.pngu;38;Resources/CPWindow/CPWindowShadow5.png70;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/CPWindowShadow5.pngu;38;Resources/CPWindow/CPWindowShadow6.png70;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/CPWindowShadow6.pngu;38;Resources/CPWindow/CPWindowShadow7.png70;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/CPWindowShadow7.pngu;38;Resources/CPWindow/CPWindowShadow8.png70;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/CPWindowShadow8.pngu;37;Resources/CPWindowResizeIndicator.png69;mhtml:IE7.environment/AppKit.sj!Resources/CPWindowResizeIndicator.pngu;31;Resources/FIXME_ImageShadow.png63;mhtml:IE7.environment/AppKit.sj!Resources/FIXME_ImageShadow.pngu;25;Resources/GenericFile.png57;mhtml:IE7.environment/AppKit.sj!Resources/GenericFile.pngu;34;Resources/HUDTheme/WindowClose.png66;mhtml:IE7.environment/AppKit.sj!Resources/HUDTheme/WindowClose.pngu;40;Resources/HUDTheme/WindowCloseActive.png72;mhtml:IE7.environment/AppKit.sj!Resources/HUDTheme/WindowCloseActive.pngu;27;Resources/slider_button.png59;mhtml:IE7.environment/AppKit.sj!Resources/slider_button.pngu;29;Resources/slider_button_h.png61;mhtml:IE7.environment/AppKit.sj!Resources/slider_button_h.pngu;37;Resources/standardApplicationIcon.png69;mhtml:IE7.environment/AppKit.sj!Resources/standardApplicationIcon.pngu;46;Resources/tableview-headerview-highlighted.png78;mhtml:IE7.environment/AppKit.sj!Resources/tableview-headerview-highlighted.pngu;34;Resources/tableview-headerview.png66;mhtml:IE7.environment/AppKit.sj!Resources/tableview-headerview.pngu;25;Resources/wheel_black.png57;mhtml:IE7.environment/AppKit.sj!Resources/wheel_black.pngu;26;Resources/wheel_button.png58;mhtml:IE7.environment/AppKit.sj!Resources/wheel_button.pngu;28;Resources/wheel_button_h.png60;mhtml:IE7.environment/AppKit.sj!Resources/wheel_button_h.pngu;49;Resources/CPWindow/HUD/CPWindowHUDBackground0.png81;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/HUD/CPWindowHUDBackground0.pngu;49;Resources/CPWindow/HUD/CPWindowHUDBackground1.png81;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/HUD/CPWindowHUDBackground1.pngu;49;Resources/CPWindow/HUD/CPWindowHUDBackground2.png81;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/HUD/CPWindowHUDBackground2.pngu;49;Resources/CPWindow/HUD/CPWindowHUDBackground3.png81;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/HUD/CPWindowHUDBackground3.pngu;49;Resources/CPWindow/HUD/CPWindowHUDBackground4.png81;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/HUD/CPWindowHUDBackground4.pngu;49;Resources/CPWindow/HUD/CPWindowHUDBackground5.png81;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/HUD/CPWindowHUDBackground5.pngu;49;Resources/CPWindow/HUD/CPWindowHUDBackground6.png81;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/HUD/CPWindowHUDBackground6.pngu;49;Resources/CPWindow/HUD/CPWindowHUDBackground7.png81;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/HUD/CPWindowHUDBackground7.pngu;49;Resources/CPWindow/HUD/CPWindowHUDBackground8.png81;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/HUD/CPWindowHUDBackground8.pngu;59;Resources/CPWindow/Standard/CPWindowStandardCloseButton.png91;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/Standard/CPWindowStandardCloseButton.pngu;70;Resources/CPWindow/Standard/CPWindowStandardCloseButtonHighlighted.png102;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/Standard/CPWindowStandardCloseButtonHighlighted.pngu;66;Resources/CPWindow/Standard/CPWindowStandardCloseButtonUnsaved.png98;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/Standard/CPWindowStandardCloseButtonUnsaved.pngu;77;Resources/CPWindow/Standard/CPWindowStandardCloseButtonUnsavedHighlighted.png109;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/Standard/CPWindowStandardCloseButtonUnsavedHighlighted.pngu;62;Resources/CPWindow/Standard/CPWindowStandardMaximizeButton.png94;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/Standard/CPWindowStandardMaximizeButton.pngu;73;Resources/CPWindow/Standard/CPWindowStandardMaximizeButtonHighlighted.png105;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/Standard/CPWindowStandardMaximizeButtonHighlighted.pngu;62;Resources/CPWindow/Standard/CPWindowStandardMinimizeButton.png94;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/Standard/CPWindowStandardMinimizeButton.pngu;73;Resources/CPWindow/Standard/CPWindowStandardMinimizeButtonHighlighted.png105;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/Standard/CPWindowStandardMinimizeButtonHighlighted.pngu;52;Resources/CPWindow/Standard/CPWindowStandardTop0.png84;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/Standard/CPWindowStandardTop0.pngu;52;Resources/CPWindow/Standard/CPWindowStandardTop1.png84;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/Standard/CPWindowStandardTop1.pngu;52;Resources/CPWindow/Standard/CPWindowStandardTop2.png84;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/Standard/CPWindowStandardTop2.pngp;15;_CPCornerView.ji;8;CPView.jc;704;
+@STATIC;1.0;u;57;Resources/_CPMenuBarWindow/_CPMenuBarWindowBackground.png89;mhtml:IE7.environment/AppKit.sj!Resources/_CPMenuBarWindow/_CPMenuBarWindowBackground.pngu;65;Resources/_CPMenuBarWindow/_CPMenuBarWindowBackgroundSelected.png97;mhtml:IE7.environment/AppKit.sj!Resources/_CPMenuBarWindow/_CPMenuBarWindowBackgroundSelected.pngu;42;Resources/_CPMenuWindow/_CPMenuWindow1.png74;mhtml:IE7.environment/AppKit.sj!Resources/_CPMenuWindow/_CPMenuWindow1.pngu;42;Resources/_CPMenuWindow/_CPMenuWindow3.png74;mhtml:IE7.environment/AppKit.sj!Resources/_CPMenuWindow/_CPMenuWindow3.pngu;42;Resources/_CPMenuWindow/_CPMenuWindow4.png74;mhtml:IE7.environment/AppKit.sj!Resources/_CPMenuWindow/_CPMenuWindow4.pngu;42;Resources/_CPMenuWindow/_CPMenuWindow5.png74;mhtml:IE7.environment/AppKit.sj!Resources/_CPMenuWindow/_CPMenuWindow5.pngu;42;Resources/_CPMenuWindow/_CPMenuWindow7.png74;mhtml:IE7.environment/AppKit.sj!Resources/_CPMenuWindow/_CPMenuWindow7.pngu;50;Resources/_CPMenuWindow/_CPMenuWindowMoreAbove.png82;mhtml:IE7.environment/AppKit.sj!Resources/_CPMenuWindow/_CPMenuWindowMoreAbove.pngu;50;Resources/_CPMenuWindow/_CPMenuWindowMoreBelow.png82;mhtml:IE7.environment/AppKit.sj!Resources/_CPMenuWindow/_CPMenuWindowMoreBelow.pngu;49;Resources/_CPMenuWindow/_CPMenuWindowRounded0.png81;mhtml:IE7.environment/AppKit.sj!Resources/_CPMenuWindow/_CPMenuWindowRounded0.pngu;49;Resources/_CPMenuWindow/_CPMenuWindowRounded2.png81;mhtml:IE7.environment/AppKit.sj!Resources/_CPMenuWindow/_CPMenuWindowRounded2.pngu;49;Resources/_CPMenuWindow/_CPMenuWindowRounded6.png81;mhtml:IE7.environment/AppKit.sj!Resources/_CPMenuWindow/_CPMenuWindowRounded6.pngu;49;Resources/_CPMenuWindow/_CPMenuWindowRounded8.png81;mhtml:IE7.environment/AppKit.sj!Resources/_CPMenuWindow/_CPMenuWindowRounded8.pngu;53;Resources/_CPToolbarView/_CPToolbarViewBackground.png85;mhtml:IE7.environment/AppKit.sj!Resources/_CPToolbarView/_CPToolbarViewBackground.pngu;67;Resources/_CPToolbarView/_CPToolbarViewExtraItemsAlternateImage.png99;mhtml:IE7.environment/AppKit.sj!Resources/_CPToolbarView/_CPToolbarViewExtraItemsAlternateImage.pngu;58;Resources/_CPToolbarView/_CPToolbarViewExtraItemsImage.png90;mhtml:IE7.environment/AppKit.sj!Resources/_CPToolbarView/_CPToolbarViewExtraItemsImage.pngu;56;Resources/_CPWindowView/_CPWindowViewResizeIndicator.png88;mhtml:IE7.environment/AppKit.sj!Resources/_CPWindowView/_CPWindowViewResizeIndicator.pngu;28;Resources/brightness_bar.png60;mhtml:IE7.environment/AppKit.sj!Resources/brightness_bar.pngu;24;Resources/color_well.png56;mhtml:IE7.environment/AppKit.sj!Resources/color_well.pngu;34;Resources/CPAlert/dialog-error.png66;mhtml:IE7.environment/AppKit.sj!Resources/CPAlert/dialog-error.pngu;40;Resources/CPAlert/dialog-information.png72;mhtml:IE7.environment/AppKit.sj!Resources/CPAlert/dialog-information.pngu;36;Resources/CPAlert/dialog-warning.png68;mhtml:IE7.environment/AppKit.sj!Resources/CPAlert/dialog-warning.pngu;31;Resources/CPApplication/New.png63;mhtml:IE7.environment/AppKit.sj!Resources/CPApplication/New.pngu;42;Resources/CPApplication/NewHighlighted.png74;mhtml:IE7.environment/AppKit.sj!Resources/CPApplication/NewHighlighted.pngu;32;Resources/CPApplication/Open.png64;mhtml:IE7.environment/AppKit.sj!Resources/CPApplication/Open.pngu;43;Resources/CPApplication/OpenHighlighted.png75;mhtml:IE7.environment/AppKit.sj!Resources/CPApplication/OpenHighlighted.pngu;32;Resources/CPApplication/Save.png64;mhtml:IE7.environment/AppKit.sj!Resources/CPApplication/Save.pngu;43;Resources/CPApplication/SaveHighlighted.png75;mhtml:IE7.environment/AppKit.sj!Resources/CPApplication/SaveHighlighted.pngu;43;Resources/CPImage/CPImageNameColorPanel.png75;mhtml:IE7.environment/AppKit.sj!Resources/CPImage/CPImageNameColorPanel.pngu;54;Resources/CPImage/CPImageNameColorPanelHighlighted.png86;mhtml:IE7.environment/AppKit.sj!Resources/CPImage/CPImageNameColorPanelHighlighted.pngu;53;Resources/CPImageView/CPImageViewBottomLeftShadow.png85;mhtml:IE7.environment/AppKit.sj!Resources/CPImageView/CPImageViewBottomLeftShadow.pngu;54;Resources/CPImageView/CPImageViewBottomRightShadow.png86;mhtml:IE7.environment/AppKit.sj!Resources/CPImageView/CPImageViewBottomRightShadow.pngu;49;Resources/CPImageView/CPImageViewBottomShadow.png81;mhtml:IE7.environment/AppKit.sj!Resources/CPImageView/CPImageViewBottomShadow.pngu;47;Resources/CPImageView/CPImageViewLeftShadow.png79;mhtml:IE7.environment/AppKit.sj!Resources/CPImageView/CPImageViewLeftShadow.pngu;48;Resources/CPImageView/CPImageViewRightShadow.png80;mhtml:IE7.environment/AppKit.sj!Resources/CPImageView/CPImageViewRightShadow.pngu;50;Resources/CPImageView/CPImageViewTopLeftShadow.png82;mhtml:IE7.environment/AppKit.sj!Resources/CPImageView/CPImageViewTopLeftShadow.pngu;51;Resources/CPImageView/CPImageViewTopRightShadow.png83;mhtml:IE7.environment/AppKit.sj!Resources/CPImageView/CPImageViewTopRightShadow.pngu;46;Resources/CPImageView/CPImageViewTopShadow.png78;mhtml:IE7.environment/AppKit.sj!Resources/CPImageView/CPImageViewTopShadow.pngu;42;Resources/CPMenuItem/CPMenuItemOnState.png74;mhtml:IE7.environment/AppKit.sj!Resources/CPMenuItem/CPMenuItemOnState.pngu;53;Resources/CPMenuItem/CPMenuItemOnStateHighlighted.png85;mhtml:IE7.environment/AppKit.sj!Resources/CPMenuItem/CPMenuItemOnStateHighlighted.pngu;67;Resources/CPProgressIndicator/CPProgressIndicatorBarBarRegular0.png99;mhtml:IE7.environment/AppKit.sj!Resources/CPProgressIndicator/CPProgressIndicatorBarBarRegular0.pngu;67;Resources/CPProgressIndicator/CPProgressIndicatorBarBarRegular1.png99;mhtml:IE7.environment/AppKit.sj!Resources/CPProgressIndicator/CPProgressIndicatorBarBarRegular1.pngu;67;Resources/CPProgressIndicator/CPProgressIndicatorBarBarRegular2.png99;mhtml:IE7.environment/AppKit.sj!Resources/CPProgressIndicator/CPProgressIndicatorBarBarRegular2.pngu;70;Resources/CPProgressIndicator/CPProgressIndicatorBarHUDBarRegular0.png102;mhtml:IE7.environment/AppKit.sj!Resources/CPProgressIndicator/CPProgressIndicatorBarHUDBarRegular0.pngu;70;Resources/CPProgressIndicator/CPProgressIndicatorBarHUDBarRegular1.png102;mhtml:IE7.environment/AppKit.sj!Resources/CPProgressIndicator/CPProgressIndicatorBarHUDBarRegular1.pngu;70;Resources/CPProgressIndicator/CPProgressIndicatorBarHUDBarRegular2.png102;mhtml:IE7.environment/AppKit.sj!Resources/CPProgressIndicator/CPProgressIndicatorBarHUDBarRegular2.pngu;75;Resources/CPProgressIndicator/CPProgressIndicatorBezelBorderBarRegular0.png107;mhtml:IE7.environment/AppKit.sj!Resources/CPProgressIndicator/CPProgressIndicatorBezelBorderBarRegular0.pngu;75;Resources/CPProgressIndicator/CPProgressIndicatorBezelBorderBarRegular1.png107;mhtml:IE7.environment/AppKit.sj!Resources/CPProgressIndicator/CPProgressIndicatorBezelBorderBarRegular1.pngu;75;Resources/CPProgressIndicator/CPProgressIndicatorBezelBorderBarRegular2.png107;mhtml:IE7.environment/AppKit.sj!Resources/CPProgressIndicator/CPProgressIndicatorBezelBorderBarRegular2.pngu;78;Resources/CPProgressIndicator/CPProgressIndicatorBezelBorderHUDBarRegular0.png110;mhtml:IE7.environment/AppKit.sj!Resources/CPProgressIndicator/CPProgressIndicatorBezelBorderHUDBarRegular0.pngu;78;Resources/CPProgressIndicator/CPProgressIndicatorBezelBorderHUDBarRegular1.png110;mhtml:IE7.environment/AppKit.sj!Resources/CPProgressIndicator/CPProgressIndicatorBezelBorderHUDBarRegular1.pngu;78;Resources/CPProgressIndicator/CPProgressIndicatorBezelBorderHUDBarRegular2.png110;mhtml:IE7.environment/AppKit.sj!Resources/CPProgressIndicator/CPProgressIndicatorBezelBorderHUDBarRegular2.pngu;73;Resources/CPProgressIndicator/CPProgressIndicatorSpinningStyleRegular.gif105;mhtml:IE7.environment/AppKit.sj!Resources/CPProgressIndicator/CPProgressIndicatorSpinningStyleRegular.gifu;47;Resources/CPSearchField/CPSearchFieldCancel.png79;mhtml:IE7.environment/AppKit.sj!Resources/CPSearchField/CPSearchFieldCancel.pngu;54;Resources/CPSearchField/CPSearchFieldCancelPressed.png86;mhtml:IE7.environment/AppKit.sj!Resources/CPSearchField/CPSearchFieldCancelPressed.pngu;45;Resources/CPSearchField/CPSearchFieldFind.png77;mhtml:IE7.environment/AppKit.sj!Resources/CPSearchField/CPSearchFieldFind.pngu;47;Resources/CPSearchField/CPSearchFieldSearch.png79;mhtml:IE7.environment/AppKit.sj!Resources/CPSearchField/CPSearchFieldSearch.pngu;50;Resources/CPShadowView/CPShadowViewHeavyBottom.png82;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewHeavyBottom.pngu;54;Resources/CPShadowView/CPShadowViewHeavyBottomLeft.png86;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewHeavyBottomLeft.pngu;55;Resources/CPShadowView/CPShadowViewHeavyBottomRight.png87;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewHeavyBottomRight.pngu;48;Resources/CPShadowView/CPShadowViewHeavyLeft.png80;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewHeavyLeft.pngu;49;Resources/CPShadowView/CPShadowViewHeavyRight.png81;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewHeavyRight.pngu;47;Resources/CPShadowView/CPShadowViewHeavyTop.png79;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewHeavyTop.pngu;51;Resources/CPShadowView/CPShadowViewHeavyTopLeft.png83;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewHeavyTopLeft.pngu;52;Resources/CPShadowView/CPShadowViewHeavyTopRight.png84;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewHeavyTopRight.pngu;50;Resources/CPShadowView/CPShadowViewLightBottom.png82;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewLightBottom.pngu;54;Resources/CPShadowView/CPShadowViewLightBottomLeft.png86;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewLightBottomLeft.pngu;55;Resources/CPShadowView/CPShadowViewLightBottomRight.png87;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewLightBottomRight.pngu;48;Resources/CPShadowView/CPShadowViewLightLeft.png80;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewLightLeft.pngu;49;Resources/CPShadowView/CPShadowViewLightRight.png81;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewLightRight.pngu;47;Resources/CPShadowView/CPShadowViewLightTop.png79;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewLightTop.pngu;51;Resources/CPShadowView/CPShadowViewLightTopLeft.png83;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewLightTopLeft.pngu;52;Resources/CPShadowView/CPShadowViewLightTopRight.png84;mhtml:IE7.environment/AppKit.sj!Resources/CPShadowView/CPShadowViewLightTopRight.pngu;47;Resources/CPSplitView/CPSplitViewHorizontal.png79;mhtml:IE7.environment/AppKit.sj!Resources/CPSplitView/CPSplitViewHorizontal.pngu;45;Resources/CPSplitView/CPSplitViewVertical.png77;mhtml:IE7.environment/AppKit.sj!Resources/CPSplitView/CPSplitViewVertical.pngu;51;Resources/CPTabView/_CPTabLabelBackgroundCenter.png83;mhtml:IE7.environment/AppKit.sj!Resources/CPTabView/_CPTabLabelBackgroundCenter.pngu;49;Resources/CPTabView/_CPTabLabelBackgroundLeft.png81;mhtml:IE7.environment/AppKit.sj!Resources/CPTabView/_CPTabLabelBackgroundLeft.pngu;50;Resources/CPTabView/_CPTabLabelBackgroundRight.png82;mhtml:IE7.environment/AppKit.sj!Resources/CPTabView/_CPTabLabelBackgroundRight.pngu;49;Resources/CPTabView/_CPTabLabelSelectedCenter.png81;mhtml:IE7.environment/AppKit.sj!Resources/CPTabView/_CPTabLabelSelectedCenter.pngu;47;Resources/CPTabView/_CPTabLabelSelectedLeft.png79;mhtml:IE7.environment/AppKit.sj!Resources/CPTabView/_CPTabLabelSelectedLeft.pngu;48;Resources/CPTabView/_CPTabLabelSelectedRight.png80;mhtml:IE7.environment/AppKit.sj!Resources/CPTabView/_CPTabLabelSelectedRight.pngu;46;Resources/CPTabView/_CPTabLabelsViewCenter.png78;mhtml:IE7.environment/AppKit.sj!Resources/CPTabView/_CPTabLabelsViewCenter.pngu;44;Resources/CPTabView/_CPTabLabelsViewLeft.png76;mhtml:IE7.environment/AppKit.sj!Resources/CPTabView/_CPTabLabelsViewLeft.pngu;45;Resources/CPTabView/_CPTabLabelsViewRight.png77;mhtml:IE7.environment/AppKit.sj!Resources/CPTabView/_CPTabLabelsViewRight.pngu;54;Resources/CPTabView/CPTabViewBezelBackgroundCenter.png86;mhtml:IE7.environment/AppKit.sj!Resources/CPTabView/CPTabViewBezelBackgroundCenter.pngu;44;Resources/CPTabView/CPTabViewBezelBorder.png76;mhtml:IE7.environment/AppKit.sj!Resources/CPTabView/CPTabViewBezelBorder.pngu;48;Resources/CPTabView/CPTabViewBezelBorderLeft.png80;mhtml:IE7.environment/AppKit.sj!Resources/CPTabView/CPTabViewBezelBorderLeft.pngu;49;Resources/CPTabView/CPTabViewBezelBorderRight.png81;mhtml:IE7.environment/AppKit.sj!Resources/CPTabView/CPTabViewBezelBorderRight.pngu;51;Resources/CPToolbarItem/CPToolbarItemSeparator0.png83;mhtml:IE7.environment/AppKit.sj!Resources/CPToolbarItem/CPToolbarItemSeparator0.pngu;51;Resources/CPToolbarItem/CPToolbarItemSeparator1.png83;mhtml:IE7.environment/AppKit.sj!Resources/CPToolbarItem/CPToolbarItemSeparator1.pngu;51;Resources/CPToolbarItem/CPToolbarItemSeparator2.png83;mhtml:IE7.environment/AppKit.sj!Resources/CPToolbarItem/CPToolbarItemSeparator2.pngu;38;Resources/CPWindow/CPWindowShadow0.png70;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/CPWindowShadow0.pngu;38;Resources/CPWindow/CPWindowShadow1.png70;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/CPWindowShadow1.pngu;38;Resources/CPWindow/CPWindowShadow2.png70;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/CPWindowShadow2.pngu;38;Resources/CPWindow/CPWindowShadow3.png70;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/CPWindowShadow3.pngu;38;Resources/CPWindow/CPWindowShadow4.png70;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/CPWindowShadow4.pngu;38;Resources/CPWindow/CPWindowShadow5.png70;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/CPWindowShadow5.pngu;38;Resources/CPWindow/CPWindowShadow6.png70;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/CPWindowShadow6.pngu;38;Resources/CPWindow/CPWindowShadow7.png70;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/CPWindowShadow7.pngu;38;Resources/CPWindow/CPWindowShadow8.png70;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/CPWindowShadow8.pngu;37;Resources/CPWindowResizeIndicator.png69;mhtml:IE7.environment/AppKit.sj!Resources/CPWindowResizeIndicator.pngu;31;Resources/FIXME_ImageShadow.png63;mhtml:IE7.environment/AppKit.sj!Resources/FIXME_ImageShadow.pngu;25;Resources/GenericFile.png57;mhtml:IE7.environment/AppKit.sj!Resources/GenericFile.pngu;34;Resources/HUDTheme/WindowClose.png66;mhtml:IE7.environment/AppKit.sj!Resources/HUDTheme/WindowClose.pngu;40;Resources/HUDTheme/WindowCloseActive.png72;mhtml:IE7.environment/AppKit.sj!Resources/HUDTheme/WindowCloseActive.pngu;27;Resources/slider_button.png59;mhtml:IE7.environment/AppKit.sj!Resources/slider_button.pngu;29;Resources/slider_button_h.png61;mhtml:IE7.environment/AppKit.sj!Resources/slider_button_h.pngu;37;Resources/standardApplicationIcon.png69;mhtml:IE7.environment/AppKit.sj!Resources/standardApplicationIcon.pngu;54;Resources/tableview-headerview-highlighted-pressed.png86;mhtml:IE7.environment/AppKit.sj!Resources/tableview-headerview-highlighted-pressed.pngu;46;Resources/tableview-headerview-highlighted.png78;mhtml:IE7.environment/AppKit.sj!Resources/tableview-headerview-highlighted.pngu;42;Resources/tableview-headerview-pressed.png74;mhtml:IE7.environment/AppKit.sj!Resources/tableview-headerview-pressed.pngu;34;Resources/tableview-headerview.png66;mhtml:IE7.environment/AppKit.sj!Resources/tableview-headerview.pngu;25;Resources/wheel_black.png57;mhtml:IE7.environment/AppKit.sj!Resources/wheel_black.pngu;26;Resources/wheel_button.png58;mhtml:IE7.environment/AppKit.sj!Resources/wheel_button.pngu;28;Resources/wheel_button_h.png60;mhtml:IE7.environment/AppKit.sj!Resources/wheel_button_h.pngu;49;Resources/CPWindow/HUD/CPWindowHUDBackground0.png81;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/HUD/CPWindowHUDBackground0.pngu;49;Resources/CPWindow/HUD/CPWindowHUDBackground1.png81;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/HUD/CPWindowHUDBackground1.pngu;49;Resources/CPWindow/HUD/CPWindowHUDBackground2.png81;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/HUD/CPWindowHUDBackground2.pngu;49;Resources/CPWindow/HUD/CPWindowHUDBackground3.png81;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/HUD/CPWindowHUDBackground3.pngu;49;Resources/CPWindow/HUD/CPWindowHUDBackground4.png81;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/HUD/CPWindowHUDBackground4.pngu;49;Resources/CPWindow/HUD/CPWindowHUDBackground5.png81;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/HUD/CPWindowHUDBackground5.pngu;49;Resources/CPWindow/HUD/CPWindowHUDBackground6.png81;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/HUD/CPWindowHUDBackground6.pngu;49;Resources/CPWindow/HUD/CPWindowHUDBackground7.png81;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/HUD/CPWindowHUDBackground7.pngu;49;Resources/CPWindow/HUD/CPWindowHUDBackground8.png81;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/HUD/CPWindowHUDBackground8.pngu;59;Resources/CPWindow/Standard/CPWindowStandardCloseButton.png91;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/Standard/CPWindowStandardCloseButton.pngu;70;Resources/CPWindow/Standard/CPWindowStandardCloseButtonHighlighted.png102;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/Standard/CPWindowStandardCloseButtonHighlighted.pngu;66;Resources/CPWindow/Standard/CPWindowStandardCloseButtonUnsaved.png98;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/Standard/CPWindowStandardCloseButtonUnsaved.pngu;77;Resources/CPWindow/Standard/CPWindowStandardCloseButtonUnsavedHighlighted.png109;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/Standard/CPWindowStandardCloseButtonUnsavedHighlighted.pngu;62;Resources/CPWindow/Standard/CPWindowStandardMaximizeButton.png94;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/Standard/CPWindowStandardMaximizeButton.pngu;73;Resources/CPWindow/Standard/CPWindowStandardMaximizeButtonHighlighted.png105;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/Standard/CPWindowStandardMaximizeButtonHighlighted.pngu;62;Resources/CPWindow/Standard/CPWindowStandardMinimizeButton.png94;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/Standard/CPWindowStandardMinimizeButton.pngu;73;Resources/CPWindow/Standard/CPWindowStandardMinimizeButtonHighlighted.png105;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/Standard/CPWindowStandardMinimizeButtonHighlighted.pngu;52;Resources/CPWindow/Standard/CPWindowStandardTop0.png84;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/Standard/CPWindowStandardTop0.pngu;52;Resources/CPWindow/Standard/CPWindowStandardTop1.png84;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/Standard/CPWindowStandardTop1.pngu;52;Resources/CPWindow/Standard/CPWindowStandardTop2.png84;mhtml:IE7.environment/AppKit.sj!Resources/CPWindow/Standard/CPWindowStandardTop2.pngp;15;_CPCornerView.ji;8;CPView.jc;704;
 
 {var the_class = objj_allocateClassPair(CPView, "_CPCornerView"),
 meta_class = the_class.isa;objj_registerClassPair(the_class);
@@ -2856,7 +2856,7 @@ var meta_class = the_class.isa;class_addMethods(the_class, [new objj_method(sel_
 }
 },["void","CPCoder"])]);
 }
-i;12;CPCheckBox.ji;9;CPRadio.jp;13;CPButtonBar.jI;15;AppKit/CPView.jc;2337;
+i;12;CPCheckBox.ji;9;CPRadio.jp;13;CPButtonBar.jI;15;AppKit/CPView.jc;2672;
 
 
 
@@ -2864,7 +2864,17 @@ i;12;CPCheckBox.ji;9;CPRadio.jp;13;CPButtonBar.jI;15;AppKit/CPView.jc;2337;
 {var the_class = objj_allocateClassPair(CPControl, "CPButtonBar"),
 meta_class = the_class.isa;objj_registerClassPair(the_class);
 objj_addClassForBundle(the_class, objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
-class_addMethods(the_class, [new objj_method(sel_getUid("rectForEphemeralSubviewNamed:"), function $CPButtonBar__rectForEphemeralSubviewNamed_(self, _cmd, aName)
+class_addMethods(the_class, [new objj_method(sel_getUid("initWithFrame:"), function $CPButtonBar__initWithFrame_(self, _cmd, aFrame)
+{ with(self)
+{
+    self = objj_msgSendSuper({ receiver:self, super_class:objj_getClass("CPControl") }, "initWithFrame:", aFrame);
+
+    if (self)
+        objj_msgSend(self, "setNeedsLayout");
+
+    return self;
+}
+},["id","CGRect"]), new objj_method(sel_getUid("rectForEphemeralSubviewNamed:"), function $CPButtonBar__rectForEphemeralSubviewNamed_(self, _cmd, aName)
 { with(self)
 {
     if (aName === "bezel-view")
@@ -3070,7 +3080,7 @@ var meta_class = the_class.isa;class_addMethods(the_class, [new objj_method(sel_
 },["void","CPCoder"])]);
 }
 
-p;18;CPCollectionView.jI;20;Foundation/CPArray.jI;19;Foundation/CPData.jI;23;Foundation/CPIndexSet.jI;28;Foundation/CPKeyedArchiver.jI;30;Foundation/CPKeyedUnarchiver.ji;8;CPView.ji;22;CPCollectionViewItem.jc;18945;
+p;18;CPCollectionView.jI;20;Foundation/CPArray.jI;19;Foundation/CPData.jI;23;Foundation/CPIndexSet.jI;28;Foundation/CPKeyedArchiver.jI;30;Foundation/CPKeyedUnarchiver.ji;8;CPView.ji;22;CPCollectionViewItem.jc;19072;
 {var the_class = objj_allocateClassPair(CPView, "CPCollectionView"),
 meta_class = the_class.isa;class_addIvars(the_class, [new objj_ivar("_content"), new objj_ivar("_items"), new objj_ivar("_itemData"), new objj_ivar("_itemPrototype"), new objj_ivar("_itemForDragging"), new objj_ivar("_cachedItems"), new objj_ivar("_maxNumberOfRows"), new objj_ivar("_maxNumberOfColumns"), new objj_ivar("_minItemSize"), new objj_ivar("_maxItemSize"), new objj_ivar("_backgroundColors"), new objj_ivar("_tileWidth"), new objj_ivar("_isSelectable"), new objj_ivar("_allowsMultipleSelection"), new objj_ivar("_allowsEmptySelection"), new objj_ivar("_selectionIndexes"), new objj_ivar("_itemSize"), new objj_ivar("_horizontalMargin"), new objj_ivar("_verticalMargin"), new objj_ivar("_numberOfRows"), new objj_ivar("_numberOfColumns"), new objj_ivar("_delegate"), new objj_ivar("_mouseDownEvent")]);
 objj_registerClassPair(the_class);
@@ -3220,6 +3230,7 @@ class_addMethods(the_class, [new objj_method(sel_getUid("initWithFrame:"), funct
     while (count--)
     {
         objj_msgSend(objj_msgSend(_items[count], "view"), "removeFromSuperview");
+        objj_msgSend(_items[count], "setSelected:", NO);
         _cachedItems.push(_items[count]);
     }
     _items = [];
@@ -3232,6 +3243,9 @@ class_addMethods(the_class, [new objj_method(sel_getUid("initWithFrame:"), funct
         _items.push(objj_msgSend(self, "newItemForRepresentedObject:", _content[index]));
         objj_msgSend(self, "addSubview:", objj_msgSend(_items[index], "view"));
     }
+    index = CPNotFound;
+    while ((index = objj_msgSend(_selectionIndexes, "indexGreaterThanIndex:", index)) != CPNotFound)
+        objj_msgSend(_items[index], "setSelected:", YES);
     objj_msgSend(self, "tile");
 }
 },["void"]), new objj_method(sel_getUid("tile"), function $CPCollectionView__tile(self, _cmd)
@@ -3289,7 +3303,6 @@ class_addMethods(the_class, [new objj_method(sel_getUid("initWithFrame:"), funct
 },["void"]), new objj_method(sel_getUid("resizeSubviewsWithOldSize:"), function $CPCollectionView__resizeSubviewsWithOldSize_(self, _cmd, aSize)
 { with(self)
 {
- objj_msgSendSuper({ receiver:self, super_class:objj_getClass("CPView") }, "resizeSubviewsWithOldSize:", aSize);
     objj_msgSend(self, "tile");
 }
 },["void","CGSize"]), new objj_method(sel_getUid("setMaxNumberOfRows:"), function $CPCollectionView__setMaxNumberOfRows_(self, _cmd, aMaxNumberOfRows)
@@ -3522,7 +3535,7 @@ class_addMethods(the_class, [new objj_method(sel_getUid("setRepresentedObject:")
 },["CPCollectionView"])]);
 }
 
-p;9;CPColor.jI;21;Foundation/CPObject.ji;9;CGColor.ji;17;CPCompatibility.ji;9;CPImage.jc;22892;
+p;9;CPColor.jI;21;Foundation/CPObject.ji;9;CGColor.ji;17;CPCompatibility.ji;9;CPImage.jc;22943;
 var _redComponent = 0,
     _greenComponent = 1,
     _blueComponent = 2,
@@ -3959,6 +3972,7 @@ var meta_class = the_class.isa;class_addMethods(the_class, [new objj_method(sel_
 },["void","CPCoder"])]);
 }
 var hexCharacters = "0123456789ABCDEF";
+var hexToRGB, integerToBytes, rgbToHex, byteToHex;
 hexToRGB= function(hex)
 {
     if ( hex.length == 3 )
@@ -7215,51 +7229,52 @@ _CPEventFromNativeMouseEvent= function(aNativeEvent, anEventType, aPoint, modifi
 
 p;14;CPFlashMovie.jI;21;Foundation/CPObject.jc;1816;
 {var the_class = objj_allocateClassPair(CPObject, "CPFlashMovie"),
-meta_class = the_class.isa;class_addIvars(the_class, [new objj_ivar("_fileName")]);
+meta_class = the_class.isa;class_addIvars(the_class, [new objj_ivar("_filename")]);
 objj_registerClassPair(the_class);
 objj_addClassForBundle(the_class, objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
-class_addMethods(the_class, [new objj_method(sel_getUid("initWithFile:"), function $CPFlashMovie__initWithFile_(self, _cmd, aFileName)
+class_addMethods(the_class, [new objj_method(sel_getUid("initWithFile:"), function $CPFlashMovie__initWithFile_(self, _cmd, aFilename)
 { with(self)
 {
     self = objj_msgSendSuper({ receiver:self, super_class:objj_getClass("CPObject") }, "init");
     if (self)
-        _fileName = aFileName;
+        _filename = aFilename;
     return self;
 }
-},["id","CPString"]), new objj_method(sel_getUid("fileName"), function $CPFlashMovie__fileName(self, _cmd)
+},["id","CPString"]), new objj_method(sel_getUid("filename"), function $CPFlashMovie__filename(self, _cmd)
 { with(self)
 {
-    return _fileName;
+    return _filename;
 }
 },["CPString"])]);
-class_addMethods(meta_class, [new objj_method(sel_getUid("flashMovieWithFile:"), function $CPFlashMovie__flashMovieWithFile_(self, _cmd, aFileName)
+class_addMethods(meta_class, [new objj_method(sel_getUid("flashMovieWithFile:"), function $CPFlashMovie__flashMovieWithFile_(self, _cmd, aFilename)
 { with(self)
 {
-    return objj_msgSend(objj_msgSend(self, "alloc"), "initWithFile:", aFileName);
+    return objj_msgSend(objj_msgSend(self, "alloc"), "initWithFile:", aFilename);
 }
 },["id","CPString"])]);
 }
-var CPFlashMovieFileNameKey = "CPFlashMovieFileNameKey";
+var CPFlashMovieFilenameKey = "CPFlashMovieFilenameKey";
 {
 var the_class = objj_getClass("CPFlashMovie")
 if(!the_class) objj_exception_throw(new objj_exception(OBJJClassNotFoundException, "*** Could not find definition for class \"CPFlashMovie\""));
 var meta_class = the_class.isa;class_addMethods(the_class, [new objj_method(sel_getUid("initWithCoder:"), function $CPFlashMovie__initWithCoder_(self, _cmd, aCoder)
 { with(self)
 {
-    _fileName = objj_msgSend(aCoder, "decodeObjectForKey:", CPFlashMovieFileNameKey);
+    _filename = objj_msgSend(aCoder, "decodeObjectForKey:", CPFlashMovieFilenameKey);
     return self;
 }
 },["id","CPCoder"]), new objj_method(sel_getUid("encodeWithCoder:"), function $CPFlashMovie__encodeWithCoder_(self, _cmd, aCoder)
 { with(self)
 {
-    objj_msgSend(aCoder, "encodeObject:forKey:", _fileName, CPFlashMovieFileNameKey);
+    objj_msgSend(aCoder, "encodeObject:forKey:", _filename, CPFlashMovieFilenameKey);
 }
 },["void","CPCoder"])]);
 }
 
-p;13;CPFlashView.ji;14;CPFlashMovie.ji;8;CPView.jc;4949;
+p;13;CPFlashView.ji;14;CPFlashMovie.ji;8;CPView.jc;6475;
+var IEFlashCLSID = "clsid:D27CDB6E-AE6D-11cf-96B8-444553540000";
 {var the_class = objj_allocateClassPair(CPView, "CPFlashView"),
-meta_class = the_class.isa;class_addIvars(the_class, [new objj_ivar("_flashMovie"), new objj_ivar("_flashVars"), new objj_ivar("_params"), new objj_ivar("_paramElements"), new objj_ivar("_DOMEmbedElement"), new objj_ivar("_DOMMParamElement"), new objj_ivar("_DOMObjectElement")]);
+meta_class = the_class.isa;class_addIvars(the_class, [new objj_ivar("_flashMovie"), new objj_ivar("_params"), new objj_ivar("_paramElements"), new objj_ivar("_DOMParamElement"), new objj_ivar("_DOMObjectElement"), new objj_ivar("_DOMInnerObjectElement")]);
 objj_registerClassPair(the_class);
 objj_addClassForBundle(the_class, objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
 class_addMethods(the_class, [new objj_method(sel_getUid("initWithFrame:"), function $CPFlashView__initWithFrame_(self, _cmd, aFrame)
@@ -7268,25 +7283,26 @@ class_addMethods(the_class, [new objj_method(sel_getUid("initWithFrame:"), funct
     self = objj_msgSendSuper({ receiver:self, super_class:objj_getClass("CPView") }, "initWithFrame:", aFrame);
     if (self)
     {
-        _DOMObjectElement = document.createElement("object");
-        _DOMObjectElement.width = "100%";
-        _DOMObjectElement.height = "100%";
-        _DOMObjectElement.style.top = "0px";
-        _DOMObjectElement.style.left = "0px";
-        _DOMParamElement = document.createElement("param");
-        _DOMParamElement.name = "movie";
-        _DOMObjectElement.appendChild(_DOMParamElement);
-        var param = document.createElement("param");
-        param.name = "wmode";
-        param.value = "transparent";
-        _DOMObjectElement.appendChild(param);
-        _DOMEmbedElement = document.createElement("embed");
-        _DOMEmbedElement.type = "application/x-shockwave-flash";
-        _DOMEmbedElement.setAttribute("wmode", "transparent");
-        _DOMEmbedElement.width = "100%";
-        _DOMEmbedElement.height = "100%";
-        _DOMElement.appendChild(_DOMEmbedElement);
-        _DOMElement.appendChild(_DOMObjectElement);
+        if (!CPBrowserIsEngine(CPInternetExplorerBrowserEngine))
+        {
+            _DOMObjectElement = document.createElement("object");
+            _DOMObjectElement.width = "100%";
+            _DOMObjectElement.height = "100%";
+            _DOMObjectElement.style.top = "0px";
+            _DOMObjectElement.style.left = "0px";
+            _DOMObjectElement.type = "application/x-shockwave-flash";
+            _DOMObjectElement.setAttribute("classid", IEFlashCLSID);
+            _DOMParamElement = document.createElement("param");
+            _DOMParamElement.name = "movie";
+            _DOMInnerObjectElement = document.createElement("object");
+            _DOMInnerObjectElement.width = "100%";
+            _DOMInnerObjectElement.height = "100%";
+            _DOMObjectElement.appendChild(_DOMParamElement);
+            _DOMObjectElement.appendChild(_DOMInnerObjectElement);
+            _DOMElement.appendChild(_DOMObjectElement);
+        }
+        else
+            objj_msgSend(self, "_rebuildIEObjects");
     }
     return self;
 }
@@ -7296,9 +7312,13 @@ class_addMethods(the_class, [new objj_method(sel_getUid("initWithFrame:"), funct
     if (_flashMovie == aFlashMovie)
         return;
     _flashMovie = aFlashMovie;
-    _DOMParamElement.value = aFlashMovie._fileName;
-    if (_DOMEmbedElement)
-       _DOMEmbedElement.src = aFlashMovie._fileName;
+    if (!CPBrowserIsEngine(CPInternetExplorerBrowserEngine))
+    {
+        _DOMParamElement.value = objj_msgSend(aFlashMovie, "filename");
+        _DOMInnerObjectElement.data = objj_msgSend(aFlashMovie, "filename");
+    }
+    else
+        objj_msgSend(self, "_rebuildIEObjects");
 }
 },["void","CPFlashMovie"]), new objj_method(sel_getUid("flashMovie"), function $CPFlashView__flashMovie(self, _cmd)
 { with(self)
@@ -7308,28 +7328,25 @@ class_addMethods(the_class, [new objj_method(sel_getUid("initWithFrame:"), funct
 },["CPFlashMovie"]), new objj_method(sel_getUid("setFlashVars:"), function $CPFlashView__setFlashVars_(self, _cmd, aDictionary)
 { with(self)
 {
-    _flashVars = aDictionary;
     var varString = "",
-        enumerator = objj_msgSend(_flashVars, "keyEnumerator");
+        enumerator = objj_msgSend(aDictionary, "keyEnumerator");
     var key;
     while (key = objj_msgSend(enumerator, "nextObject"))
-        varString = objj_msgSend(varString, "stringByAppendingFormat:", "&%@=%@", key, objj_msgSend(_flashVars, "objectForKey:", key));
-    var param = document.createElement("param");
-    param.name = "flashvars";
-    param.value = varString;
-    _DOMObjectElement.appendChild(param);
-    if (_DOMEmbedElement)
-        _DOMEmbedElement.setAttribute("flashvars", varString);
+        varString = objj_msgSend(varString, "stringByAppendingFormat:", "&%@=%@", key, objj_msgSend(aDictionary, "objectForKey:", key));
+    if (!_params)
+        _params = objj_msgSend(CPDictionary, "dictionary");
+    objj_msgSend(_params, "setObject:forKey:", varString, "flashvars");
+    objj_msgSend(self, "setParameters:", _params);
 }
 },["void","CPDictionary"]), new objj_method(sel_getUid("flashVars"), function $CPFlashView__flashVars(self, _cmd)
 { with(self)
 {
-    return _flashVars;
+    return objj_msgSend(_params, "objectForKey:", "flashvars");
 }
 },["CPDictionary"]), new objj_method(sel_getUid("setParameters:"), function $CPFlashView__setParameters_(self, _cmd, aDictionary)
 { with(self)
 {
-    if (_paramElements)
+    if (_paramElements && !CPBrowserIsEngine(CPInternetExplorerBrowserEngine))
     {
         var elements = objj_msgSend(_paramElements, "allValues"),
             count = objj_msgSend(elements, "count");
@@ -7337,24 +7354,44 @@ class_addMethods(the_class, [new objj_method(sel_getUid("initWithFrame:"), funct
             _DOMObjectElement.removeChild(objj_msgSend(elements, "objectAtIndex:", i));
     }
     _params = aDictionary;
-    _paramElements = objj_msgSend(CPDictionary, "dictionary");
-    var enumerator = objj_msgSend(_params, "keyEnumerator"),
-        key;
-    while (key = objj_msgSend(enumerator, "nextObject"))
+    if (!CPBrowserIsEngine(CPInternetExplorerBrowserEngine))
     {
-        var param = document.createElement("param");
-        param.name = key;
-        param.value = objj_msgSend(_params, "objectForKey:", key);
-        _DOMObjectElement.appendChild(param);
-        objj_msgSend(_paramElements, "setObject:forKey:", param, key);
+        _paramElements = objj_msgSend(CPDictionary, "dictionary");
+        var enumerator = objj_msgSend(_params, "keyEnumerator"),
+            key;
+        while (key = objj_msgSend(enumerator, "nextObject") && _DOMObjectElement)
+        {
+            var param = document.createElement("param");
+            param.name = key;
+            param.value = objj_msgSend(_params, "objectForKey:", key);
+            _DOMObjectElement.appendChild(param);
+            objj_msgSend(_paramElements, "setObject:forKey:", param, key);
+        }
     }
+    else
+        objj_msgSend(self, "_rebuildIEObjects");
 }
 },["void","CPDictionary"]), new objj_method(sel_getUid("parameters"), function $CPFlashView__parameters(self, _cmd)
 { with(self)
 {
     return _params;
 }
-},["CPDictionary"]), new objj_method(sel_getUid("mouseDragged:"), function $CPFlashView__mouseDragged_(self, _cmd, anEvent)
+},["CPDictionary"]), new objj_method(sel_getUid("_rebuildIEObjects"), function $CPFlashView___rebuildIEObjects(self, _cmd)
+{ with(self)
+{
+    _DOMElement.innerHTML = "";
+    if (!objj_msgSend(_flashMovie, "filename"))
+        return;
+    var paramString = objj_msgSend(CPString, "stringWithFormat:", "<param name='movie' value='%@' />", objj_msgSend(_flashMovie, "filename")),
+        paramEnumerator = objj_msgSend(_params, "keyEnumerator"),
+        key;
+    while (key = objj_msgSend(paramEnumerator, "nextObject"))
+        paramString = objj_msgSend(paramString, "stringByAppendingFormat:", "<param name='%@' value='%@' />", key, objj_msgSend(_params, "objectForKey:", key));
+    _DOMObjectElement = document.createElement("object");
+    _DOMElement.appendChild(_DOMObjectElement);
+    _DOMObjectElement.outerHTML = objj_msgSend(CPString, "stringWithFormat:", "<object classid=%@ width=%@ height=%@>%@</object>", IEFlashCLSID, CGRectGetWidth(objj_msgSend(self, "bounds")), CGRectGetHeight(objj_msgSend(self, "bounds")), paramString);
+}
+},["void"]), new objj_method(sel_getUid("mouseDragged:"), function $CPFlashView__mouseDragged_(self, _cmd, anEvent)
 { with(self)
 {
     objj_msgSend(objj_msgSend(objj_msgSend(self, "window"), "platformWindow"), "_propagateCurrentDOMEvent:", YES);
@@ -8501,7 +8538,7 @@ class_addMethods(meta_class, [new objj_method(sel_getUid("openPanel"), function 
 },["id"])]);
 }
 
-p;15;CPOutlineView.ji;15;CPTableColumn.ji;13;CPTableView.jc;30284;
+p;15;CPOutlineView.ji;15;CPTableColumn.ji;13;CPTableView.jc;30560;
 CPOutlineViewColumnDidMoveNotification = "CPOutlineViewColumnDidMoveNotification";
 CPOutlineViewColumnDidResizeNotification = "CPOutlineViewColumnDidResizeNotification";
 CPOutlineViewItemDidCollapseNotification = "CPOutlineViewItemDidCollapseNotification";
@@ -8882,93 +8919,99 @@ var _reloadItem = function( anOutlineView, anItem)
 {
     if (!anItem)
         return;
-    var itemInfosForItems = anOutlineView._itemInfosForItems,
-        dataSource = anOutlineView._outlineViewDataSource,
-        itemUID = objj_msgSend(anItem, "UID"),
-        itemInfo = itemInfosForItems[itemUID];
-    if (!itemInfo)
-        return [];
-    var parent = itemInfo.parent,
-        parentItemInfo = parent ? itemInfosForItems[objj_msgSend(parent, "UID")] : anOutlineView._rootItemInfo,
-        parentChildren = parentItemInfo.children,
-        index = objj_msgSend(parentChildren, "indexOfObjectIdenticalTo:", anItem),
-        newItem = objj_msgSend(dataSource, "outlineView:child:ofItem:", anOutlineView, index, parent);
-    if (anItem !== newItem)
+    with(anOutlineView)
     {
-        itemInfosForItems[objj_msgSend(anItem, "UID")] = nil;
-        itemInfosForItems[objj_msgSend(newItem, "UID")] = itemInfo;
-        parentChildren[index] = newItem;
-        anOutlineView._itemsForRows[itemInfo.row] = newItem;
-    }
-    itemInfo.isExpandable = objj_msgSend(dataSource, "outlineView:isItemExpandable:", anOutlineView, newItem);
-    itemInfo.isExpanded = itemInfo.isExpandable && itemInfo.isExpanded;
-}
-var _loadItemInfoForItem = function( anOutlineView, anItem, isIntermediate)
-{
-    var itemInfosForItems = anOutlineView._itemInfosForItems,
-        dataSource = anOutlineView._outlineViewDataSource;
-    if (!anItem)
-        var itemInfo = anOutlineView._rootItemInfo;
-    else
-    {
-        var itemUID = objj_msgSend(anItem, "UID"),
+        var itemInfosForItems = _itemInfosForItems,
+            dataSource = _outlineViewDataSource,
+            itemUID = objj_msgSend(anItem, "UID"),
             itemInfo = itemInfosForItems[itemUID];
         if (!itemInfo)
             return [];
-        itemInfo.isExpandable = objj_msgSend(dataSource, "outlineView:isItemExpandable:", anOutlineView, anItem);
-        if (!itemInfo.isExpandable && itemInfo.isExpanded)
+        var parent = itemInfo.parent,
+            parentItemInfo = parent ? itemInfosForItems[objj_msgSend(parent, "UID")] : _rootItemInfo,
+            parentChildren = parentItemInfo.children,
+            index = objj_msgSend(parentChildren, "indexOfObjectIdenticalTo:", anItem),
+            newItem = objj_msgSend(dataSource, "outlineView:child:ofItem:", anOutlineView, index, parent);
+        if (anItem !== newItem)
         {
-            itemInfo.isExpanded = NO;
+            itemInfosForItems[objj_msgSend(anItem, "UID")] = nil;
+            itemInfosForItems[objj_msgSend(newItem, "UID")] = itemInfo;
+            parentChildren[index] = newItem;
+            _itemsForRows[itemInfo.row] = newItem;
+        }
+        itemInfo.isExpandable = objj_msgSend(dataSource, "outlineView:isItemExpandable:", anOutlineView, newItem);
+        itemInfo.isExpanded = itemInfo.isExpandable && itemInfo.isExpanded;
+    }
+}
+var _loadItemInfoForItem = function( anOutlineView, anItem, isIntermediate)
+{
+    with(anOutlineView)
+    {
+        var itemInfosForItems = _itemInfosForItems,
+            dataSource = _outlineViewDataSource;
+        if (!anItem)
+            var itemInfo = _rootItemInfo;
+        else
+        {
+            var itemUID = objj_msgSend(anItem, "UID"),
+                itemInfo = itemInfosForItems[itemUID];
+            if (!itemInfo)
+                return [];
+            itemInfo.isExpandable = objj_msgSend(dataSource, "outlineView:isItemExpandable:", anOutlineView, anItem);
+            if (!itemInfo.isExpandable && itemInfo.isExpanded)
+            {
+                itemInfo.isExpanded = NO;
+                itemInfo.children = [];
+            }
+        }
+        var weight = itemInfo.weight,
+            descendants = anItem ? [anItem] : [];
+        if (itemInfo.isExpanded && (!(_implementedOutlineViewDataSourceMethods & CPOutlineViewDataSource_outlineView_shouldDeferDisplayingChildrenOfItem_) ||
+            !objj_msgSend(dataSource, "outlineView:shouldDeferDisplayingChildrenOfItem:", anOutlineView, anItem)))
+        {
+            var index = 0,
+                count = objj_msgSend(dataSource, "outlineView:numberOfChildrenOfItem:", anOutlineView, anItem),
+                level = itemInfo.level + 1;
             itemInfo.children = [];
-        }
-    }
-    var weight = itemInfo.weight,
-        descendants = anItem ? [anItem] : [];
-    if (itemInfo.isExpanded && (!(anOutlineView._implementedOutlineViewDataSourceMethods & CPOutlineViewDataSource_outlineView_shouldDeferDisplayingChildrenOfItem_) ||
-        !objj_msgSend(dataSource, "outlineView:shouldDeferDisplayingChildrenOfItem:", anOutlineView, anItem)))
-    {
-        var index = 0,
-            count = objj_msgSend(dataSource, "outlineView:numberOfChildrenOfItem:", anOutlineView, anItem),
-            level = itemInfo.level + 1;
-        itemInfo.children = [];
-        for (; index < count; ++index)
-        {
-            var childItem = objj_msgSend(dataSource, "outlineView:child:ofItem:", anOutlineView, index, anItem),
-                childItemInfo = itemInfosForItems[objj_msgSend(childItem, "UID")];
-            if (!childItemInfo)
+            for (; index < count; ++index)
             {
-                childItemInfo = { isExpanded:NO, isExpandable:NO, children:[], weight:1 };
-                itemInfosForItems[objj_msgSend(childItem, "UID")] = childItemInfo;
+                var childItem = objj_msgSend(dataSource, "outlineView:child:ofItem:", anOutlineView, index, anItem),
+                    childItemInfo = itemInfosForItems[objj_msgSend(childItem, "UID")];
+                if (!childItemInfo)
+                {
+                    childItemInfo = { isExpanded:NO, isExpandable:NO, children:[], weight:1 };
+                    itemInfosForItems[objj_msgSend(childItem, "UID")] = childItemInfo;
+                }
+                itemInfo.children[index] = childItem;
+                var childDescendants = _loadItemInfoForItem(anOutlineView, childItem, YES);
+                childItemInfo.parent = anItem;
+                childItemInfo.level = level;
+                descendants = descendants.concat(childDescendants);
             }
-            itemInfo.children[index] = childItem;
-            var childDescendants = _loadItemInfoForItem(anOutlineView, childItem, YES);
-            childItemInfo.parent = anItem;
-            childItemInfo.level = level;
-            descendants = descendants.concat(childDescendants);
         }
-    }
-    itemInfo.weight = descendants.length;
-    if (!isIntermediate)
-    {
-        var index = MAX(itemInfo.row, 0),
-            itemsForRows = anOutlineView._itemsForRows;
-        descendants.unshift(index, weight);
-        itemsForRows.splice.apply(itemsForRows, descendants);
-        var count = itemsForRows.length;
-        for (; index < count; ++index)
-            itemInfosForItems[objj_msgSend(itemsForRows[index], "UID")].row = index;
-        var deltaWeight = itemInfo.weight - weight;
-        if (deltaWeight !== 0)
+        itemInfo.weight = descendants.length;
+        if (!isIntermediate)
         {
-            var parent = itemInfo.parent;
-            while (parent)
+            var index = MAX(itemInfo.row, 0),
+                itemsForRows = _itemsForRows;
+            descendants.unshift(index, weight);
+            itemsForRows.splice.apply(itemsForRows, descendants);
+            var count = itemsForRows.length;
+            for (; index < count; ++index)
+                itemInfosForItems[objj_msgSend(itemsForRows[index], "UID")].row = index;
+            var deltaWeight = itemInfo.weight - weight;
+            if (deltaWeight !== 0)
             {
-                var parentItemInfo = itemInfosForItems[objj_msgSend(parent, "UID")];
-                parentItemInfo.weight += deltaWeight;
-                parent = parentItemInfo.parent;
+                var parent = itemInfo.parent;
+                while (parent)
+                {
+                    var parentItemInfo = itemInfosForItems[objj_msgSend(parent, "UID")];
+                    parentItemInfo.weight += deltaWeight;
+                    parent = parentItemInfo.parent;
+                }
+                if (anItem)
+                    _rootItemInfo.weight += deltaWeight;
             }
-            if (anItem)
-                anOutlineView._rootItemInfo.weight += deltaWeight;
         }
     }
     return descendants;
@@ -9786,7 +9829,7 @@ var meta_class = the_class.isa;class_addMethods(the_class, [new objj_method(sel_
 },["void","CPCoder"])]);
 }
 
-p;21;CPProgressIndicator.jI;19;AppKit/CGGeometry.jI;20;AppKit/CPImageView.jI;15;AppKit/CPView.jc;13585;
+p;21;CPProgressIndicator.jI;19;AppKit/CGGeometry.jI;20;AppKit/CPImageView.jI;15;AppKit/CPView.jc;12762;
 CPProgressIndicatorBarStyle = 0;
 CPProgressIndicatorSpinningStyle = 1;
 CPProgressIndicatorHUDBarStyle = 2;
@@ -9970,17 +10013,21 @@ class_addMethods(the_class, [new objj_method(sel_getUid("initWithFrame:"), funct
         return;
     if (!_barView)
     {
-        _barView = objj_msgSend(objj_msgSend(CPView, "alloc"), "initWithFrame:", CGRectMake(2.0, 2.0, 0.0, 9.0));
-        objj_msgSend(_barView, "setBackgroundColor:", objj_msgSend(CPColor, "redColor"));
+        _barView = objj_msgSend(objj_msgSend(CPView, "alloc"), "initWithFrame:", CGRectMake(0.0, 0.0, 0.0, 16.0));
         objj_msgSend(self, "addSubview:", _barView);
     }
-    objj_msgSend(_barView, "setBackgroundColor:", _CPControlColorWithPatternImage(
+    objj_msgSend(_barView, "setBackgroundColor:", _CPControlThreePartImagePattern(
+        NO,
         CPProgressIndicatorStyleSizes,
         CPProgressIndicatorClassName,
         "Bar",
         CPProgressIndicatorStyleIdentifiers[_style],
         _CPControlIdentifierForControlSize(_controlSize)));
-    objj_msgSend(_barView, "setFrameSize:", CGSizeMake(CGRectGetWidth(objj_msgSend(self, "bounds")) * (_doubleValue - _minValue) / (_maxValue - _minValue) - 4.0, 9.0));
+    var width = CGRectGetWidth(objj_msgSend(self, "bounds")),
+        barWidth = width * ((_doubleValue - _minValue) / (_maxValue - _minValue));
+    if (barWidth > 0.0 && barWidth < 4.0)
+        barWidth = 4.0;
+    objj_msgSend(_barView, "setFrameSize:", CGSizeMake(barWidth, 16.0));
 }
 },["void"]), new objj_method(sel_getUid("updateBackgroundColor"), function $CPProgressIndicator__updateBackgroundColor(self, _cmd)
 { with(self)
@@ -10041,22 +10088,19 @@ class_addMethods(meta_class, [new objj_method(sel_getUid("initialize"), function
         smallIdentifier = _CPControlIdentifierForControlSize(CPSmallControlSize),
         miniIdentifier = _CPControlIdentifierForControlSize(CPMiniControlSize);
     CPProgressIndicatorStyleSizes = [];
-    var prefix = CPProgressIndicatorClassName + "BezelBorder" + CPProgressIndicatorStyleIdentifiers[CPProgressIndicatorBarStyle];
-    CPProgressIndicatorStyleSizes[prefix + regularIdentifier] = [{ width:3.0, height:15.0 }, { width:1.0, height:15.0 }, { width:3.0, height:15.0 }];
-    CPProgressIndicatorStyleSizes[prefix + smallIdentifier] = [{ width:3.0, height:15.0 }, { width:1.0, height:15.0 }, { width:3.0, height:15.0 }];
-    CPProgressIndicatorStyleSizes[prefix + miniIdentifier] = [{ width:3.0, height:15.0 }, { width:1.0, height:15.0 }, { width:3.0, height:15.0 }];
-    prefix = CPProgressIndicatorClassName + "Bar" + CPProgressIndicatorStyleIdentifiers[CPProgressIndicatorBarStyle];
-    CPProgressIndicatorStyleSizes[prefix + regularIdentifier] = { width:1.0, height:9.0 };
-    CPProgressIndicatorStyleSizes[prefix + smallIdentifier] = { width:1.0, height:9.0 };
-    CPProgressIndicatorStyleSizes[prefix + miniIdentifier] = { width:1.0, height:9.0 };
-    prefix = CPProgressIndicatorClassName + "BezelBorder" + CPProgressIndicatorStyleIdentifiers[CPProgressIndicatorHUDBarStyle];
-    CPProgressIndicatorStyleSizes[prefix + regularIdentifier] = [{ width:3.0, height:15.0 }, { width:1.0, height:15.0 }, { width:3.0, height:15.0 }];
-    CPProgressIndicatorStyleSizes[prefix + smallIdentifier] = [{ width:3.0, height:15.0 }, { width:1.0, height:15.0 }, { width:3.0, height:15.0 }];
-    CPProgressIndicatorStyleSizes[prefix + miniIdentifier] = [{ width:3.0, height:15.0 }, { width:1.0, height:15.0 }, { width:3.0, height:15.0 }];
-    prefix = CPProgressIndicatorClassName + "Bar" + CPProgressIndicatorStyleIdentifiers[CPProgressIndicatorHUDBarStyle];
-    CPProgressIndicatorStyleSizes[prefix + regularIdentifier] = { width:1.0, height:9.0 };
-    CPProgressIndicatorStyleSizes[prefix + smallIdentifier] = { width:1.0, height:9.0 };
-    CPProgressIndicatorStyleSizes[prefix + miniIdentifier] = { width:1.0, height:9.0 };
+    var prefixes = [
+        CPProgressIndicatorClassName + "BezelBorder" + CPProgressIndicatorStyleIdentifiers[CPProgressIndicatorBarStyle],
+        CPProgressIndicatorClassName + "Bar" + CPProgressIndicatorStyleIdentifiers[CPProgressIndicatorBarStyle],
+        CPProgressIndicatorClassName + "BezelBorder" + CPProgressIndicatorStyleIdentifiers[CPProgressIndicatorHUDBarStyle],
+        CPProgressIndicatorClassName + "Bar" + CPProgressIndicatorStyleIdentifiers[CPProgressIndicatorHUDBarStyle]
+    ];
+    for (var i = 0, count = prefixes.length; i<count; i++)
+    {
+        var prefix = prefixes[i];
+        CPProgressIndicatorStyleSizes[prefix + regularIdentifier] = [{ width:3.0, height:16.0 }, { width:1.0, height:16.0 }, { width:3.0, height:16.0 }];
+        CPProgressIndicatorStyleSizes[prefix + smallIdentifier] = [{ width:3.0, height:16.0 }, { width:1.0, height:16.0 }, { width:3.0, height:16.0 }];
+        CPProgressIndicatorStyleSizes[prefix + miniIdentifier] = [{ width:3.0, height:16.0 }, { width:1.0, height:16.0 }, { width:3.0, height:16.0 }];
+    }
 }
 },["void"])]);
 }
@@ -13923,7 +13967,7 @@ var meta_class = the_class.isa;class_addMethods(the_class, [new objj_method(sel_
 },["CGSize","CPFont","float"])]);
 }
 
-p;15;CPTableColumn.jI;25;Foundation/CPDictionary.jI;21;Foundation/CPObject.jI;29;Foundation/CPSortDescriptor.jI;21;Foundation/CPString.ji;19;CPTableHeaderView.jc;13104;
+p;15;CPTableColumn.jI;25;Foundation/CPDictionary.jI;21;Foundation/CPObject.jI;29;Foundation/CPSortDescriptor.jI;21;Foundation/CPString.ji;19;CPTableHeaderView.jc;13001;
 CPTableColumnNoResizing = 0;
 CPTableColumnAutoresizingMask = 1;
 CPTableColumnUserResizingMask = 2;
@@ -13947,8 +13991,7 @@ class_addMethods(the_class, [new objj_method(sel_getUid("init"), function $CPTab
         _minWidth = 10.0;
         _maxWidth = 1000000.0;
         objj_msgSend(self, "setIdentifier:", anIdentifier);
-        var header = objj_msgSend(CPTextField, "new");
-        objj_msgSend(header, "setBackgroundColor:", objj_msgSend(CPColor, "colorWithPatternImage:", CPAppKitImage("tableview-headerview.png", CGSizeMake(1.0, 23.0))));
+        var header = objj_msgSend(objj_msgSend(_CPTableColumnHeaderView, "alloc"), "initWithFrame:", CGRectMakeZero());
         objj_msgSend(self, "setHeaderView:", header);
         var textDataView = objj_msgSend(CPTextField, "new");
         objj_msgSend(textDataView, "setValue:forThemeAttribute:inState:", objj_msgSend(CPColor, "whiteColor"), "text-color", CPThemeStateHighlighted);
@@ -14216,9 +14259,61 @@ var meta_class = the_class.isa;class_addMethods(the_class, [new objj_method(sel_
 },["id","int"])]);
 }
 
-p;19;CPTableHeaderView.ji;15;CPTableColumn.ji;13;CPTableView.ji;8;CPView.jc;5218;
+p;19;CPTableHeaderView.ji;15;CPTableColumn.ji;13;CPTableView.ji;8;CPView.jc;12074;
+var CPThemeStatePressed = CPThemeState("pressed");
+{var the_class = objj_allocateClassPair(CPView, "_CPTableColumnHeaderView"),
+meta_class = the_class.isa;class_addIvars(the_class, [new objj_ivar("_textField")]);
+objj_registerClassPair(the_class);
+objj_addClassForBundle(the_class, objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
+class_addMethods(the_class, [new objj_method(sel_getUid("initWithFrame:"), function $_CPTableColumnHeaderView__initWithFrame_(self, _cmd, frame)
+{ with(self)
+{
+    self = objj_msgSendSuper({ receiver:self, super_class:objj_getClass("CPView") }, "initWithFrame:", frame);
+    if (self)
+    {
+        _textField = objj_msgSend(objj_msgSend(CPTextField, "alloc"), "initWithFrame:", objj_msgSend(self, "bounds"));
+        objj_msgSend(_textField, "setAutoresizingMask:", CPViewWidthSizable|CPViewHeightSizable);
+        objj_msgSend(self, "addSubview:", _textField);
+    }
+    return self;
+}
+},["void","CGRect"]), new objj_method(sel_getUid("layoutSubviews"), function $_CPTableColumnHeaderView__layoutSubviews(self, _cmd)
+{ with(self)
+{
+    var themeState = objj_msgSend(self, "themeState");
+    if((themeState & CPThemeStateSelected) && (themeState & CPThemeStatePressed))
+        objj_msgSend(self, "setBackgroundColor:", objj_msgSend(CPColor, "colorWithPatternImage:", CPAppKitImage("tableview-headerview-highlighted-pressed.png", CGSizeMake(1.0, 22.0))));
+    else if (themeState == CPThemeStateSelected)
+        objj_msgSend(self, "setBackgroundColor:", objj_msgSend(CPColor, "colorWithPatternImage:", CPAppKitImage("tableview-headerview-highlighted.png", CGSizeMake(1.0, 22.0))));
+    else if (themeState == CPThemeStatePressed)
+        objj_msgSend(self, "setBackgroundColor:", objj_msgSend(CPColor, "colorWithPatternImage:", CPAppKitImage("tableview-headerview-pressed.png", CGSizeMake(1.0, 22.0))));
+    else
+        objj_msgSend(self, "setBackgroundColor:", objj_msgSend(CPColor, "colorWithPatternImage:", CPAppKitImage("tableview-headerview.png", CGSizeMake(1.0, 22.0))));
+}
+},["void"]), new objj_method(sel_getUid("setStringValue:"), function $_CPTableColumnHeaderView__setStringValue_(self, _cmd, string)
+{ with(self)
+{
+    objj_msgSend(_textField, "setStringValue:", string);
+}
+},["void","CPString"]), new objj_method(sel_getUid("stringValue"), function $_CPTableColumnHeaderView__stringValue(self, _cmd)
+{ with(self)
+{
+    return objj_msgSend(_textField, "stringValue");
+}
+},["CPString"]), new objj_method(sel_getUid("textField"), function $_CPTableColumnHeaderView__textField(self, _cmd)
+{ with(self)
+{
+    return _textField;
+}
+},["void"]), new objj_method(sel_getUid("sizeToFit"), function $_CPTableColumnHeaderView__sizeToFit(self, _cmd)
+{ with(self)
+{
+    objj_msgSend(_textField, "sizeToFit");
+}
+},["void"])]);
+}
 {var the_class = objj_allocateClassPair(CPView, "CPTableHeaderView"),
-meta_class = the_class.isa;class_addIvars(the_class, [new objj_ivar("_resizedColumn"), new objj_ivar("_draggedColumn"), new objj_ivar("_draggedDistance"), new objj_ivar("_tableView")]);
+meta_class = the_class.isa;class_addIvars(the_class, [new objj_ivar("_resizedColumn"), new objj_ivar("_draggedColumn"), new objj_ivar("_pressedColumn"), new objj_ivar("_draggedDistance"), new objj_ivar("_tableView")]);
 objj_registerClassPair(the_class);
 objj_addClassForBundle(the_class, objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
 class_addMethods(the_class, [new objj_method(sel_getUid("resizedColumn"), function $CPTableHeaderView__resizedColumn(self, _cmd)
@@ -14231,6 +14326,12 @@ new objj_method(sel_getUid("draggedColumn"), function $CPTableHeaderView__dragge
 { with(self)
 {
 return _draggedColumn;
+}
+},["id"]),
+new objj_method(sel_getUid("pressedColumn"), function $CPTableHeaderView__pressedColumn(self, _cmd)
+{ with(self)
+{
+return _pressedColumn;
 }
 },["id"]),
 new objj_method(sel_getUid("draggedDistance"), function $CPTableHeaderView__draggedDistance(self, _cmd)
@@ -14258,7 +14359,9 @@ _tableView = newValue;
     {
         _resizedColumn = CPNotFound;
         _draggedColumn = CPNotFound;
+        _pressedColumn = CPNotFound;
         _draggedDistance = 0.0;
+        objj_msgSend(self, "setBackgroundColor:", objj_msgSend(CPColor, "colorWithPatternImage:", CPAppKitImage("tableview-headerview.png", CGSizeMake(1.0, 22.0))));
     }
     return self;
 }
@@ -14295,47 +14398,122 @@ _tableView = newValue;
         bounds.origin.x += objj_msgSend(tableColumns[aColumnIndex], "width") + tableSpacing.width;
     return bounds;
 }
-},["CGRect","int"]), new objj_method(sel_getUid("layoutSubviews"), function $CPTableHeaderView__layoutSubviews(self, _cmd)
+},["CGRect","int"]), new objj_method(sel_getUid("_resizeRectBeforeColumn:"), function $CPTableHeaderView___resizeRectBeforeColumn_(self, _cmd, column)
+{ with(self)
+{
+    var rect = objj_msgSend(self, "headerRectOfColumn:", column);
+    rect.origin.x -= 10;
+    rect.size.width = 20;
+    return rect;
+}
+},["CPRect","CPInteger"]), new objj_method(sel_getUid("_setPressedColumn:"), function $CPTableHeaderView___setPressedColumn_(self, _cmd, column)
+{ with(self)
+{
+    if (_pressedColumn != CPNotFound)
+    {
+        var headerView = objj_msgSend(_tableView._tableColumns[_pressedColumn], "headerView");
+        objj_msgSend(headerView, "unsetThemeState:", CPThemeStatePressed);
+    }
+    if (column != CPNotFound)
+    {
+        var headerView = objj_msgSend(_tableView._tableColumns[column], "headerView");
+        objj_msgSend(headerView, "setThemeState:", CPThemeStatePressed);
+    }
+    _pressedColumn = column;
+}
+},["void","CPInteger"]), new objj_method(sel_getUid("mouseDown:"), function $CPTableHeaderView__mouseDown_(self, _cmd, theEvent)
+{ with(self)
+{
+    var location = objj_msgSend(self, "convertPoint:fromView:", objj_msgSend(theEvent, "locationInWindow"), nil),
+        aPoint = CGPointMakeCopy(location),
+        clickedColumn = objj_msgSend(self, "columnAtPoint:", aPoint);
+    if (clickedColumn == -1)
+        return;
+    if (_tableView._implementedDelegateMethods & (1 << 6))
+        objj_msgSend(objj_msgSend(_tableView, "delegate"), "tableView:mouseDownInHeaderOfTableColumn:", _tableView, objj_msgSend(objj_msgSend(_tableView, "tableColumns"), "objectAtIndex:", clickedColumn));
+    objj_msgSend(self, "_setPressedColumn:", clickedColumn);
+}
+},["void","CPEvent"]), new objj_method(sel_getUid("mouseUp:"), function $CPTableHeaderView__mouseUp_(self, _cmd, theEvent)
+{ with(self)
+{
+    var location = objj_msgSend(self, "convertPoint:fromView:", objj_msgSend(theEvent, "locationInWindow"), nil),
+        clickedColumn = objj_msgSend(self, "columnAtPoint:", location);
+    objj_msgSend(self, "_setPressedColumn:", CPNotFound);
+    if (clickedColumn == -1)
+        return;
+    if (objj_msgSend(_tableView, "allowsColumnSelection"))
+    {
+        if (objj_msgSend(theEvent, "modifierFlags") & CPCommandKeyMask)
+        {
+            if (objj_msgSend(_tableView, "isColumnSelected:", clickedColumn))
+                objj_msgSend(_tableView, "deselectColumn:", clickedColumn);
+            else if (objj_msgSend(_tableView, "allowsMultipleSelection") == YES)
+                objj_msgSend(_tableView, "selectColumnIndexes:byExtendingSelection:", objj_msgSend(CPIndexSet, "indexSetWithIndex:", clickedColumn), YES);
+        }
+        else if (objj_msgSend(theEvent, "modifierFlags") & CPShiftKeyMask)
+        {
+            var selectedIndexes = objj_msgSend(_tableView, "selectedColumnIndexes"),
+                startColumn = MIN(clickedColumn, objj_msgSend(selectedIndexes, "lastIndex")),
+                endColumn = MAX(clickedColumn, objj_msgSend(selectedIndexes, "firstIndex"));
+            objj_msgSend(_tableView, "selectColumnIndexes:byExtendingSelection:", objj_msgSend(CPIndexSet, "indexSetWithIndexesInRange:", CPMakeRange(startColumn, endColumn - startColumn + 1)), YES);
+        }
+        else
+            objj_msgSend(_tableView, "selectColumnIndexes:byExtendingSelection:", objj_msgSend(CPIndexSet, "indexSetWithIndex:", clickedColumn), NO);
+    }
+}
+},["void","CPEvent"]), new objj_method(sel_getUid("layoutSubviews"), function $CPTableHeaderView__layoutSubviews(self, _cmd)
 { with(self)
 {
     var tableColumns = objj_msgSend(_tableView, "tableColumns"),
-        count = objj_msgSend(tableColumns, "count"),
-        columnRect = objj_msgSend(self, "bounds"),
-        spacing = objj_msgSend(_tableView, "intercellSpacing");
-    for (i = 0; i < count; ++i)
+        count = objj_msgSend(tableColumns, "count");
+    for (var i = 0; i < count; i++)
     {
         var column = objj_msgSend(tableColumns, "objectAtIndex:", i),
             headerView = objj_msgSend(column, "headerView");
-        columnRect.size.width = objj_msgSend(column, "width") + spacing.width;
-        objj_msgSend(headerView, "setFrame:", columnRect);
-        columnRect.origin.x += objj_msgSend(column, "width") + spacing.width;
-        objj_msgSend(self, "addSubview:", headerView);
+        var frame = objj_msgSend(self, "headerRectOfColumn:", i);
+        frame.size.height -= 0.5;
+        if (i > 0)
+        {
+            frame.origin.x += 0.5;
+            frame.size.width -= 1;
+        }
+        objj_msgSend(headerView, "setFrame:", frame);
+        if(objj_msgSend(headerView, "superview") != self)
+            objj_msgSend(self, "addSubview:", headerView);
     }
 }
 },["void"]), new objj_method(sel_getUid("drawRect:"), function $CPTableHeaderView__drawRect_(self, _cmd, aRect)
 { with(self)
 {
-    objj_msgSend(objj_msgSend(_tableView, "gridColor"), "setStroke");
     var context = objj_msgSend(objj_msgSend(CPGraphicsContext, "currentContext"), "graphicsPort"),
-        exposedColumnIndexes = exposedColumnIndexes = objj_msgSend(_tableView, "columnIndexesInRect:", aRect),
-        columnsArray = [];
-    objj_msgSend(exposedColumnIndexes, "getIndexes:maxCount:inIndexRange:", columnsArray, -1, nil);
+        exposedColumnIndexes = objj_msgSend(_tableView, "columnIndexesInRect:", aRect),
+        columnsArray = [],
+        tableColumns = objj_msgSend(_tableView, "tableColumns"),
+        exposedTableColumns = _tableView._exposedColumns,
+        firstIndex = objj_msgSend(exposedTableColumns, "firstIndex"),
+        exposedRange = CPMakeRange(firstIndex, objj_msgSend(exposedTableColumns, "lastIndex") - firstIndex + 1);
+    CGContextSetLineWidth(context, 1);
+    CGContextSetStrokeColor(context, objj_msgSend(_tableView, "gridColor"));
+    objj_msgSend(exposedColumnIndexes, "getIndexes:maxCount:inIndexRange:", columnsArray, -1, exposedRange);
     var columnArrayIndex = 0,
-        columnArrayCount = columnsArray.length;
-    for(; columnArrayIndex < columnArrayCount; ++columnArrayIndex)
+        columnArrayCount = columnsArray.length,
+        columnMaxX;
+    CGContextBeginPath(context);
+    for(; columnArrayIndex < columnArrayCount; columnArrayIndex++)
     {
-        var columnToStroke = objj_msgSend(self, "headerRectOfColumn:", columnArrayIndex);
-        CGContextBeginPath(context);
-        CGContextMoveToPoint(context, ROUND(columnToStroke.origin.x + columnToStroke.size.width) + 0.5, ROUND(columnToStroke.origin.y) + 0.5);
-        CGContextAddLineToPoint(context, ROUND(columnToStroke.origin.x + columnToStroke.size.width) + 0.5, ROUND(columnToStroke.origin.y + columnToStroke.size.height) + 0.5);
-        CGContextSetLineWidth(context, 1);
-        CGContextStrokePath(context);
+        var columnIndex = columnsArray[columnArrayIndex],
+            columnToStroke = objj_msgSend(self, "headerRectOfColumn:", columnIndex);
+        columnMaxX = CGRectGetMaxX(columnToStroke);
+        CGContextMoveToPoint(context, ROUND(columnMaxX) + 0.5, ROUND(CGRectGetMinY(columnToStroke)));
+        CGContextAddLineToPoint(context, ROUND(columnMaxX) + 0.5, ROUND(CGRectGetMaxY(columnToStroke)));
     }
+    CGContextClosePath(context);
+    CGContextStrokePath(context);
 }
 },["void","CGRect"])]);
 }
 
-p;13;CPTableView.jI;20;Foundation/CPArray.ji;11;CPControl.ji;15;CPTableColumn.ji;15;_CPCornerView.ji;12;CPScroller.jc;106148;
+p;13;CPTableView.jI;20;Foundation/CPArray.ji;11;CPControl.ji;15;CPTableColumn.ji;15;_CPCornerView.ji;12;CPScroller.jc;108412;
 CPTableViewColumnDidMoveNotification = "CPTableViewColumnDidMoveNotification";
 CPTableViewColumnDidResizeNotification = "CPTableViewColumnDidResizeNotification";
 CPTableViewSelectionDidChangeNotification = "CPTableViewSelectionDidChangeNotification";
@@ -14406,7 +14584,7 @@ class_addMethods(the_class, [new objj_method(sel_getUid("initWithTableView:"), f
 },["void","CGRect"])]);
 }
 {var the_class = objj_allocateClassPair(CPControl, "CPTableView"),
-meta_class = the_class.isa;class_addIvars(the_class, [new objj_ivar("_dataSource"), new objj_ivar("_implementedDataSourceMethods"), new objj_ivar("_delegate"), new objj_ivar("_implementedDelegateMethods"), new objj_ivar("_tableColumns"), new objj_ivar("_tableColumnRanges"), new objj_ivar("_dirtyTableColumnRangeIndex"), new objj_ivar("_numberOfHiddenColumns"), new objj_ivar("_reloadAllRows"), new objj_ivar("_objectValues"), new objj_ivar("_exposedRows"), new objj_ivar("_exposedColumns"), new objj_ivar("_dataViewsForTableColumns"), new objj_ivar("_cachedDataViews"), new objj_ivar("_allowsColumnReordering"), new objj_ivar("_allowsColumnResizing"), new objj_ivar("_allowsMultipleSelection"), new objj_ivar("_allowsEmptySelection"), new objj_ivar("_intercellSpacing"), new objj_ivar("_rowHeight"), new objj_ivar("_usesAlternatingRowBackgroundColors"), new objj_ivar("_alternatingRowBackgroundColors"), new objj_ivar("_selectionHighlightMask"), new objj_ivar("_selectionHightlightColor"), new objj_ivar("_currentHighlightedTableColumn"), new objj_ivar("_gridStyleMask"), new objj_ivar("_gridColor"), new objj_ivar("_numberOfRows"), new objj_ivar("_headerView"), new objj_ivar("_cornerView"), new objj_ivar("_selectedColumnIndexes"), new objj_ivar("_selectedRowIndexes"), new objj_ivar("_selectionAnchorRow"), new objj_ivar("_previouslySelectedRowIndexes"), new objj_ivar("_startTrackingPoint"), new objj_ivar("_startTrackingTimestamp"), new objj_ivar("_trackingPointMovedOutOfClickSlop"), new objj_ivar("_editingCellIndex"), new objj_ivar("_tableDrawView"), new objj_ivar("_doubleAction"), new objj_ivar("_columnAutoResizingStyle")]);
+meta_class = the_class.isa;class_addIvars(the_class, [new objj_ivar("_dataSource"), new objj_ivar("_implementedDataSourceMethods"), new objj_ivar("_delegate"), new objj_ivar("_implementedDelegateMethods"), new objj_ivar("_tableColumns"), new objj_ivar("_tableColumnRanges"), new objj_ivar("_dirtyTableColumnRangeIndex"), new objj_ivar("_numberOfHiddenColumns"), new objj_ivar("_reloadAllRows"), new objj_ivar("_objectValues"), new objj_ivar("_exposedRows"), new objj_ivar("_exposedColumns"), new objj_ivar("_dataViewsForTableColumns"), new objj_ivar("_cachedDataViews"), new objj_ivar("_allowsColumnReordering"), new objj_ivar("_allowsColumnResizing"), new objj_ivar("_allowsColumnSelection"), new objj_ivar("_allowsMultipleSelection"), new objj_ivar("_allowsEmptySelection"), new objj_ivar("_intercellSpacing"), new objj_ivar("_rowHeight"), new objj_ivar("_usesAlternatingRowBackgroundColors"), new objj_ivar("_alternatingRowBackgroundColors"), new objj_ivar("_selectionHighlightMask"), new objj_ivar("_selectionHightlightColor"), new objj_ivar("_currentHighlightedTableColumn"), new objj_ivar("_gridStyleMask"), new objj_ivar("_gridColor"), new objj_ivar("_numberOfRows"), new objj_ivar("_headerView"), new objj_ivar("_cornerView"), new objj_ivar("_selectedColumnIndexes"), new objj_ivar("_selectedRowIndexes"), new objj_ivar("_selectionAnchorRow"), new objj_ivar("_previouslySelectedRowIndexes"), new objj_ivar("_startTrackingPoint"), new objj_ivar("_startTrackingTimestamp"), new objj_ivar("_trackingPointMovedOutOfClickSlop"), new objj_ivar("_editingCellIndex"), new objj_ivar("_tableDrawView"), new objj_ivar("_doubleAction"), new objj_ivar("_columnAutoResizingStyle"), new objj_ivar("_verticalMotionCanDrag"), new objj_ivar("_destinationDragStyle"), new objj_ivar("_isSelectingSession"), new objj_ivar("_draggedRowIndexes"), new objj_ivar("_dropOperationFeedbackView"), new objj_ivar("_dragOperationDefaultMask"), new objj_ivar("_retargetedDropRow"), new objj_ivar("_retargetedDropOperation")]);
 objj_registerClassPair(the_class);
 objj_addClassForBundle(the_class, objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
 class_addMethods(the_class, [new objj_method(sel_getUid("initWithFrame:"), function $CPTableView__initWithFrame_(self, _cmd, aFrame)
@@ -14445,19 +14623,17 @@ class_addMethods(the_class, [new objj_method(sel_getUid("initWithFrame:"), funct
         _cornerView = objj_msgSend(objj_msgSend(_CPCornerView, "alloc"), "initWithFrame:", CGRectMake(0, 0, objj_msgSend(CPScroller, "scrollerWidth"), CGRectGetHeight(objj_msgSend(_headerView, "frame"))));
         _selectedColumnIndexes = objj_msgSend(CPIndexSet, "indexSet");
         _selectedRowIndexes = objj_msgSend(CPIndexSet, "indexSet");
-window.setTimeout(function(){
-        self._draggedRowIndexes = objj_msgSend(CPIndexSet, "indexSet");
-        self._verticalMotionCanDrag = YES;
-        self._isSelectingSession = NO;
-        self._retargetedDropRow = nil;
-        self._retargetedDropOperation = nil;
-        self._dragOperationDefaultMask = nil;
-        self._destinationDragStyle = CPTableViewDraggingDestinationFeedbackStyleRegular;
-        self._dropOperationFeedbackView = objj_msgSend(objj_msgSend(_dropOperationDrawingView, "alloc"), "initWithFrame:", { origin: { x:0.0, y:0.0 }, size: { width:0.0, height:0.0 } });
+        _draggedRowIndexes = objj_msgSend(CPIndexSet, "indexSet");
+        _verticalMotionCanDrag = YES;
+        _isSelectingSession = NO;
+        _retargetedDropRow = nil;
+        _retargetedDropOperation = nil;
+        _dragOperationDefaultMask = nil;
+        _destinationDragStyle = CPTableViewDraggingDestinationFeedbackStyleRegular;
+        _dropOperationFeedbackView = objj_msgSend(objj_msgSend(_dropOperationDrawingView, "alloc"), "initWithFrame:", { origin: { x:0.0, y:0.0 }, size: { width:0.0, height:0.0 } });
         objj_msgSend(self, "addSubview:", _dropOperationFeedbackView);
         objj_msgSend(_dropOperationFeedbackView, "setHidden:", YES);
         objj_msgSend(_dropOperationFeedbackView, "setTableView:", self);
-},0);
         _tableDrawView = objj_msgSend(objj_msgSend(_CPTableDrawView, "alloc"), "initWithTableView:", self);
         objj_msgSend(_tableDrawView, "setBackgroundColor:", objj_msgSend(CPColor, "clearColor"));
         objj_msgSend(self, "addSubview:", _tableDrawView);
@@ -14774,7 +14950,7 @@ window.setTimeout(function(){
 },["void","CPIndexSet","BOOL"]), new objj_method(sel_getUid("selectRowIndexes:byExtendingSelection:"), function $CPTableView__selectRowIndexes_byExtendingSelection_(self, _cmd, rows, shouldExtendSelection)
 { with(self)
 {
-    if ((objj_msgSend(rows, "firstIndex") != CPNotFound && objj_msgSend(rows, "firstIndex") < 0) || objj_msgSend(rows, "lastIndex") >= objj_msgSend(self, "numberOfRows"))
+    if (objj_msgSend(rows, "isEqualToIndexSet:", _selectedRowIndexes) || ((objj_msgSend(rows, "firstIndex") != CPNotFound && objj_msgSend(rows, "firstIndex") < 0) || objj_msgSend(rows, "lastIndex") >= objj_msgSend(self, "numberOfRows")))
         return;
     if (objj_msgSend(_selectedColumnIndexes, "count") > 0)
     {
@@ -14868,13 +15044,17 @@ window.setTimeout(function(){
 },["CPIndexSet"]), new objj_method(sel_getUid("deselectColumn:"), function $CPTableView__deselectColumn_(self, _cmd, aColumn)
 { with(self)
 {
-    objj_msgSend(_selectedColumnIndexes, "removeIndex:", aColumn);
+    var selectedColumnIndexes = objj_msgSend(_selectedColumnIndexes, "copy");
+    objj_msgSend(selectedColumnIndexes, "removeIndex:", aColumn);
+    objj_msgSend(self, "selectColumnIndexes:byExtendingSelection:", selectedColumnIndexes, NO);
     objj_msgSend(self, "_noteSelectionDidChange");
 }
 },["void","CPInteger"]), new objj_method(sel_getUid("deselectRow:"), function $CPTableView__deselectRow_(self, _cmd, aRow)
 { with(self)
 {
-    objj_msgSend(_selectedRowIndexes, "removeIndex:", aRow);
+    var selectedRowIndexes = objj_msgSend(_selectedRowIndexes, "copy");
+    objj_msgSend(selectedRowIndexes, "removeIndex:", aRow);
+    objj_msgSend(self, "selectColumnIndexes:byExtendingSelection:", selectedRowIndexes, NO);
     objj_msgSend(self, "_noteSelectionDidChange");
 }
 },["void","CPInteger"]), new objj_method(sel_getUid("numberOfSelectedColumns"), function $CPTableView__numberOfSelectedColumns(self, _cmd)
@@ -15288,30 +15468,37 @@ window.setTimeout(function(){
 },["CPImage","CPIndexSet","CPArray","CPEvent","CPPointPointer"]), new objj_method(sel_getUid("dragViewForRowsWithIndexes:tableColumns:event:offset:"), function $CPTableView__dragViewForRowsWithIndexes_tableColumns_event_offset_(self, _cmd, theDraggedRows, theTableColumns, theDragEvent, dragViewOffset)
 { with(self)
 {
- var size = objj_msgSend(self, "bounds").size,
-  view = objj_msgSend(objj_msgSend(CPView, "alloc"), "initWithFrame:", CPMakeRect(dragViewOffset.x, dragViewOffset.y, size.width, size.height));
+ var bounds = objj_msgSend(self, "bounds"),
+  view = objj_msgSend(objj_msgSend(CPView, "alloc"), "initWithFrame:", bounds);
  objj_msgSend(view, "setBackgroundColor:", objj_msgSend(CPColor, "clearColor"));
  objj_msgSend(view, "setAlphaValue:", 0.7);
  var firstExposedColumn = objj_msgSend(_exposedColumns, "firstIndex"),
-  exposedLength = objj_msgSend(_exposedColumns, "lastIndex") - firstExposedColumn + 1,
-  columns = [];
- objj_msgSend(_exposedColumns, "getIndexes:maxCount:inIndexRange:", columns, -1, CPMakeRange(firstExposedColumn, exposedLength));
- var columnIndex = objj_msgSend(columns, "count"),
-  draggedDataViews = [],
-  dragViewHeight = 0.0;
- while (columnIndex--) {
-  var column = objj_msgSend(_tableColumns, "objectAtIndex:", columnIndex),
-   yOffset = 0,
-   rowIndex = CPNotFound;
-  while ((rowIndex = objj_msgSend(_selectedRowIndexes, "indexGreaterThanIndex:", rowIndex)) !== CPNotFound)
+     firstExposedRow = objj_msgSend(_exposedRows, "firstIndex"),
+  exposedColumnsLength = objj_msgSend(_exposedColumns, "lastIndex") - firstExposedColumn + 1,
+  exposedRowsLength = objj_msgSend(_exposedRows, "lastIndex") - firstExposedRow + 1,
+  columns = [],
+  rows = [];
+ objj_msgSend(_exposedColumns, "getIndexes:maxCount:inIndexRange:", columns, -1, CPMakeRange(firstExposedColumn, exposedColumnsLength));
+    objj_msgSend(theDraggedRows, "getIndexes:maxCount:inIndexRange:", rows, -1, CPMakeRange(firstExposedRow, exposedRowsLength));
+ var columnIndex = objj_msgSend(columns, "count");
+ while (columnIndex--)
+ {
+  var column = columns[columnIndex],
+      tableColumn = objj_msgSend(_tableColumns, "objectAtIndex:", column),
+   rowIndex = objj_msgSend(rows, "count");
+  while (rowIndex--)
   {
-   var dataView = objj_msgSend(self, "_newDataViewForRow:tableColumn:", rowIndex, column);
+      var row = rows[rowIndex];
+   var dataView = objj_msgSend(self, "_newDataViewForRow:tableColumn:", row, tableColumn);
    objj_msgSend(dataView, "setBackgroundColor:", objj_msgSend(CPColor, "clearColor"));
-   objj_msgSend(dataView, "setFrame:", objj_msgSend(self, "frameOfDataViewAtColumn:row:", columnIndex, rowIndex));
-   objj_msgSend(dataView, "setObjectValue:", objj_msgSend(self, "_objectValueForTableColumn:row:", column, rowIndex));
+   objj_msgSend(dataView, "setFrame:", objj_msgSend(self, "frameOfDataViewAtColumn:row:", column, row));
+   objj_msgSend(dataView, "setObjectValue:", objj_msgSend(self, "_objectValueForTableColumn:row:", tableColumn, row));
    objj_msgSend(view, "addSubview:", dataView);
   }
  }
+ var dragPoint = objj_msgSend(self, "convertPoint:fromView:", objj_msgSend(theDragEvent, "locationInWindow"), nil);
+ dragViewOffset.x = CGRectGetWidth(bounds)/2 - dragPoint.x;
+ dragViewOffset.y = CGRectGetHeight(bounds)/2 - dragPoint.y;
  return view;
 }
 },["CPView","CPIndexSet","CPArray","CPEvent","CPPoint"]), new objj_method(sel_getUid("setDraggingSourceOperationMask:forLocal:"), function $CPTableView__setDraggingSourceOperationMask_forLocal_(self, _cmd, mask, isLocal)
@@ -15545,11 +15732,6 @@ window.setTimeout(function(){
     objj_msgSend(self, "drawGridInClipRect:", exposedRect);
     objj_msgSend(self, "highlightSelectionInClipRect:", exposedRect);
 }
-},["void","CGRect"]), new objj_method(sel_getUid("drawRect:"), function $CPTableView__drawRect_(self, _cmd, aRect)
-{ with(self)
-{
-    objj_msgSend(_tableDrawView, "display");
-}
 },["void","CGRect"]), new objj_method(sel_getUid("drawBackgroundInClipRect:"), function $CPTableView__drawBackgroundInClipRect_(self, _cmd, aRect)
 { with(self)
 {
@@ -15573,11 +15755,12 @@ window.setTimeout(function(){
         heightFilled = 0.0;
     while (colorIndex--)
     {
-        var row = firstRow % colorCount + firstRow + colorIndex,
+        var row = firstRow - firstRow % colorCount + colorIndex,
             fillRect = nil;
         CGContextBeginPath(context);
         for (; row <= lastRow; row += colorCount)
-            CGContextAddRect(context, CGRectIntersection(aRect, fillRect = objj_msgSend(self, "rectOfRow:", row)));
+            if (row >= firstRow)
+                CGContextAddRect(context, CGRectIntersection(aRect, fillRect = objj_msgSend(self, "rectOfRow:", row)));
         if (row - colorCount === lastRow)
             heightFilled = (fillRect.origin.y + fillRect.size.height);
         CGContextClosePath(context);
@@ -15690,13 +15873,29 @@ window.setTimeout(function(){
     CGContextFillPath(context);
     CGContextBeginPath(context);
     gridStyleMask = objj_msgSend(self, "gridStyleMask");
-    for(var i=0; i < count2-1; i++)
+    for(var i=0; i < count2; i++)
     {
-         var rect = objj_msgSend(self, "rectOfRow:", indexes[i]),
-             minX = (rect.origin.x) - 0.5,
-             maxX = (rect.origin.x + rect.size.width) - 0.5,
-             minY = (rect.origin.y) - 0.5,
-             maxY = (rect.origin.y + rect.size.height) - 0.5;
+         var rect = objj_msgSend(self, rectSelector, indexes[i]),
+             minX = CGRectGetMinX(rect) - 0.5,
+             maxX = CGRectGetMaxX(rect) - 0.5,
+             minY = CGRectGetMinY(rect) - 0.5,
+             maxY = CGRectGetMaxY(rect) - 0.5;
+        if (objj_msgSend(_selectedRowIndexes, "count") >= 1 && gridStyleMask & CPTableViewSolidVerticalGridLineMask)
+        {
+            var exposedColumns = objj_msgSend(self, "columnIndexesInRect:", aRect),
+            exposedColumnIndexes = [],
+            firstExposedColumn = objj_msgSend(exposedColumns, "firstIndex"),
+            exposedRange = CPMakeRange(firstExposedColumn, objj_msgSend(exposedColumns, "lastIndex") - firstExposedColumn + 1);
+            objj_msgSend(exposedColumns, "getIndexes:maxCount:inIndexRange:", exposedColumnIndexes, -1, exposedRange);
+            var exposedColumnCount = objj_msgSend(exposedColumnIndexes, "count");
+            for(var c = firstExposedColumn; c < exposedColumnCount; c++)
+            {
+                var colRect = objj_msgSend(self, "rectOfColumn:", exposedColumnIndexes[c]),
+                    colX = CGRectGetMaxX(colRect) + 0.5;
+                CGContextMoveToPoint(context, colX, minY);
+                CGContextAddLineToPoint(context, colX, maxY);
+            }
+        }
          CGContextMoveToPoint(context, minX, maxY);
          CGContextAddLineToPoint(context, maxX, maxY);
     }
@@ -15765,7 +15964,15 @@ window.setTimeout(function(){
     objj_msgSend(objj_msgSend(self, "window"), "makeFirstResponder:", self);
     return YES;
 }
-},["BOOL","CGPoint"]), new objj_method(sel_getUid("continueTracking:at:"), function $CPTableView__continueTracking_at_(self, _cmd, lastPoint, aPoint)
+},["BOOL","CGPoint"]), new objj_method(sel_getUid("trackMouse:"), function $CPTableView__trackMouse_(self, _cmd, anEvent)
+{ with(self)
+{
+ if (!objj_msgSend(_draggedRowIndexes, "count"))
+  objj_msgSendSuper({ receiver:self, super_class:objj_getClass("CPControl") }, "trackMouse:", anEvent);
+ else
+  objj_msgSend(CPApp, "sendEvent:", anEvent);
+}
+},["void","CPEvent"]), new objj_method(sel_getUid("continueTracking:at:"), function $CPTableView__continueTracking_at_(self, _cmd, lastPoint, aPoint)
 { with(self)
 {
     var row = objj_msgSend(self, "rowAtPoint:", aPoint);
@@ -15779,23 +15986,26 @@ window.setTimeout(function(){
         )
     )
     {
-        if(objj_msgSend(_selectedRowIndexes, "containsIndex:", row))
+        if (objj_msgSend(_selectedRowIndexes, "containsIndex:", row))
             _draggedRowIndexes = objj_msgSend(objj_msgSend(CPIndexSet, "alloc"), "initWithIndexSet:", _selectedRowIndexes);
         else
             _draggedRowIndexes = objj_msgSend(CPIndexSet, "indexSetWithIndex:", row);
         var pboard = objj_msgSend(CPPasteboard, "pasteboardWithName:", CPDragPboard);
-        if(objj_msgSend(self, "canDragRowsWithIndexes:atPoint:", _draggedRowIndexes, aPoint) && objj_msgSend(_dataSource, "tableView:writeRowsWithIndexes:toPasteboard:", self, _draggedRowIndexes, pboard))
+        if (objj_msgSend(self, "canDragRowsWithIndexes:atPoint:", _draggedRowIndexes, aPoint) && objj_msgSend(_dataSource, "tableView:writeRowsWithIndexes:toPasteboard:", self, _draggedRowIndexes, pboard))
         {
    var currentEvent = objj_msgSend(CPApp, "currentEvent"),
-    offset = CPPointMakeZero();
-   var view = objj_msgSend(self, "dragViewForRowsWithIndexes:tableColumns:event:offset:", _draggedRowIndexes, _exposedColumns, currentEvent, CPPointMakeZero());
-   if (!view) {
-    var image = objj_msgSend(self, "dragImageForRowsWithIndexes:tableColumns:event:offset:", _draggedRowIndexes, _exposedColumns, currentEvent, CPPointMakeZero());
-    view = objj_msgSend(objj_msgSend(CPImageView, "alloc"), "initWithFrame:", CPMakeRect(aPoint.x, aPoint.y, objj_msgSend(image, "size").width, objj_msgSend(image, "size").height));
+    offset = CPPointMakeZero(),
+    tableColumns = objj_msgSend(_tableColumns, "objectsAtIndexes:", _exposedColumns);
+   var view = objj_msgSend(self, "dragViewForRowsWithIndexes:tableColumns:event:offset:", _draggedRowIndexes, tableColumns, currentEvent, offset);
+   if (!view)
+   {
+    var image = objj_msgSend(self, "dragImageForRowsWithIndexes:tableColumns:event:offset:", _draggedRowIndexes, tableColumns, currentEvent, offset);
+    view = objj_msgSend(objj_msgSend(CPImageView, "alloc"), "initWithFrame:", CPMakeRect(0, 0, objj_msgSend(image, "size").width, objj_msgSend(image, "size").height));
     objj_msgSend(view, "setImage:", image);
-    offset = aPoint;
    }
-   objj_msgSend(self, "dragView:at:offset:event:pasteboard:source:slideBack:", view, offset, CPPointMakeZero(), objj_msgSend(CPApp, "currentEvent"), pboard, self, YES);
+   var bounds = objj_msgSend(view, "bounds");
+   var viewLocation = CPPointMake(aPoint.x - CGRectGetWidth(bounds)/2 + offset.x, aPoint.y - CGRectGetHeight(bounds)/2 + offset.y);
+   objj_msgSend(self, "dragView:at:offset:event:pasteboard:source:slideBack:", view, viewLocation, CPPointMakeZero(), objj_msgSend(CPApp, "currentEvent"), pboard, self, YES);
             return NO;
         }
     }
@@ -15828,17 +16038,15 @@ window.setTimeout(function(){
         rowIndex = objj_msgSend(self, "rowAtPoint:", aPoint);
         if (rowIndex !== -1)
         {
-            if(_draggedRowIndexes !== nil)
+            if (objj_msgSend(_draggedRowIndexes, "count") > 0)
             {
-                _draggedRowIndexes = nil;
+                _draggedRowIndexes = objj_msgSend(CPIndexSet, "indexSet");
                 return;
             }
              _previouslySelectedRowIndexes = objj_msgSend(_selectedRowIndexes, "copy");
             objj_msgSend(self, "_updateSelectionWithMouseAtRow:", rowIndex);
         }
     }
-    if (!objj_msgSend(_previouslySelectedRowIndexes, "isEqualToIndexSet:", _selectedRowIndexes))
-        objj_msgSend(self, "_noteSelectionDidChange");
     if (mouseIsUp
         && (_implementedDataSourceMethods & CPTableViewDataSource_tableView_setObjectValue_forTableColumn_row_)
         && !_trackingPointMovedOutOfClickSlop
@@ -16060,7 +16268,6 @@ window.setTimeout(function(){
     if (objj_msgSend(newSelection, "isEqualToIndexSet:", _selectedRowIndexes))
         return;
     objj_msgSend(self, "selectRowIndexes:byExtendingSelection:", newSelection, NO);
-    objj_msgSend(self, "_noteSelectionIsChanging");
 }
 },["void","CPInteger"]), new objj_method(sel_getUid("_noteSelectionIsChanging"), function $CPTableView___noteSelectionIsChanging(self, _cmd)
 { with(self)
@@ -16122,7 +16329,6 @@ window.setTimeout(function(){
     if(i)
     {
         objj_msgSend(self, "scrollRowToVisible:", i);
-        objj_msgSend(self, "_noteSelectionDidChange");
     }
 }
 },["void","id"]), new objj_method(sel_getUid("moveUp:"), function $CPTableView__moveUp_(self, _cmd, sender)
@@ -16160,7 +16366,6 @@ window.setTimeout(function(){
      if(i)
      {
         objj_msgSend(self, "scrollRowToVisible:", i);
-        objj_msgSend(self, "_noteSelectionDidChange");
      }
 }
 },["void","id"]), new objj_method(sel_getUid("deleteBackward:"), function $CPTableView__deleteBackward_(self, _cmd, sender)
@@ -16992,7 +17197,7 @@ var meta_class = the_class.isa;class_addMethods(the_class, [new objj_method(sel_
 },["void","CPCoder"])]);
 }
 
-p;13;CPTextField.ji;11;CPControl.ji;17;CPStringDrawing.ji;17;CPCompatibility.jc;40198;
+p;13;CPTextField.ji;11;CPControl.ji;17;CPStringDrawing.ji;17;CPCompatibility.jc;39838;
 CPLineBreakByWordWrapping = 0;
 CPLineBreakByCharWrapping = 1;
 CPLineBreakByClipping = 2;
@@ -17006,6 +17211,7 @@ CPTextFieldDidBlurNotification = "CPTextFieldDidBlurNotification";
 var CPTextFieldDOMInputElement = nil,
     CPTextFieldDOMPasswordInputElement = nil,
     CPTextFieldDOMStandardInputElement = nil,
+    CPTextFieldDOMMultilineInputElement = nil,
     CPTextFieldInputOwner = nil,
     CPTextFieldTextDidChangeValue = nil,
     CPTextFieldInputResigning = NO,
@@ -17013,7 +17219,10 @@ var CPTextFieldDOMInputElement = nil,
     CPTextFieldInputIsActive = NO,
     CPTextFieldCachedSelectStartFunction = nil,
     CPTextFieldCachedDragFunction = nil,
-    CPTextFieldBlurFunction = nil;
+    CPTextFieldBlurFunction = nil,
+    CPTextFieldKeyUpFunction = nil,
+    CPTextFieldKeyPressFunction = nil,
+    CPTextFieldKeyDownFunction = nil;
 var CPSecureTextFieldCharacter = "\u2022";
 {
 var the_class = objj_getClass("CPString")
@@ -17027,6 +17236,7 @@ var meta_class = the_class.isa;class_addMethods(the_class, [new objj_method(sel_
 }
 CPTextFieldStateRounded = CPThemeState("rounded");
 CPTextFieldStatePlaceholder = CPThemeState("placeholder");
+CPThemeStateEditable = CPThemeState("editable");
 {var the_class = objj_allocateClassPair(CPControl, "CPTextField"),
 meta_class = the_class.isa;class_addIvars(the_class, [new objj_ivar("_isEditing"), new objj_ivar("_isEditable"), new objj_ivar("_isSelectable"), new objj_ivar("_isSecure"), new objj_ivar("_drawsBackground"), new objj_ivar("_textFieldBackgroundColor"), new objj_ivar("_placeholderString"), new objj_ivar("_delegate"), new objj_ivar("_textDidChangeValue"), new objj_ivar("_bezelStyle"), new objj_ivar("_isBordered"), new objj_ivar("_controlSize"), new objj_ivar("_wraps")]);
 objj_registerClassPair(the_class);
@@ -17036,17 +17246,7 @@ class_addMethods(the_class, [new objj_method(sel_getUid("_inputElement"), functi
 {
     if (!CPTextFieldDOMInputElement)
     {
-  CPTextFieldDOMInputElement;
-        if (_wraps)
-        {
-         CPTextFieldDOMInputElement = document.createElement("textarea");
-         CPTextFieldDOMInputElement.style.resize = "none";
-         CPTextFieldDOMInputElement.style.overflow = "hidden";
-        }
-        else
-        {
-         CPTextFieldDOMInputElement = document.createElement("input");
-        }
+        CPTextFieldDOMInputElement = document.createElement("input");
         CPTextFieldDOMInputElement.style.position = "absolute";
         CPTextFieldDOMInputElement.style.border = "0px";
         CPTextFieldDOMInputElement.style.padding = "0px";
@@ -17075,14 +17275,6 @@ class_addMethods(the_class, [new objj_method(sel_getUid("_inputElement"), functi
         CPTextFieldDOMInputElement.onblur = CPTextFieldBlurFunction;
         CPTextFieldDOMStandardInputElement = CPTextFieldDOMInputElement;
     }
-    if (CPFeatureIsCompatible(CPInputTypeCanBeChangedFeature))
-    {
-        if (objj_msgSend(self, "isSecure"))
-            CPTextFieldDOMInputElement.type = "password";
-        else
-            CPTextFieldDOMInputElement.type = "text";
-        return CPTextFieldDOMInputElement;
-    }
     if (objj_msgSend(self, "isSecure"))
     {
         if (!CPTextFieldDOMPasswordInputElement)
@@ -17096,9 +17288,51 @@ class_addMethods(the_class, [new objj_method(sel_getUid("_inputElement"), functi
             CPTextFieldDOMPasswordInputElement.style.background = "transparent";
             CPTextFieldDOMPasswordInputElement.style.outline = "none";
             CPTextFieldDOMPasswordInputElement.type = "password";
+            if (document.attachEvent)
+            {
+                CPTextFieldDOMPasswordInputElement.attachEvent("on" + CPDOMEventKeyUp, CPTextFieldKeyUpFunction);
+                CPTextFieldDOMPasswordInputElement.attachEvent("on" + CPDOMEventKeyDown, CPTextFieldKeyDownFunction);
+                CPTextFieldDOMPasswordInputElement.attachEvent("on" + CPDOMEventKeyPress, CPTextFieldKeyPressFunction);
+            }
+            else
+            {
+                CPTextFieldDOMPasswordInputElement.addEventListener(CPDOMEventKeyUp, CPTextFieldKeyUpFunction, NO);
+                CPTextFieldDOMPasswordInputElement.addEventListener(CPDOMEventKeyDown, CPTextFieldKeyDownFunction, NO);
+                CPTextFieldDOMPasswordInputElement.addEventListener(CPDOMEventKeyPress, CPTextFieldKeyPressFunction, NO);
+            }
             CPTextFieldDOMPasswordInputElement.onblur = CPTextFieldBlurFunction;
         }
         CPTextFieldDOMInputElement = CPTextFieldDOMPasswordInputElement;
+    }
+    else if (objj_msgSend(self, "wraps"))
+    {
+        if (!CPTextFieldDOMMultilineInputElement)
+        {
+         CPTextFieldDOMMultilineInputElement = document.createElement("textarea");
+         CPTextFieldDOMMultilineInputElement.style.resize = "none";
+         CPTextFieldDOMMultilineInputElement.style.overflow = "hidden";
+            CPTextFieldDOMMultilineInputElement.style.position = "absolute";
+            CPTextFieldDOMMultilineInputElement.style.border = "0px";
+            CPTextFieldDOMMultilineInputElement.style.padding = "0px";
+            CPTextFieldDOMMultilineInputElement.style.margin = "0px";
+            CPTextFieldDOMMultilineInputElement.style.whiteSpace = "pre";
+            CPTextFieldDOMMultilineInputElement.style.background = "transparent";
+            CPTextFieldDOMMultilineInputElement.style.outline = "none";
+   if (document.attachEvent)
+         {
+             CPTextFieldDOMMultilineInputElement.attachEvent("on" + CPDOMEventKeyUp, CPTextFieldKeyUpFunction);
+           CPTextFieldDOMMultilineInputElement.attachEvent("on" + CPDOMEventKeyDown, CPTextFieldKeyDownFunction);
+             CPTextFieldDOMMultilineInputElement.attachEvent("on" + CPDOMEventKeyPress, CPTextFieldKeyPressFunction);
+         }
+         else
+         {
+             CPTextFieldDOMMultilineInputElement.addEventListener(CPDOMEventKeyUp, CPTextFieldKeyUpFunction, NO);
+             CPTextFieldDOMMultilineInputElement.addEventListener(CPDOMEventKeyDown, CPTextFieldKeyDownFunction, NO);
+             CPTextFieldDOMMultilineInputElement.addEventListener(CPDOMEventKeyPress, CPTextFieldKeyPressFunction, NO);
+         }
+            CPTextFieldDOMMultilineInputElement.onblur = CPTextFieldBlurFunction;
+        }
+        CPTextFieldDOMInputElement = CPTextFieldDOMMultilineInputElement;
     }
     else
     {
@@ -17123,6 +17357,10 @@ class_addMethods(the_class, [new objj_method(sel_getUid("_inputElement"), functi
 { with(self)
 {
     _isEditable = shouldBeEditable;
+    if (shouldBeEditable)
+        objj_msgSend(self, "setThemeState:", CPThemeStateEditable);
+    else
+        objj_msgSend(self, "unsetThemeState:", CPThemeStateEditable);
 }
 },["void","BOOL"]), new objj_method(sel_getUid("isEditable"), function $CPTextField__isEditable(self, _cmd)
 { with(self)
@@ -17263,10 +17501,10 @@ class_addMethods(the_class, [new objj_method(sel_getUid("_inputElement"), functi
     CPTextFieldInputIsActive = YES;
     if (document.attachEvent)
     {
-        CPTextFieldCachedSelectStartFunction = objj_msgSend(objj_msgSend(self, "window"), "platformWindow")._DOMBodyElement.onselectstart;
-        CPTextFieldCachedDragFunction = objj_msgSend(objj_msgSend(self, "window"), "platformWindow")._DOMBodyElement.ondrag;
-        objj_msgSend(objj_msgSend(self, "window"), "platformWindow")._DOMBodyElement.ondrag = function () {};
-        objj_msgSend(objj_msgSend(self, "window"), "platformWindow")._DOMBodyElement.onselectstart = function () {};
+        CPTextFieldCachedSelectStartFunction = document.body.onselectstart;
+        CPTextFieldCachedDragFunction = document.body.ondrag;
+        document.body.ondrag = function () {};
+        document.body.onselectstart = function () {};
     }
     objj_msgSend(self, "textDidFocus:", objj_msgSend(CPNotification, "notificationWithName:object:userInfo:", CPTextFieldDidFocusNotification, self, nil));
     return YES;
@@ -17292,8 +17530,8 @@ class_addMethods(the_class, [new objj_method(sel_getUid("_inputElement"), functi
     {
         CPTextFieldCachedSelectStartFunction = nil;
         CPTextFieldCachedDragFunction = nil;
-        objj_msgSend(objj_msgSend(self, "window"), "platformWindow")._DOMBodyElement.ondrag = CPTextFieldCachedDragFunction;
-        objj_msgSend(objj_msgSend(self, "window"), "platformWindow")._DOMBodyElement.onselectstart = CPTextFieldCachedSelectStartFunction;
+        document.body.ondrag = CPTextFieldCachedDragFunction
+        document.body.onselectstart = CPTextFieldCachedSelectStartFunction
     }
     if (_isEditing)
     {
@@ -17303,11 +17541,6 @@ class_addMethods(the_class, [new objj_method(sel_getUid("_inputElement"), functi
             objj_msgSend(self, "sendAction:to:", objj_msgSend(self, "action"), objj_msgSend(self, "target"));
     }
     objj_msgSend(self, "textDidBlur:", objj_msgSend(CPNotification, "notificationWithName:object:userInfo:", CPTextFieldDidBlurNotification, self, nil));
-    return YES;
-}
-},["BOOL"]), new objj_method(sel_getUid("needsPanelToBecomeKey"), function $CPTextField__needsPanelToBecomeKey(self, _cmd)
-{ with(self)
-{
     return YES;
 }
 },["BOOL"]), new objj_method(sel_getUid("mouseDown:"), function $CPTextField__mouseDown_(self, _cmd, anEvent)
@@ -17351,13 +17584,25 @@ class_addMethods(the_class, [new objj_method(sel_getUid("_inputElement"), functi
 {
     if (objj_msgSend(anEvent, "keyCode") === CPReturnKeyCode)
     {
-        if (_isEditing)
+        if (_isEditing && !objj_msgSend(self, "wraps"))
         {
             _isEditing = NO;
             objj_msgSend(self, "textDidEndEditing:", objj_msgSend(CPNotification, "notificationWithName:object:userInfo:", CPControlTextDidEndEditingNotification, self, nil));
         }
-        objj_msgSend(self, "sendAction:to:", objj_msgSend(self, "action"), objj_msgSend(self, "target"));
-        objj_msgSend(self, "selectText:", nil);
+        if(!objj_msgSend(self, "wraps"))
+        {
+            objj_msgSend(self, "selectText:", nil);
+            objj_msgSend(self, "sendAction:to:", objj_msgSend(self, "action"), objj_msgSend(self, "target"));
+            objj_msgSend(objj_msgSend(objj_msgSend(self, "window"), "platformWindow"), "_propagateCurrentDOMEvent:", NO);
+            objj_msgSend(objj_msgSend(CPRunLoop, "currentRunLoop"), "limitDateForMode:", CPDefaultRunLoopMode);
+            return;
+        }
+        else
+        {
+            objj_msgSend(objj_msgSend(objj_msgSend(self, "window"), "platformWindow"), "_propagateCurrentDOMEvent:", YES);
+            objj_msgSend(objj_msgSend(CPRunLoop, "currentRunLoop"), "limitDateForMode:", CPDefaultRunLoopMode);
+            return;
+        }
         objj_msgSend(objj_msgSend(objj_msgSend(self, "window"), "platformWindow"), "_propagateCurrentDOMEvent:", NO);
     }
     else if (objj_msgSend(anEvent, "keyCode") === CPTabKeyCode)
@@ -17467,108 +17712,10 @@ class_addMethods(the_class, [new objj_method(sel_getUid("_inputElement"), functi
         }
     }
 }
-},["void","id"]), new objj_method(sel_getUid("copy:"), function $CPTextField__copy_(self, _cmd, sender)
-{ with(self)
-{
-    var selectedRange = objj_msgSend(self, "selectedRange");
-    if (selectedRange.length < 1)
-        return;
-    var pasteboard = objj_msgSend(CPPasteboard, "generalPasteboard"),
-        stringValue = objj_msgSend(self, "stringValue"),
-        stringForPasting = objj_msgSend(stringValue, "substringWithRange:", selectedRange);
-    objj_msgSend(pasteboard, "declareTypes:owner:", [CPStringPboardType], nil);
-    objj_msgSend(pasteboard, "setString:forType:", stringForPasting, CPStringPboardType);
-}
-},["void","id"]), new objj_method(sel_getUid("cut:"), function $CPTextField__cut_(self, _cmd, sender)
-{ with(self)
-{
-    objj_msgSend(self, "copy:", sender);
-    objj_msgSend(self, "deleteBackwards:", sender);
-}
-},["void","id"]), new objj_method(sel_getUid("paste:"), function $CPTextField__paste_(self, _cmd, sender)
-{ with(self)
-{
-    var pasteboard = objj_msgSend(CPPasteboard, "generalPasteboard");
-    if (!objj_msgSend(objj_msgSend(pasteboard, "types"), "containsObject:", CPStringPboardType))
-        return;
-    objj_msgSend(self, "deleteBackwards:", sender);
-    var selectedRange = objj_msgSend(self, "selectedRange"),
-        stringValue = objj_msgSend(self, "stringValue"),
-        pasteString = objj_msgSend(pasteboard, "stringForType:", CPStringPboardType),
-        newValue = objj_msgSend(stringValue, "stringByReplacingCharactersInRange:withString:", selectedRange, pasteString);
-    objj_msgSend(self, "setStringValue:", newValue);
-    objj_msgSend(self, "setSelectedRange:", CPMakeRange(selectedRange.location+pasteString.length, 0));
-}
-},["void","id"]), new objj_method(sel_getUid("selectedRange"), function $CPTextField__selectedRange(self, _cmd)
-{ with(self)
-{
-    if (objj_msgSend(objj_msgSend(self, "window"), "firstResponder") !== self)
-        return CPMakeRange(0, 0);
-    try
-    {
-        var inputElement = objj_msgSend(self, "_inputElement"),
-            selectionStart = inputElement.selectionStart,
-            selectionEnd = inputElement.selectionEnd;
-        if (objj_msgSend(selectionStart, "isKindOfClass:", CPNumber))
-            return CPMakeRange(selectionStart, selectionEnd - selectionStart);
-        var theDocument = inputElement.ownerDocument || inputElement.document,
-            selectionRange = theDocument.selection.createRange(),
-            range = inputElement.createTextRange();
-        if (range.inRange(selectionRange))
-        {
-            range.setEndPoint('EndToStart', selectionRange);
-            return CPMakeRange(range.text.length, selectionRange.text.length);
-        }
-    }
-    catch (e)
-    {
-    }
-    return CGMakeRange(0, 0);
-}
-},["CPRange"]), new objj_method(sel_getUid("setSelectedRange:"), function $CPTextField__setSelectedRange_(self, _cmd, aRange)
-{ with(self)
-{
-    if (!objj_msgSend(objj_msgSend(self, "window"), "firstResponder") === self)
-        return;
-    var inputElement = objj_msgSend(self, "_inputElement");
-    try
-    {
-        if (objj_msgSend(inputElement.selectionStart, "isKindOfClass:", CPNumber))
-        {
-            inputElement.selectionStart = aRange.location;
-            inputElement.selectionEnd = CPMaxRange(aRange);
-        }
-        else
-        {
-            var theDocument = inputElement.ownerDocument || inputElement.document,
-                existingRange = theDocument.selection.createRange(),
-                range = inputElement.createTextRange();
-            if (range.inRange(existingRange))
-            {
-                range.collapse(true);
-                range.move('character', aRange.location);
-                range.moveEnd('character', aRange.length);
-                range.select();
-            }
-        }
-    }
-    catch (e)
-    {
-    }
-}
-},["void","CPRange"]), new objj_method(sel_getUid("selectAll:"), function $CPTextField__selectAll_(self, _cmd, sender)
+},["void","id"]), new objj_method(sel_getUid("selectAll:"), function $CPTextField__selectAll_(self, _cmd, sender)
 { with(self)
 {
     objj_msgSend(self, "selectText:", sender);
-}
-},["void","id"]), new objj_method(sel_getUid("deleteBackwards:"), function $CPTextField__deleteBackwards_(self, _cmd, sender)
-{ with(self)
-{
-    var selectedRange = objj_msgSend(self, "selectedRange"),
-        stringValue = objj_msgSend(self, "stringValue"),
-        newValue = objj_msgSend(stringValue, "stringByReplacingCharactersInRange:withString:", selectedRange, "");
-    objj_msgSend(self, "setStringValue:", newValue);
-    objj_msgSend(self, "setSelectedRange:", CPMakeRange(selectedRange.location, 0));
 }
 },["void","id"]), new objj_method(sel_getUid("setDelegate:"), function $CPTextField__setDelegate_(self, _cmd, aDelegate)
 { with(self)
@@ -17623,11 +17770,25 @@ class_addMethods(the_class, [new objj_method(sel_getUid("_inputElement"), functi
     bounds.size.height -= bezelInset.top + bezelInset.bottom;
     return bounds;
 }
+},["CGRect","CFRect"]), new objj_method(sel_getUid("focusRingRectForBounds:"), function $CPTextField__focusRingRectForBounds_(self, _cmd, bounds)
+{ with(self)
+{
+    var focusRingInset = objj_msgSend(self, "currentValueForThemeAttribute:", "focus-inset");
+    if (((focusRingInset).top === 0 && (focusRingInset).right === 0 && (focusRingInset).bottom === 0 && (focusRingInset).left === 0))
+        return bounds;
+    bounds.origin.x += focusRingInset.left;
+    bounds.origin.y += focusRingInset.top;
+    bounds.size.width -= focusRingInset.left + focusRingInset.right;
+    bounds.size.height -= focusRingInset.top + focusRingInset.bottom;
+    return bounds;
+}
 },["CGRect","CFRect"]), new objj_method(sel_getUid("rectForEphemeralSubviewNamed:"), function $CPTextField__rectForEphemeralSubviewNamed_(self, _cmd, aName)
 { with(self)
 {
     if (aName === "bezel-view")
         return objj_msgSend(self, "bezelRectForBounds:", objj_msgSend(self, "bounds"));
+   else if (aName === "focus-ring-view")
+        return objj_msgSend(self, "focusRingRectForBounds:", objj_msgSend(self, "bounds"));
     else if (aName === "content-view")
         return objj_msgSend(self, "contentRectForBounds:", objj_msgSend(self, "bounds"));
     return objj_msgSendSuper({ receiver:self, super_class:objj_getClass("CPControl") }, "rectForEphemeralSubviewNamed:", aName);
@@ -17641,10 +17802,15 @@ class_addMethods(the_class, [new objj_method(sel_getUid("_inputElement"), functi
         objj_msgSend(view, "setHitTests:", NO);
         return view;
     }
+    else if (aName === "focus-ring-view")
+    {
+        var view = objj_msgSend(objj_msgSend(CPView, "alloc"), "initWithFrame:", { origin: { x:0.0, y:0.0 }, size: { width:0.0, height:0.0 } });
+        objj_msgSend(view, "setHitTests:", NO);
+        return view;
+    }
     else
     {
         var view = objj_msgSend(objj_msgSend(_CPImageAndTextView, "alloc"), "initWithFrame:", { origin: { x:0.0, y:0.0 }, size: { width:0.0, height:0.0 } });
-        objj_msgSend(view, "setHitTests:", NO);
         return view;
     }
     return objj_msgSendSuper({ receiver:self, super_class:objj_getClass("CPControl") }, "createEphemeralSubviewNamed:", aName);
@@ -17652,6 +17818,9 @@ class_addMethods(the_class, [new objj_method(sel_getUid("_inputElement"), functi
 },["CPView","CPString"]), new objj_method(sel_getUid("layoutSubviews"), function $CPTextField__layoutSubviews(self, _cmd)
 { with(self)
 {
+ var focusRingView = objj_msgSend(self, "layoutEphemeralSubviewNamed:positioned:relativeToEphemeralSubviewNamed:", "focus-ring-view", CPWindowBelow, "content-view");
+    if (focusRingView)
+        objj_msgSend(focusRingView, "setBackgroundColor:", objj_msgSend(self, "currentValueForThemeAttribute:", "focus-ring-color"));
     var bezelView = objj_msgSend(self, "layoutEphemeralSubviewNamed:positioned:relativeToEphemeralSubviewNamed:", "bezel-view", CPWindowBelow, "content-view");
     if (bezelView)
         objj_msgSend(bezelView, "setBackgroundColor:", objj_msgSend(self, "currentValueForThemeAttribute:", "bezel-color"));
@@ -17681,7 +17850,7 @@ class_addMethods(the_class, [new objj_method(sel_getUid("_inputElement"), functi
 },["void"]), new objj_method(sel_getUid("setWraps:"), function $CPTextField__setWraps_(self, _cmd, aFlag)
 { with(self)
 {
- _wraps = aFlag
+ _wraps = aFlag;
 }
 },["void","BOOL"]), new objj_method(sel_getUid("wraps"), function $CPTextField__wraps(self, _cmd)
 { with(self)
@@ -17747,7 +17916,7 @@ class_addMethods(meta_class, [new objj_method(sel_getUid("textFieldWithStringVal
 },["CPString"]), new objj_method(sel_getUid("themeAttributes"), function $CPTextField__themeAttributes(self, _cmd)
 { with(self)
 {
-    return objj_msgSend(CPDictionary, "dictionaryWithObjects:forKeys:", [{ top:(0), right:(0), bottom:(0), left:(0) }, { top:(2.0), right:(2.0), bottom:(2.0), left:(2.0) }, nil], ["bezel-inset", "content-inset", "bezel-color"]);
+    return objj_msgSend(CPDictionary, "dictionaryWithObjects:forKeys:", [{ top:(0), right:(0), bottom:(0), left:(0) }, { top:(2.0), right:(2.0), bottom:(2.0), left:(2.0) }, nil, nil, { top:(0), right:(0), bottom:(0), left:(0) }], ["bezel-inset", "content-inset", "bezel-color", "focus-ring-color", "focus-inset"]);
 }
 },["id"])]);
 }
@@ -25707,7 +25876,7 @@ CGPathIsEmpty= function(aPath)
     return !aPath || aPath.count == 0;
 }
 
-p;18;_CPMenuBarWindow.ji;15;_CPMenuWindow.jc;19161;
+p;18;_CPMenuBarWindow.ji;15;_CPMenuWindow.jc;19596;
 
 
 var MENUBAR_HEIGHT = 28.0,
@@ -25763,8 +25932,20 @@ class_addMethods(the_class, [new objj_method(sel_getUid("init"), function $_CPMe
 },["id"]), new objj_method(sel_getUid("setTitle:"), function $_CPMenuBarWindow__setTitle_(self, _cmd, aTitle)
 { with(self)
 {
+
+    var bundleName = objj_msgSend(objj_msgSend(CPBundle, "mainBundle"), "objectForInfoDictionaryKey:", "CPBundleName");
+
+    if (!objj_msgSend(bundleName, "length"))
+        document.title = aTitle;
+    else if (objj_msgSend(aTitle, "length"))
+        document.title = aTitle + " - " + bundleName;
+    else
+        document.title = bundleName;
+
+
     objj_msgSend(_titleField, "setStringValue:", aTitle);
     objj_msgSend(_titleField, "sizeToFit");
+
     objj_msgSend(self, "tile");
 }
 },["void","CPString"]), new objj_method(sel_getUid("setIconImage:"), function $_CPMenuBarWindow__setIconImage_(self, _cmd, anImage)
@@ -25772,6 +25953,7 @@ class_addMethods(the_class, [new objj_method(sel_getUid("init"), function $_CPMe
 {
     objj_msgSend(_iconImageView, "setImage:", anImage);
     objj_msgSend(_iconImageView, "setHidden:", anImage == nil);
+
     objj_msgSend(self, "tile");
 }
 },["void","CPImage"]), new objj_method(sel_getUid("setIconImageAlphaValue:"), function $_CPMenuBarWindow__setIconImageAlphaValue_(self, _cmd, anAlphaValue)
@@ -25786,6 +25968,7 @@ class_addMethods(the_class, [new objj_method(sel_getUid("init"), function $_CPMe
     {
         if (!_CPMenuBarWindowBackgroundColor)
             _CPMenuBarWindowBackgroundColor = objj_msgSend(CPColor, "colorWithPatternImage:", objj_msgSend(objj_msgSend(CPImage, "alloc"), "initWithContentsOfFile:size:", objj_msgSend(objj_msgSend(CPBundle, "bundleForClass:", objj_msgSend(_CPMenuBarWindow, "class")), "pathForResource:", "_CPMenuBarWindow/_CPMenuBarWindowBackground.png"), CGSizeMake(1.0, 28.0)));
+
         objj_msgSend(objj_msgSend(self, "contentView"), "setBackgroundColor:", _CPMenuBarWindowBackgroundColor);
     }
     else
@@ -25796,7 +25979,9 @@ class_addMethods(the_class, [new objj_method(sel_getUid("init"), function $_CPMe
 {
     if (_textColor == aColor)
         return;
+
     _textColor = aColor;
+
     objj_msgSend(_menuItemViews, "makeObjectsPerformSelector:withObject:", sel_getUid("setTextColor:"), _textColor);
 }
 },["void","CPColor"]), new objj_method(sel_getUid("setTitleColor:"), function $_CPMenuBarWindow__setTitleColor_(self, _cmd, aColor)
@@ -25804,7 +25989,9 @@ class_addMethods(the_class, [new objj_method(sel_getUid("init"), function $_CPMe
 {
     if (_titleColor == aColor)
         return;
+
     _titleColor = aColor;
+
     objj_msgSend(_titleField, "setTextColor:", aColor ? aColor : objj_msgSend(CPColor, "blackColor"));
 }
 },["void","CPColor"]), new objj_method(sel_getUid("setTextShadowColor:"), function $_CPMenuBarWindow__setTextShadowColor_(self, _cmd, aColor)
@@ -25812,7 +25999,9 @@ class_addMethods(the_class, [new objj_method(sel_getUid("init"), function $_CPMe
 {
     if (_textShadowColor == aColor)
         return;
+
     _textShadowColor = aColor;
+
     objj_msgSend(_menuItemViews, "makeObjectsPerformSelector:withObject:", sel_getUid("setTextShadowColor:"), _textShadowColor);
 }
 },["void","CPColor"]), new objj_method(sel_getUid("setTitleShadowColor:"), function $_CPMenuBarWindow__setTitleShadowColor_(self, _cmd, aColor)
@@ -25820,7 +26009,9 @@ class_addMethods(the_class, [new objj_method(sel_getUid("init"), function $_CPMe
 {
     if (_titleShadowColor == aColor)
         return;
+
     _titleShadowColor = aColor;
+
     objj_msgSend(_titleField, "setTextShadowColor:", aColor ? aColor : objj_msgSend(CPColor, "whiteColor"));
 }
 },["void","CPColor"]), new objj_method(sel_getUid("setHighlightColor:"), function $_CPMenuBarWindow__setHighlightColor_(self, _cmd, aColor)
@@ -25828,6 +26019,7 @@ class_addMethods(the_class, [new objj_method(sel_getUid("init"), function $_CPMe
 {
     if (_highlightColor == aColor)
         return;
+
     _highlightColor = aColor;
 }
 },["void","CPColor"]), new objj_method(sel_getUid("setHighlightTextColor:"), function $_CPMenuBarWindow__setHighlightTextColor_(self, _cmd, aColor)
@@ -25835,52 +26027,76 @@ class_addMethods(the_class, [new objj_method(sel_getUid("init"), function $_CPMe
 {
     if (_highlightTextColor == aColor)
         return;
+
     _highlightTextColor = aColor;
+
+
 }
 },["void","CPColor"]), new objj_method(sel_getUid("setHighlightTextShadowColor:"), function $_CPMenuBarWindow__setHighlightTextShadowColor_(self, _cmd, aColor)
 { with(self)
 {
     if (_highlightTextShadowColor == aColor)
         return;
+
     _highlightTextShadowColor = aColor;
+
+
 }
 },["void","CPColor"]), new objj_method(sel_getUid("setMenu:"), function $_CPMenuBarWindow__setMenu_(self, _cmd, aMenu)
 { with(self)
 {
     if (_menu == aMenu)
         return;
+
     var defaultCenter = objj_msgSend(CPNotificationCenter, "defaultCenter");
+
     if (_menu)
     {
         objj_msgSend(defaultCenter, "removeObserver:name:object:", self, CPMenuDidAddItemNotification, _menu);
+
         objj_msgSend(defaultCenter, "removeObserver:name:object:", self, CPMenuDidChangeItemNotification, _menu);
+
         objj_msgSend(defaultCenter, "removeObserver:name:object:", self, CPMenuDidRemoveItemNotification, _menu);
+
         var items = objj_msgSend(_menu, "itemArray"),
             count = items.length;
+
         while (count--)
             objj_msgSend(objj_msgSend(items[count], "_menuItemView"), "removeFromSuperview");
     }
+
     _menu = aMenu;
+
     if (_menu)
     {
         objj_msgSend(defaultCenter, "addObserver:selector:name:object:", self, sel_getUid("menuDidAddItem:"), CPMenuDidAddItemNotification, _menu);
+
         objj_msgSend(defaultCenter, "addObserver:selector:name:object:", self, sel_getUid("menuDidChangeItem:"), CPMenuDidChangeItemNotification, _menu);
+
         objj_msgSend(defaultCenter, "addObserver:selector:name:object:", self, sel_getUid("menuDidRemoveItem:"), CPMenuDidRemoveItemNotification, _menu);
     }
+
     _menuItemViews = [];
+
     var contentView = objj_msgSend(self, "contentView"),
         items = objj_msgSend(_menu, "itemArray"),
         count = items.length;
+
     for (index = 0; index < count; ++index)
     {
         var item = items[index],
             menuItemView = objj_msgSend(item, "_menuItemView");
+
         _menuItemViews.push(menuItemView);
+
         objj_msgSend(menuItemView, "setTextColor:", _textColor);
         objj_msgSend(menuItemView, "setHidden:", objj_msgSend(item, "isHidden"));
+
         objj_msgSend(menuItemView, "synchronizeWithMenuItem");
+
         objj_msgSend(contentView, "addSubview:", menuItemView);
     }
+
     objj_msgSend(self, "tile");
 }
 },["void","CPMenu"]), new objj_method(sel_getUid("menuDidChangeItem:"), function $_CPMenuBarWindow__menuDidChangeItem_(self, _cmd, aNotification)
@@ -25888,8 +26104,10 @@ class_addMethods(the_class, [new objj_method(sel_getUid("init"), function $_CPMe
 {
     var menuItem = objj_msgSend(_menu, "itemAtIndex:", objj_msgSend(objj_msgSend(aNotification, "userInfo"), "objectForKey:", "CPMenuItemIndex")),
         menuItemView = objj_msgSend(menuItem, "_menuItemView");
+
     objj_msgSend(menuItemView, "setHidden:", objj_msgSend(menuItem, "isHidden"));
     objj_msgSend(menuItemView, "synchronizeWithMenuItem");
+
     objj_msgSend(self, "tile");
 }
 },["void","CPNotification"]), new objj_method(sel_getUid("menuDidAddItem:"), function $_CPMenuBarWindow__menuDidAddItem_(self, _cmd, aNotification)
@@ -25898,11 +26116,16 @@ class_addMethods(the_class, [new objj_method(sel_getUid("init"), function $_CPMe
     var index = objj_msgSend(objj_msgSend(aNotification, "userInfo"), "objectForKey:", "CPMenuItemIndex"),
         menuItem = objj_msgSend(_menu, "itemAtIndex:", index),
         menuItemView = objj_msgSend(menuItem, "_menuItemView");
+
     objj_msgSend(_menuItemViews, "insertObject:atIndex:", menuItemView, index);
+
     objj_msgSend(menuItemView, "setTextColor:", _textColor);
     objj_msgSend(menuItemView, "setHidden:", objj_msgSend(menuItem, "isHidden"));
+
     objj_msgSend(menuItemView, "synchronizeWithMenuItem");
+
     objj_msgSend(objj_msgSend(self, "contentView"), "addSubview:", menuItemView);
+
     objj_msgSend(self, "tile");
 }
 },["void","CPNotification"]), new objj_method(sel_getUid("menuDidRemoveItem:"), function $_CPMenuBarWindow__menuDidRemoveItem_(self, _cmd, aNotification)
@@ -25910,15 +26133,20 @@ class_addMethods(the_class, [new objj_method(sel_getUid("init"), function $_CPMe
 {
     var index = objj_msgSend(objj_msgSend(aNotification, "userInfo"), "objectForKey:", "CPMenuItemIndex"),
         menuItemView = objj_msgSend(_menuItemViews, "objectAtIndex:", index);
+
     objj_msgSend(_menuItemViews, "removeObjectAtIndex:", index);
+
     objj_msgSend(menuItemView, "removeFromSuperview");
+
     objj_msgSend(self, "tile");
 }
 },["void","CPNotification"]), new objj_method(sel_getUid("mouseDown:"), function $_CPMenuBarWindow__mouseDown_(self, _cmd, anEvent)
 { with(self)
 {
     var constraintRect = CGRectInset(objj_msgSend(objj_msgSend(self, "platformWindow"), "visibleFrame"), 5.0, 0.0);
+
     constraintRect.size.height -= 5.0;
+
     objj_msgSend(objj_msgSend(_CPMenuManager, "sharedMenuManager"), "beginTracking:menuContainer:constraintRect:callback:", anEvent, self, constraintRect, function(aMenuContainer, aMenu)
              {
                 objj_msgSend(aMenu, "_performActionOfHighlightedItemChain");
@@ -25936,35 +26164,46 @@ class_addMethods(the_class, [new objj_method(sel_getUid("init"), function $_CPMe
     var items = objj_msgSend(_menu, "itemArray"),
         index = 0,
         count = items.length,
+
         x = MENUBAR_LEFT_MARGIN,
         y = 0.0,
         isLeftAligned = YES;
+
     for (; index < count; ++index)
     {
         var item = items[index];
+
         if (objj_msgSend(item, "isSeparatorItem"))
         {
             x = CGRectGetWidth(objj_msgSend(self, "frame")) - MENUBAR_RIGHT_MARGIN;
             isLeftAligned = NO;
+
             continue;
         }
+
          if (objj_msgSend(item, "isHidden"))
             continue;
+
         var menuItemView = objj_msgSend(item, "_menuItemView"),
             frame = objj_msgSend(menuItemView, "frame");
+
         if (isLeftAligned)
         {
             objj_msgSend(menuItemView, "setFrame:", CGRectMake(x, 0.0, CGRectGetWidth(frame), MENUBAR_HEIGHT));
+
             x += CGRectGetWidth(objj_msgSend(menuItemView, "frame"));
         }
         else
         {
             objj_msgSend(menuItemView, "setFrame:", CGRectMake(x - CGRectGetWidth(frame), 0.0, CGRectGetWidth(frame), MENUBAR_HEIGHT));
+
             x = CGRectGetMinX(objj_msgSend(menuItemView, "frame"));
         }
     }
+
     var bounds = objj_msgSend(objj_msgSend(self, "contentView"), "bounds"),
         titleFrame = objj_msgSend(_titleField, "frame");
+
     if (objj_msgSend(_iconImageView, "isHidden"))
         objj_msgSend(_titleField, "setFrameOrigin:", CGPointMake((CGRectGetWidth(bounds) - CGRectGetWidth(titleFrame)) / 2.0, (CGRectGetHeight(bounds) - CGRectGetHeight(titleFrame)) / 2.0));
     else
@@ -25972,6 +26211,7 @@ class_addMethods(the_class, [new objj_method(sel_getUid("init"), function $_CPMe
         var iconFrame = objj_msgSend(_iconImageView, "frame"),
             iconWidth = CGRectGetWidth(iconFrame),
             totalWidth = iconWidth + CGRectGetWidth(titleFrame);
+
         objj_msgSend(_iconImageView, "setFrameOrigin:", CGPointMake((CGRectGetWidth(bounds) - totalWidth) / 2.0, (CGRectGetHeight(bounds) - CGRectGetHeight(iconFrame)) / 2.0));
         objj_msgSend(_titleField, "setFrameOrigin:", CGPointMake((CGRectGetWidth(bounds) - totalWidth) / 2.0 + iconWidth, (CGRectGetHeight(bounds) - CGRectGetHeight(titleFrame)) / 2.0));
     }
@@ -25980,7 +26220,9 @@ class_addMethods(the_class, [new objj_method(sel_getUid("init"), function $_CPMe
 { with(self)
 {
     var size = objj_msgSend(self, "frame").size;
+
     objj_msgSendSuper({ receiver:self, super_class:objj_getClass("CPPanel") }, "setFrame:display:animate:", aRect, shouldDisplay, shouldAnimate);
+
     if (!(size.width == aRect.size.width && size.height == aRect.size.height))
         objj_msgSend(self, "tile");
 }
@@ -26002,6 +26244,7 @@ class_addMethods(meta_class, [new objj_method(sel_getUid("initialize"), function
 }
 },["CPFont"])]);
 }
+
 {
 var the_class = objj_getClass("_CPMenuBarWindow")
 if(!the_class) objj_exception_throw(new objj_exception(OBJJClassNotFoundException, "*** Could not find definition for class \"_CPMenuBarWindow\""));
@@ -26025,24 +26268,30 @@ var meta_class = the_class.isa;class_addMethods(the_class, [new objj_method(sel_
 {
     var items = objj_msgSend(_menu, "itemArray"),
         index = items.length;
+
     while (index--)
     {
         var item = items[index];
+
         if (objj_msgSend(item, "isHidden") || objj_msgSend(item, "isSeparatorItem"))
             continue;
+
         if (CGRectContainsPoint(objj_msgSend(self, "rectForItemAtIndex:", index), aPoint))
             return index;
     }
+
     return CPNotFound;
 }
 },["CPInteger","CGPoint"]), new objj_method(sel_getUid("rectForItemAtIndex:"), function $_CPMenuBarWindow__rectForItemAtIndex_(self, _cmd, anIndex)
 { with(self)
 {
     var menuItem = objj_msgSend(_menu, "itemAtIndex:", anIndex === CPNotFound ? 0 : anIndex);
+
     return objj_msgSend(objj_msgSend(menuItem, "_menuItemView"), "frame");
 }
 },["CGRect","CPInteger"])]);
 }
+
 {var the_class = objj_allocateClassPair(_CPMenuView, "_CPMenuBarView"),
 meta_class = the_class.isa;objj_registerClassPair(the_class);
 objj_addClassForBundle(the_class, objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
@@ -26055,23 +26304,30 @@ class_addMethods(the_class, [new objj_method(sel_getUid("rectForItemAtIndex:"), 
 { with(self)
 {
     var bounds = objj_msgSend(self, "bounds");
+
     if (!CGRectContainsPoint(bounds, aPoint))
         return CPNotFound;
+
     var x = aPoint.x,
         low = 0,
         high = _visibleMenuItemInfos.length - 1;
+
     while (low <= high)
     {
         var middle = FLOOR(low + (high - low) / 2),
             info = _visibleMenuItemInfos[middle],
             frame = objj_msgSend(info.view, "frame");
+
         if (x < CGRectGetMinX(frame))
             high = middle - 1;
+
         else if (x > CGRectGetMaxX(frame))
             low = middle + 1;
+
         else
             return info.index;
    }
+
    return CPNotFound;
 }
 },["int","CGPoint"]), new objj_method(sel_getUid("tile"), function $_CPMenuBarView__tile(self, _cmd)
@@ -26080,35 +26336,46 @@ class_addMethods(the_class, [new objj_method(sel_getUid("rectForItemAtIndex:"), 
     var items = objj_msgSend(_menu, "itemArray"),
         index = 0,
         count = items.length,
+
         x = MENUBAR_LEFT_MARGIN,
         y = 0.0,
         isLeftAligned = YES;
+
     for (; index < count; ++index)
     {
         var item = items[index];
+
         if (objj_msgSend(item, "isSeparatorItem"))
         {
             x = CGRectGetWidth(objj_msgSend(self, "frame")) - MENUBAR_RIGHT_MARGIN;
             isLeftAligned = NO;
+
             continue;
         }
+
          if (objj_msgSend(item, "isHidden"))
             continue;
+
         var menuItemView = objj_msgSend(item, "_menuItemView"),
             frame = objj_msgSend(menuItemView, "frame");
+
         if (isLeftAligned)
         {
             objj_msgSend(menuItemView, "setFrameOrigin:", CGPointMake(x, (MENUBAR_HEIGHT - 1.0 - CGRectGetHeight(frame)) / 2.0));
+
             x += CGRectGetWidth(objj_msgSend(menuItemView, "frame")) + MENUBAR_MARGIN;
         }
         else
         {
             objj_msgSend(menuItemView, "setFrameOrigin:", CGPointMake(x - CGRectGetWidth(frame), (MENUBAR_HEIGHT - 1.0 - CGRectGetHeight(frame)) / 2.0));
+
             x = CGRectGetMinX(objj_msgSend(menuItemView, "frame")) - MENUBAR_MARGIN;
         }
     }
+
     var bounds = objj_msgSend(objj_msgSend(self, "contentView"), "bounds"),
         titleFrame = objj_msgSend(_titleField, "frame");
+
     if (objj_msgSend(_iconImageView, "isHidden"))
         objj_msgSend(_titleField, "setFrameOrigin:", CGPointMake((CGRectGetWidth(bounds) - CGRectGetWidth(titleFrame)) / 2.0, (CGRectGetHeight(bounds) - CGRectGetHeight(titleFrame)) / 2.0));
     else
@@ -26116,6 +26383,7 @@ class_addMethods(the_class, [new objj_method(sel_getUid("rectForItemAtIndex:"), 
         var iconFrame = objj_msgSend(_iconImageView, "frame"),
             iconWidth = CGRectGetWidth(iconFrame),
             totalWidth = iconWidth + CGRectGetWidth(titleFrame);
+
         objj_msgSend(_iconImageView, "setFrameOrigin:", CGPointMake((CGRectGetWidth(bounds) - totalWidth) / 2.0, (CGRectGetHeight(bounds) - CGRectGetHeight(iconFrame)) / 2.0));
         objj_msgSend(_titleField, "setFrameOrigin:", CGPointMake((CGRectGetWidth(bounds) - totalWidth) / 2.0 + iconWidth, (CGRectGetHeight(bounds) - CGRectGetHeight(titleFrame)) / 2.0));
     }
@@ -31307,7 +31575,7 @@ CPStandardWindowShadowStyle = 0;
 CPMenuWindowShadowStyle = 1;
 CPPanelWindowShadowStyle = 2;
 CPCustomWindowShadowStyle = 3;
-i;15;_CPWindowView.ji;23;_CPStandardWindowView.ji;23;_CPDocModalWindowView.ji;18;_CPHUDWindowView.ji;25;_CPBorderlessWindowView.ji;31;_CPBorderlessBridgeWindowView.ji;14;CPDragServer.ji;8;CPView.jp;12;CPPlatform.jI;21;Foundation/CPObject.jc;4725;
+i;15;_CPWindowView.ji;23;_CPStandardWindowView.ji;23;_CPDocModalWindowView.ji;18;_CPHUDWindowView.ji;25;_CPBorderlessWindowView.ji;31;_CPBorderlessBridgeWindowView.ji;14;CPDragServer.ji;8;CPView.jp;12;CPPlatform.jI;21;Foundation/CPObject.jc;5324;
 {var the_class = objj_allocateClassPair(CPObject, "CPBasePlatform"),
 meta_class = the_class.isa;objj_registerClassPair(the_class);
 objj_addClassForBundle(the_class, objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
@@ -31351,8 +31619,10 @@ class_addMethods(meta_class, [new objj_method(sel_getUid("bootstrap"), function 
 },["void","id"])]);
 }
 CPPlatformDidClearBodyElementNotification = "CPPlatformDidClearBodyElementNotification";
+CPPlatformWillClearBodyElementNotification = "CPPlatformWillClearBodyElementNotification";
 var screenNeedsInitialization = NO,
-    mainBodyElement = nil;
+    mainBodyElement = nil,
+    elementRemovalTest = new RegExp("\\bcpdontremove\\b", "g");
 {var the_class = objj_allocateClassPair(CPBasePlatform, "CPPlatform"),
 meta_class = the_class.isa;objj_registerClassPair(the_class);
 objj_addClassForBundle(the_class, objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
@@ -31371,7 +31641,7 @@ class_addMethods(meta_class, [new objj_method(sel_getUid("initialize"), function
 },["BOOL"]), new objj_method(sel_getUid("supportsDragAndDrop"), function $CPPlatform__supportsDragAndDrop(self, _cmd)
 { with(self)
 {
-    return CPFeatureIsCompatible(CPHTMLDragAndDropFeature);
+    return CPFeatureIsCompatible(CPHTMLDragAndDropFeature) && !objj_msgSend(self, "isBrowser");
 }
 },["BOOL"]), new objj_method(sel_getUid("supportsNativeMainMenu"), function $CPPlatform__supportsNativeMainMenu(self, _cmd)
 { with(self)
@@ -31418,10 +31688,21 @@ class_addMethods(meta_class, [new objj_method(sel_getUid("initialize"), function
 
     screenNeedsInitialization = NO;
 
+    objj_msgSend(objj_msgSend(CPNotificationCenter, "defaultCenter"), "postNotificationName:object:", CPPlatformWillClearBodyElementNotification, self);
+
     var bodyElement = objj_msgSend(self, "mainBodyElement");
 
 
-    bodyElement.innerHTML = "";
+    var children = bodyElement.childNodes,
+        length = children.length;
+
+    while (length--)
+    {
+        var element = children[length];
+        if (!element.className || element.className.match(elementRemovalTest) === null)
+            bodyElement.removeChild(element);
+    }
+
     bodyElement.style.overflow = "hidden";
 
     if (document.documentElement)
@@ -31432,7 +31713,7 @@ class_addMethods(meta_class, [new objj_method(sel_getUid("initialize"), function
 },["void"])]);
 }
 
-p;18;CPPlatformString.jI;21;Foundation/CPObject.jc;4292;
+p;18;CPPlatformString.jI;21;Foundation/CPObject.jc;3821;
 {var the_class = objj_allocateClassPair(CPObject, "CPBasePlatformString"),
 meta_class = the_class.isa;objj_registerClassPair(the_class);
 objj_addClassForBundle(the_class, objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
@@ -31448,6 +31729,7 @@ class_addMethods(meta_class, [new objj_method(sel_getUid("bootstrap"), function 
 },["CGSize","CPString","CPFont","float"])]);
 }
 var DOMSpanElement = nil,
+    DOMIFrameElement = nil,
     DefaultFont = nil;
 {var the_class = objj_allocateClassPair(CPBasePlatformString, "CPPlatformString"),
 meta_class = the_class.isa;objj_registerClassPair(the_class);
@@ -31456,12 +31738,11 @@ class_addMethods(meta_class, [new objj_method(sel_getUid("bootstrap"), function 
 { with(self)
 {
     objj_msgSend(self, "createDOMElements");
-    objj_msgSend(objj_msgSend(CPNotificationCenter, "defaultCenter"), "addObserver:selector:name:object:", self, sel_getUid("platformDidClearBodyElement:"), CPPlatformDidClearBodyElementNotification, CPPlatform);
 }
 },["void"]), new objj_method(sel_getUid("createDOMElements"), function $CPPlatformString__createDOMElements(self, _cmd)
 { with(self)
 {
-    var DOMIFrameElement = document.createElement("iframe");
+    DOMIFrameElement = document.createElement("iframe");
     DOMIFrameElement.name = "iframe_" + FLOOR(RAND() * 10000);
     DOMIFrameElement.style.position = "absolute";
     DOMIFrameElement.style.left = "-100px";
@@ -31471,6 +31752,7 @@ class_addMethods(meta_class, [new objj_method(sel_getUid("bootstrap"), function 
     DOMIFrameElement.style.borderWidth = "0px";
     DOMIFrameElement.style.overflow = "hidden";
     DOMIFrameElement.style.zIndex = 100000000000;
+    DOMIFrameElement.className = "cpdontremove";
     var bodyElement = objj_msgSend(CPPlatform, "mainBodyElement");
     bodyElement.appendChild(DOMIFrameElement);
     var DOMIFrameDocument = (DOMIFrameElement.contentDocument || DOMIFrameElement.contentWindow.document);
@@ -31488,12 +31770,7 @@ class_addMethods(meta_class, [new objj_method(sel_getUid("bootstrap"), function 
     DOMSpanElement.style.margin = "0px";
     DOMDivElement.appendChild(DOMSpanElement);
 }
-},["void"]), new objj_method(sel_getUid("platformDidClearBodyElement:"), function $CPPlatformString__platformDidClearBodyElement_(self, _cmd, aNotification)
-{ with(self)
-{
-    objj_msgSend(self, "createDOMElements");
-}
-},["void","CPNotification"]), new objj_method(sel_getUid("sizeOfString:withFont:forWidth:"), function $CPPlatformString__sizeOfString_withFont_forWidth_(self, _cmd, aString, aFont, aWidth)
+},["void"]), new objj_method(sel_getUid("sizeOfString:withFont:forWidth:"), function $CPPlatformString__sizeOfString_withFont_forWidth_(self, _cmd, aString, aFont, aWidth)
 { with(self)
 {
     if (!aFont)
@@ -31503,7 +31780,7 @@ class_addMethods(meta_class, [new objj_method(sel_getUid("bootstrap"), function 
         aFont = DefaultFont;
     }
     var style = DOMSpanElement.style;
-    if (aWidth === NULL)
+    if (!aWidth)
     {
         style.width = "";
         style.whiteSpace = "pre";
@@ -31511,15 +31788,11 @@ class_addMethods(meta_class, [new objj_method(sel_getUid("bootstrap"), function 
     else
     {
         style.width = ROUND(aWidth) + "px";
-        if (document.attachEvent)
-            style.wordWrap = "break-word";
-        else
-        {
-            style.whiteSpace = "-o-pre-wrap";
-            style.whiteSpace = "-pre-wrap";
-            style.whiteSpace = "-moz-pre-wrap";
-            style.whiteSpace = "pre-wrap";
-        }
+        style.wordWrap = "break-word";
+        style.whiteSpace = "-o-pre-wrap";
+        style.whiteSpace = "-pre-wrap";
+        style.whiteSpace = "-moz-pre-wrap";
+        style.whiteSpace = "pre-wrap";
     }
     style.font = objj_msgSend(aFont, "cssString");
     if (CPFeatureIsCompatible(CPJavascriptInnerTextFeature))
@@ -31752,7 +32025,7 @@ class_addMethods(the_class, [new objj_method(sel_getUid("initWithLevel:"), funct
 },["CPArray"])]);
 }
 
-p;22;CPPlatformWindow+DOM.jI;21;Foundation/CPObject.jI;22;Foundation/CPRunLoop.ji;9;CPEvent.ji;17;CPCompatibility.ji;18;CPDOMWindowLayer.ji;12;CPPlatform.ji;18;CPPlatformWindow.ji;26;CPPlatformWindow+DOMKeys.jc;46670;
+p;22;CPPlatformWindow+DOM.jI;21;Foundation/CPObject.jI;22;Foundation/CPRunLoop.ji;9;CPEvent.ji;17;CPCompatibility.ji;18;CPDOMWindowLayer.ji;12;CPPlatform.ji;18;CPPlatformWindow.ji;26;CPPlatformWindow+DOMKeys.jc;46309;
 var PlatformWindows = objj_msgSend(CPSet, "set");
 var CPDOMEventGetClickCount,
     CPDOMEventStop,
@@ -31771,7 +32044,7 @@ if(!the_class) objj_exception_throw(new objj_exception(OBJJClassNotFoundExceptio
 var meta_class = the_class.isa;class_addMethods(the_class, [new objj_method(sel_getUid("_init"), function $CPPlatformWindow___init(self, _cmd)
 { with(self)
 {
-    self = objj_msgSendSuper({ receiver:self, super_class:objj_getClass("CPObject") }, "init");
+    self = objj_msgSendSuper({ receiver:self, super_class:objj_getClass("CPPlatformWindow").super_class }, "init");
     if (self)
     {
         _DOMWindow = window;
@@ -31839,20 +32112,17 @@ var meta_class = the_class.isa;class_addMethods(the_class, [new objj_method(sel_
     _DOMFocusElement.style.zIndex = "-1000";
     _DOMFocusElement.style.opacity = "0";
     _DOMFocusElement.style.filter = "alpha(opacity=0)";
+    _DOMFocusElement.className = "cpdontremove";
     _DOMBodyElement.appendChild(_DOMFocusElement);
     _DOMPasteboardElement = theDocument.createElement("textarea");
     _DOMPasteboardElement.style.position = "absolute";
     _DOMPasteboardElement.style.top = "-10000px";
     _DOMPasteboardElement.style.zIndex = "999";
+    _DOMPasteboardElement.className = "cpdontremove";
     _DOMBodyElement.appendChild(_DOMPasteboardElement);
     _DOMPasteboardElement.blur();
 }
-},["void"]), new objj_method(sel_getUid("platformDidClearBodyElement:"), function $CPPlatformWindow__platformDidClearBodyElement_(self, _cmd, aNotification)
-{ with(self)
-{
-    objj_msgSend(self, "createDOMElements");
-}
-},["void","CPNotification"]), new objj_method(sel_getUid("registerDOMWindow"), function $CPPlatformWindow__registerDOMWindow(self, _cmd)
+},["void"]), new objj_method(sel_getUid("registerDOMWindow"), function $CPPlatformWindow__registerDOMWindow(self, _cmd)
 { with(self)
 {
     var theDocument = _DOMWindow.document;
@@ -31861,8 +32131,6 @@ var meta_class = the_class.isa;class_addMethods(the_class, [new objj_method(sel_
         _DOMBodyElement.style["-khtml-user-select"] = "none";
     _DOMBodyElement.webkitTouchCallout = "none";
     objj_msgSend(self, "createDOMElements");
-    if (window === _DOMWindow)
-        objj_msgSend(objj_msgSend(CPNotificationCenter, "defaultCenter"), "addObserver:selector:name:object:", self, sel_getUid("platformDidClearBodyElement:"), CPPlatformDidClearBodyElementNotification, CPPlatform);
     objj_msgSend(self, "_addLayers");
     var theClass = objj_msgSend(self, "class"),
         dragEventImplementation = class_getMethodImplementation(theClass, sel_getUid("dragEvent:")),
@@ -33046,15 +33314,35 @@ Content-Transfer-Encoding:base64
 
 iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAElJREFUKM9j+P//PwM5mGHoaywH4nf/IWAmEAsSo7H8PybYTYzGd/+xA2NCGnEBF0IaZ2LRdJcYpwpC/YSsyZiU6DBGd94QTTkAZdZoLJnGKoYAAAAASUVORK5CYII=
 --_ANY_STRING_WILL_DO_AS_A_SEPARATOR
-Content-Location:Resources/CPProgressIndicator/CPProgressIndicatorBarBarRegular.png
+Content-Location:Resources/CPProgressIndicator/CPProgressIndicatorBarBarRegular0.png
 Content-Transfer-Encoding:base64
 
-iVBORw0KGgoAAAANSUhEUgAAAAEAAAALCAYAAAC+jufvAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAClJREFUCB1jCAku/M8AJP6BiN8g4juI+AgiXoKIeyDiIog4BCI2gIg5AFyHFY8OqzfuAAAAAElFTkSuQmCC
+iVBORw0KGgoAAAANSUhEUgAAAAMAAAAQCAYAAADTasWKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAKVJREFUeNpiZAiuZ2ZgYLAGYh0GhsA6h44tpzdfeP7lIxML038TCx11x1c/GflY/vz+w/35139uBoY/DCwM//4y//n7hwEEWBj+/2X+/QfG+fuX5ffvv1DOPyAHLvPvD1DZbySZ338QnD9/EHrgpjGxMzP++vr92w+QXUy6StLXjp+5cPnL12/fGe8+fSkXVjMh5Oq9JxqM////ZwQqlwZiIYAAAwAMX1XNMAlUgQAAAABJRU5ErkJggg==
 --_ANY_STRING_WILL_DO_AS_A_SEPARATOR
-Content-Location:Resources/CPProgressIndicator/CPProgressIndicatorBarHUDBarSmall.png
+Content-Location:Resources/CPProgressIndicator/CPProgressIndicatorBarBarRegular1.png
 Content-Transfer-Encoding:base64
 
-iVBORw0KGgoAAAANSUhEUgAAAAEAAAAJCAYAAADzRkbkAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAB1JREFUCFtj+v//fywTAwPDZzjxBU58BRHf4cQPAB52Cxbv64VdAAAAAElFTkSuQmCC
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAAQCAYAAADXnxW3AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEZJREFUeNpiYAiuL2e48+H3f6Zb734yMP3985eB6c/fPwxMv/+AiN9/Yaw/v0FcIOvPH5gYWB2Iy7zvwWdVhv///xsDBBgAJJsuTOBf54IAAAAASUVORK5CYII=
+--_ANY_STRING_WILL_DO_AS_A_SEPARATOR
+Content-Location:Resources/CPProgressIndicator/CPProgressIndicatorBarBarRegular2.png
+Content-Transfer-Encoding:base64
+
+iVBORw0KGgoAAAANSUhEUgAAAAMAAAAQCAYAAADTasWKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJ5JREFUeNpiZAiuz2JgYLgCxEeZL+zbukdBXEhmz7mbT5le/WTks9BRd2Rh+m/C8vPXH4afDAzcf37/4Wb58/cPAxj8+8vM8vsPlPMfxPn9F8L5+5cFIfMPzPkN5fwBKUOS+fPnL7IyJKNB9vz89esHOzPjL5YvX799P3PxyhVdJelrzKde/ZbnZvl/YFVz/gaG////6wGxDBAzAgQYAO59XJBTIVY/AAAAAElFTkSuQmCC
+--_ANY_STRING_WILL_DO_AS_A_SEPARATOR
+Content-Location:Resources/CPProgressIndicator/CPProgressIndicatorBarHUDBarRegular0.png
+Content-Transfer-Encoding:base64
+
+iVBORw0KGgoAAAANSUhEUgAAAAMAAAAQCAYAAADTasWKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJhJREFUeNpi1LewZWZgYLAGYh0GfXMbh5XrN21++fbDRxYmZiYTGxtbx39MLNwsf/784f7LwMj9988fBhaG//+Z//75ywACLP+BnN9//8A5IKUIzu/fCA4zqgyMw4Cmh/k31GgmVlbWX1+/fPkBspRJVUX52qED+y9//vz5O+Ojx4/l8ovKQm7fvavBCNTDCFQuDcRCAAEGADqxWcjpDiMNAAAAAElFTkSuQmCC
+--_ANY_STRING_WILL_DO_AS_A_SEPARATOR
+Content-Location:Resources/CPProgressIndicator/CPProgressIndicatorBarHUDBarRegular1.png
+Content-Transfer-Encoding:base64
+
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAAQCAYAAADXnxW3AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAFRJREFUeNpi0LewLWf88uPXf8Zn7z7/Z3z0+sN/xvvP3/5nvPXk5X/Gaw+e/me8ePvhf6Y/f/4wMP0GEVDWXwamv2Du378MDKra+ksY////bwwQYAAEtTEizRGTJgAAAABJRU5ErkJggg==
+--_ANY_STRING_WILL_DO_AS_A_SEPARATOR
+Content-Location:Resources/CPProgressIndicator/CPProgressIndicatorBarHUDBarRegular2.png
+Content-Transfer-Encoding:base64
+
+iVBORw0KGgoAAAANSUhEUgAAAAMAAAAQCAYAAADTasWKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJZJREFUeNpi1LewzWJgYLgCxEeZL128tEdWVkbm8JGjT5n+MbHw2djYOjIxM5mw/P7zB6iCkfvPnz/cLH///GUAg///mVl+//0DZQM5f/7AOSwsv38jcZBkmKGmockwgPVAjQYr+wuU+QEErKysv5g+f/78/dCB/ZdVVZSvMegYmc0KDI0sevT4sRxIrR4QywAxI0CAAQBTdF49cw4ogQAAAABJRU5ErkJggg==
 --_ANY_STRING_WILL_DO_AS_A_SEPARATOR
 Content-Location:Resources/CPProgressIndicator/CPProgressIndicatorBezelBorderBarRegular0.png
 Content-Transfer-Encoding:base64
@@ -33071,20 +33359,20 @@ Content-Transfer-Encoding:base64
 
 iVBORw0KGgoAAAANSUhEUgAAAAMAAAAPCAYAAAAh6nXEAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAC9JREFUCFtjKC8v/8/AwMDFAAXuyAK2UI4ciKMB5WjQjQNluMNc4A5VAnabHIwBABIKI6Gj7Sm0AAAAAElFTkSuQmCC
 --_ANY_STRING_WILL_DO_AS_A_SEPARATOR
-Content-Location:Resources/CPProgressIndicator/CPProgressIndicatorBezelBorderHUDBarSmall0.png
+Content-Location:Resources/CPProgressIndicator/CPProgressIndicatorBezelBorderHUDBarRegular0.png
 Content-Transfer-Encoding:base64
 
-iVBORw0KGgoAAAANSUhEUgAAAAMAAAAPCAYAAAAh6nXEAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACxJREFUCFtjYIAArv9AgMxwB3HkoBxbEEcDytGgJ0cOiN3hboOKgt0GE5ADANaCOFnbDsAfAAAAAElFTkSuQmCC
+iVBORw0KGgoAAAANSUhEUgAAAAMAAAAQCAYAAADTasWKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAH5JREFUeNpiZIAAISBWYQQSwp6enk1iYmJhLBwcHJpARjQTExM/048fP7iAsvz//v1jYAEymEAMEABxGP/+/QvnoMjgUYZTDyOMw8TDw/P/z58/n0ACTK6urm9fvXq1/vfv3x8Y3r59KxAcHOzOz88fwvj//3+Qcn4glgYIMADyGjn6SjxcsAAAAABJRU5ErkJggg==
 --_ANY_STRING_WILL_DO_AS_A_SEPARATOR
-Content-Location:Resources/CPProgressIndicator/CPProgressIndicatorBezelBorderHUDBarSmall1.png
+Content-Location:Resources/CPProgressIndicator/CPProgressIndicatorBezelBorderHUDBarRegular1.png
 Content-Transfer-Encoding:base64
 
-iVBORw0KGgoAAAANSUhEUgAAAAEAAAAPCAYAAAAlH6X5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABhJREFUCB1j+A8EDEAQCCI0GMA8EggkvQBxuCPQNuROvQAAAABJRU5ErkJggg==
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAAQCAYAAADXnxW3AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAC9JREFUeNpiYGBgcGZMSkr6z/T//38Gpn///kGJv3//YnDRxOAECIQzAw3gAAgwAGRwKZNd4WBbAAAAAElFTkSuQmCC
 --_ANY_STRING_WILL_DO_AS_A_SEPARATOR
-Content-Location:Resources/CPProgressIndicator/CPProgressIndicatorBezelBorderHUDBarSmall2.png
+Content-Location:Resources/CPProgressIndicator/CPProgressIndicatorBezelBorderHUDBarRegular2.png
 Content-Transfer-Encoding:base64
 
-iVBORw0KGgoAAAANSUhEUgAAAAMAAAAPCAYAAAAh6nXEAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAC1JREFUCFtj+A8EDAwMXAxQ4I4sYAvlyIE4GlCOBt04UIY7zAXuUCVgt8nBGAAbGThZ6I8gYQAAAABJRU5ErkJggg==
+iVBORw0KGgoAAAANSUhEUgAAAAMAAAAQCAYAAADTasWKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAIBJREFUeNpiYGBgMANiISBmYI6Pj78gJSUlfufOnZNMQCAiJiYWzcHBocn0798/kAr+Hz9+cLFAOSDAxPL3718YhxFVBrcyJA4TTj2MYEv//PnziYeH5z/T79+/P7x69Wq9q6vrWwZ+fv6Q4OBg97dv3wow/P//XwuI+YGYASDAADufQ795H/vjAAAAAElFTkSuQmCC
 --_ANY_STRING_WILL_DO_AS_A_SEPARATOR
 Content-Location:Resources/CPProgressIndicator/CPProgressIndicatorSpinningStyleRegular.gif
 Content-Transfer-Encoding:base64
@@ -33366,10 +33654,20 @@ Content-Transfer-Encoding:base64
 
 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
 --_ANY_STRING_WILL_DO_AS_A_SEPARATOR
+Content-Location:Resources/tableview-headerview-highlighted-pressed.png
+Content-Transfer-Encoding:base64
+
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAAXCAIAAABF+LJYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADtJREFUeNo8i8sNACAMQpH9p6oTGb2oB7Sx9kD4vFDMKufalEQAxHVB2SVEvvIczPfHlZ/fnY3ejgADAPV/LBeRV6LeAAAAAElFTkSuQmCC
+--_ANY_STRING_WILL_DO_AS_A_SEPARATOR
 Content-Location:Resources/tableview-headerview-highlighted.png
 Content-Transfer-Encoding:base64
 
 iVBORw0KGgoAAAANSUhEUgAAAAEAAAAXCAIAAABF+LJYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACtJREFUeNpi/vT5C9OPHz+Z/v//z8TAwACmYRiZz8AAonHLo/M/fngHEGAAmHc1lNgXMmwAAAAASUVORK5CYII=
+--_ANY_STRING_WILL_DO_AS_A_SEPARATOR
+Content-Location:Resources/tableview-headerview-pressed.png
+Content-Transfer-Encoding:base64
+
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAAXCAIAAABF+LJYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACNJREFUeNpiOHPmDBMDAwPT////cdIwjIuPRT3LkydPAAIMAGirLBgXU933AAAAAElFTkSuQmCC
 --_ANY_STRING_WILL_DO_AS_A_SEPARATOR
 Content-Location:Resources/tableview-headerview.png
 Content-Transfer-Encoding:base64

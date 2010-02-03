@@ -24,10 +24,11 @@
 	return [CPSet deserializeFromArrayWithDictionaries:arrayFromPlist withContext:aContext];
 }
 
-- (CPData)serializeToXML:(BOOL) containsAllProperties
+- (CPData)serializeToXML:(BOOL) containsAllProperties containsChangedProperties:(BOOL)containsChangedProperties
 {	
 	var errorString;
-	var result = [CPPropertyListSerialization dataFromPropertyList:[self serializeToArrayWithDictionaries:containsAllProperties] 
+	var result = [CPPropertyListSerialization dataFromPropertyList:
+						[self serializeToArrayWithDictionaries:containsAllProperties containsChangedProperties:containsChangedProperties] 
 															format:CPPropertyListXMLFormat_v1_0 errorDescription:errorString];
 									
 	return result;
@@ -51,11 +52,12 @@
 }
 
 
-- (CPData)serializeTo280NPLIST:(BOOL) containsAllProperties
+- (CPData)serializeTo280NPLIST:(BOOL) containsAllProperties containsChangedProperties:(BOOL)containsChangedProperties
 {	
 	var errorString;
-	var result = [CPPropertyListSerialization dataFromPropertyList:[self serializeToArrayWithDictionaries:containsAllProperties] 
-															format:CPPropertyList280NorthFormat_v1_0 errorDescription:errorString];
+	var result = [CPPropertyListSerialization dataFromPropertyList:
+						[self serializeToArrayWithDictionaries:containsAllProperties containsChangedProperties:containsChangedProperties]
+												format:CPPropertyList280NorthFormat_v1_0 errorDescription:errorString];
 									
 	return result;
 }
@@ -80,9 +82,9 @@
 }
 
 
-- (CPString)serializeToJSON:(BOOL) containsAllProperties
+- (CPString)serializeToJSON:(BOOL) containsAllProperties containsChangedProperties:(BOOL)containsChangedProperties
 {	
-	var result = [CPString JSONFromObject:[[self serializeToArrayWithDictionaries:containsAllProperties] toJSObject]];									
+	var result = [CPString JSONFromObject:[[self serializeToArrayWithDictionaries:containsAllProperties containsChangedProperties:containsChangedProperties] toJSObject]];									
 	CPLog.trace("data: " + result);
 	return result;
 }
@@ -117,7 +119,7 @@
 }
 
 
-- (CPArray)serializeToArrayWithDictionaries:(BOOL) containsAllProperties
+- (CPArray)serializeToArrayWithDictionaries:(BOOL) containsAllProperties containsChangedProperties:(BOOL)containsChangedProperties
 {
 	var arrayFromContent = [[CPMutableArray alloc] init];
 	
@@ -129,7 +131,7 @@
 	{
 		if([aCPManagedObject isKindOfClass:[CPManagedObject class]])
 		{
-			[arrayFromContent addObject:[aCPManagedObject serializeToDictionary:containsAllProperties]];
+			[arrayFromContent addObject:[aCPManagedObject serializeToDictionary:containsAllProperties containsChangedProperties:containsChangedProperties]];
 		}
 		else
 		{
