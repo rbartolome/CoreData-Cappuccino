@@ -33,7 +33,6 @@
 @import "CPCoreDataPersistantStores/WebDAVStore/CPWebDAVStore.j"
 
 //HTML5 store
-@import "CPCoreDataPersistantStores/HTML5Store/RLOfflineDataStore.j"
 @import "CPCoreDataPersistantStores/HTML5Store/CPHTML5Store.j"
 @import "CPCoreDataPersistantStores/HTML5Store/CPHTML5StoreType.j"
 

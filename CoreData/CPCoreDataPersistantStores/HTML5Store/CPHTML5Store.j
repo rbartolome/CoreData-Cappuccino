@@ -9,7 +9,7 @@
 
 @import <Foundation/Foundation.j>
 
-@import "RLOfflineDataStore.j"
+@import "RLOfflineLocalStorage.j"
 
 @implementation CPHTML5Store : CPPersistantStore
 {
@@ -33,7 +33,7 @@
 - (id)dataStorage
 {
 	if(!dataStorage)
-		 dataStorage = [[RLOfflineDataStore alloc] initWithName:[self storeName] delegate:self];
+		 dataStorage = [[RLOfflineLocalStorage alloc] initWithName:[self storeName] delegate:self];
 		
 	return dataStorage;
 }
@@ -43,7 +43,6 @@
  */
 - (void) saveAll:(CPSet) objects error:({CPError}) error
 {
-	CPLog.info("writedata:");
 	[[self dataStorage] setValue:[[objects serializeTo280NPLIST:YES containsChangedProperties:YES] string] forKey:@"AllObjects"];
 }
 
@@ -51,8 +50,7 @@
 
 - (CPSet)loadAll:(CPDictionary) properties inManagedObjectContext:(CPManagedObjectContext) aContext error:({CPError}) error
 {
-	var resultValue = [[self dataStorage] storedValueForKey:@"AllObjects"];
-	CPLog.info("RESULT:" + resultValue);
+	var resultValue = [[self dataStorage] getValueForKey:@"AllObjects"];
 	if(resultValue == null)
 		return [CPSet new];
 		

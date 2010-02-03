@@ -17197,7 +17197,7 @@ var meta_class = the_class.isa;class_addMethods(the_class, [new objj_method(sel_
 },["void","CPCoder"])]);
 }
 
-p;13;CPTextField.ji;11;CPControl.ji;17;CPStringDrawing.ji;17;CPCompatibility.jc;39838;
+p;13;CPTextField.ji;11;CPControl.ji;17;CPStringDrawing.ji;17;CPCompatibility.jc;43272;
 CPLineBreakByWordWrapping = 0;
 CPLineBreakByCharWrapping = 1;
 CPLineBreakByClipping = 2;
@@ -17219,10 +17219,7 @@ var CPTextFieldDOMInputElement = nil,
     CPTextFieldInputIsActive = NO,
     CPTextFieldCachedSelectStartFunction = nil,
     CPTextFieldCachedDragFunction = nil,
-    CPTextFieldBlurFunction = nil,
-    CPTextFieldKeyUpFunction = nil,
-    CPTextFieldKeyPressFunction = nil,
-    CPTextFieldKeyDownFunction = nil;
+    CPTextFieldBlurFunction = nil;
 var CPSecureTextFieldCharacter = "\u2022";
 {
 var the_class = objj_getClass("CPString")
@@ -17288,18 +17285,6 @@ class_addMethods(the_class, [new objj_method(sel_getUid("_inputElement"), functi
             CPTextFieldDOMPasswordInputElement.style.background = "transparent";
             CPTextFieldDOMPasswordInputElement.style.outline = "none";
             CPTextFieldDOMPasswordInputElement.type = "password";
-            if (document.attachEvent)
-            {
-                CPTextFieldDOMPasswordInputElement.attachEvent("on" + CPDOMEventKeyUp, CPTextFieldKeyUpFunction);
-                CPTextFieldDOMPasswordInputElement.attachEvent("on" + CPDOMEventKeyDown, CPTextFieldKeyDownFunction);
-                CPTextFieldDOMPasswordInputElement.attachEvent("on" + CPDOMEventKeyPress, CPTextFieldKeyPressFunction);
-            }
-            else
-            {
-                CPTextFieldDOMPasswordInputElement.addEventListener(CPDOMEventKeyUp, CPTextFieldKeyUpFunction, NO);
-                CPTextFieldDOMPasswordInputElement.addEventListener(CPDOMEventKeyDown, CPTextFieldKeyDownFunction, NO);
-                CPTextFieldDOMPasswordInputElement.addEventListener(CPDOMEventKeyPress, CPTextFieldKeyPressFunction, NO);
-            }
             CPTextFieldDOMPasswordInputElement.onblur = CPTextFieldBlurFunction;
         }
         CPTextFieldDOMInputElement = CPTextFieldDOMPasswordInputElement;
@@ -17318,18 +17303,6 @@ class_addMethods(the_class, [new objj_method(sel_getUid("_inputElement"), functi
             CPTextFieldDOMMultilineInputElement.style.whiteSpace = "pre";
             CPTextFieldDOMMultilineInputElement.style.background = "transparent";
             CPTextFieldDOMMultilineInputElement.style.outline = "none";
-   if (document.attachEvent)
-         {
-             CPTextFieldDOMMultilineInputElement.attachEvent("on" + CPDOMEventKeyUp, CPTextFieldKeyUpFunction);
-           CPTextFieldDOMMultilineInputElement.attachEvent("on" + CPDOMEventKeyDown, CPTextFieldKeyDownFunction);
-             CPTextFieldDOMMultilineInputElement.attachEvent("on" + CPDOMEventKeyPress, CPTextFieldKeyPressFunction);
-         }
-         else
-         {
-             CPTextFieldDOMMultilineInputElement.addEventListener(CPDOMEventKeyUp, CPTextFieldKeyUpFunction, NO);
-             CPTextFieldDOMMultilineInputElement.addEventListener(CPDOMEventKeyDown, CPTextFieldKeyDownFunction, NO);
-             CPTextFieldDOMMultilineInputElement.addEventListener(CPDOMEventKeyPress, CPTextFieldKeyPressFunction, NO);
-         }
             CPTextFieldDOMMultilineInputElement.onblur = CPTextFieldBlurFunction;
         }
         CPTextFieldDOMInputElement = CPTextFieldDOMMultilineInputElement;
@@ -17501,10 +17474,10 @@ class_addMethods(the_class, [new objj_method(sel_getUid("_inputElement"), functi
     CPTextFieldInputIsActive = YES;
     if (document.attachEvent)
     {
-        CPTextFieldCachedSelectStartFunction = document.body.onselectstart;
-        CPTextFieldCachedDragFunction = document.body.ondrag;
-        document.body.ondrag = function () {};
-        document.body.onselectstart = function () {};
+        CPTextFieldCachedSelectStartFunction = objj_msgSend(objj_msgSend(self, "window"), "platformWindow")._DOMBodyElement.onselectstart;
+        CPTextFieldCachedDragFunction = objj_msgSend(objj_msgSend(self, "window"), "platformWindow")._DOMBodyElement.ondrag;
+        objj_msgSend(objj_msgSend(self, "window"), "platformWindow")._DOMBodyElement.ondrag = function () {};
+        objj_msgSend(objj_msgSend(self, "window"), "platformWindow")._DOMBodyElement.onselectstart = function () {};
     }
     objj_msgSend(self, "textDidFocus:", objj_msgSend(CPNotification, "notificationWithName:object:userInfo:", CPTextFieldDidFocusNotification, self, nil));
     return YES;
@@ -17530,8 +17503,8 @@ class_addMethods(the_class, [new objj_method(sel_getUid("_inputElement"), functi
     {
         CPTextFieldCachedSelectStartFunction = nil;
         CPTextFieldCachedDragFunction = nil;
-        document.body.ondrag = CPTextFieldCachedDragFunction
-        document.body.onselectstart = CPTextFieldCachedSelectStartFunction
+        objj_msgSend(objj_msgSend(self, "window"), "platformWindow")._DOMBodyElement.ondrag = CPTextFieldCachedDragFunction;
+        objj_msgSend(objj_msgSend(self, "window"), "platformWindow")._DOMBodyElement.onselectstart = CPTextFieldCachedSelectStartFunction;
     }
     if (_isEditing)
     {
@@ -17541,6 +17514,11 @@ class_addMethods(the_class, [new objj_method(sel_getUid("_inputElement"), functi
             objj_msgSend(self, "sendAction:to:", objj_msgSend(self, "action"), objj_msgSend(self, "target"));
     }
     objj_msgSend(self, "textDidBlur:", objj_msgSend(CPNotification, "notificationWithName:object:userInfo:", CPTextFieldDidBlurNotification, self, nil));
+    return YES;
+}
+},["BOOL"]), new objj_method(sel_getUid("needsPanelToBecomeKey"), function $CPTextField__needsPanelToBecomeKey(self, _cmd)
+{ with(self)
+{
     return YES;
 }
 },["BOOL"]), new objj_method(sel_getUid("mouseDown:"), function $CPTextField__mouseDown_(self, _cmd, anEvent)
@@ -17712,10 +17690,117 @@ class_addMethods(the_class, [new objj_method(sel_getUid("_inputElement"), functi
         }
     }
 }
-},["void","id"]), new objj_method(sel_getUid("selectAll:"), function $CPTextField__selectAll_(self, _cmd, sender)
+},["void","id"]), new objj_method(sel_getUid("copy:"), function $CPTextField__copy_(self, _cmd, sender)
+{ with(self)
+{
+    if (!objj_msgSend(CPPlatform, "isBrowser"))
+    {
+        var selectedRange = objj_msgSend(self, "selectedRange");
+        if (selectedRange.length < 1)
+            return;
+        var pasteboard = objj_msgSend(CPPasteboard, "generalPasteboard"),
+            stringValue = objj_msgSend(self, "stringValue"),
+            stringForPasting = objj_msgSend(stringValue, "substringWithRange:", selectedRange);
+        objj_msgSend(pasteboard, "declareTypes:owner:", [CPStringPboardType], nil);
+        objj_msgSend(pasteboard, "setString:forType:", stringForPasting, CPStringPboardType);
+    }
+}
+},["void","id"]), new objj_method(sel_getUid("cut:"), function $CPTextField__cut_(self, _cmd, sender)
+{ with(self)
+{
+    if (!objj_msgSend(CPPlatform, "isBrowser"))
+    {
+        objj_msgSend(self, "copy:", sender);
+        objj_msgSend(self, "deleteBackwards:", sender);
+    }
+}
+},["void","id"]), new objj_method(sel_getUid("paste:"), function $CPTextField__paste_(self, _cmd, sender)
+{ with(self)
+{
+    if (!objj_msgSend(CPPlatform, "isBrowser"))
+    {
+        var pasteboard = objj_msgSend(CPPasteboard, "generalPasteboard");
+        if (!objj_msgSend(objj_msgSend(pasteboard, "types"), "containsObject:", CPStringPboardType))
+            return;
+        objj_msgSend(self, "deleteBackwards:", sender);
+        var selectedRange = objj_msgSend(self, "selectedRange"),
+            stringValue = objj_msgSend(self, "stringValue"),
+            pasteString = objj_msgSend(pasteboard, "stringForType:", CPStringPboardType),
+            newValue = objj_msgSend(stringValue, "stringByReplacingCharactersInRange:withString:", selectedRange, pasteString);
+        objj_msgSend(self, "setStringValue:", newValue);
+        objj_msgSend(self, "setSelectedRange:", CPMakeRange(selectedRange.location+pasteString.length, 0));
+    }
+}
+},["void","id"]), new objj_method(sel_getUid("selectedRange"), function $CPTextField__selectedRange(self, _cmd)
+{ with(self)
+{
+    if (objj_msgSend(objj_msgSend(self, "window"), "firstResponder") !== self)
+        return CPMakeRange(0, 0);
+    try
+    {
+        var inputElement = objj_msgSend(self, "_inputElement"),
+            selectionStart = inputElement.selectionStart,
+            selectionEnd = inputElement.selectionEnd;
+        if (objj_msgSend(selectionStart, "isKindOfClass:", CPNumber))
+            return CPMakeRange(selectionStart, selectionEnd - selectionStart);
+        var theDocument = inputElement.ownerDocument || inputElement.document,
+            selectionRange = theDocument.selection.createRange(),
+            range = inputElement.createTextRange();
+        if (range.inRange(selectionRange))
+        {
+            range.setEndPoint('EndToStart', selectionRange);
+            return CPMakeRange(range.text.length, selectionRange.text.length);
+        }
+    }
+    catch (e)
+    {
+    }
+    return CGMakeRange(0, 0);
+}
+},["CPRange"]), new objj_method(sel_getUid("setSelectedRange:"), function $CPTextField__setSelectedRange_(self, _cmd, aRange)
+{ with(self)
+{
+    if (!objj_msgSend(objj_msgSend(self, "window"), "firstResponder") === self)
+        return;
+    var inputElement = objj_msgSend(self, "_inputElement");
+    try
+    {
+        if (objj_msgSend(inputElement.selectionStart, "isKindOfClass:", CPNumber))
+        {
+            inputElement.selectionStart = aRange.location;
+            inputElement.selectionEnd = CPMaxRange(aRange);
+        }
+        else
+        {
+            var theDocument = inputElement.ownerDocument || inputElement.document,
+                existingRange = theDocument.selection.createRange(),
+                range = inputElement.createTextRange();
+            if (range.inRange(existingRange))
+            {
+                range.collapse(true);
+                range.move('character', aRange.location);
+                range.moveEnd('character', aRange.length);
+                range.select();
+            }
+        }
+    }
+    catch (e)
+    {
+    }
+}
+},["void","CPRange"]), new objj_method(sel_getUid("selectAll:"), function $CPTextField__selectAll_(self, _cmd, sender)
 { with(self)
 {
     objj_msgSend(self, "selectText:", sender);
+}
+},["void","id"]), new objj_method(sel_getUid("deleteBackwards:"), function $CPTextField__deleteBackwards_(self, _cmd, sender)
+{ with(self)
+{
+    var selectedRange = objj_msgSend(self, "selectedRange"),
+        stringValue = objj_msgSend(self, "stringValue"),
+        newValue = objj_msgSend(stringValue, "stringByReplacingCharactersInRange:withString:", selectedRange, "");
+    objj_msgSend(self, "setStringValue:", newValue);
+    objj_msgSend(self, "setSelectedRange:", CPMakeRange(selectedRange.location, 0));
 }
 },["void","id"]), new objj_method(sel_getUid("setDelegate:"), function $CPTextField__setDelegate_(self, _cmd, aDelegate)
 { with(self)
@@ -17811,6 +17896,7 @@ class_addMethods(the_class, [new objj_method(sel_getUid("_inputElement"), functi
     else
     {
         var view = objj_msgSend(objj_msgSend(_CPImageAndTextView, "alloc"), "initWithFrame:", { origin: { x:0.0, y:0.0 }, size: { width:0.0, height:0.0 } });
+        objj_msgSend(view, "setHitTests:", NO);
         return view;
     }
     return objj_msgSendSuper({ receiver:self, super_class:objj_getClass("CPControl") }, "createEphemeralSubviewNamed:", aName);
