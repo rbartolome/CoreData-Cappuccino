@@ -1,4 +1,4 @@
-@STATIC;1.0;p;13;CPArray+KVO.ji;9;CPArray.ji;8;CPNull.jc;17963;
+@STATIC;1.0;p;13;CPArray+KVO.ji;9;CPArray.ji;8;CPNull.jc;18034;
 {
 var the_class = objj_getClass("CPObject")
 if(!the_class) objj_exception_throw(new objj_exception(OBJJClassNotFoundException, "*** Could not find definition for class \"CPObject\""));
@@ -287,6 +287,7 @@ var meta_class = the_class.isa;class_addMethods(the_class, [new objj_method(sel_
 },["void","id","CPString"])]);
 }
 var kvoOperators = [];
+var avgOperator, maxOperator, minOperator, countOperator, sumOperator;
 kvoOperators["avg"] = avgOperator= function(self, _cmd, param)
 {
     var objects = objj_msgSend(self, "valueForKeyPath:", param),

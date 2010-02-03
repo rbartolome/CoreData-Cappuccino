@@ -271,7 +271,6 @@
 -(void)datePickerDidChange:(id)sender
 {
 	[selectedAddress setValue:[birthDateField date] forKey:@"dateOfBirth"];	
-	CPLog.info(@"Value from CPManagedObject: " + [selectedAddress valueForKey:@"dateOfBirth"]);
 }
 
 @end

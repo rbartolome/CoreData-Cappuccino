@@ -45,10 +45,11 @@ CPchangedProperties = "CPchangedProperties";
 }
 
 
-- (CPData)serializeToXML:(BOOL) containsAllProperties
+- (CPData)serializeToXML:(BOOL) containsAllProperties containsChangedProperties:(BOOL)containsChangedProperties
 {
 	var errorString;
-	var result = [CPPropertyListSerialization dataFromPropertyList:[self serializeToDictionary:containsAllProperties] 
+	var result = [CPPropertyListSerialization dataFromPropertyList:
+				[self serializeToDictionary:containsAllProperties containsChangedProperties:containsChangedProperties] 
 															format:CPPropertyListXMLFormat_v1_0 errorDescription:errorString];
 									
 	return result;
@@ -70,10 +71,11 @@ CPchangedProperties = "CPchangedProperties";
 }
 
 
-- (CPData)serializeTo280NPLIST:(BOOL) containsAllProperties
+- (CPData)serializeTo280NPLIST:(BOOL) containsAllProperties containsChangedProperties:(BOOL)containsChangedProperties
 {
 	var errorString;
-	var result = [CPPropertyListSerialization dataFromPropertyList:[self serializeToDictionary:containsAllProperties] 
+	var result = [CPPropertyListSerialization dataFromPropertyList:
+					[self serializeToDictionary:containsAllProperties containsChangedProperties:containsChangedProperties] 
 															format:CPPropertyList280NorthFormat_v1_0 errorDescription:errorString];
 									
 	return result;
@@ -94,9 +96,9 @@ CPchangedProperties = "CPchangedProperties";
 }
 
 
-- (id)serializeToJSON:(BOOL) containsAllProperties
+- (id)serializeToJSON:(BOOL) containsAllProperties containsChangedProperties:(BOOL)containsChangedProperties
 {
-	var result =  [CPString JSONFromObject:[self serializeToDictionary:containsAllProperties]];
+	var result =  [CPString JSONFromObject:[self serializeToDictionary:containsAllProperties containsChangedProperties:containsChangedProperties]];
 	return result;
 }
 
@@ -153,7 +155,7 @@ CPchangedProperties = "CPchangedProperties";
 }
 
 
-- (CPDictionary)serializeToDictionary:(BOOL) containsAllProperties
+- (CPDictionary)serializeToDictionary:(BOOL) containsAllProperties containsChangedProperties:(BOOL)containsChangedProperties
 {
 	var result = [[CPMutableDictionary alloc] init];
 		
@@ -167,8 +169,9 @@ CPchangedProperties = "CPchangedProperties";
 	
 	if(containsAllProperties)
 		[result setObject:[self serializeProperties:[self data]] forKey:CPallProperties];
-		
-	[result setObject:[self serializeProperties:[self changedData]] forKey:CPchangedProperties];
+	
+	if(containsChangedProperties)
+		[result setObject:[self serializeProperties:[self changedData]] forKey:CPchangedProperties];
 	 	
 	return result;
 }
