@@ -132,7 +132,7 @@ CPchangedProperties = "CPchangedProperties";
 			var aObjectID = [CPManagedObjectID deserializeFromDictionary: [aDictionary objectForKey:CPManagedObjectIDKey] withContext:aContext];
 		
 			//deserialize the CPManagedObject representation
-			aCPManagedObject = [[CPManagedObject alloc] init];
+			aCPManagedObject = [aEntity createObject];
 			[aCPManagedObject setObjectID:aObjectID];
 			[aCPManagedObject setEntity:aEntity];
 			[aCPManagedObject setContext:aContext];
