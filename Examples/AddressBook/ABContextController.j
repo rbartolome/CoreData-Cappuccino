@@ -34,13 +34,13 @@
 		var model = [CPManagedObjectModel modelWithModelNamed:@"AddressBook.xcdatamodel" bundle:nil];
 		//model = [CPManagedObjectModel modelWithModelNamed:@"AddressBook.eomodeld" bundle:nil];
 		
-//		var coordinator = [[CPPersistentStoreCoordinator alloc] initWithManagedObjectModel: model 
-//																			storeType: [CPWebDAVStoreType class] 
-//																   storeConfiguration: [ABContextController webDAVConfig]];
-
 		var coordinator = [[CPPersistentStoreCoordinator alloc] initWithManagedObjectModel: model 
-																			storeType: [CPHTML5StoreType class] 
-																   storeConfiguration: [ABContextController html5Config]];
+																			storeType: [CPWebDAVStoreType class] 
+																   storeConfiguration: [ABContextController webDAVConfig]];
+// 		uncomment this and comment the above line to use the html5 store
+//		var coordinator = [[CPPersistentStoreCoordinator alloc] initWithManagedObjectModel: model 
+//																			storeType: [CPHTML5StoreType class] 
+//																   storeConfiguration: [ABContextController html5Config]];
 																   																   
 		//init the context with the coordinator
 		context = [[CPManagedObjectContext alloc] initWithPersistantStoreCoordinator: coordinator];

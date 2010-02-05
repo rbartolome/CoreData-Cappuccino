@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>CPBundleIdentifier</key>
-	<string>com.280n.CoreData</string>
+	<string>com.rbartolome.CoreData</string>
 	<key>CPBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CPBundleName</key>
-	<string>Foundation</string>
+	<string>CoreData</string>
 	<key>CPBundlePackageType</key>
 	<string>FMWK</string>
 </dict>

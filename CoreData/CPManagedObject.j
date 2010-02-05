@@ -262,7 +262,7 @@ CPManagedObjectUnexpectedValueTypeForProperty = "CPManagedObjectUnexpectedValueT
 	{
 		[self willChangeValueForKey:aKey];
 		
-		if([[self entity] acceptValue:value forProperty:aKey])
+		if(value == nil || [[self entity] acceptValue:value forProperty:aKey])
 		{
 			[self _setChangedObject:value forKey:aKey];
 			[self didChangeValueForKey:aKey];
