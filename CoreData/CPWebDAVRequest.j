@@ -144,14 +144,14 @@
 {
 	var resultArray = [[CPMutableArray alloc] init];
 	
-    var XMLDocument = XMLDocumentFromString(aResponseString),
-        responses = XMLDocument.getElementsByTagNameNS("*", "response"),
-        responseIndex = 0,
-        responseCount = responses.length;
+    var XMLDocument = XMLDocumentFromString(aResponseString);
+    var responses = XMLDocument.getElementsByTagNameNS("*", "response");
+    var responseIndex = 0;
+    var responseCount = responses.length;
   
     for (; responseIndex < responseCount; ++responseIndex)
     {
-        var response = responses[responseIndex], 
+        var response = responses[responseIndex]; 
         var href = response.getElementsByTagNameNS("*", "href").item(0);
 
         [resultArray addObject:[href.firstChild.nodeValue lastPathComponent]];
