@@ -177,7 +177,7 @@ CPDDeletedObjectsKey = "CPDDeletedObjectsKey";
 //@TODO write store fetching
 - (CPSet) _executeStoreFetchRequest:(CPFetchRequest) aFetchRequest
 {
-
+	var error;
 	var resultArray = [[CPMutableArray alloc] init];
 	
 	if([[self store] respondsToSelector:@selector(executeFetchRequest:inManagedObjectContext:error:)])

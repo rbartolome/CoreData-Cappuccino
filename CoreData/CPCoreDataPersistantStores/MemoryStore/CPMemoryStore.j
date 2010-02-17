@@ -82,6 +82,21 @@
 	return _metadata;
 }
 
+- (CPString)resourcesFile
+{
+	if(_configuration != nil)
+	{
+		return [[CPBundle mainBundle] pathForResource:[_configuration objectForKey:CPMemoryStoreConfigurationKeyResourcesFile]];
+	}
+}
+
+- (CPString)format
+{
+	if(_configuration != nil)
+	{
+		return [_configuration objectForKey:CPMemoryStoreConfigurationKeyFileFormat];
+	}
+}
 
 /*
  *	The CPManagedObjectContext calls this method before it closed
@@ -97,31 +112,38 @@
  */
 - (CPSet)loadAll:(CPDictionary) properties inManagedObjectContext:(CPManagedObjectContext) aContext error:({CPError}) error
 {
-	return [CPSet new];
-}
+	var resultSet = nil;
+	var data = [CPURLConnection sendSynchronousRequest:[CPURLRequest requestWithURL:[self resourcesFile]] returningResponse:nil error:nil];
+	CPLog.info([self resourcesFile]);
+//	var data = [[self davManager] contentOfFileAtPath:[self storeID]];
+	if([data length] > 0)
+	{
+		if([[self format] isEqualToString:CPCoreDataSerializationXMLFormat])
+		{
+			resultSet = [CPSet deserializeFromXML:data withContext:aContext];
+			error = nil;
+		}
+		else if([[self format] isEqualToString:CPCoreDataSerialization280NPLISTFormat])
+		{
+			resultSet = [CPSet deserializeFrom280NPLIST:data withContext:aContext];
+			error = nil;
+		}
+		else if([[self format] isEqualToString:CPCoreDataSerializationJSONFormat])
+		{
+			var jsonArray = JSON.parse([data description]); 		
+			resultSet = [CPSet deserializeFromJSON:jsonArray withContext:aContext];
+		}
+		else if([[self format] isEqualToString:CPCoreDataSerializationDictionaryFormat])
+		{
+			CPLog.error("*** Unimplemented Format ***");
+		}
+	}
+	else
+	{
+		CPLog.error("*** File not found or content not readable ***");
+	}
 
-/*
- *	Save objects, updated, inserted and deleted
- *	@return a set of CPManagedObjects with cheap relationship
- */
-- (CPSet) saveObjectsUpdated:(CPSet) updatedObjects
-			       inserted:(CPSet) insertedObjects
-				    deleted:(CPSet) deletedObjects
-					  error:({CPError}) error
-{
-	return [CPSet new];
-}
-
-
-/*
- *	Fetch objects with request
- *	@return a set of CPManagedObjects with cheap relationship
- */
-- (CPSet) executeFetchRequest:(CPFetchRequest) aFetchRequest
-	   inManagedObjectContext:(CPManagedObjectContext) aContext
-					  	error:({CPError}) error
-{
-	return [CPSet new];
+	return resultSet;
 }
 
 
