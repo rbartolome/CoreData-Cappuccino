@@ -114,8 +114,7 @@
 {
 	var resultSet = nil;
 	var data = [CPURLConnection sendSynchronousRequest:[CPURLRequest requestWithURL:[self resourcesFile]] returningResponse:nil error:nil];
-	CPLog.info([self resourcesFile]);
-//	var data = [[self davManager] contentOfFileAtPath:[self storeID]];
+
 	if([data length] > 0)
 	{
 		if([[self format] isEqualToString:CPCoreDataSerializationXMLFormat])

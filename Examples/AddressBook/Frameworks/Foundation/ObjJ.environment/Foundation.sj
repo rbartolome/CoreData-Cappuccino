@@ -1506,10 +1506,11 @@ objj_bundle.prototype.isa=CPBundle;
 objj_bundle.prototype.toString=function(){
 return objj_msgSend(this,"description");
 };
-p;9;CPCoder.ji;10;CPObject.ji;13;CPException.jc;1894;
+p;9;CPCoder.j@STATIC;1.0;i;10;CPObject.ji;13;CPException.jt;1848;
+objj_executeFile("CPObject.j",true);
+objj_executeFile("CPException.j",true);
 var _1=objj_allocateClassPair(CPObject,"CPCoder"),_2=_1.isa;
 objj_registerClassPair(_1);
-objj_addClassForBundle(_1,objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
 class_addMethods(_1,[new objj_method(sel_getUid("allowsKeyedCoding"),function(_3,_4){
 with(_3){
 return NO;
@@ -1558,7 +1559,7 @@ objj_msgSend(_21,"encodeObject:",object);
 })]);
 var _1=objj_getClass("CPObject");
 if(!_1){
-objj_exception_throw(new objj_exception(OBJJClassNotFoundException,"*** Could not find definition for class \"CPObject\""));
+throw new SyntaxError("*** Could not find definition for class \"CPObject\"");
 }
 var _2=_1.isa;
 class_addMethods(_1,[new objj_method(sel_getUid("awakeAfterUsingCoder:"),function(_24,_25,_26){
@@ -1566,17 +1567,17 @@ with(_24){
 return _24;
 }
 })]);
-p;14;CPCountedSet.ji;7;CPSet.jc;1265;
+p;14;CPCountedSet.j@STATIC;1.0;i;7;CPSet.jt;1258;
+objj_executeFile("CPSet.j",true);
 var _1=objj_allocateClassPair(CPMutableSet,"CPCountedSet"),_2=_1.isa;
 class_addIvars(_1,[new objj_ivar("_counts")]);
 objj_registerClassPair(_1);
-objj_addClassForBundle(_1,objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
 class_addMethods(_1,[new objj_method(sel_getUid("addObject:"),function(_3,_4,_5){
 with(_3){
 if(!_counts){
 _counts={};
 }
-objj_msgSendSuper({receiver:_3,super_class:objj_getClass("CPMutableSet")},"addObject:",_5);
+objj_msgSendSuper({receiver:_3,super_class:objj_getClass("CPCountedSet").super_class},"addObject:",_5);
 var _6=objj_msgSend(_5,"UID");
 if(_counts[_6]===undefined){
 _counts[_6]=1;
@@ -1596,13 +1597,13 @@ return;
 --_counts[_a];
 if(_counts[_a]===0){
 delete _counts[_a];
-objj_msgSendSuper({receiver:_7,super_class:objj_getClass("CPMutableSet")},"removeObject:",_9);
+objj_msgSendSuper({receiver:_7,super_class:objj_getClass("CPCountedSet").super_class},"removeObject:",_9);
 }
 }
 }
 }),new objj_method(sel_getUid("removeAllObjects"),function(_b,_c){
 with(_b){
-objj_msgSendSuper({receiver:_b,super_class:objj_getClass("CPMutableSet")},"removeAllObjects");
+objj_msgSendSuper({receiver:_b,super_class:objj_getClass("CPCountedSet").super_class},"removeAllObjects");
 _counts={};
 }
 }),new objj_method(sel_getUid("countForObject:"),function(_d,_e,_f){
@@ -1689,7 +1690,7 @@ return objj_msgSend(objj_msgSend(_1e,"alloc"),"initWithPlistObject:",_20);
 }
 })]);
 objj_data.prototype.isa=CPData;
-p;8;CPDate.ji;10;CPObject.ji;10;CPString.jc;4743;
+p;8;CPDate.ji;10;CPObject.ji;10;CPString.jc;4845;
 var _1=new Date(Date.UTC(2001,1,1,0,0,0,0));
 var _2=objj_allocateClassPair(CPObject,"CPDate"),_3=_2.isa;
 objj_registerClassPair(_2);
@@ -1768,56 +1769,60 @@ with(_2f){
 var _31=Math.floor(_2f.getTimezoneOffset()/60),_32=_2f.getTimezoneOffset()-_31*60;
 return objj_msgSend(CPString,"stringWithFormat:","%04d-%02d-%02d %02d:%02d:%02d +%02d%02d",_2f.getFullYear(),_2f.getMonth()+1,_2f.getDate(),_2f.getHours(),_2f.getMinutes(),_2f.getSeconds(),_31,_32);
 }
-})]);
-class_addMethods(_3,[new objj_method(sel_getUid("alloc"),function(_33,_34){
+}),new objj_method(sel_getUid("copy"),function(_33,_34){
 with(_33){
+return new Date(_33.getTime());
+}
+})]);
+class_addMethods(_3,[new objj_method(sel_getUid("alloc"),function(_35,_36){
+with(_35){
 return new Date;
 }
-}),new objj_method(sel_getUid("date"),function(_35,_36){
-with(_35){
-return objj_msgSend(objj_msgSend(_35,"alloc"),"init");
-}
-}),new objj_method(sel_getUid("dateWithTimeIntervalSinceNow:"),function(_37,_38,_39){
+}),new objj_method(sel_getUid("date"),function(_37,_38){
 with(_37){
-return objj_msgSend(objj_msgSend(CPDate,"alloc"),"initWithTimeIntervalSinceNow:",_39);
+return objj_msgSend(objj_msgSend(_37,"alloc"),"init");
 }
-}),new objj_method(sel_getUid("dateWithTimeIntervalSince1970:"),function(_3a,_3b,_3c){
-with(_3a){
-return objj_msgSend(objj_msgSend(CPDate,"alloc"),"initWithTimeIntervalSince1970:",_3c);
+}),new objj_method(sel_getUid("dateWithTimeIntervalSinceNow:"),function(_39,_3a,_3b){
+with(_39){
+return objj_msgSend(objj_msgSend(CPDate,"alloc"),"initWithTimeIntervalSinceNow:",_3b);
 }
-}),new objj_method(sel_getUid("dateWithTimeIntervalSinceReferenceDate:"),function(_3d,_3e,_3f){
-with(_3d){
-return objj_msgSend(objj_msgSend(CPDate,"alloc"),"initWithTimeIntervalSinceReferenceDate:",_3f);
+}),new objj_method(sel_getUid("dateWithTimeIntervalSince1970:"),function(_3c,_3d,_3e){
+with(_3c){
+return objj_msgSend(objj_msgSend(CPDate,"alloc"),"initWithTimeIntervalSince1970:",_3e);
 }
-}),new objj_method(sel_getUid("distantPast"),function(_40,_41){
-with(_40){
+}),new objj_method(sel_getUid("dateWithTimeIntervalSinceReferenceDate:"),function(_3f,_40,_41){
+with(_3f){
+return objj_msgSend(objj_msgSend(CPDate,"alloc"),"initWithTimeIntervalSinceReferenceDate:",_41);
+}
+}),new objj_method(sel_getUid("distantPast"),function(_42,_43){
+with(_42){
 return new Date(-10000,1,1,0,0,0,0);
 }
-}),new objj_method(sel_getUid("distantFuture"),function(_42,_43){
-with(_42){
+}),new objj_method(sel_getUid("distantFuture"),function(_44,_45){
+with(_44){
 return new Date(10000,1,1,0,0,0,0);
 }
-}),new objj_method(sel_getUid("timeIntervalSinceReferenceDate"),function(_44,_45){
-with(_44){
+}),new objj_method(sel_getUid("timeIntervalSinceReferenceDate"),function(_46,_47){
+with(_46){
 return objj_msgSend(objj_msgSend(CPDate,"date"),"timeIntervalSinceReferenceDate");
 }
 })]);
-var _46="CPDateTimeKey";
+var _48="CPDateTimeKey";
 var _2=objj_getClass("CPDate");
 if(!_2){
 objj_exception_throw(new objj_exception(OBJJClassNotFoundException,"*** Could not find definition for class \"CPDate\""));
 }
 var _3=_2.isa;
-class_addMethods(_2,[new objj_method(sel_getUid("initWithCoder:"),function(_47,_48,_49){
-with(_47){
-if(_47){
-_47.setTime(objj_msgSend(_49,"decodeIntForKey:",_46));
+class_addMethods(_2,[new objj_method(sel_getUid("initWithCoder:"),function(_49,_4a,_4b){
+with(_49){
+if(_49){
+_49.setTime(objj_msgSend(_4b,"decodeIntForKey:",_48));
 }
-return _47;
+return _49;
 }
-}),new objj_method(sel_getUid("encodeWithCoder:"),function(_4a,_4b,_4c){
-with(_4a){
-objj_msgSend(_4c,"encodeInt:forKey:",_4a.getTime(),_46);
+}),new objj_method(sel_getUid("encodeWithCoder:"),function(_4c,_4d,_4e){
+with(_4c){
+objj_msgSend(_4e,"encodeInt:forKey:",_4c.getTime(),_48);
 }
 })]);
 Date.prototype.isa=CPDate;
@@ -2174,11 +2179,12 @@ objj_msgSend(CPException,"initialize");
 _CPRaiseInvalidAbstractInvocation=function(_28,_29){
 objj_msgSend(CPException,"raise:reason:",CPInvalidArgumentException,"*** -"+sel_getName(_29)+" cannot be sent to an abstract object of class "+objj_msgSend(_28,"className")+": Create a concrete instance!");
 };
-p;21;CPFunctionOperation.jI;21;Foundation/CPObject.ji;13;CPOperation.jc;1175;
+p;21;CPFunctionOperation.j@STATIC;1.0;I;21;Foundation/CPObject.ji;13;CPOperation.jt;1207;
+objj_executeFile("Foundation/CPObject.j",false);
+objj_executeFile("CPOperation.j",true);
 var _1=objj_allocateClassPair(CPOperation,"CPFunctionOperation"),_2=_1.isa;
 class_addIvars(_1,[new objj_ivar("_functions")]);
 objj_registerClassPair(_1);
-objj_addClassForBundle(_1,objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
 class_addMethods(_1,[new objj_method(sel_getUid("main"),function(_3,_4){
 with(_3){
 if(_functions&&objj_msgSend(_functions,"count")>0){
@@ -2191,7 +2197,7 @@ _5();
 }
 }),new objj_method(sel_getUid("init"),function(_6,_7){
 with(_6){
-if(_6=objj_msgSendSuper({receiver:_6,super_class:objj_getClass("CPOperation")},"init")){
+if(_6=objj_msgSendSuper({receiver:_6,super_class:objj_getClass("CPFunctionOperation").super_class},"init")){
 _functions=[];
 }
 return _6;
@@ -2714,14 +2720,15 @@ return _ac;
 }
 return CPNotFound;
 };
-p;14;CPInvocation.ji;10;CPObject.ji;13;CPException.jc;2623;
+p;14;CPInvocation.j@STATIC;1.0;i;10;CPObject.ji;13;CPException.jt;2609;
+objj_executeFile("CPObject.j",true);
+objj_executeFile("CPException.j",true);
 var _1=objj_allocateClassPair(CPObject,"CPInvocation"),_2=_1.isa;
 class_addIvars(_1,[new objj_ivar("_returnValue"),new objj_ivar("_arguments"),new objj_ivar("_methodSignature")]);
 objj_registerClassPair(_1);
-objj_addClassForBundle(_1,objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
 class_addMethods(_1,[new objj_method(sel_getUid("initWithMethodSignature:"),function(_3,_4,_5){
 with(_3){
-_3=objj_msgSendSuper({receiver:_3,super_class:objj_getClass("CPObject")},"init");
+_3=objj_msgSendSuper({receiver:_3,super_class:objj_getClass("CPInvocation").super_class},"init");
 if(_3){
 _arguments=[];
 _methodSignature=_5;
@@ -2778,12 +2785,12 @@ return objj_msgSend(objj_msgSend(_21,"alloc"),"initWithMethodSignature:",_23);
 var _24="CPInvocationArguments",_25="CPInvocationReturnValue";
 var _1=objj_getClass("CPInvocation");
 if(!_1){
-objj_exception_throw(new objj_exception(OBJJClassNotFoundException,"*** Could not find definition for class \"CPInvocation\""));
+throw new SyntaxError("*** Could not find definition for class \"CPInvocation\"");
 }
 var _2=_1.isa;
 class_addMethods(_1,[new objj_method(sel_getUid("initWithCoder:"),function(_26,_27,_28){
 with(_26){
-_26=objj_msgSendSuper({receiver:_26,super_class:objj_getClass("CPObject")},"init");
+_26=objj_msgSendSuper({receiver:_26,super_class:objj_getClass("CPInvocation").super_class},"init");
 if(_26){
 _returnValue=objj_msgSend(_28,"decodeObjectForKey:",_25);
 _arguments=objj_msgSend(_28,"decodeObjectForKey:",_24);
@@ -2796,11 +2803,13 @@ objj_msgSend(_2b,"encodeObject:forKey:",_returnValue,_25);
 objj_msgSend(_2b,"encodeObject:forKey:",_arguments,_24);
 }
 })]);
-p;23;CPInvocationOperation.jI;21;Foundation/CPObject.jI;25;Foundation/CPInvocation.ji;13;CPOperation.jc;1349;
+p;23;CPInvocationOperation.j@STATIC;1.0;I;21;Foundation/CPObject.jI;25;Foundation/CPInvocation.ji;13;CPOperation.jt;1436;
+objj_executeFile("Foundation/CPObject.j",false);
+objj_executeFile("Foundation/CPInvocation.j",false);
+objj_executeFile("CPOperation.j",true);
 var _1=objj_allocateClassPair(CPOperation,"CPInvocationOperation"),_2=_1.isa;
 class_addIvars(_1,[new objj_ivar("_invocation")]);
 objj_registerClassPair(_1);
-objj_addClassForBundle(_1,objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
 class_addMethods(_1,[new objj_method(sel_getUid("main"),function(_3,_4){
 with(_3){
 if(_invocation){
@@ -2809,7 +2818,7 @@ objj_msgSend(_invocation,"invoke");
 }
 }),new objj_method(sel_getUid("init"),function(_5,_6){
 with(_5){
-if(_5=objj_msgSendSuper({receiver:_5,super_class:objj_getClass("CPOperation")},"init")){
+if(_5=objj_msgSendSuper({receiver:_5,super_class:objj_getClass("CPInvocationOperation").super_class},"init")){
 _invocation=nil;
 }
 return _5;
@@ -2841,20 +2850,20 @@ return objj_msgSend(_invocation,"returnValue");
 return nil;
 }
 })]);
-p;19;CPJSONPConnection.jI;21;Foundation/CPObject.jc;3347;
+p;19;CPJSONPConnection.j@STATIC;1.0;I;21;Foundation/CPObject.jt;3340;
+objj_executeFile("Foundation/CPObject.j",false);
 CPJSONPConnectionCallbacks={};
 CPJSONPCallbackReplacementString="${JSONP_CALLBACK}";
 var _1=objj_allocateClassPair(CPObject,"CPJSONPConnection"),_2=_1.isa;
 class_addIvars(_1,[new objj_ivar("_request"),new objj_ivar("_delegate"),new objj_ivar("_callbackParameter"),new objj_ivar("_scriptTag")]);
 objj_registerClassPair(_1);
-objj_addClassForBundle(_1,objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
 class_addMethods(_1,[new objj_method(sel_getUid("initWithRequest:callback:delegate:"),function(_3,_4,_5,_6,_7){
 with(_3){
 return objj_msgSend(_3,"initWithRequest:callback:delegate:startImmediately:",_5,_6,_7,NO);
 }
 }),new objj_method(sel_getUid("initWithRequest:callback:delegate:startImmediately:"),function(_8,_9,_a,_b,_c,_d){
 with(_8){
-_8=objj_msgSendSuper({receiver:_8,super_class:objj_getClass("CPObject")},"init");
+_8=objj_msgSendSuper({receiver:_8,super_class:objj_getClass("CPJSONPConnection").super_class},"init");
 _request=_a;
 _delegate=_c;
 _callbackParameter=_b;
@@ -4293,18 +4302,19 @@ window.CPLogDisable=!confirm("Click cancel to stop logging");
 }
 },false);
 };
-p;16;CPNotification.ji;10;CPObject.ji;13;CPException.jc;1404;
+p;16;CPNotification.j@STATIC;1.0;i;10;CPObject.ji;13;CPException.jt;1422;
+objj_executeFile("CPObject.j",true);
+objj_executeFile("CPException.j",true);
 var _1=objj_allocateClassPair(CPObject,"CPNotification"),_2=_1.isa;
 class_addIvars(_1,[new objj_ivar("_name"),new objj_ivar("_object"),new objj_ivar("_userInfo")]);
 objj_registerClassPair(_1);
-objj_addClassForBundle(_1,objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
 class_addMethods(_1,[new objj_method(sel_getUid("init"),function(_3,_4){
 with(_3){
 objj_msgSend(CPException,"raise:reason:",CPUnsupportedMethodException,"CPNotification's init method should not be used");
 }
 }),new objj_method(sel_getUid("initWithName:object:userInfo:"),function(_5,_6,_7,_8,_9){
 with(_5){
-_5=objj_msgSendSuper({receiver:_5,super_class:objj_getClass("CPObject")},"init");
+_5=objj_msgSendSuper({receiver:_5,super_class:objj_getClass("CPNotification").super_class},"init");
 if(_5){
 _name=_7;
 _object=_8;
@@ -4334,15 +4344,19 @@ with(_15){
 return objj_msgSend(objj_msgSend(_15,"alloc"),"initWithName:object:userInfo:",_17,_18,nil);
 }
 })]);
-p;22;CPNotificationCenter.ji;9;CPArray.ji;14;CPDictionary.ji;13;CPException.ji;16;CPNotification.ji;8;CPNull.jc;6405;
+p;22;CPNotificationCenter.j@STATIC;1.0;i;9;CPArray.ji;14;CPDictionary.ji;13;CPException.ji;16;CPNotification.ji;8;CPNull.jt;6420;
+objj_executeFile("CPArray.j",true);
+objj_executeFile("CPDictionary.j",true);
+objj_executeFile("CPException.j",true);
+objj_executeFile("CPNotification.j",true);
+objj_executeFile("CPNull.j",true);
 var _1=nil;
 var _2=objj_allocateClassPair(CPObject,"CPNotificationCenter"),_3=_2.isa;
 class_addIvars(_2,[new objj_ivar("_namedRegistries"),new objj_ivar("_unnamedRegistry")]);
 objj_registerClassPair(_2);
-objj_addClassForBundle(_2,objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
 class_addMethods(_2,[new objj_method(sel_getUid("init"),function(_4,_5){
 with(_4){
-_4=objj_msgSendSuper({receiver:_4,super_class:objj_getClass("CPObject")},"init");
+_4=objj_msgSendSuper({receiver:_4,super_class:objj_getClass("CPNotificationCenter").super_class},"init");
 if(_4){
 _namedRegistries=objj_msgSend(CPDictionary,"dictionary");
 _unnamedRegistry=objj_msgSend(objj_msgSend(_CPNotificationRegistry,"alloc"),"init");
@@ -4413,10 +4427,9 @@ objj_msgSend(objj_msgSend(_29._namedRegistries,"objectForKey:",objj_msgSend(_2a,
 var _2=objj_allocateClassPair(CPObject,"_CPNotificationRegistry"),_3=_2.isa;
 class_addIvars(_2,[new objj_ivar("_objectObservers"),new objj_ivar("_observerRemovalCount")]);
 objj_registerClassPair(_2);
-objj_addClassForBundle(_2,objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
 class_addMethods(_2,[new objj_method(sel_getUid("init"),function(_2b,_2c){
 with(_2b){
-_2b=objj_msgSendSuper({receiver:_2b,super_class:objj_getClass("CPObject")},"init");
+_2b=objj_msgSendSuper({receiver:_2b,super_class:objj_getClass("_CPNotificationRegistry").super_class},"init");
 if(_2b){
 _observerRemovalCount=0;
 _objectObservers=objj_msgSend(CPDictionary,"dictionary");
@@ -4502,7 +4515,6 @@ return objj_msgSend(_objectObservers,"count");
 var _2=objj_allocateClassPair(CPObject,"_CPNotificationObserver"),_3=_2.isa;
 class_addIvars(_2,[new objj_ivar("_observer"),new objj_ivar("_selector")]);
 objj_registerClassPair(_2);
-objj_addClassForBundle(_2,objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
 class_addMethods(_2,[new objj_method(sel_getUid("initWithObserver:selector:"),function(_45,_46,_47,_48){
 with(_45){
 if(_45){
@@ -4533,11 +4545,12 @@ _1=objj_msgSend(objj_msgSend(CPNull,"alloc"),"init");
 return _1;
 }
 })]);
-p;10;CPNumber.ji;10;CPObject.ji;15;CPObjJRuntime.jc;5981;
+p;10;CPNumber.j@STATIC;1.0;i;10;CPObject.ji;15;CPObjJRuntime.jt;5937;
+objj_executeFile("CPObject.j",true);
+objj_executeFile("CPObjJRuntime.j",true);
 var _1=new Number(),_2={};
 var _3=objj_allocateClassPair(CPObject,"CPNumber"),_4=_3.isa;
 objj_registerClassPair(_3);
-objj_addClassForBundle(_3,objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
 class_addMethods(_3,[new objj_method(sel_getUid("initWithBool:"),function(_5,_6,_7){
 with(_5){
 return _7;
@@ -4770,7 +4783,7 @@ return _77;
 })]);
 var _3=objj_getClass("CPNumber");
 if(!_3){
-objj_exception_throw(new objj_exception(OBJJClassNotFoundException,"*** Could not find definition for class \"CPNumber\""));
+throw new SyntaxError("*** Could not find definition for class \"CPNumber\"");
 }
 var _4=_3.isa;
 class_addMethods(_3,[new objj_method(sel_getUid("initWithCoder:"),function(_78,_79,_7a){
@@ -5005,7 +5018,8 @@ return objj_msgSend(this,"description");
 return String(this)+" (-description not implemented)";
 }
 };
-p;15;CPObjJRuntime.ji;7;CPLog.jc;372;
+p;15;CPObjJRuntime.j@STATIC;1.0;i;7;CPLog.jt;406;
+objj_executeFile("CPLog.j",true);
 CPStringFromSelector=function(_1){
 return sel_getName(_1);
 };
@@ -5157,12 +5171,15 @@ objj_msgSend(_2f,"didChangeValueForKey:","isReady");
 }
 }
 })]);
-p;18;CPOperationQueue.jI;21;Foundation/CPObject.ji;13;CPOperation.ji;23;CPInvocationOperation.ji;21;CPFunctionOperation.jc;4940;
+p;18;CPOperationQueue.j@STATIC;1.0;I;21;Foundation/CPObject.ji;13;CPOperation.ji;23;CPInvocationOperation.ji;21;CPFunctionOperation.jt;5070;
+objj_executeFile("Foundation/CPObject.j",false);
+objj_executeFile("CPOperation.j",true);
+objj_executeFile("CPInvocationOperation.j",true);
+objj_executeFile("CPFunctionOperation.j",true);
 var _1=nil;
 var _2=objj_allocateClassPair(CPObject,"CPOperationQueue"),_3=_2.isa;
 class_addIvars(_2,[new objj_ivar("_operations"),new objj_ivar("_suspended"),new objj_ivar("_name"),new objj_ivar("_timer")]);
 objj_registerClassPair(_2);
-objj_addClassForBundle(_2,objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
 class_addMethods(_2,[new objj_method(sel_getUid("name"),function(_4,_5){
 with(_4){
 return _name;
@@ -5173,7 +5190,7 @@ _name=_8;
 }
 }),new objj_method(sel_getUid("init"),function(_9,_a){
 with(_9){
-if(_9=objj_msgSendSuper({receiver:_9,super_class:objj_getClass("CPObject")},"init")){
+if(_9=objj_msgSendSuper({receiver:_9,super_class:objj_getClass("CPOperationQueue").super_class},"init")){
 _operations=objj_msgSend(objj_msgSend(CPArray,"alloc"),"init");
 _suspended=NO;
 _currentlyModifyingOps=NO;
@@ -5341,10 +5358,12 @@ with(_8){
 return CPPropertyListCreateFromData(_a,_b);
 }
 })]);
-p;9;CPProxy.ji;13;CPException.ji;14;CPInvocation.ji;10;CPString.jc;3477;
+p;9;CPProxy.j@STATIC;1.0;i;13;CPException.ji;14;CPInvocation.ji;10;CPString.jt;3518;
+objj_executeFile("CPException.j",true);
+objj_executeFile("CPInvocation.j",true);
+objj_executeFile("CPString.j",true);
 var _1=objj_allocateClassPair(Nil,"CPProxy"),_2=_1.isa;
 objj_registerClassPair(_1);
-objj_addClassForBundle(_1,objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
 class_addMethods(_1,[new objj_method(sel_getUid("methodSignatureForSelector:"),function(_3,_4,_5){
 with(_3){
 objj_msgSend(CPException,"raise:reason:",CPInvalidArgumentException,"-methodSignatureForSelector: called on abstract CPProxy class.");
@@ -5442,7 +5461,7 @@ with(_41){
 return !!class_getInstanceMethod(isa,aSelector);
 }
 })]);
-p;9;CPRange.jc;1225;
+p;9;CPRange.j@STATIC;1.0;t;1225;
 CPMakeRange=function(_1,_2){
 return {location:_1,length:_2};
 };
@@ -5485,7 +5504,10 @@ CPRangeFromString=function(_14){
 var _15=_14.indexOf(",");
 return {location:parseInt(_14.substr(1,_15-1)),length:parseInt(_14.substring(_15+1,_14.length))};
 };
-p;11;CPRunLoop.ji;10;CPObject.ji;9;CPArray.ji;10;CPString.jc;6407;
+p;11;CPRunLoop.j@STATIC;1.0;i;10;CPObject.ji;9;CPArray.ji;10;CPString.jt;6397;
+objj_executeFile("CPObject.j",true);
+objj_executeFile("CPArray.j",true);
+objj_executeFile("CPString.j",true);
 CPDefaultRunLoopMode="CPDefaultRunLoopMode";
 _CPRunLoopPerformCompare=function(_1,_2){
 return objj_msgSend(_2,"order")-objj_msgSend(_1,"order");
@@ -5494,10 +5516,9 @@ var _3=[],_4=5;
 var _5=objj_allocateClassPair(CPObject,"_CPRunLoopPerform"),_6=_5.isa;
 class_addIvars(_5,[new objj_ivar("_target"),new objj_ivar("_selector"),new objj_ivar("_argument"),new objj_ivar("_order"),new objj_ivar("_runLoopModes"),new objj_ivar("_isValid")]);
 objj_registerClassPair(_5);
-objj_addClassForBundle(_5,objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
 class_addMethods(_5,[new objj_method(sel_getUid("initWithSelector:target:argument:order:modes:"),function(_7,_8,_9,_a,_b,_c,_d){
 with(_7){
-_7=objj_msgSendSuper({receiver:_7,super_class:objj_getClass("CPObject")},"init");
+_7=objj_msgSendSuper({receiver:_7,super_class:objj_getClass("_CPRunLoopPerform").super_class},"init");
 if(_7){
 _selector=_9;
 _target=_a;
@@ -5566,10 +5587,9 @@ var _26=0;
 var _5=objj_allocateClassPair(CPObject,"CPRunLoop"),_6=_5.isa;
 class_addIvars(_5,[new objj_ivar("_runLoopLock"),new objj_ivar("_timersForModes"),new objj_ivar("_nativeTimersForModes"),new objj_ivar("_nextTimerFireDatesForModes"),new objj_ivar("_didAddTimer"),new objj_ivar("_effectiveDate"),new objj_ivar("_orderedPerforms")]);
 objj_registerClassPair(_5);
-objj_addClassForBundle(_5,objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
 class_addMethods(_5,[new objj_method(sel_getUid("init"),function(_27,_28){
 with(_27){
-_27=objj_msgSendSuper({receiver:_27,super_class:objj_getClass("CPObject")},"init");
+_27=objj_msgSendSuper({receiver:_27,super_class:objj_getClass("CPRunLoop").super_class},"init");
 if(_27){
 _orderedPerforms=[];
 _timersForModes={};
@@ -5977,21 +5997,22 @@ objj_msgSend(_7c,"encodeObject:forKey:",objj_msgSend(_7a,"allObjects"),_76);
 var _1=objj_allocateClassPair(CPSet,"CPMutableSet"),_2=_1.isa;
 objj_registerClassPair(_1);
 objj_addClassForBundle(_1,objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
-p;18;CPSortDescriptor.ji;10;CPObject.ji;15;CPObjJRuntime.jc;1953;
+p;18;CPSortDescriptor.j@STATIC;1.0;i;10;CPObject.ji;15;CPObjJRuntime.jt;1975;
+objj_executeFile("CPObject.j",true);
+objj_executeFile("CPObjJRuntime.j",true);
 CPOrderedAscending=-1;
 CPOrderedSame=0;
 CPOrderedDescending=1;
 var _1=objj_allocateClassPair(CPObject,"CPSortDescriptor"),_2=_1.isa;
 class_addIvars(_1,[new objj_ivar("_key"),new objj_ivar("_selector"),new objj_ivar("_ascending")]);
 objj_registerClassPair(_1);
-objj_addClassForBundle(_1,objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
 class_addMethods(_1,[new objj_method(sel_getUid("initWithKey:ascending:"),function(_3,_4,_5,_6){
 with(_3){
 return objj_msgSend(_3,"initWithKey:ascending:selector:",_5,_6,sel_getUid("compare:"));
 }
 }),new objj_method(sel_getUid("initWithKey:ascending:selector:"),function(_7,_8,_9,_a,_b){
 with(_7){
-_7=objj_msgSendSuper({receiver:_7,super_class:objj_getClass("CPObject")},"init");
+_7=objj_msgSendSuper({receiver:_7,super_class:objj_getClass("CPSortDescriptor").super_class},"init");
 if(_7){
 _key=_9;
 _ascending=_a;
@@ -6364,14 +6385,17 @@ return g;
 }
 })]);
 String.prototype.isa=CPString;
-p;9;CPTimer.ji;10;CPObject.ji;14;CPInvocation.ji;8;CPDate.ji;11;CPRunLoop.jc;5354;
+p;9;CPTimer.j@STATIC;1.0;i;10;CPObject.ji;14;CPInvocation.ji;8;CPDate.ji;11;CPRunLoop.jt;5450;
+objj_executeFile("CPObject.j",true);
+objj_executeFile("CPInvocation.j",true);
+objj_executeFile("CPDate.j",true);
+objj_executeFile("CPRunLoop.j",true);
 var _1=objj_allocateClassPair(CPObject,"CPTimer"),_2=_1.isa;
 class_addIvars(_1,[new objj_ivar("_timeInterval"),new objj_ivar("_invocation"),new objj_ivar("_callback"),new objj_ivar("_repeats"),new objj_ivar("_isValid"),new objj_ivar("_fireDate"),new objj_ivar("_userInfo")]);
 objj_registerClassPair(_1);
-objj_addClassForBundle(_1,objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
 class_addMethods(_1,[new objj_method(sel_getUid("initWithFireDate:interval:invocation:repeats:"),function(_3,_4,_5,_6,_7,_8){
 with(_3){
-_3=objj_msgSendSuper({receiver:_3,super_class:objj_getClass("CPObject")},"init");
+_3=objj_msgSendSuper({receiver:_3,super_class:objj_getClass("CPTimer").super_class},"init");
 if(_3){
 _timeInterval=_6;
 _invocation=_7;
@@ -6395,7 +6419,7 @@ return _9;
 }
 }),new objj_method(sel_getUid("initWithFireDate:interval:callback:repeats:"),function(_12,_13,_14,_15,_16,_17){
 with(_12){
-_12=objj_msgSendSuper({receiver:_12,super_class:objj_getClass("CPObject")},"init");
+_12=objj_msgSendSuper({receiver:_12,super_class:objj_getClass("CPTimer").super_class},"init");
 if(_12){
 _timeInterval=_15;
 _callback=_16;
@@ -6523,7 +6547,10 @@ return _4e(_59,_5a,YES,Array.prototype.slice.apply(arguments,[2]));
 window.clearInterval=function(_5c){
 window.clearTimeout(_5c);
 };
-p;15;CPUndoManager.ji;10;CPObject.ji;14;CPInvocation.ji;9;CPProxy.jc;15988;
+p;15;CPUndoManager.j@STATIC;1.0;i;10;CPObject.ji;14;CPInvocation.ji;9;CPProxy.jt;15851;
+objj_executeFile("CPObject.j",true);
+objj_executeFile("CPInvocation.j",true);
+objj_executeFile("CPProxy.j",true);
 var _1=0,_2=1,_3=2;
 CPUndoManagerCheckpointNotification="CPUndoManagerCheckpointNotification";
 CPUndoManagerDidOpenUndoGroupNotification="CPUndoManagerDidOpenUndoGroupNotification";
@@ -6537,10 +6564,9 @@ var _4=[],_5=5;
 var _6=objj_allocateClassPair(CPObject,"_CPUndoGrouping"),_7=_6.isa;
 class_addIvars(_6,[new objj_ivar("_parent"),new objj_ivar("_invocations")]);
 objj_registerClassPair(_6);
-objj_addClassForBundle(_6,objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
 class_addMethods(_6,[new objj_method(sel_getUid("initWithParent:"),function(_8,_9,_a){
 with(_8){
-_8=objj_msgSendSuper({receiver:_8,super_class:objj_getClass("CPObject")},"init");
+_8=objj_msgSendSuper({receiver:_8,super_class:objj_getClass("_CPUndoGrouping").super_class},"init");
 if(_8){
 _parent=_a;
 _invocations=[];
@@ -6603,12 +6629,12 @@ return objj_msgSend(objj_msgSend(_1f,"alloc"),"initWithParent:",_21);
 var _23="_CPUndoGroupingParentKey",_24="_CPUndoGroupingInvocationsKey";
 var _6=objj_getClass("_CPUndoGrouping");
 if(!_6){
-objj_exception_throw(new objj_exception(OBJJClassNotFoundException,"*** Could not find definition for class \"_CPUndoGrouping\""));
+throw new SyntaxError("*** Could not find definition for class \"_CPUndoGrouping\"");
 }
 var _7=_6.isa;
 class_addMethods(_6,[new objj_method(sel_getUid("initWithCoder:"),function(_25,_26,_27){
 with(_25){
-_25=objj_msgSendSuper({receiver:_25,super_class:objj_getClass("CPObject")},"init");
+_25=objj_msgSendSuper({receiver:_25,super_class:objj_getClass("_CPUndoGrouping").super_class},"init");
 if(_25){
 _parent=objj_msgSend(_27,"decodeObjectForKey:",_23);
 _invocations=objj_msgSend(_27,"decodeObjectForKey:",_24);
@@ -6624,10 +6650,9 @@ objj_msgSend(_2a,"encodeObject:forKey:",_invocations,_24);
 var _6=objj_allocateClassPair(CPObject,"CPUndoManager"),_7=_6.isa;
 class_addIvars(_6,[new objj_ivar("_redoStack"),new objj_ivar("_undoStack"),new objj_ivar("_groupsByEvent"),new objj_ivar("_disableCount"),new objj_ivar("_levelsOfUndo"),new objj_ivar("_currentGrouping"),new objj_ivar("_state"),new objj_ivar("_actionName"),new objj_ivar("_preparedTarget"),new objj_ivar("_undoManagerProxy"),new objj_ivar("_runLoopModes"),new objj_ivar("_registeredWithRunLoop")]);
 objj_registerClassPair(_6);
-objj_addClassForBundle(_6,objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
 class_addMethods(_6,[new objj_method(sel_getUid("init"),function(_2b,_2c){
 with(_2b){
-_2b=objj_msgSendSuper({receiver:_2b,super_class:objj_getClass("CPObject")},"init");
+_2b=objj_msgSendSuper({receiver:_2b,super_class:objj_getClass("CPUndoManager").super_class},"init");
 if(_2b){
 _redoStack=[];
 _undoStack=[];
@@ -6916,12 +6941,12 @@ CPUndoManagerRunLoopModesKey="CPUndoManagerRunLoopModesKey";
 CPUndoManagerGroupsByEventKey="CPUndoManagerGroupsByEventKey";
 var _6=objj_getClass("CPUndoManager");
 if(!_6){
-objj_exception_throw(new objj_exception(OBJJClassNotFoundException,"*** Could not find definition for class \"CPUndoManager\""));
+throw new SyntaxError("*** Could not find definition for class \"CPUndoManager\"");
 }
 var _7=_6.isa;
 class_addMethods(_6,[new objj_method(sel_getUid("initWithCoder:"),function(_95,_96,_97){
 with(_95){
-_95=objj_msgSendSuper({receiver:_95,super_class:objj_getClass("CPObject")},"init");
+_95=objj_msgSendSuper({receiver:_95,super_class:objj_getClass("CPUndoManager").super_class},"init");
 if(_95){
 _redoStack=objj_msgSend(_97,"decodeObjectForKey:",_93);
 _undoStack=objj_msgSend(_97,"decodeObjectForKey:",_94);
@@ -6948,7 +6973,6 @@ objj_msgSend(_9a,"encodeBool:forKey:",_groupsByEvent,CPUndoManagerGroupsByEventK
 var _6=objj_allocateClassPair(CPProxy,"_CPUndoManagerProxy"),_7=_6.isa;
 class_addIvars(_6,[new objj_ivar("_undoManager")]);
 objj_registerClassPair(_6);
-objj_addClassForBundle(_6,objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
 class_addMethods(_6,[new objj_method(sel_getUid("methodSignatureForSelector:"),function(_9b,_9c,_9d){
 with(_9b){
 return objj_msgSend(_undoManager,"_methodSignatureOfPreparedTargetForSelector:",_9d);
@@ -7473,14 +7497,14 @@ with(_2f){
 return objj_msgSend(objj_msgSend(_2f,"alloc"),"initWithRequest:delegate:",_31,_32);
 }
 })]);
-p;14;CPURLRequest.ji;10;CPObject.jc;2178;
+p;14;CPURLRequest.j@STATIC;1.0;i;10;CPObject.jt;2154;
+objj_executeFile("CPObject.j",true);
 var _1=objj_allocateClassPair(CPObject,"CPURLRequest"),_2=_1.isa;
 class_addIvars(_1,[new objj_ivar("_URL"),new objj_ivar("_HTTPBody"),new objj_ivar("_HTTPMethod"),new objj_ivar("_HTTPHeaderFields")]);
 objj_registerClassPair(_1);
-objj_addClassForBundle(_1,objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
 class_addMethods(_1,[new objj_method(sel_getUid("initWithURL:"),function(_3,_4,_5){
 with(_3){
-_3=objj_msgSendSuper({receiver:_3,super_class:objj_getClass("CPObject")},"init");
+_3=objj_msgSendSuper({receiver:_3,super_class:objj_getClass("CPURLRequest").super_class},"init");
 if(_3){
 objj_msgSend(_3,"setURL:",_5);
 _HTTPBody="";
@@ -7538,14 +7562,14 @@ with(_1e){
 return objj_msgSend(objj_msgSend(CPURLRequest,"alloc"),"initWithURL:",_20);
 }
 })]);
-p;15;CPURLResponse.ji;10;CPObject.jc;956;
+p;15;CPURLResponse.j@STATIC;1.0;i;10;CPObject.jt;856;
+objj_executeFile("CPObject.j",true);
 var _1=objj_allocateClassPair(CPObject,"CPURLResponse"),_2=_1.isa;
 class_addIvars(_1,[new objj_ivar("_URL")]);
 objj_registerClassPair(_1);
-objj_addClassForBundle(_1,objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
 class_addMethods(_1,[new objj_method(sel_getUid("initWithURL:"),function(_3,_4,_5){
 with(_3){
-_3=objj_msgSendSuper({receiver:_3,super_class:objj_getClass("CPObject")},"init");
+_3=objj_msgSendSuper({receiver:_3,super_class:objj_getClass("CPURLResponse").super_class},"init");
 if(_3){
 _URL=_5;
 }
@@ -7559,7 +7583,6 @@ return _URL;
 var _1=objj_allocateClassPair(CPURLResponse,"CPHTTPURLResponse"),_2=_1.isa;
 class_addIvars(_1,[new objj_ivar("_statusCode")]);
 objj_registerClassPair(_1);
-objj_addClassForBundle(_1,objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
 class_addMethods(_1,[new objj_method(sel_getUid("_setStatusCode:"),function(_8,_9,_a){
 with(_8){
 _statusCode=_a;
@@ -7569,7 +7592,9 @@ with(_b){
 return _statusCode;
 }
 })]);
-p;22;CPUserSessionManager.jI;21;Foundation/CPObject.jI;21;Foundation/CPString.jc;1844;
+p;22;CPUserSessionManager.j@STATIC;1.0;I;21;Foundation/CPObject.jI;21;Foundation/CPString.jt;1889;
+objj_executeFile("Foundation/CPObject.j",false);
+objj_executeFile("Foundation/CPString.j",false);
 CPUserSessionUndeterminedStatus=0;
 CPUserSessionLoggedInStatus=1;
 CPUserSessionLoggedOutStatus=2;
@@ -7579,10 +7604,9 @@ var _1=nil;
 var _2=objj_allocateClassPair(CPObject,"CPUserSessionManager"),_3=_2.isa;
 class_addIvars(_2,[new objj_ivar("_status"),new objj_ivar("_userIdentifier")]);
 objj_registerClassPair(_2);
-objj_addClassForBundle(_2,objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
 class_addMethods(_2,[new objj_method(sel_getUid("init"),function(_4,_5){
 with(_4){
-_4=objj_msgSendSuper({receiver:_4,super_class:objj_getClass("CPObject")},"init");
+_4=objj_msgSendSuper({receiver:_4,super_class:objj_getClass("CPUserSessionManager").super_class},"init");
 if(_4){
 _status=CPUserSessionUndeterminedStatus;
 }
@@ -7624,14 +7648,15 @@ _1=objj_msgSend(objj_msgSend(CPUserSessionManager,"alloc"),"init");
 return _1;
 }
 })]);
-p;9;CPValue.ji;10;CPObject.ji;9;CPCoder.jc;1673;
+p;9;CPValue.j@STATIC;1.0;i;10;CPObject.ji;9;CPCoder.jt;1645;
+objj_executeFile("CPObject.j",true);
+objj_executeFile("CPCoder.j",true);
 var _1=objj_allocateClassPair(CPObject,"CPValue"),_2=_1.isa;
 class_addIvars(_1,[new objj_ivar("_JSObject")]);
 objj_registerClassPair(_1);
-objj_addClassForBundle(_1,objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
 class_addMethods(_1,[new objj_method(sel_getUid("initWithJSObject:"),function(_3,_4,_5){
 with(_3){
-_3=objj_msgSendSuper({receiver:_3,super_class:objj_getClass("CPObject")},"init");
+_3=objj_msgSendSuper({receiver:_3,super_class:objj_getClass("CPValue").super_class},"init");
 if(_3){
 _JSObject=_5;
 }
@@ -7650,12 +7675,12 @@ return objj_msgSend(objj_msgSend(_8,"alloc"),"initWithJSObject:",_a);
 var _b="CPValueValueKey";
 var _1=objj_getClass("CPValue");
 if(!_1){
-objj_exception_throw(new objj_exception(OBJJClassNotFoundException,"*** Could not find definition for class \"CPValue\""));
+throw new SyntaxError("*** Could not find definition for class \"CPValue\"");
 }
 var _2=_1.isa;
 class_addMethods(_1,[new objj_method(sel_getUid("initWithCoder:"),function(_c,_d,_e){
 with(_c){
-_c=objj_msgSendSuper({receiver:_c,super_class:objj_getClass("CPObject")},"init");
+_c=objj_msgSendSuper({receiver:_c,super_class:objj_getClass("CPValue").super_class},"init");
 if(_c){
 _JSObject=JSON.parse(objj_msgSend(_e,"decodeObjectForKey:",_b));
 }
@@ -7795,4 +7820,43 @@ return _35;
 };
 var _3f=function(_40,_41){
 };
-p;12;Foundation.ji;9;CPArray.ji;10;CPBundle.ji;9;CPCoder.ji;8;CPData.ji;8;CPDate.ji;14;CPDictionary.ji;14;CPEnumerator.ji;13;CPException.ji;12;CPIndexSet.ji;14;CPInvocation.ji;19;CPJSONPConnection.ji;17;CPKeyedArchiver.ji;19;CPKeyedUnarchiver.ji;18;CPKeyValueCoding.ji;21;CPKeyValueObserving.ji;7;CPLog.ji;16;CPNotification.ji;22;CPNotificationCenter.ji;8;CPNull.ji;10;CPNumber.ji;10;CPObject.ji;15;CPObjJRuntime.ji;13;CPOperation.ji;18;CPOperationQueue.ji;29;CPPropertyListSerialization.ji;9;CPRange.ji;11;CPRunLoop.ji;7;CPSet.ji;18;CPSortDescriptor.ji;10;CPString.ji;9;CPTimer.ji;15;CPUndoManager.ji;7;CPURL.ji;17;CPURLConnection.ji;14;CPURLRequest.ji;15;CPURLResponse.ji;22;CPUserSessionManager.ji;9;CPValue.je;
+p;12;Foundation.j@STATIC;1.0;i;9;CPArray.ji;10;CPBundle.ji;9;CPCoder.ji;8;CPData.ji;8;CPDate.ji;14;CPDictionary.ji;14;CPEnumerator.ji;13;CPException.ji;12;CPIndexSet.ji;14;CPInvocation.ji;19;CPJSONPConnection.ji;17;CPKeyedArchiver.ji;19;CPKeyedUnarchiver.ji;18;CPKeyValueCoding.ji;21;CPKeyValueObserving.ji;7;CPLog.ji;16;CPNotification.ji;22;CPNotificationCenter.ji;8;CPNull.ji;10;CPNumber.ji;10;CPObject.ji;15;CPObjJRuntime.ji;13;CPOperation.ji;18;CPOperationQueue.ji;29;CPPropertyListSerialization.ji;9;CPRange.ji;11;CPRunLoop.ji;7;CPSet.ji;18;CPSortDescriptor.ji;10;CPString.ji;9;CPTimer.ji;15;CPUndoManager.ji;7;CPURL.ji;17;CPURLConnection.ji;14;CPURLRequest.ji;15;CPURLResponse.ji;22;CPUserSessionManager.ji;9;CPValue.jt;1543;
+objj_executeFile("CPArray.j",true);
+objj_executeFile("CPBundle.j",true);
+objj_executeFile("CPCoder.j",true);
+objj_executeFile("CPData.j",true);
+objj_executeFile("CPDate.j",true);
+objj_executeFile("CPDictionary.j",true);
+objj_executeFile("CPEnumerator.j",true);
+objj_executeFile("CPException.j",true);
+objj_executeFile("CPIndexSet.j",true);
+objj_executeFile("CPInvocation.j",true);
+objj_executeFile("CPJSONPConnection.j",true);
+objj_executeFile("CPKeyedArchiver.j",true);
+objj_executeFile("CPKeyedUnarchiver.j",true);
+objj_executeFile("CPKeyValueCoding.j",true);
+objj_executeFile("CPKeyValueObserving.j",true);
+objj_executeFile("CPLog.j",true);
+objj_executeFile("CPNotification.j",true);
+objj_executeFile("CPNotificationCenter.j",true);
+objj_executeFile("CPNull.j",true);
+objj_executeFile("CPNumber.j",true);
+objj_executeFile("CPObject.j",true);
+objj_executeFile("CPObjJRuntime.j",true);
+objj_executeFile("CPOperation.j",true);
+objj_executeFile("CPOperationQueue.j",true);
+objj_executeFile("CPPropertyListSerialization.j",true);
+objj_executeFile("CPRange.j",true);
+objj_executeFile("CPRunLoop.j",true);
+objj_executeFile("CPSet.j",true);
+objj_executeFile("CPSortDescriptor.j",true);
+objj_executeFile("CPString.j",true);
+objj_executeFile("CPTimer.j",true);
+objj_executeFile("CPUndoManager.j",true);
+objj_executeFile("CPURL.j",true);
+objj_executeFile("CPURLConnection.j",true);
+objj_executeFile("CPURLRequest.j",true);
+objj_executeFile("CPURLResponse.j",true);
+objj_executeFile("CPUserSessionManager.j",true);
+objj_executeFile("CPValue.j",true);
+e;

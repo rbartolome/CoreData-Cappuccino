@@ -1880,7 +1880,7 @@ class_addMethods(meta_class, [new objj_method(sel_getUid("alloc"), function $CPD
 }
 objj_data.prototype.isa = CPData;
 
-p;8;CPDate.ji;10;CPObject.ji;10;CPString.jc;7047;
+p;8;CPDate.ji;10;CPObject.ji;10;CPString.jc;7183;
 var CPDateReferenceDate = new Date(Date.UTC(2001,1,1,0,0,0,0));
 {var the_class = objj_allocateClassPair(CPObject, "CPDate"),
 meta_class = the_class.isa;objj_registerClassPair(the_class);
@@ -1976,7 +1976,12 @@ class_addMethods(the_class, [new objj_method(sel_getUid("initWithTimeIntervalSin
         minutes = self.getTimezoneOffset() - hours * 60;
     return objj_msgSend(CPString, "stringWithFormat:", "%04d-%02d-%02d %02d:%02d:%02d +%02d%02d", self.getFullYear(), self.getMonth()+1, self.getDate(), self.getHours(), self.getMinutes(), self.getSeconds(), hours, minutes);
 }
-},["CPString"])]);
+},["CPString"]), new objj_method(sel_getUid("copy"), function $CPDate__copy(self, _cmd)
+{ with(self)
+{
+    return new Date(self.getTime());
+}
+},["id"])]);
 class_addMethods(meta_class, [new objj_method(sel_getUid("alloc"), function $CPDate__alloc(self, _cmd)
 { with(self)
 {

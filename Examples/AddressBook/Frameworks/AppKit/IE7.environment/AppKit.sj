@@ -28126,7 +28126,7 @@ with(_14){
 return _windows;
 }
 })]);
-p;22;CPPlatformWindow+DOM.jI;21;Foundation/CPObject.jI;22;Foundation/CPRunLoop.ji;9;CPEvent.ji;17;CPCompatibility.ji;18;CPDOMWindowLayer.ji;12;CPPlatform.ji;18;CPPlatformWindow.ji;26;CPPlatformWindow+DOMKeys.jc;27524;
+p;22;CPPlatformWindow+DOM.jI;21;Foundation/CPObject.jI;22;Foundation/CPRunLoop.ji;9;CPEvent.ji;17;CPCompatibility.ji;18;CPDOMWindowLayer.ji;12;CPPlatform.ji;18;CPPlatformWindow.ji;26;CPPlatformWindow+DOMKeys.jc;27504;
 var _1=objj_msgSend(CPSet,"set");
 var _2,_3,_4;
 var _5={},_6={},_7={61:187,59:186};
@@ -28139,7 +28139,7 @@ objj_exception_throw(new objj_exception(OBJJClassNotFoundException,"*** Could no
 var _a=_9.isa;
 class_addMethods(_9,[new objj_method(sel_getUid("_init"),function(_b,_c){
 with(_b){
-_b=objj_msgSendSuper({receiver:_b,super_class:objj_getClass("CPPlatformWindow").super_class},"init");
+_b=objj_msgSendSuper({receiver:_b,super_class:objj_getClass("CPObject")},"init");
 if(_b){
 _DOMWindow=window;
 _contentRect={origin:{x:0,y:0},size:{width:0,height:0}};
@@ -29245,17 +29245,17 @@ iVBORw0KGgoAAAANSUhEUgAAAAMAAAAQCAYAAADTasWKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFn
 Content-Location:Resources/CPProgressIndicator/CPProgressIndicatorBezelBorderBarRegular0.png
 Content-Transfer-Encoding:base64
 
-iVBORw0KGgoAAAANSUhEUgAAAAMAAAAPCAYAAAAh6nXEAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAC1JREFUCFtjYIAArvLy8v/IDHcQRw7KsQVxNKAcDXpy5IDYHe42qCjYbTABOQDm8yOhSf3qCwAAAABJRU5ErkJggg==
+iVBORw0KGgoAAAANSUhEUgAAAAMAAAAQCAYAAADTasWKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAIBJREFUeNpiZIAAISBWATGE9+7dO/Xr16+vGTg4OGyAjA+/f//+z/Tjxw8uFhYW/n///jGwAJUxgRggAOIw/v37F85BkWFClkFVhlMPXBkTDw/Pf6DFn0CyzN7e3mKsrKwcUlJSCgxv374VCA4Odufn5w9h/P//P0g5PxBLAwQYADkXPiP8F5MNAAAAAElFTkSuQmCC
 --_ANY_STRING_WILL_DO_AS_A_SEPARATOR
 Content-Location:Resources/CPProgressIndicator/CPProgressIndicatorBezelBorderBarRegular1.png
 Content-Transfer-Encoding:base64
 
-iVBORw0KGgoAAAANSUhEUgAAAAEAAAAPCAYAAAAlH6X5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABxJREFUCB1jKC8v/88ABIEgQoPh/38gj1gCVS8A6JkgoF9/TfAAAAAASUVORK5CYII=
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAAQCAYAAADXnxW3AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEtJREFUeNocxFEKgCAQRdF59dO+WkT7B0EEQRBhGERv1Pk4Zma31lpozokiArk7GmOg3jtqraFaKyqloJwzSilx7L3t7/OcwPUKMABbNDOyQBe/kwAAAABJRU5ErkJggg==
 --_ANY_STRING_WILL_DO_AS_A_SEPARATOR
 Content-Location:Resources/CPProgressIndicator/CPProgressIndicatorBezelBorderBarRegular2.png
 Content-Transfer-Encoding:base64
 
-iVBORw0KGgoAAAANSUhEUgAAAAMAAAAPCAYAAAAh6nXEAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAC9JREFUCFtjKC8v/8/AwMDFAAXuyAK2UI4ciKMB5WjQjQNluMNc4A5VAnabHIwBABIKI6Gj7Sm0AAAAAElFTkSuQmCC
+iVBORw0KGgoAAAANSUhEUgAAAAMAAAAQCAYAAADTasWKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAH5JREFUeNpiYGBgMANiIQYQ+Pr16+u9e/dOBTKFGX7//v0fKPCBg4PDhunfv38MLCws/D9+/OBiAXGggInl79+/MA4jThk0ZSgy+E379evXJx4env9M3759+7B///71rq6ubxn4+flDgoOD3d++fSvA8P//fy0g5gdiBoAAAwDmKUtB/aWHewAAAABJRU5ErkJggg==
 --_ANY_STRING_WILL_DO_AS_A_SEPARATOR
 Content-Location:Resources/CPProgressIndicator/CPProgressIndicatorBezelBorderHUDBarRegular0.png
 Content-Transfer-Encoding:base64

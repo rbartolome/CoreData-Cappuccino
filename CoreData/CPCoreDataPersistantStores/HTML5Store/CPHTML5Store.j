@@ -43,11 +43,7 @@
  */
 - (void) saveAll:(CPSet) objects error:({CPError}) error
 {
-<<<<<<< HEAD
-	[[self dataStorage] setValue:[[objects serializeTo280NPLIST:YES containsChangedProperties:YES] string] forKey:@"AllObjects"];
-=======
 	[[self dataStorage] setValue:[[objects serializeTo280NPLIST:YES containsChangedProperties:YES] description] forKey:[self storeName]+@"-Objects"];
->>>>>>> 674eaab... fix typo in CPHTML5Store
 }
 
 
