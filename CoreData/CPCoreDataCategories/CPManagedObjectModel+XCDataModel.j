@@ -11,19 +11,19 @@
 
 + (void) parseCoreDataModel:(CPString) aModelName
 {
-	if(![aModelName hasPrefix:@"cxcdatamodel"])
+	var modelPath = aModelName;
+	if(![modelPath hasSuffix:@"cxcdatamodel"])
 	{
-		var modelNameComponents = [aModelName componentsSeparatedByString:@"."];
-		aModelName = [modelNameComponents objectAtIndex:0] + ".cxcdatamodel";	
+		var modelNameComponents = [modelPath componentsSeparatedByString:@"."];
+		modelPath = [modelNameComponents objectAtIndex:0] + ".cxcdatamodel";
 	}
 	
-	var data = [CPURLConnection sendSynchronousRequest:
-						[CPURLRequest requestWithURL:aModelName] returningResponse:nil error:nil];
-	var plistContents = [data string].replace(/\<key\>\s*CF\$UID\s*\<\/key\>/g, "<key>CP$UID</key>");
-	var unarchiver = [[CPKeyedUnarchiver alloc] initForReadingWithData:[CPData dataWithString:plistContents]]; 
+	var data = [CPURLConnection sendSynchronousRequest: [CPURLRequest requestWithURL:modelPath] returningResponse:nil];
+	var plistContents = [data rawString].replace(/\<key\>\s*CF\$UID\s*\<\/key\>/g, "<key>CP$UID</key>");
+	var unarchiver = [[CPKeyedUnarchiver alloc] initForReadingWithData:[CPData dataWithRawString:plistContents]]; 
 	
-	var managedObjectModel = [unarchiver decodeObjectForKey: @"root"];
-	[managedObjectModel setNameFromFilePath: aModelName];	
+	var managedObjectModel = [unarchiver decodeObjectForKey:@"root"];
+	[managedObjectModel setNameFromFilePath: modelPath];	
 
 	return managedObjectModel;
 }

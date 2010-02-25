@@ -113,7 +113,7 @@
 - (CPSet)loadAll:(CPDictionary) properties inManagedObjectContext:(CPManagedObjectContext) aContext error:({CPError}) error
 {
 	var resultSet = nil;
-	var data = [CPURLConnection sendSynchronousRequest:[CPURLRequest requestWithURL:[self resourcesFile]] returningResponse:nil error:nil];
+	var data = [CPURLConnection sendSynchronousRequest:[CPURLRequest requestWithURL:[self resourcesFile]] returningResponse:nil];
 
 	if([data length] > 0)
 	{
@@ -129,7 +129,7 @@
 		}
 		else if([[self format] isEqualToString:CPCoreDataSerializationJSONFormat])
 		{
-			var jsonArray = JSON.parse([data description]); 		
+			var jsonArray = JSON.parse([data rawString]); 
 			resultSet = [CPSet deserializeFromJSON:jsonArray withContext:aContext];
 		}
 		else if([[self format] isEqualToString:CPCoreDataSerializationDictionaryFormat])

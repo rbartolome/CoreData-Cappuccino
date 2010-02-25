@@ -288,9 +288,9 @@
 	
 	var request = [CPURLRequest requestWithURL:requestURL];
 	[request setHTTPMethod: "POST"]; 
-	[request setHTTPBody:[aString string]]
+	[request setHTTPBody:[aString rawString]]
 	[request setValue:"application/json" forHTTPHeaderField:@"Content-Type"];
-	var data = [CPURLConnection sendSynchronousRequest: request returningResponse:nil error:nil]; 
+	var data = [CPURLConnection sendSynchronousRequest: request returningResponse:nil]; 
 	var resultString = [data description]; 
 	
 

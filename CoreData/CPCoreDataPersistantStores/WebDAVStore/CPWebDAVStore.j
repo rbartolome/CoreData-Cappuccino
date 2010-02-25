@@ -117,7 +117,7 @@
 		}
 		else if([[self format] isEqualToString:CPCoreDataSerializationJSONFormat])
 		{
-			var jsonArray = JSON.parse([data description]); 		
+			var jsonArray = JSON.parse([data rawString]); 		
 			resultSet = [CPSet deserializeFromJSON:jsonArray withContext:aContext];
 		}
 		else if([[self format] isEqualToString:CPCoreDataSerializationDictionaryFormat])

@@ -258,8 +258,8 @@ var woprototypes_cp = [
 }
 - (CPDictionary) dictionaryForPropertyListFile:(CPString) aFile
 {
-	var data = [CPURLConnection sendSynchronousRequest:[CPURLRequest requestWithURL:aFile] returningResponse:nil error:nil];
-	var dict = [CPPropertyListReader_Vintage dictionaryForString:[data string]];
+	var data = [CPURLConnection sendSynchronousRequest:[CPURLRequest requestWithURL:aFile] returningResponse:nil];
+	var dict = [CPPropertyListReader_Vintage dictionaryForString:[data rawString]];
 //	var dict = [CPPropertyListReader_Binary propertyListFromData:data];
 	
 	return dict;

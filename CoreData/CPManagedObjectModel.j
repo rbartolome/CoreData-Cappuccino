@@ -75,6 +75,7 @@ var CPDCOREDATAMODEL_SUFFIX = "cpxcdatamodel";
 	var pathComponents = [aFilePath componentsSeparatedByString:@"/"];
 	var pathComponentsEnum = [pathComponents objectEnumerator];
 	var aPathComponent;
+	
 	while(aPathComponent = [pathComponentsEnum nextObject])
 	{
 		if([CPManagedObjectModel hasSupportedModelSuffix:aPathComponent])

@@ -54,7 +54,7 @@
 	if(resultValue == null)
 		return [CPSet new];
 		
-	return [CPSet deserializeFrom280NPLIST:[CPData dataWithString:resultValue] withContext:aContext];
+	return [CPSet deserializeFrom280NPLIST:[CPData dataWithRawString:resultValue] withContext:aContext];
 }
 
 

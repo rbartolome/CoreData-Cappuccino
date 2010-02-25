@@ -182,6 +182,7 @@ CPchangedProperties = "CPchangedProperties";
 
 	var propertyKeys = [aDictionary keyEnumerator];
 	var aKey;
+	
 	while((aKey = [propertyKeys nextObject]))		
 	{		
 		var aObject = [aDictionary objectForKey:aKey];
@@ -205,11 +206,13 @@ CPchangedProperties = "CPchangedProperties";
 				if([self isPropertyOfTypeToManyRelationship:aKey])
 				{
 					var toManySet = [[CPMutableSet alloc] init];
-					var aObjectEnum = [aObject objectEnumerator];
+					//var aObjectEnum = [aObject objectEnumerator];
 					var aObjectIDDictionary;
 					
-					while((aObjectIDDictionary = [aObjectEnum nextObject]))
-					{						
+					for(var j = 0; j < [[toManySet allObjects] count]; j++)
+					//@TODO_ENUM while((aObjectIDDictionary = [aObjectEnum nextObject]))
+					{				
+						aObjectIDDictionary = [[aObject allObjects] objectAtIndex:j];
 						var aObjectID = [CPManagedObjectID deserializeFromDictionary:aObjectIDDictionary withContext:[self context]];	
 						[toManySet addObject:aObjectID];
 					}
@@ -234,7 +237,6 @@ CPchangedProperties = "CPchangedProperties";
 	
 	var keyEnum = [aDictionary keyEnumerator];
 	var aKey;
-	
 	while(aKey = [keyEnum nextObject])
 	{
 		var aObject = [aDictionary objectForKey:aKey];
