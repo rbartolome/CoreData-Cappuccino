@@ -826,12 +826,15 @@ CPManagedObjectUnexpectedValueTypeForProperty = "CPManagedObjectUnexpectedValueT
 	_data = [[CPMutableDictionary alloc] init];
 	var e = [[_entity properties] objectEnumerator];
 	var property;
-	
+		
 	while ((property = [e nextObject]) != nil)
     {
 		var propName = [property name];
+		//@TODO nil is no longer supported as object
 		[_data setObject:nil forKey:propName];
 	}
+	
+	CPLog.trace([_data allKeys]);
 }
 
 - (BOOL)isPropertyOfTypeAttribute:(CPString)aKey

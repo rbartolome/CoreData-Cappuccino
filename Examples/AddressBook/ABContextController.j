@@ -32,7 +32,7 @@
 	{
 		//load your coredata model file
 		var model = [CPManagedObjectModel modelWithModelNamed:@"AddressBook.xcdatamodel" bundle:nil];
-		//model = [CPManagedObjectModel modelWithModelNamed:@"AddressBook.eomodeld" bundle:nil];
+		//var model = [CPManagedObjectModel modelWithModelNamed:@"AddressBook.eomodeld" bundle:nil];
 		
 		var coordinator = [[CPPersistentStoreCoordinator alloc] initWithManagedObjectModel: model 
 																			storeType: [CPWebDAVStoreType class] 

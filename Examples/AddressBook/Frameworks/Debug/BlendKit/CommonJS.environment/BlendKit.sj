@@ -1,4 +1,5 @@
-@STATIC;1.0;p;22;BKShowcaseController.jI;16;AppKit/CPTheme.jI;15;AppKit/CPView.jc;21051;
+@STATIC;1.0;p;22;BKShowcaseController.jt;20985;@STATIC;1.0;I;16;AppKit/CPTheme.jI;15;AppKit/CPView.jt;20924;objj_executeFile("AppKit/CPTheme.j", false);
+objj_executeFile("AppKit/CPView.j", false);
 var LEFT_PANEL_WIDTH = 176.0;
 var BKLearnMoreToolbarItemIdentifier = "BKLearnMoreToolbarItemIdentifier",
     BKStateToolbarItemIdentifier = "BKStateToolbarItemIdentifier",
@@ -6,7 +7,6 @@ var BKLearnMoreToolbarItemIdentifier = "BKLearnMoreToolbarItemIdentifier",
 {var the_class = objj_allocateClassPair(CPObject, "BKShowcaseController"),
 meta_class = the_class.isa;class_addIvars(the_class, [new objj_ivar("_themeDescriptorClasses"), new objj_ivar("_themesCollectionView"), new objj_ivar("_themedObjectsCollectionView")]);
 objj_registerClassPair(the_class);
-objj_addClassForBundle(the_class, objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
 class_addMethods(the_class, [new objj_method(sel_getUid("applicationDidFinishLaunching:"), function $BKShowcaseController__applicationDidFinishLaunching_(self, _cmd, aNotification)
 { with(self)
 {
@@ -205,7 +205,6 @@ var SelectionColor = nil;
 {var the_class = objj_allocateClassPair(CPView, "BKThemeDescriptorCell"),
 meta_class = the_class.isa;class_addIvars(the_class, [new objj_ivar("_label")]);
 objj_registerClassPair(the_class);
-objj_addClassForBundle(the_class, objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
 class_addMethods(the_class, [new objj_method(sel_getUid("setRepresentedObject:"), function $BKThemeDescriptorCell__setRepresentedObject_(self, _cmd, aThemeDescriptor)
 { with(self)
 {
@@ -244,11 +243,10 @@ var BKShowcaseCellBackgroundColorDidChangeNotification = "BKShowcaseCellBackgrou
 {var the_class = objj_allocateClassPair(CPView, "BKShowcaseCell"),
 meta_class = the_class.isa;class_addIvars(the_class, [new objj_ivar("_backgroundView"), new objj_ivar("_view"), new objj_ivar("_label")]);
 objj_registerClassPair(the_class);
-objj_addClassForBundle(the_class, objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
 class_addMethods(the_class, [new objj_method(sel_getUid("init"), function $BKShowcaseCell__init(self, _cmd)
 { with(self)
 {
-    self = objj_msgSendSuper({ receiver:self, super_class:objj_getClass("CPView") }, "init");
+    self = objj_msgSendSuper({ receiver:self, super_class:objj_getClass("BKShowcaseCell").super_class }, "init");
     if (self)
         objj_msgSend(objj_msgSend(CPNotificationCenter, "defaultCenter"), "addObserver:selector:name:object:", self, sel_getUid("showcaseBackgroundDidChange:"), BKShowcaseCellBackgroundColorDidChangeNotification, nil);
     return self;
@@ -256,7 +254,7 @@ class_addMethods(the_class, [new objj_method(sel_getUid("init"), function $BKSho
 },["id"]), new objj_method(sel_getUid("initWithCoder:"), function $BKShowcaseCell__initWithCoder_(self, _cmd, aCoder)
 { with(self)
 {
-    self = objj_msgSendSuper({ receiver:self, super_class:objj_getClass("CPView") }, "initWithCoder:", aCoder);
+    self = objj_msgSendSuper({ receiver:self, super_class:objj_getClass("BKShowcaseCell").super_class }, "initWithCoder:", aCoder);
     if (self)
         objj_msgSend(objj_msgSend(CPNotificationCenter, "defaultCenter"), "addObserver:selector:name:object:", self, sel_getUid("showcaseBackgroundDidChange:"), BKShowcaseCellBackgroundColorDidChangeNotification, nil);
     return self;
@@ -319,7 +317,7 @@ class_addMethods(meta_class, [new objj_method(sel_getUid("setBackgroundColor:"),
 },["CPColor"])]);
 }
 
-p;19;BKThemeDescriptor.jI;21;Foundation/CPObject.jc;6893;
+p;19;BKThemeDescriptor.jt;6902;@STATIC;1.0;I;21;Foundation/CPObject.jt;6857;objj_executeFile("Foundation/CPObject.j", false);
 var ItemSizes = { },
     ThemedObjects = { },
     BackgroundColors = { },
@@ -328,12 +326,11 @@ var ItemSizes = { },
     WindowBackgroundColor = nil;
 {var the_class = objj_allocateClassPair(CPObject, "BKThemeDescriptor"),
 meta_class = the_class.isa;objj_registerClassPair(the_class);
-objj_addClassForBundle(the_class, objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
 class_addMethods(meta_class, [new objj_method(sel_getUid("allThemeDescriptorClasses"), function $BKThemeDescriptor__allThemeDescriptorClasses(self, _cmd)
 { with(self)
 {
     var themeDescriptorClasses = [];
-    for (candidate in window)
+    for (candidate in global)
     {
         var theClass = objj_getClass(candidate),
             theClassName = class_getName(theClass);
@@ -479,15 +476,14 @@ BKLabelFromIdentifier= function(anIdentifier)
     return label;
 }
 
-p;24;BKThemedObjectTemplate.jI;15;AppKit/CPView.jc;1184;
+p;24;BKThemedObjectTemplate.jt;1209;@STATIC;1.0;I;15;AppKit/CPView.jt;1170;objj_executeFile("AppKit/CPView.j", false);
 {var the_class = objj_allocateClassPair(CPView, "BKThemedObjectTemplate"),
 meta_class = the_class.isa;class_addIvars(the_class, [new objj_ivar("_label"), new objj_ivar("_themedObject")]);
 objj_registerClassPair(the_class);
-objj_addClassForBundle(the_class, objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
 class_addMethods(the_class, [new objj_method(sel_getUid("initWithCoder:"), function $BKThemedObjectTemplate__initWithCoder_(self, _cmd, aCoder)
 { with(self)
 {
-    self = objj_msgSendSuper({ receiver:self, super_class:objj_getClass("CPView") }, "init");
+    self = objj_msgSendSuper({ receiver:self, super_class:objj_getClass("BKThemedObjectTemplate").super_class }, "init");
     if (self)
     {
         _label = objj_msgSend(aCoder, "decodeObjectForKey:", "BKThemedObjectTemplateLabel");
@@ -504,15 +500,14 @@ class_addMethods(the_class, [new objj_method(sel_getUid("initWithCoder:"), funct
 },["void","CPCoder"])]);
 }
 
-p;17;BKThemeTemplate.jI;21;Foundation/CPObject.jc;1129;
+p;17;BKThemeTemplate.jt;1157;@STATIC;1.0;I;21;Foundation/CPObject.jt;1112;objj_executeFile("Foundation/CPObject.j", false);
 {var the_class = objj_allocateClassPair(CPObject, "BKThemeTemplate"),
 meta_class = the_class.isa;class_addIvars(the_class, [new objj_ivar("_name"), new objj_ivar("_description")]);
 objj_registerClassPair(the_class);
-objj_addClassForBundle(the_class, objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
 class_addMethods(the_class, [new objj_method(sel_getUid("initWithCoder:"), function $BKThemeTemplate__initWithCoder_(self, _cmd, aCoder)
 { with(self)
 {
-    self = objj_msgSendSuper({ receiver:self, super_class:objj_getClass("CPObject") }, "init");
+    self = objj_msgSendSuper({ receiver:self, super_class:objj_getClass("BKThemeTemplate").super_class }, "init");
     if (self)
     {
         _name = objj_msgSend(aCoder, "decodeObjectForKey:", "BKThemeTemplateName");
@@ -529,4 +524,9 @@ class_addMethods(the_class, [new objj_method(sel_getUid("initWithCoder:"), funct
 },["void","CPCoder"])]);
 }
 
-p;10;BlendKit.ji;22;BKShowcaseController.ji;19;BKThemeDescriptor.ji;17;BKThemeTemplate.ji;24;BKThemedObjectTemplate.je;
+p;10;BlendKit.jt;315;@STATIC;1.0;i;22;BKShowcaseController.ji;19;BKThemeDescriptor.ji;17;BKThemeTemplate.ji;24;BKThemedObjectTemplate.jt;195;objj_executeFile("BKShowcaseController.j", true);
+objj_executeFile("BKThemeDescriptor.j", true);
+objj_executeFile("BKThemeTemplate.j", true);
+objj_executeFile("BKThemedObjectTemplate.j", true);
+
+e;

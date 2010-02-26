@@ -236,7 +236,7 @@ var QUOTING_CHARS = [':', '/', '-', '.', '\\'];
 	    if (!(s.charAt(0) == TOKEN_BEGIN[PLIST_DATA] && s.charAt(s.length-1) == TOKEN_END[PLIST_DATA]))
 	        return nil;
 	
-	return [CPData dataWithString:s.substring(1,s.length-1)];
+	return [CPData dataWithRawString:s.substring(1,s.length-1)];
 }
 
 + (CPObject) propertyListFromString:(CPString) aString

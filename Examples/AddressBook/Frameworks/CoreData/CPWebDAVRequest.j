@@ -30,7 +30,7 @@
 
 - (void) writeFileWithDataContent:(CPData)aData toPath:(CPString)aPath 
 {    
-	[self writeFileWithStringContent:[aData string] toPath:aPath];
+	[self writeFileWithStringContent:[aData rawString] toPath:aPath];
 }
 
 - (void) writeFileWithStringContent:(CPString)aString toPath:(CPString)aPath
@@ -42,7 +42,7 @@
     [urlRequest setValue:@"application/octet-stream" forHTTPHeaderField:@"Content-Type"];
     
     [urlRequest setValue:[CPString stringWithFormat:@"%d", [aString length]] forHTTPHeaderField:@"Content-Length"];
-    [urlRequest setHTTPBody:[aString string]];
+    [urlRequest setHTTPBody:[aString rawString]];
     [self _sendRequest:urlRequest];
 }
 
@@ -124,17 +124,17 @@
     
     [urlRequest setValue:@"application/xml" forHTTPHeaderField:@"Content-Type"];
     
-    [urlRequest setHTTPBody:[xmlAsString string]];
+    [urlRequest setHTTPBody:[xmlAsString rawString]];
     
    	var result = [self _sendRequest:urlRequest];    
-    return [self _parseDirectoryContentResponse:[result string]];
+    return [self _parseDirectoryContentResponse:[result rawString]];
 }
 
 
 - (CPData) _sendRequest:(CPURLRequest)urlRequest 
 {        
 	var urlResponse;
-	var responseData = [CPURLConnection sendSynchronousRequest: urlRequest returningResponse:urlResponse error:nil];    
+	var responseData = [CPURLConnection sendSynchronousRequest: urlRequest returningResponse:urlResponse];    
 	
 	return responseData;
 }

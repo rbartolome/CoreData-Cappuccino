@@ -40,7 +40,7 @@
 	var newObject;
 	var objectClassWithName = CPClassFromString(_name);
 	var objectClassWithExternaName = CPClassFromString(_externalName);
-	
+
 	if(objectClassWithExternaName != nil)
 	{
 		newObject = [[objectClassWithExternaName alloc] initWithEntity:self]

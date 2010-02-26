@@ -1,4 +1,4 @@
-@STATIC;1.0;p;22;BKShowcaseController.j@STATIC;1.0;I;16;AppKit/CPTheme.jI;15;AppKit/CPView.jt;15242;
+@STATIC;1.0;p;22;BKShowcaseController.jt;15303;@STATIC;1.0;I;16;AppKit/CPTheme.jI;15;AppKit/CPView.jt;15242;
 objj_executeFile("AppKit/CPTheme.j",false);
 objj_executeFile("AppKit/CPView.j",false);
 var _1=176;
@@ -282,15 +282,15 @@ with(_57){
 return _44;
 }
 })]);
-p;19;BKThemeDescriptor.jI;21;Foundation/CPObject.jc;4265;
+p;19;BKThemeDescriptor.jt;4282;@STATIC;1.0;I;21;Foundation/CPObject.jt;4237;
+objj_executeFile("Foundation/CPObject.j",false);
 var _1={},_2={},_3={},_4=nil,_5=nil,_6=nil;
 var _7=objj_allocateClassPair(CPObject,"BKThemeDescriptor"),_8=_7.isa;
 objj_registerClassPair(_7);
-objj_addClassForBundle(_7,objj_getBundleWithPath(OBJJ_CURRENT_BUNDLE.path));
 class_addMethods(_8,[new objj_method(sel_getUid("allThemeDescriptorClasses"),function(_9,_a){
 with(_9){
 var _b=[];
-for(candidate in window){
+for(candidate in global){
 var _c=objj_getClass(candidate),_d=class_getName(_c);
 if(_d==="BKThemeDescriptor"){
 continue;
@@ -416,7 +416,7 @@ isLeadingCapital=NO;
 }
 return label;
 };
-p;24;BKThemedObjectTemplate.j@STATIC;1.0;I;15;AppKit/CPView.jt;876;
+p;24;BKThemedObjectTemplate.jt;914;@STATIC;1.0;I;15;AppKit/CPView.jt;876;
 objj_executeFile("AppKit/CPView.j",false);
 var _1=objj_allocateClassPair(CPView,"BKThemedObjectTemplate"),_2=_1.isa;
 class_addIvars(_1,[new objj_ivar("_label"),new objj_ivar("_themedObject")]);
@@ -436,7 +436,7 @@ objj_msgSend(_8,"encodeObject:forKey:",_label,"BKThemedObjectTemplateLabel");
 objj_msgSend(_8,"encodeObject:forKey:",_themedObject,"BKThemedObjectTemplateThemedObject");
 }
 })]);
-p;17;BKThemeTemplate.j@STATIC;1.0;I;21;Foundation/CPObject.jt;832;
+p;17;BKThemeTemplate.jt;876;@STATIC;1.0;I;21;Foundation/CPObject.jt;832;
 objj_executeFile("Foundation/CPObject.j",false);
 var _1=objj_allocateClassPair(CPObject,"BKThemeTemplate"),_2=_1.isa;
 class_addIvars(_1,[new objj_ivar("_name"),new objj_ivar("_description")]);
@@ -456,7 +456,7 @@ objj_msgSend(_8,"encodeObject:forKey:",_name,"BKThemeTemplateName");
 objj_msgSend(_8,"encodeObject:forKey:",_description,"BKThemeTemplateDescription");
 }
 })]);
-p;10;BlendKit.j@STATIC;1.0;i;22;BKShowcaseController.ji;19;BKThemeDescriptor.ji;17;BKThemeTemplate.ji;24;BKThemedObjectTemplate.jt;191;
+p;10;BlendKit.jt;311;@STATIC;1.0;i;22;BKShowcaseController.ji;19;BKThemeDescriptor.ji;17;BKThemeTemplate.ji;24;BKThemedObjectTemplate.jt;191;
 objj_executeFile("BKShowcaseController.j",true);
 objj_executeFile("BKThemeDescriptor.j",true);
 objj_executeFile("BKThemeTemplate.j",true);

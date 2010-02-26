@@ -73,6 +73,8 @@ var CPDCOREDATAMODEL_SUFFIX = "cpxcdatamodel";
 - (void)setNameFromFilePath:(CPString)aFilePath
 {
 	var pathComponents = [aFilePath componentsSeparatedByString:@"/"];
+	[pathComponents removeObjectAtIndex:0];
+	
 	var pathComponentsEnum = [pathComponents objectEnumerator];
 	var aPathComponent;
 	
