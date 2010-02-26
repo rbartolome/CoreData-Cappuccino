@@ -9,6 +9,28 @@
 
 @implementation CPDictionary (CPCoreDataSerialization)
 
+// setObject nil value support
+- (void)setObject:(id)anObject forKey:(id)aKey
+{
+	if(anObject == nil)
+	{
+		self.setValueForKey(aKey, CPNull);
+	}
+	else
+	{
+		self.setValueForKey(aKey, anObject);
+	}
+}
+
+// if object is CPNull return nil
+- (id)objectForKey:(CPString)aKey
+{
+	var object = _buckets[aKey];
+	return (object === undefined || object == CPNull) ? nil : object;
+}
+
+
+
 +(id)dictionaryWithJSObject:(id)object recursively:(BOOL)recursively
 {
 	var updatedObject = object;

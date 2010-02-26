@@ -42,7 +42,7 @@
     [urlRequest setValue:@"application/octet-stream" forHTTPHeaderField:@"Content-Type"];
     
     [urlRequest setValue:[CPString stringWithFormat:@"%d", [aString length]] forHTTPHeaderField:@"Content-Length"];
-    [urlRequest setHTTPBody:[aString rawString]];
+    [urlRequest setHTTPBody:aString];
     [self _sendRequest:urlRequest];
 }
 
@@ -124,7 +124,7 @@
     
     [urlRequest setValue:@"application/xml" forHTTPHeaderField:@"Content-Type"];
     
-    [urlRequest setHTTPBody:[xmlAsString rawString]];
+    [urlRequest setHTTPBody:xmlAsString];
     
    	var result = [self _sendRequest:urlRequest];    
     return [self _parseDirectoryContentResponse:[result rawString]];
@@ -134,7 +134,7 @@
 - (CPData) _sendRequest:(CPURLRequest)urlRequest 
 {        
 	var urlResponse;
-	var responseData = [CPURLConnection sendSynchronousRequest: urlRequest returningResponse:urlResponse];    
+	var responseData = [CPURLConnection sendSynchronousRequest:urlRequest returningResponse:urlResponse];    
 	
 	return responseData;
 }
