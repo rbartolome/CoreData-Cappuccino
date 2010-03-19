@@ -83,7 +83,6 @@
 - (CPString)serializeToJSON:(BOOL) containsAllProperties containsChangedProperties:(BOOL)containsChangedProperties
 {	
 	var result = [CPString JSONFromObject:[[self serializeToArrayWithDictionaries:containsAllProperties containsChangedProperties:containsChangedProperties] toJSObject]];									
-	CPLog.trace("data: " + result);
 	return result;
 }
 

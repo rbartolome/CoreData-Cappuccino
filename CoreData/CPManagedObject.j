@@ -834,7 +834,7 @@ CPManagedObjectUnexpectedValueTypeForProperty = "CPManagedObjectUnexpectedValueT
 		[_data setObject:nil forKey:propName];
 	}
 	
-	CPLog.trace([_data allKeys]);
+//	CPLog.trace([_data allKeys]);
 }
 
 - (BOOL)isPropertyOfTypeAttribute:(CPString)aKey

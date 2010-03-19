@@ -200,15 +200,14 @@ CPchangedProperties = "CPchangedProperties";
 			else
 			{
 				if([self isPropertyOfTypeToManyRelationship:aKey])
-				{
+				{					
 					var toManySet = [[CPMutableSet alloc] init];
-					//var aObjectEnum = [aObject objectEnumerator];
 					var aObjectIDDictionary;
 					
-					for(var j = 0; j < [[toManySet allObjects] count]; j++)
+					for(var j = 0; j < [aObject count]; j++)
 					//@TODO_ENUM while((aObjectIDDictionary = [aObjectEnum nextObject]))
 					{				
-						aObjectIDDictionary = [[aObject allObjects] objectAtIndex:j];
+						aObjectIDDictionary = [aObject objectAtIndex:j];
 						var aObjectID = [CPManagedObjectID deserializeFromDictionary:aObjectIDDictionary withContext:[self context]];	
 						[toManySet addObject:aObjectID];
 					}
