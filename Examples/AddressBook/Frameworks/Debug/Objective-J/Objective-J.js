@@ -49,8 +49,8 @@ if (!this.JSON) {
             return this.valueOf();
         };
     }
-    var cx = new RegExp('/[\\u0000\\u00ad\\u0600-\\u0604\\u070f\\u17b4\\u17b5\\u200c-\\u200f\\u2028-\\u202f\\u2060-\\u206f\\ufeff\\ufff0-\\uffff]/g');
-    var escapable = new RegExp('/[\\\\\\"\\x00-\\x1f\\x7f-\\x9f\\u00ad\\u0600-\\u0604\\u070f\\u17b4\\u17b5\\u200c-\\u200f\\u2028-\\u202f\\u2060-\\u206f\\ufeff\\ufff0-\\uffff]/g');
+    var cx = new RegExp('[\\u0000\\u00ad\\u0600-\\u0604\\u070f\\u17b4\\u17b5\\u200c-\\u200f\\u2028-\\u202f\\u2060-\\u206f\\ufeff\\ufff0-\\uffff]', "g");
+    var escapable = new RegExp('[\\\\\\"\\x00-\\x1f\\x7f-\\x9f\\u00ad\\u0600-\\u0604\\u070f\\u17b4\\u17b5\\u200c-\\u200f\\u2028-\\u202f\\u2060-\\u206f\\ufeff\\ufff0-\\uffff]', "g");
     var gap,
         indent,
         meta = {
@@ -204,7 +204,7 @@ replace(/(?:^|:|,)(?:\s*\[)+/g, ''))) {
 }());
 var formatRegex = new RegExp("([^%]+|%[\\+\\-\\ \\#0]*[0-9\\*]*(.[0-9\\*]+)?[hlL]?[cbBdieEfgGosuxXpn%@])", "g");
 var tagRegex = new RegExp("(%)([\\+\\-\\ \\#0]*)([0-9\\*]*)((.[0-9\\*]+)?)([hlL]?)([cbBdieEfgGosuxXpn%@])");
-sprintf = function(format)
+exports.sprintf = function(format)
 {
     var format = arguments[0],
         tokens = format.match(formatRegex),
@@ -385,7 +385,7 @@ function _CPLogDispatch(parameters, aLevel, aTitle)
         aTitle = CPLogDefaultTitle;
     if (aLevel == undefined)
         aLevel = CPLogDefaultLevel;
-    var message = (typeof parameters[0] == "string" && parameters.length > 1) ? sprintf.apply(null, parameters) : String(parameters[0]);
+    var message = (typeof parameters[0] == "string" && parameters.length > 1) ? exports.sprintf.apply(null, parameters) : String(parameters[0]);
     if (_CPLogRegistrations[aLevel])
         for (var i = 0; i < _CPLogRegistrations[aLevel].length; i++)
              _CPLogRegistrations[aLevel][i](message, aLevel, aTitle);
@@ -397,79 +397,13 @@ var _CPFormatLogMessage = function(aString, aLevel, aTitle)
 {
     var now = new Date();
     aLevel = ( aLevel == null ? '' : ' [' + aLevel + ']' );
-    if (typeof sprintf == "function")
-        return sprintf("%4d-%02d-%02d %02d:%02d:%02d.%03d %s%s: %s",
+    if (typeof exports.sprintf == "function")
+        return exports.sprintf("%4d-%02d-%02d %02d:%02d:%02d.%03d %s%s: %s",
             now.getFullYear(), now.getMonth(), now.getDate(),
             now.getHours(), now.getMinutes(), now.getSeconds(), now.getMilliseconds(),
             aTitle, aLevel, aString);
     else
         return now + " " + aTitle + aLevel + ": " + aString;
-}
-var ANSI_ESC = String.fromCharCode(0x1B);
-var ANSI_CSI = ANSI_ESC + '[';
-var ANSI_TEXT_PROP = 'm';
-var ANSI_RESET = '0';
-var ANSI_BOLD = '1';
-var ANSI_FAINT = '2';
-var ANSI_NORMAL = '22';
-var ANSI_ITALIC = '3';
-var ANSI_UNDER = '4';
-var ANSI_UNDER_DBL = '21';
-var ANSI_UNDER_OFF = '24';
-var ANSI_BLINK = '5';
-var ANSI_BLINK_FAST = '6';
-var ANSI_BLINK_OFF = '25';
-var ANSI_REVERSE = '7';
-var ANSI_POSITIVE = '27';
-var ANSI_CONCEAL = '8';
-var ANSI_REVEAL = '28';
-var ANSI_FG = '3';
-var ANSI_BG = '4';
-var ANSI_FG_INTENSE = '9';
-var ANSI_BG_INTENSE = '10';
-var ANSI_BLACK = '0';
-var ANSI_RED = '1';
-var ANSI_GREEN = '2';
-var ANSI_YELLOW = '3';
-var ANSI_BLUE = '4';
-var ANSI_MAGENTA = '5';
-var ANSI_CYAN = '6';
-var ANSI_WHITE = '7';
-var colorCodeMap = {
-    "black" : ANSI_BLACK,
-    "red" : ANSI_RED,
-    "green" : ANSI_GREEN,
-    "yellow" : ANSI_YELLOW,
-    "blue" : ANSI_BLUE,
-    "magenta" : ANSI_MAGENTA,
-    "cyan" : ANSI_CYAN,
-    "white" : ANSI_WHITE
-}
-function ANSIControlCode(code, parameters)
-{
-    if (parameters == undefined)
-        parameters = "";
-    else if (typeof(parameters) == 'object' && (parameters instanceof Array))
-        parameters = parameters.join(';');
-    return ANSI_CSI + String(parameters) + String(code);
-}
-function ANSITextApplyProperties(string, properties)
-{
-    return ANSIControlCode(ANSI_TEXT_PROP, properties) + String(string) + ANSIControlCode(ANSI_TEXT_PROP);
-}
-ANSITextColorize = function(string, color)
-{
-    if (colorCodeMap[color] == undefined)
-        return string;
-    return ANSITextApplyProperties(string, ANSI_FG + colorCodeMap[color]);
-}
-var levelColorMap = {
-    "fatal": "red",
-    "error": "red",
-    "warn" : "yellow",
-    "info" : "green",
-    "debug": "cyan",
-    "trace": "blue"
 }
 CPLogConsole = function(aString, aLevel, aTitle)
 {
@@ -527,21 +461,16 @@ CPLogPopup = function(aString, aLevel, aTitle)
     } catch(e) {
     }
 }
+var CPLogPopupStyle ='<style type="text/css" media="screen"> body{font:10px Monaco,Courier,"Courier New",monospace,mono;padding-top:15px;} div > .fatal,div > .error,div > .warn,div > .info,div > .debug,div > .trace{display:none;overflow:hidden;white-space:pre;padding:0px 5px 0px 5px;margin-top:2px;-moz-border-radius:5px;-webkit-border-radius:5px;} div[wrap="yes"] > div{white-space:normal;} .fatal{background-color:#ffb2b3;} .error{background-color:#ffe2b2;} .warn{background-color:#fdffb2;} .info{background-color:#e4ffb2;} .debug{background-color:#a0e5a0;} .trace{background-color:#99b9ff;} .enfatal .fatal,.enerror .error,.enwarn .warn,.eninfo .info,.endebug .debug,.entrace .trace{display:block;} div#header{background-color:rgba(240,240,240,0.82);position:fixed;top:0px;left:0px;width:100%;border-bottom:1px solid rgba(0,0,0,0.33);text-align:center;} ul#enablers{display:inline-block;margin:1px 15px 0 15px;padding:2px 0 2px 0;} ul#enablers li{display:inline;padding:0px 5px 0px 5px;margin-left:4px;-moz-border-radius:5px;-webkit-border-radius:5px;} [enabled="no"]{opacity:0.25;} ul#options{display:inline-block;margin:0 15px 0px 15px;padding:0 0px;} ul#options li{margin:0 0 0 0;padding:0 0 0 0;display:inline;} </style>';
 function _CPLogInitPopup(logWindow)
 {
     var doc = logWindow.document;
-    doc.writeln("<html><head><title></title></head><body></body></html>");
+    doc.writeln("<html><head><title></title>"+CPLogPopupStyle+"</head><body></body></html>");
     doc.title = CPLogDefaultTitle + " Run Log";
     var head = doc.getElementsByTagName("head")[0];
     var body = doc.getElementsByTagName("body")[0];
     var base = window.location.protocol + "//" + window.location.host + window.location.pathname;
     base = base.substring(0,base.lastIndexOf("/")+1);
-    var link = doc.createElement("link");
-    link.setAttribute("type", "text/css");
-    link.setAttribute("rel", "stylesheet");
-    link.setAttribute("href", base+"Frameworks/Foundation/Resources/log.css");
-    link.setAttribute("media", "screen");
-    head.appendChild(link);
     var div = doc.createElement("div");
     div.setAttribute("id", "header");
     body.appendChild(div);
@@ -619,7 +548,7 @@ if (typeof window !== "undefined")
     window.setNativeTimeout = window.setTimeout;
     window.clearNativeTimeout = window.clearTimeout;
     window.setNativeInterval = window.setInterval;
-    window.clearNativeInterval = window.clearNativeInterval;
+    window.clearNativeInterval = window.clearInterval;
 }
 NO = false;
 YES = true;
@@ -661,7 +590,7 @@ function EventDispatcher( anOwner)
 EventDispatcher.prototype.addEventListener = function( anEventName, anEventListener)
 {
     var eventListenersForEventNames = this._eventListenersForEventNames;
-    if (!hasOwnProperty.call(this._eventListenersForEventNames, anEventName))
+    if (!hasOwnProperty.call(eventListenersForEventNames, anEventName))
     {
         var eventListenersForEventName = [];
         eventListenersForEventNames[anEventName] = eventListenersForEventName;
@@ -679,7 +608,7 @@ EventDispatcher.prototype.removeEventListener = function( anEventName, anEventLi
     var eventListenersForEventNames = this._eventListenersForEventNames;
     if (!hasOwnProperty.call(eventListenersForEventNames, anEventName))
         return;
-    var eventListenersForEventName = eventListenersForEventNames[anEventName].
+    var eventListenersForEventName = eventListenersForEventNames[anEventName],
         index = eventListenersForEventName.length;
     while (index--)
         if (eventListenersForEventName[index] === anEventListener)
@@ -837,9 +766,14 @@ CFHTTPRequest.prototype.overrideMimeType = function( aMimeType)
     if ("overrideMimeType" in this._nativeRequest)
         return this._nativeRequest.overrideMimeType(aMimeType);
 }
-CFHTTPRequest.prototype.open = function( )
+CFHTTPRequest.prototype.open = function( method, url, async, user, password)
 {
-    return this._nativeRequest.open(arguments[0], arguments[1], arguments[2], arguments[3], arguments[4]);
+    var cachedRequest = CFHTTPRequest._lookupCachedRequest(url);
+    if (cachedRequest) {
+        cachedRequest.onreadystatechange = this._nativeRequest.onreadystatechange;
+        this._nativeRequest = cachedRequest;
+    }
+    return this._nativeRequest.open(method, url, async, user, password);
 }
 CFHTTPRequest.prototype.send = function( aBody)
 {
@@ -879,16 +813,65 @@ function determineAndDispatchHTTPRequestEvents( aRequest)
         eventDispatcher.dispatchEvent({ type:result, request:aRequest });
     }
 }
-function FileRequest( aFilePath, onsuccess, onfailure)
+function FileRequest( aURL, onsuccess, onfailure)
 {
     var request = new CFHTTPRequest();
-    request.onsuccess = Asynchronous(onsuccess);
-    request.onfailure = Asynchronous(onfailure);
-    if (FILE.extension(aFilePath) === ".plist")
+    if (aURL.pathExtension() === "plist")
         request.overrideMimeType("text/xml");
-    request.open("GET", aFilePath, YES);
+    if (FileRequest.async)
+    {
+        request.onsuccess = Asynchronous(onsuccess);
+        request.onfailure = Asynchronous(onfailure);
+    }
+    else
+    {
+        request.onsuccess = onsuccess;
+        request.onfailure = onfailure;
+    }
+    request.open("GET", aURL.absoluteString(), FileRequest.async);
     request.send("");
 }
+FileRequest.async = YES;
+var URLCache = { };
+CFHTTPRequest._cacheRequest = function( aURL, status, headers, body)
+{
+    aURL = typeof aURL === "string" ? aURL : aURL.absoluteString();
+    URLCache[aURL] = new MockXMLHttpRequest(status, headers, body);
+}
+CFHTTPRequest._lookupCachedRequest = function( aURL)
+{
+    aURL = typeof aURL === "string" ? aURL : aURL.absoluteString();
+    return URLCache[aURL];
+}
+function MockXMLHttpRequest(status, headers, body)
+{
+    this.readyState = CFHTTPRequest.UninitializedState;
+    this.status = status || 200;
+    this.statusText = "";
+    this.responseText = body || "";
+    this._responseHeaders = headers || {};
+};
+MockXMLHttpRequest.prototype.open = function(method, url, async, user, password)
+{
+    this.readyState = CFHTTPRequest.LoadingState;
+    this.async = async;
+};
+MockXMLHttpRequest.prototype.send = function(body)
+{
+    var self = this;
+    self.responseText = self.responseText.toString();
+    function complete() {
+        for (self.readyState = CFHTTPRequest.LoadedState; self.readyState <= CFHTTPRequest.CompleteState; self.readyState++)
+            self.onreadystatechange();
+    }
+    (self.async ? Asynchronous(complete) : complete)();
+};
+MockXMLHttpRequest.prototype.onreadystatechange = function() {};
+MockXMLHttpRequest.prototype.abort = function() {};
+MockXMLHttpRequest.prototype.setRequestHeader = function(header, value) {};
+MockXMLHttpRequest.prototype.getAllResponseHeaders = function() { return this._responseHeaders; };
+MockXMLHttpRequest.prototype.getResponseHeader = function(header) { return this._responseHeaders[header]; };
+MockXMLHttpRequest.prototype.overrideMimeType = function(mimetype) {};
 var OBJECT_COUNT = 0;
 objj_generateObjectUID = function()
 {
@@ -1258,7 +1241,7 @@ CFPropertyList.propertyListFromXML = function( aStringOrXMLNode)
             case PLIST_BOOLEAN_FALSE: object = NO;
                                         break;
             case PLIST_DATA: object = new CFMutableData();
-                                        object.bytes = (XMLNode.firstChild) ? base64_decode_to_array(((String((XMLNode.firstChild).nodeValue))), YES) : [];
+                                        object.bytes = (XMLNode.firstChild) ? CFData.decodeBase64ToArray(((String((XMLNode.firstChild).nodeValue))), YES) : [];
                                         break;
             default: throw new Error("*** " + (String(XMLNode.nodeName)) + " tag not recognized in Plist.");
         }
@@ -1338,6 +1321,7 @@ CFDictionary.prototype.containsKey = function( aKey)
 {
     return hasOwnProperty.apply(this._buckets, [aKey]);
 }
+CFDictionary.prototype.containsKey.displayName = "CFDictionary.prototype.containsKey";
 CFDictionary.prototype.containsValue = function( anObject)
 {
     var keys = this._keys,
@@ -1349,14 +1333,17 @@ CFDictionary.prototype.containsValue = function( anObject)
             return YES;
     return NO;
 }
+CFDictionary.prototype.containsValue.displayName = "CFDictionary.prototype.containsValue";
 CFDictionary.prototype.count = function()
 {
     return this._count;
 }
+CFDictionary.prototype.count.displayName = "CFDictionary.prototype.count";
 CFDictionary.prototype.countOfKey = function( aKey)
 {
     return this.containsKey(aKey) ? 1 : 0;
 }
+CFDictionary.prototype.countOfKey.displayName = "CFDictionary.prototype.countOfKey";
 CFDictionary.prototype.countOfValue = function( anObject)
 {
     var keys = this._keys,
@@ -1369,10 +1356,12 @@ CFDictionary.prototype.countOfValue = function( anObject)
             return ++countOfValue;
     return countOfValue;
 }
+CFDictionary.prototype.countOfValue.displayName = "CFDictionary.prototype.countOfValue";
 CFDictionary.prototype.keys = function()
 {
     return this._keys.slice();
 }
+CFDictionary.prototype.keys.displayName = "CFDictionary.prototype.keys";
 CFDictionary.prototype.valueForKey = function( aKey)
 {
     var buckets = this._buckets;
@@ -1380,6 +1369,7 @@ CFDictionary.prototype.valueForKey = function( aKey)
         return nil;
     return buckets[aKey];
 }
+CFDictionary.prototype.valueForKey.displayName = "CFDictionary.prototype.valueForKey";
 CFDictionary.prototype.toString = function()
 {
     var string = "{\n",
@@ -1393,6 +1383,7 @@ CFDictionary.prototype.toString = function()
     }
     return string + "}";
 }
+CFDictionary.prototype.toString.displayName = "CFDictionary.prototype.toString";
 CFMutableDictionary = function( aDictionary)
 {
     CFDictionary.apply(this, []);
@@ -1410,6 +1401,7 @@ CFMutableDictionary.prototype.addValueForKey = function( aKey, aValue)
     this._keys.push(aKey);
     this._buckets[aKey] = aValue;
 }
+CFMutableDictionary.prototype.addValueForKey.displayName = "CFMutableDictionary.prototype.addValueForKey";
 CFMutableDictionary.prototype.removeValueForKey = function( aKey)
 {
     var indexOfKey = -1;
@@ -1433,18 +1425,21 @@ CFMutableDictionary.prototype.removeValueForKey = function( aKey)
     this._keys.splice(indexOfKey, 1);
     delete this._buckets[aKey];
 }
+CFMutableDictionary.prototype.removeValueForKey.displayName = "CFMutableDictionary.prototype.removeValueForKey";
 CFMutableDictionary.prototype.removeAllValues = function()
 {
     this._count = 0;
     this._keys = [];
     this._buckets = { };
 }
+CFMutableDictionary.prototype.removeAllValues.displayName = "CFMutableDictionary.prototype.removeAllValues";
 CFMutableDictionary.prototype.replaceValueForKey = function( aKey, aValue)
 {
     if (!this.containsKey(aKey))
         return;
     this._buckets[aKey] = aValue;
 }
+CFMutableDictionary.prototype.replaceValueForKey.displayName = "CFMutableDictionary.prototype.replaceValueForKey";
 CFMutableDictionary.prototype.setValueForKey = function( aKey, aValue)
 {
     if (aValue === nil || aValue === undefined)
@@ -1454,6 +1449,7 @@ CFMutableDictionary.prototype.setValueForKey = function( aKey, aValue)
     else
         this.addValueForKey(aKey, aValue);
 }
+CFMutableDictionary.prototype.setValueForKey.displayName = "CFMutableDictionary.prototype.setValueForKey";
 CFData = function()
 {
     this._rawString = NULL;
@@ -1551,7 +1547,7 @@ var base64_map_to = [
     base64_map_from = [];
 for (var i = 0; i < base64_map_to.length; i++)
     base64_map_from[base64_map_to[i].charCodeAt(0)] = i;
-base64_decode_to_array = function(input, strip)
+CFData.decodeBase64ToArray = function(input, strip)
 {
     if (strip)
         input = input.replace(/[^A-Za-z0-9\+\/\=]/g, "");
@@ -1573,7 +1569,7 @@ base64_decode_to_array = function(input, strip)
         return output.slice(0, -1 * pad);
     return output;
 }
-base64_encode_array = function(input)
+CFData.encodeBase64Array = function(input)
 {
     var pad = (3 - (input.length % 3)) % 3,
         length = input.length + pad,
@@ -1603,21 +1599,497 @@ base64_encode_array = function(input)
     }
     return output.join("");
 }
-base64_decode_to_string = function(input, strip)
+CFData.decodeBase64ToString = function(input, strip)
 {
-    return bytes_to_string(base64_decode_to_array(input, strip));
+    return CFData.bytesToString(CFData.decodeBase64ToArray(input, strip));
 }
-bytes_to_string = function(bytes)
+CFData.bytesToString = function(bytes)
 {
     return String.fromCharCode.apply(NULL, bytes);
 }
-base64_encode_string = function(input)
+CFData.encodeBase64String = function(input)
 {
     var temp = [];
     for (var i = 0; i < input.length; i++)
         temp.push(input.charCodeAt(i));
-    return base64_encode_array(temp);
+    return CFData.encodeBase64Array(temp);
 }
+var CFURLsForCachedUIDs,
+    CFURLPartsForURLStrings,
+    CFURLCachingEnableCount = 0;
+function enableCFURLCaching()
+{
+    if (++CFURLCachingEnableCount !== 1)
+        return;
+    CFURLsForCachedUIDs = { };
+    CFURLPartsForURLStrings = { };
+}
+function disableCFURLCaching()
+{
+    CFURLCachingEnableCount = MAX(CFURLCachingEnableCount - 1, 0);
+    if (CFURLCachingEnableCount !== 0)
+        return;
+    delete CFURLsForCachedUIDs;
+    delete CFURLPartsForURLStrings;
+}
+var URL_RE = new RegExp(
+    "^" +
+    "(?:" +
+        "([^:/?#]+):" +
+    ")?" +
+    "(?:" +
+        "(//)" +
+        "(" +
+            "(?:" +
+                "(" +
+                    "([^:@]*)" +
+                    ":?" +
+                    "([^:@]*)" +
+                ")?" +
+                "@" +
+            ")?" +
+            "([^:/?#]*)" +
+            "(?::(\\d*))?" +
+        ")" +
+    ")?" +
+    "([^?#]*)" +
+    "(?:\\?([^#]*))?" +
+    "(?:#(.*))?"
+);
+var URI_KEYS =
+[
+    "url",
+    "scheme",
+    "authorityRoot",
+    "authority",
+        "userInfo",
+            "user",
+            "password",
+        "domain",
+        "portNumber",
+    "path",
+    "queryString",
+    "fragment"
+];
+function CFURLGetParts( aURL)
+{
+    if (aURL._parts)
+        return aURL._parts;
+    var URLString = aURL.string(),
+        isMHTMLURL = URLString.match(/^mhtml:/);
+    if (isMHTMLURL)
+        URLString = URLString.substr("mhtml:".length);
+    if (CFURLCachingEnableCount > 0 && hasOwnProperty.call(CFURLPartsForURLStrings, URLString))
+    {
+        aURL._parts = CFURLPartsForURLStrings[URLString];
+        return aURL._parts;
+    }
+    aURL._parts = { };
+    var parts = aURL._parts,
+        results = URL_RE.exec(URLString),
+        index = results.length;
+    while (index--)
+        parts[URI_KEYS[index]] = results[index] || NULL;
+    parts.portNumber = parseInt(parts.portNumber, 10);
+    if (isNaN(parts.portNumber))
+        parts.portNumber = -1;
+    parts.pathComponents = [];
+    if (parts.path)
+    {
+        var split = parts.path.split("/"),
+            pathComponents = parts.pathComponents,
+            index = 0,
+            count = split.length;
+        for (; index < count; ++index)
+        {
+            var component = split[index];
+            if (component)
+                pathComponents.push(component);
+            else if (index === 0)
+                pathComponents.push("/");
+        }
+        parts.pathComponents = pathComponents;
+    }
+    if (isMHTMLURL)
+    {
+        parts.url = "mhtml:" + parts.url;
+        parts.scheme = "mhtml:" + parts.scheme;
+    }
+    if (CFURLCachingEnableCount > 0)
+        CFURLPartsForURLStrings[URLString] = parts;
+    return parts;
+}
+CFURL = function( aURL, aBaseURL)
+{
+    aURL = aURL || "";
+    if (aURL instanceof CFURL)
+    {
+        if (!aBaseURL)
+            return aURL;
+        var existingBaseURL = aURL.baseURL();
+        if (existingBaseURL)
+            aBaseURL = new CFURL(existingBaseURL.absoluteURL(), aBaseURL);
+        aURL = aURL.string();
+    }
+    if (CFURLCachingEnableCount > 0)
+    {
+        var cacheUID = aURL + " " + (aBaseURL && aBaseURL.UID() || "");
+        if (hasOwnProperty.call(CFURLsForCachedUIDs, cacheUID))
+            return CFURLsForCachedUIDs[cacheUID];
+        CFURLsForCachedUIDs[cacheUID] = this;
+    }
+    if (aURL.match(/^data:/))
+    {
+        var parts = { },
+            index = URI_KEYS.length;
+        while (index--)
+            parts[URI_KEYS[index]] = "";
+        parts.url = aURL;
+        parts.scheme = "data";
+        parts.pathComponents = [];
+        this._parts = parts;
+        this._standardizedURL = this;
+        this._absoluteURL = this;
+    }
+    this._UID = objj_generateObjectUID();
+    this._string = aURL;
+    this._baseURL = aBaseURL;
+}
+CFURL.displayName = "CFURL";
+CFURL.prototype.UID = function()
+{
+    return this._UID;
+}
+CFURL.prototype.UID.displayName = "CFURL.prototype.UID";
+var URLMap = { };
+CFURL.prototype.mappedURL = function()
+{
+    return URLMap[this.absoluteString()] || this;
+}
+CFURL.prototype.mappedURL.displayName = "CFURL.prototype.mappedURL";
+CFURL.setMappedURLForURL = function( fromURL, toURL)
+{
+    URLMap[fromURL.absoluteString()] = toURL;
+}
+CFURL.setMappedURLForURL.displayName = "CFURL.setMappedURLForURL";
+CFURL.prototype.schemeAndAuthority = function()
+{
+    var string = "",
+        scheme = this.scheme();
+    if (scheme)
+        string += scheme + ":";
+    var authority = this.authority();
+    if (authority)
+        string += "//" + authority;
+    return string;
+}
+CFURL.prototype.schemeAndAuthority.displayName = "CFURL.prototype.schemeAndAuthority";
+CFURL.prototype.absoluteString = function()
+{
+    if (this._absoluteString === undefined)
+        this._absoluteString = this.absoluteURL().string();
+    return this._absoluteString;
+}
+CFURL.prototype.absoluteString.displayName = "CFURL.prototype.absoluteString";
+CFURL.prototype.toString = function()
+{
+    return this.absoluteString();
+}
+CFURL.prototype.toString.displayName = "CFURL.prototype.toString";
+function resolveURL(aURL)
+{
+    aURL = aURL.standardizedURL();
+    var baseURL = aURL.baseURL();
+    if (!baseURL)
+        return aURL;
+    var parts = ((aURL)._parts || CFURLGetParts(aURL)),
+        resolvedParts,
+        absoluteBaseURL = baseURL.absoluteURL(),
+        baseParts = ((absoluteBaseURL)._parts || CFURLGetParts(absoluteBaseURL));
+    if (parts.scheme || parts.authority)
+        resolvedParts = parts;
+    else
+    {
+        resolvedParts = { };
+        resolvedParts.scheme = baseParts.scheme;
+        resolvedParts.authority = baseParts.authority;
+        resolvedParts.userInfo = baseParts.userInfo;
+        resolvedParts.user = baseParts.user;
+        resolvedParts.password = baseParts.password;
+        resolvedParts.domain = baseParts.domain;
+        resolvedParts.portNumber = baseParts.portNumber;
+        resolvedParts.queryString = parts.queryString;
+        resolvedParts.fragment = parts.fragment;
+        var pathComponents = parts.pathComponents
+        if (pathComponents.length && pathComponents[0] === "/")
+        {
+            resolvedParts.path = parts.path;
+            resolvedParts.pathComponents = pathComponents;
+        }
+        else
+        {
+            var basePathComponents = baseParts.pathComponents,
+                resolvedPathComponents = basePathComponents.concat(pathComponents);
+            if (!baseURL.hasDirectoryPath() && basePathComponents.length)
+                resolvedPathComponents.splice(basePathComponents.length - 1, 1);
+            if (pathComponents.length && pathComponents[0] === "..")
+                standardizePathComponents(resolvedPathComponents, YES);
+            resolvedParts.pathComponents = resolvedPathComponents;
+            resolvedParts.path = pathFromPathComponents(resolvedPathComponents, pathComponents.length <= 0 || aURL.hasDirectoryPath());
+        }
+    }
+    var resolvedString = URLStringFromParts(resolvedParts),
+        resolvedURL = new CFURL(resolvedString);
+    resolvedURL._parts = resolvedParts;
+    resolvedURL._standardizedURL = resolvedURL;
+    resolvedURL._standardizedString = resolvedString;
+    resolvedURL._absoluteURL = resolvedURL;
+    resolvedURL._absoluteString = resolvedString;
+    return resolvedURL;
+}
+function pathFromPathComponents( pathComponents, isDirectoryPath)
+{
+    var path = pathComponents.join("/");
+    if (path.length && path.charAt(0) === "/")
+        path = path.substr(1);
+    if (isDirectoryPath)
+        path += "/";
+    return path;
+}
+function standardizePathComponents( pathComponents, inPlace)
+{
+    var index = 0,
+        resultIndex = 0,
+        count = pathComponents.length,
+        result = inPlace ? pathComponents : [];
+    for (; index < count; ++index)
+    {
+        var component = pathComponents[index];
+        if (component === "" || component === ".")
+             continue;
+        if (component !== ".." || resultIndex === 0 || result[resultIndex - 1] === "..")
+        {
+                result[resultIndex] = component;
+            resultIndex++;
+            continue;
+        }
+        if (resultIndex > 0 && result[resultIndex - 1] !== "/")
+            --resultIndex;
+    }
+    result.length = resultIndex;
+    return result;
+}
+function URLStringFromParts( parts)
+{
+    var string = "",
+        scheme = parts.scheme;
+    if (scheme)
+        string += scheme + ":";
+    var authority = parts.authority;
+    if (authority)
+        string += "//" + authority;
+    string += parts.path;
+    var queryString = parts.queryString;
+    if (queryString)
+        string += "?" + queryString;
+    var fragment = parts.fragment;
+    if (fragment)
+        string += "#" + fragment;
+    return string;
+}
+CFURL.prototype.absoluteURL = function()
+{
+    if (this._absoluteURL === undefined)
+        this._absoluteURL = resolveURL(this);
+    return this._absoluteURL;
+}
+CFURL.prototype.absoluteURL.displayName = "CFURL.prototype.absoluteURL";
+CFURL.prototype.standardizedURL = function()
+{
+    if (this._standardizedURL === undefined)
+    {
+        var parts = ((this)._parts || CFURLGetParts(this)),
+            pathComponents = parts.pathComponents,
+            standardizedPathComponents = standardizePathComponents(pathComponents, NO);
+        var standardizedPath = pathFromPathComponents(standardizedPathComponents, this.hasDirectoryPath());
+        if (parts.path === standardizedPath)
+            this._standardizedURL = this;
+        else
+        {
+            var standardizedParts = CFURLPartsCreateCopy(parts);
+            standardizedParts.pathComponents = standardizedPathComponents;
+            standardizedParts.path = standardizedPath;
+            var standardizedURL = new CFURL(URLStringFromParts(standardizedParts), this.baseURL());
+            standardizedURL._parts = standardizedParts;
+            standardizedURL._standardizedURL = standardizedURL;
+            this._standardizedURL = standardizedURL;
+        }
+    }
+    return this._standardizedURL;
+}
+CFURL.prototype.standardizedURL.displayName = "CFURL.prototype.standardizedURL";
+function CFURLPartsCreateCopy(parts)
+{
+    var copiedParts = { },
+        count = URI_KEYS.length;
+    while (count--)
+    {
+        var partName = URI_KEYS[count];
+        copiedParts[partName] = parts[partName];
+    }
+    return copiedParts;
+}
+CFURL.prototype.string = function()
+{
+    return this._string;
+}
+CFURL.prototype.string.displayName = "CFURL.prototype.string";
+CFURL.prototype.authority = function()
+{
+    var authority = ((this)._parts || CFURLGetParts(this)).authority;
+    if (authority)
+        return authority;
+    var baseURL = this.baseURL();
+    return baseURL && baseURL.authority() || "";
+}
+CFURL.prototype.authority.displayName = "CFURL.prototype.authority";
+CFURL.prototype.hasDirectoryPath = function()
+{
+    var hasDirectoryPath = this._hasDirectoryPath;
+    if (hasDirectoryPath === undefined)
+    {
+        var path = this.path();
+        if (!path)
+            return NO;
+        if (path.charAt(path.length - 1) === "/")
+            return YES;
+        var lastPathComponent = this.lastPathComponent();
+        hasDirectoryPath = lastPathComponent === "." || lastPathComponent === "..";
+        this._hasDirectoryPath = hasDirectoryPath;
+    }
+    return this._hasDirectoryPath;
+}
+CFURL.prototype.hasDirectoryPath.displayName = "CFURL.prototype.hasDirectoryPath";
+CFURL.prototype.hostName = function()
+{
+    return this.authority();
+}
+CFURL.prototype.hostName.displayName = "CFURL.prototype.hostName";
+CFURL.prototype.fragment = function()
+{
+    return ((this)._parts || CFURLGetParts(this)).fragment;
+}
+CFURL.prototype.fragment.displayName = "CFURL.prototype.fragment";
+CFURL.prototype.lastPathComponent = function()
+{
+    if (this._lastPathComponent === undefined)
+    {
+        var pathComponents = this.pathComponents(),
+            pathComponentCount = pathComponents.length;
+        if (!pathComponentCount)
+            this._lastPathComponent = "";
+        else
+            this._lastPathComponent = pathComponents[pathComponentCount - 1];
+    }
+    return this._lastPathComponent;
+}
+CFURL.prototype.lastPathComponent.displayName = "CFURL.prototype.lastPathComponent";
+CFURL.prototype.path = function()
+{
+    return ((this)._parts || CFURLGetParts(this)).path;
+}
+CFURL.prototype.path.displayName = "CFURL.prototype.path";
+CFURL.prototype.pathComponents = function()
+{
+    return ((this)._parts || CFURLGetParts(this)).pathComponents;
+}
+CFURL.prototype.pathComponents.displayName = "CFURL.prototype.pathComponents";
+CFURL.prototype.pathExtension = function()
+{
+    var lastPathComponent = this.lastPathComponent();
+    if (!lastPathComponent)
+        return NULL;
+    lastPathComponent = lastPathComponent.replace(/^\.*/, '');
+    var index = lastPathComponent.lastIndexOf(".");
+    return index <= 0 ? "" : lastPathComponent.substring(index + 1);
+}
+CFURL.prototype.pathExtension.displayName = "CFURL.prototype.pathExtension";
+CFURL.prototype.queryString = function()
+{
+    return ((this)._parts || CFURLGetParts(this)).queryString;
+}
+CFURL.prototype.queryString.displayName = "CFURL.prototype.queryString";
+CFURL.prototype.scheme = function()
+{
+    var scheme = this._scheme;
+    if (scheme === undefined)
+    {
+        scheme = ((this)._parts || CFURLGetParts(this)).scheme;
+        if (!scheme)
+        {
+            var baseURL = this.baseURL();
+            scheme = baseURL && baseURL.scheme();
+        }
+        this._scheme = scheme;
+    }
+    return scheme;
+}
+CFURL.prototype.scheme.displayName = "CFURL.prototype.scheme";
+CFURL.prototype.user = function()
+{
+    return ((this)._parts || CFURLGetParts(this)).user;
+}
+CFURL.prototype.user.displayName = "CFURL.prototype.user";
+CFURL.prototype.password = function()
+{
+    return ((this)._parts || CFURLGetParts(this)).password;
+}
+CFURL.prototype.password.displayName = "CFURL.prototype.password";
+CFURL.prototype.portNumber = function()
+{
+    return ((this)._parts || CFURLGetParts(this)).portNumber;
+}
+CFURL.prototype.portNumber.displayName = "CFURL.prototype.portNumber";
+CFURL.prototype.domain = function()
+{
+    return ((this)._parts || CFURLGetParts(this)).domain;
+}
+CFURL.prototype.domain.displayName = "CFURL.prototype.domain";
+CFURL.prototype.baseURL = function()
+{
+    return this._baseURL;
+}
+CFURL.prototype.baseURL.displayName = "CFURL.prototype.baseURL";
+CFURL.prototype.asDirectoryPathURL = function()
+{
+    if (this.hasDirectoryPath())
+        return this;
+    return new CFURL(this.lastPathComponent() + "/", this);
+}
+CFURL.prototype.asDirectoryPathURL.displayName = "CFURL.prototype.asDirectoryPathURL";
+function CFURLGetResourcePropertiesForKeys( aURL)
+{
+    if (!aURL._resourcePropertiesForKeys)
+        aURL._resourcePropertiesForKeys = new CFMutableDictionary();
+    return aURL._resourcePropertiesForKeys;
+}
+CFURL.prototype.resourcePropertyForKey = function( aKey)
+{
+    return CFURLGetResourcePropertiesForKeys(this).valueForKey(aKey);
+}
+CFURL.prototype.resourcePropertyForKey.displayName = "CFURL.prototype.resourcePropertyForKey";
+CFURL.prototype.setResourcePropertyForKey = function( aKey, aValue)
+{
+    CFURLGetResourcePropertiesForKeys(this).setValueForKey(aKey, aValue);
+}
+CFURL.prototype.setResourcePropertyForKey.displayName = "CFURL.prototype.setResourcePropertyForKey";
+CFURL.prototype.staticResourceData = function()
+{
+    var data = new CFMutableData();
+    data.setRawString(StaticResource.resourceAtURL(this).contents());
+    return data;
+}
+CFURL.prototype.staticResourceData.displayName = "CFURL.prototype.staticResourceData";
 function MarkedStream( aString)
 {
     this._string = aString;
@@ -1630,10 +2102,12 @@ MarkedStream.prototype.magicNumber = function()
 {
     return this._magicNumber;
 }
+MarkedStream.prototype.magicNumber.displayName = "MarkedStream.prototype.magicNumber";
 MarkedStream.prototype.version = function()
 {
     return this._version;
 }
+MarkedStream.prototype.version.displayName = "MarkedStream.prototype.version";
 MarkedStream.prototype.getMarker = function()
 {
     var string = this._string,
@@ -1649,6 +2123,7 @@ MarkedStream.prototype.getMarker = function()
     this._location = next + 1;
     return marker;
 }
+MarkedStream.prototype.getMarker.displayName = "MarkedStream.prototype.getMarker";
 MarkedStream.prototype.getString = function()
 {
     var string = this._string,
@@ -1658,56 +2133,68 @@ MarkedStream.prototype.getString = function()
     var next = string.indexOf(';', location);
     if (next < 0)
         return null;
-    var size = parseInt(string.substring(location, next)),
+    var size = parseInt(string.substring(location, next), 10),
         text = string.substr(next + 1, size);
     this._location = next + 1 + size;
     return text;
 }
+MarkedStream.prototype.getString.displayName = "MarkedStream.prototype.getString";
 var CFBundleUnloaded = 0,
     CFBundleLoading = 1 << 0,
     CFBundleLoadingInfoPlist = 1 << 1,
     CFBundleLoadingExecutable = 1 << 2,
     CFBundleLoadingSpritedImages = 1 << 3,
     CFBundleLoaded = 1 << 4;
-var CFBundlesForPaths = { },
+var CFBundlesForURLStrings = { },
     CFBundlesForClasses = { },
-    CFCacheBuster = new Date().getTime();
-CFBundle = function( aPath)
+    CFCacheBuster = new Date().getTime(),
+    CFTotalBytesLoaded = 0,
+    CPApplicationSizeInBytes = 0;
+CFBundle = function( aURL)
 {
-    aPath = FILE.absolute(aPath);
-    var existingBundle = CFBundlesForPaths[aPath];
+    aURL = makeAbsoluteURL(aURL).asDirectoryPathURL();
+    var URLString = aURL.absoluteString(),
+        existingBundle = CFBundlesForURLStrings[URLString];
     if (existingBundle)
         return existingBundle;
-    CFBundlesForPaths[aPath] = this;
-    this._path = aPath;
-    this._name = FILE.basename(aPath);
+    CFBundlesForURLStrings[URLString] = this;
+    this._bundleURL = aURL;
+    this._resourcesDirectoryURL = new CFURL("Resources/", aURL);
     this._staticResource = NULL;
+    this._isValid = NO;
     this._loadStatus = CFBundleUnloaded;
     this._loadRequests = [];
-    this._infoDictionary = NULL;
-    this._URIMap = { };
+    this._infoDictionary = new CFDictionary();
     this._eventDispatcher = new EventDispatcher(this);
 }
+CFBundle.displayName = "CFBundle";
 CFBundle.environments = function()
 {
     return ["Browser","ObjJ"];
 }
-CFBundle.bundleContainingPath = function( aPath)
+CFBundle.environments.displayName = "CFBundle.environments";
+CFBundle.bundleContainingURL = function( aURL)
 {
-    aPath = FILE.absolute(aPath);
-    while (aPath !== "/")
+    aURL = new CFURL(".", makeAbsoluteURL(aURL));
+    var previousURLString,
+        URLString = aURL.absoluteString();
+    while (!previousURLString || previousURLString !== URLString)
     {
-        var bundle = CFBundlesForPaths[aPath];
-        if (bundle)
+        var bundle = CFBundlesForURLStrings[URLString];
+        if (bundle && bundle._isValid)
             return bundle;
-        aPath = FILE.dirname(aPath);
+        aURL = new CFURL("..", aURL);
+        previousURLString = URLString;
+        URLString = aURL.absoluteString();
     }
     return NULL;
 }
+CFBundle.bundleContainingURL.displayName = "CFBundle.bundleContainingURL";
 CFBundle.mainBundle = function()
 {
-    return new CFBundle(FILE.cwd());
+    return new CFBundle(mainBundleURL);
 }
+CFBundle.mainBundle.displayName = "CFBundle.mainBundle";
 function addClassToBundle(aClass, aBundle)
 {
     if (aBundle)
@@ -1717,36 +2204,57 @@ CFBundle.bundleForClass = function( aClass)
 {
     return CFBundlesForClasses[aClass.name] || CFBundle.mainBundle();
 }
-CFBundle.prototype.path = function()
+CFBundle.bundleForClass.displayName = "CFBundle.bundleForClass";
+CFBundle.prototype.bundleURL = function()
 {
-    return this._path;
+    return this._bundleURL;
 }
+CFBundle.prototype.bundleURL.displayName = "CFBundle.prototype.bundleURL";
+CFBundle.prototype.resourcesDirectoryURL = function()
+{
+    return this._resourcesDirectoryURL;
+}
+CFBundle.prototype.resourcesDirectoryURL.displayName = "CFBundle.prototype.resourcesDirectoryURL";
+CFBundle.prototype.resourceURL = function( aResourceName, aType, aSubDirectory)
+ {
+    if (aType)
+        aResourceName = aResourceName + "." + aType;
+    if (aSubDirectory)
+        aResourceName = aSubDirectory + "/" + aResourceName;
+    var resourceURL = (new CFURL(aResourceName, this.resourcesDirectoryURL())).mappedURL();
+    return resourceURL.absoluteURL();
+}
+CFBundle.prototype.resourceURL.displayName = "CFBundle.prototype.resourceURL";
+CFBundle.prototype.mostEligibleEnvironmentURL = function()
+{
+    if (this._mostEligibleEnvironmentURL === undefined)
+        this._mostEligibleEnvironmentURL = new CFURL(this.mostEligibleEnvironment() + ".environment/", this.bundleURL());
+    return this._mostEligibleEnvironmentURL;
+}
+CFBundle.prototype.mostEligibleEnvironmentURL.displayName = "CFBundle.prototype.mostEligibleEnvironmentURL";
+CFBundle.prototype.executableURL = function()
+{
+    if (this._executableURL === undefined)
+    {
+        var executableSubPath = this.valueForInfoDictionaryKey("CPBundleExecutable");
+        if (!executableSubPath)
+            this._executableURL = NULL;
+        else
+            this._executableURL = new CFURL(executableSubPath, this.mostEligibleEnvironmentURL());
+    }
+    return this._executableURL;
+}
+CFBundle.prototype.executableURL.displayName = "CFBundle.prototype.executableURL";
 CFBundle.prototype.infoDictionary = function()
 {
     return this._infoDictionary;
 }
-CFBundle.prototype.valueForInfoDictionary = function( aKey)
+CFBundle.prototype.infoDictionary.displayName = "CFBundle.prototype.infoDictionary";
+CFBundle.prototype.valueForInfoDictionaryKey = function( aKey)
 {
     return this._infoDictionary.valueForKey(aKey);
 }
-CFBundle.prototype.resourcesPath = function()
-{
-    return FILE.join(this.path(), "Resources");
-}
-CFBundle.prototype.pathForResource = function( aPath)
-{
-    var mappedPath = this._URIMap[FILE.join("Resources", aPath)];
-    if (mappedPath)
-        return mappedPath;
-    return FILE.join(this.resourcesPath(), aPath);
-}
-CFBundle.prototype.executablePath = function()
-{
-    var executableSubPath = this._infoDictionary.valueForKey("CPBundleExecutable");
-    if (executableSubPath)
-        return FILE.join(this.path(), this.mostEligibleEnvironment() + ".environment", executableSubPath);
-    return NULL;
-}
+CFBundle.prototype.valueForInfoDictionaryKey.displayName = "CFBundle.prototype.valueForInfoDictionaryKey";
 CFBundle.prototype.hasSpritedImages = function()
 {
     var environments = this._infoDictionary.valueForKey("CPBundleEnvironmentsWithImageSprites") || [],
@@ -1757,10 +2265,12 @@ CFBundle.prototype.hasSpritedImages = function()
             return YES;
     return NO;
 }
+CFBundle.prototype.hasSpritedImages.displayName = "CFBundle.prototype.hasSpritedImages";
 CFBundle.prototype.environments = function()
 {
     return this._infoDictionary.valueForKey("CPBundleEnvironments") || ["ObjJ"];
 }
+CFBundle.prototype.environments.displayName = "CFBundle.prototype.environments";
 CFBundle.prototype.mostEligibleEnvironment = function( environments)
 {
     environments = environments || this.environments();
@@ -1778,47 +2288,53 @@ CFBundle.prototype.mostEligibleEnvironment = function( environments)
     }
     return NULL;
 }
+CFBundle.prototype.mostEligibleEnvironment.displayName = "CFBundle.prototype.mostEligibleEnvironment";
 CFBundle.prototype.isLoading = function()
 {
     return this._loadStatus & CFBundleLoading;
 }
+CFBundle.prototype.isLoading.displayName = "CFBundle.prototype.isLoading";
 CFBundle.prototype.load = function( shouldExecute)
 {
     if (this._loadStatus !== CFBundleUnloaded)
         return;
     this._loadStatus = CFBundleLoading | CFBundleLoadingInfoPlist;
-    var self = this;
-    rootResource.resolveSubPath(FILE.dirname(self.path()), YES, function(aStaticResource)
+    var self = this,
+        bundleURL = this.bundleURL(),
+        parentURL = new CFURL("..", bundleURL);
+    if (parentURL.absoluteString() === bundleURL.absoluteString())
+        parentURL = parentURL.schemeAndAuthority();
+    StaticResource.resolveResourceAtURL(parentURL, YES, function(aStaticResource)
     {
-        var path = self.path();
-        if (path === "/")
-            self._staticResource = rootResource;
-        else
-        {
-            var name = FILE.basename(path);
-            self._staticResource = aStaticResource._children[name];
-            if (!self._staticResource)
-                self._staticResource = new StaticResource(name, aStaticResource, YES, NO);
-        }
+        var resourceName = bundleURL.absoluteURL().lastPathComponent();
+        self._staticResource = aStaticResource._children[resourceName] ||
+                                new StaticResource(bundleURL, aStaticResource, YES, NO);
         function onsuccess( anEvent)
         {
             self._loadStatus &= ~CFBundleLoadingInfoPlist;
-            self._infoDictionary = anEvent.request.responsePropertyList();
+            var infoDictionary = anEvent.request.responsePropertyList();
+            self._isValid = !!infoDictionary || CFBundle.mainBundle() === self;
+            if (infoDictionary)
+                self._infoDictionary = infoDictionary;
             if (!self._infoDictionary)
             {
                 finishBundleLoadingWithError(self, new Error("Could not load bundle at \"" + path + "\""));
                 return;
             }
+            if (self === CFBundle.mainBundle() && self.valueForInfoDictionaryKey("CPApplicationSize"))
+                CPApplicationSizeInBytes = self.valueForInfoDictionaryKey("CPApplicationSize").valueForKey("executable") || 0;
             loadExecutableAndResources(self, shouldExecute);
         }
         function onfailure()
         {
+            self._isValid = CFBundle.mainBundle() === self;
             self._loadStatus = CFBundleUnloaded;
-            finishBundleLoadingWithError(self, new Error("Could not load bundle at \"" + path + "\""));
+            finishBundleLoadingWithError(self, new Error("Could not load bundle at \"" + self.bundleURL() + "\""));
         }
-        new FileRequest(FILE.join(path, "Info.plist"), onsuccess, onfailure);
+        new FileRequest(new CFURL("Info.plist", self.bundleURL()), onsuccess, onfailure);
     });
 }
+CFBundle.prototype.load.displayName = "CFBundle.prototype.load";
 function finishBundleLoadingWithError( aBundle, anError)
 {
     resolveStaticResource(aBundle._staticResource);
@@ -1849,6 +2365,11 @@ function loadExecutableAndResources( aBundle, shouldExecute)
     }
     function success()
     {
+        if ((typeof CPApp === "undefined" || !CPApp || !CPApp._finishedLaunching) &&
+             typeof OBJJ_PROGRESS_CALLBACK === "function" && CPApplicationSizeInBytes)
+        {
+            OBJJ_PROGRESS_CALLBACK(MAX(MIN(1.0, CFTotalBytesLoaded / CPApplicationSizeInBytes), 0.0), CPApplicationSizeInBytes, aBundle.path())
+        }
         if (aBundle._loadStatus === CFBundleLoading)
             aBundle._loadStatus = CFBundleLoaded;
         else
@@ -1870,14 +2391,16 @@ function loadExecutableAndResources( aBundle, shouldExecute)
 }
 function loadExecutableForBundle( aBundle, success, failure)
 {
-    if (!aBundle.executablePath())
+    var executableURL = aBundle.executableURL();
+    if (!executableURL)
         return;
     aBundle._loadStatus |= CFBundleLoadingExecutable;
-    new FileRequest(aBundle.executablePath(), function( anEvent)
+    new FileRequest(executableURL, function( anEvent)
     {
         try
         {
-            decompileStaticFile(aBundle, anEvent.request.responseText(), aBundle.executablePath());
+            CFTotalBytesLoaded += anEvent.request.responseText().length;
+            decompileStaticFile(aBundle, anEvent.request.responseText(), executableURL);
             aBundle._loadStatus &= ~CFBundleLoadingExecutable;
             success();
         }
@@ -1887,27 +2410,41 @@ function loadExecutableForBundle( aBundle, success, failure)
         }
     }, failure);
 }
+function spritedImagesTestURLStringForBundle( aBundle)
+{
+    return "mhtml:" + new CFURL("MHTMLTest.txt", aBundle.mostEligibleEnvironmentURL());
+}
+function spritedImagesURLForBundle( aBundle)
+{
+    if (CFBundleSupportedSpriteType === CFBundleDataURLSpriteType)
+        return new CFURL("dataURLs.txt", aBundle.mostEligibleEnvironmentURL());
+    if (CFBundleSupportedSpriteType === CFBundleMHTMLSpriteType ||
+        CFBundleSupportedSpriteType === CFBundleMHTMLUncachedSpriteType)
+        return new CFURL("MHTMLPaths.txt", aBundle.mostEligibleEnvironmentURL());
+    return NULL;
+}
 function loadSpritedImagesForBundle( aBundle, success, failure)
 {
     if (!aBundle.hasSpritedImages())
         return;
     aBundle._loadStatus |= CFBundleLoadingSpritedImages;
     if (!CFBundleHasTestedSpriteSupport())
-        return CFBundleTestSpriteSupport(spritedImagesTestPathForBundle(aBundle), function()
+        return CFBundleTestSpriteSupport(spritedImagesTestURLStringForBundle(aBundle), function()
         {
             loadSpritedImagesForBundle(aBundle, success, failure);
         });
-    var spritedImagesPath = spritedImagesPathForBundle(aBundle);
-    if (!spritedImagesPath)
+    var spritedImagesURL = spritedImagesURLForBundle(aBundle);
+    if (!spritedImagesURL)
     {
         aBundle._loadStatus &= ~CFBundleLoadingSpritedImages;
         return success();
     }
-    new FileRequest(spritedImagesPath, function( anEvent)
+    new FileRequest(spritedImagesURL, function( anEvent)
     {
         try
         {
-            decompileStaticFile(aBundle, anEvent.request.responseText(), spritedImagesPath);
+            CFTotalBytesLoaded += anEvent.request.responseText().length;
+            decompileStaticFile(aBundle, anEvent.request.responseText(), spritedImagesURL);
             aBundle._loadStatus &= ~CFBundleLoadingSpritedImages;
             success();
         }
@@ -1934,6 +2471,24 @@ function CFBundleTestSpriteSupport( MHTMLPath, aCallback)
     CFBundleSpriteSupportListeners.push(aCallback);
     if (CFBundleSpriteSupportListeners.length > 1)
         return;
+    CFBundleSpriteSupportListeners.push(function()
+    {
+        var size = 0,
+            sizeDictionary = CFBundle.mainBundle().valueForInfoDictionaryKey("CPApplicationSize");
+        if (!sizeDictionary)
+            return;
+        switch (CFBundleSupportedSpriteType)
+        {
+            case CFBundleDataURLSpriteType:
+                size = sizeDictionary.valueForKey("data");
+                break;
+            case CFBundleMHTMLSpriteType:
+            case CFBundleMHTMLUncachedSpriteType:
+                size = sizeDictionary.valueForKey("mhtml");
+                break;
+        }
+        CPApplicationSizeInBytes += size;
+    })
     CFBundleTestSpriteTypes([
         CFBundleDataURLSpriteType,
         "data:image/gif;base64,R0lGODlhAQABAIAAAMc9BQAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==",
@@ -1974,32 +2529,9 @@ function CFBundleTestSpriteTypes( spriteTypes)
     }
     image.src = spriteTypes[1];
 }
-function mhtmlBasePath()
-{
-    return window.location.protocol + "//" + window.location.hostname + (window.location.port ? (":" + window.location.port) : "");
-}
-function spritedImagesTestPathForBundle( aBundle)
-{
-    return "mhtml:" + mhtmlBasePath() + FILE.join(aBundle.path(), aBundle.mostEligibleEnvironment() + ".environment", "MHTMLTest.txt");
-}
-function spritedImagesPathForBundle( aBundle)
-{
-    if (CFBundleSupportedSpriteType === CFBundleDataURLSpriteType)
-        return FILE.join(aBundle.path(), aBundle.mostEligibleEnvironment() + ".environment", "dataURLs.txt");
-    if (CFBundleSupportedSpriteType === CFBundleMHTMLSpriteType || CFBundleSupportedSpriteType === CFBundleMHTMLUncachedSpriteType)
-        return mhtmlBasePath() + FILE.join(aBundle.path(), aBundle.mostEligibleEnvironment() + ".environment", "MHTMLPaths.txt");
-    return NULL;
-}
-CFBundle.dataContentsAtPath = function( aPath)
-{
-    var data = new CFMutableData();
-    data.setRawString(rootResource.nodeAtSubPath(aPath).contents());
-    return data;
-}
 function executeBundle( aBundle, aCallback)
 {
-    var staticResources = [aBundle._staticResource],
-        resourcesPath = aBundle.resourcesPath();
+    var staticResources = [aBundle._staticResource];
     function executeStaticResources(index)
     {
         for (; index < staticResources.length; ++index)
@@ -2009,22 +2541,21 @@ function executeBundle( aBundle, aCallback)
                 continue;
             if (staticResource.isFile())
             {
-                var executable = new FileExecutable(staticResource.path());
+                var executable = new FileExecutable(staticResource.URL());
                 if (executable.hasLoadedFileDependencies())
                     executable.execute();
                 else
                 {
-                    executable.addEventListener("dependenciesload", function()
+                    executable.loadFileDependencies(function()
                     {
                         executeStaticResources(index);
                     });
-                    executable.loadFileDependencies();
                     return;
                 }
             }
             else
             {
-                if (staticResource.path() === aBundle.resourcesPath())
+                if (staticResource.URL().absoluteString() === aBundle.resourcesDirectoryURL().absoluteString())
                     continue;
                 var children = staticResource.children();
                 for (var name in children)
@@ -2047,38 +2578,39 @@ function decompileStaticFile( aBundle, aString, aPath)
 {
     var stream = new MarkedStream(aString);
     if (stream.magicNumber() !== STATIC_MAGIC_NUMBER)
-        throw new Error("Could not read static file: "+aPath);
+        throw new Error("Could not read static file: " + aPath);
     if (stream.version() !== "1.0")
-        throw new Error("Could not read static file: "+aPath);
+        throw new Error("Could not read static file: " + aPath);
     var marker,
-        bundlePath = aBundle.path(),
+        bundleURL = aBundle.bundleURL(),
         file = NULL;
     while (marker = stream.getMarker())
     {
         var text = stream.getString();
         if (marker === MARKER_PATH)
         {
-            var absolutePath = FILE.join(bundlePath, text),
-                parent = rootResource.nodeAtSubPath(FILE.dirname(absolutePath), YES);
-            file = new StaticResource(FILE.basename(absolutePath), parent, NO, YES);
+            var fileURL = new CFURL(text, bundleURL),
+                parent = StaticResource.resourceAtURL(new CFURL(".", fileURL), YES);
+            file = new StaticResource(fileURL, parent, NO, YES);
         }
         else if (marker === MARKER_URI)
         {
-            var URI = stream.getString();
-            if (URI.toLowerCase().indexOf("mhtml:") === 0)
+            var URL = new CFURL(text, bundleURL),
+                mappedURLString = stream.getString();
+            if (mappedURLString.indexOf("mhtml:") === 0)
             {
-                URI = "mhtml:" + mhtmlBasePath() + FILE.join(bundlePath, URI.substr("mhtml:".length));
+                mappedURLString = "mhtml:" + new CFURL(mappedURLString.substr("mhtml:".length), bundleURL);
                 if (CFBundleSupportedSpriteType === CFBundleMHTMLUncachedSpriteType)
                 {
-                    var exclamationIndex = URI.indexOf("!"),
-                        firstPart = URI.substring(0, exclamationIndex),
-                        lastPart = URI.substring(exclamationIndex);
-                    URI = firstPart + "?" + CFCacheBuster + lastPart;
+                    var exclamationIndex = URLString.indexOf("!"),
+                        firstPart = URLString.substring(0, exclamationIndex),
+                        lastPart = URLString.substring(exclamationIndex);
+                    mappedURLString = firstPart + "?" + CFCacheBuster + lastPart;
                 }
             }
-            aBundle._URIMap[text] = URI;
-            var parent = rootResource.nodeAtSubPath(FILE.join(bundlePath, FILE.dirname(text)), YES);
-            new StaticResource(FILE.basename(text), parent, NO, YES);
+            CFURL.setMappedURLForURL(URL, new CFURL(mappedURLString));
+            var parent = StaticResource.resourceAtURL(new CFURL(".", URL), YES);
+            new StaticResource(URL, parent, NO, YES);
         }
         else if (marker === MARKER_TEXT)
             file.write(text);
@@ -2088,112 +2620,55 @@ CFBundle.prototype.addEventListener = function( anEventName, anEventListener)
 {
     this._eventDispatcher.addEventListener(anEventName, anEventListener);
 }
+CFBundle.prototype.addEventListener.displayName = "CFBundle.prototype.addEventListener";
 CFBundle.prototype.removeEventListener = function( anEventName, anEventListener)
 {
     this._eventDispatcher.removeEventListener(anEventName, anEventListener);
 }
+CFBundle.prototype.removeEventListener.displayName = "CFBundle.prototype.removeEventListener";
 CFBundle.prototype.onerror = function( anEvent)
 {
     throw anEvent.error;
 }
-var FILE =
+CFBundle.prototype.onerror.displayName = "CFBundle.prototype.onerror";
+CFBundle.prototype.bundlePath = function()
 {
-    absolute: function( aPath)
-    {
-        aPath = FILE.normal(aPath);
-        if (FILE.isAbsolute(aPath))
-            return aPath;
-        return FILE.join(FILE.cwd(), aPath);
-    },
-    basename: function( aPath)
-    {
-        var components = FILE.split(FILE.normal(aPath));
-        return components[components.length - 1];
-    },
-    extension: function( aPath)
-    {
-        aPath = FILE.basename(aPath);
-        aPath = aPath.replace(/^\.*/, '');
-        var index = aPath.lastIndexOf(".");
-        return index <= 0 ? "" : aPath.substring(index);
-    },
-    cwd: function()
-    {
-        return FILE._cwd;
-    },
-    normal: function( aPath)
-    {
-        if (!aPath)
-            return "";
-        var components = aPath.split("/"),
-            results = [],
-            index = 0,
-            count = components.length,
-            isRoot = aPath.charAt(0) === "/";
-        for (; index < count; ++index)
-        {
-            var component = components[index];
-            if (component === "" || component === ".")
-                continue;
-            if (component !== "..")
-            {
-                results.push(component);
-                continue;
-            }
-            var resultsCount = results.length;
-            if (resultsCount > 0 && results[resultsCount - 1] !== "..")
-                results.pop();
-            else if (!isRoot && resultsCount === 0 || results[resultsCount - 1] === "..")
-                results.push(component);
-        }
-        return (isRoot ? "/" : "") + results.join("/");
-    },
-    dirname: function( aPath)
-    {
-        var aPath = FILE.normal(aPath),
-            components = FILE.split(aPath);
-        if (components.length === 2)
-            components.unshift("");
-        return FILE.join.apply(FILE, components.slice(0, components.length - 1));
-    },
-    isAbsolute: function( aPath)
-    {
-        return aPath.charAt(0) === "/";
-    },
-    join: function()
-    {
-        if (arguments.length === 1 && arguments[0] === "")
-            return "/";
-        return FILE.normal(Array.prototype.join.call(arguments, "/"));
-    },
-    split: function( aPath)
-    {
-        return FILE.normal(aPath).split("/");
-    }
+    return this._bundleURL.absoluteURL().path();
 }
-var path = window.location.pathname,
-    DOMBaseElement = document.getElementsByTagName("base")[0];
-if (DOMBaseElement)
-    path = DOMBaseElement.getAttribute("href");
-if (path.charAt(path.length - 1) === "/")
-    FILE._cwd = path;
-else
-    FILE._cwd = FILE.dirname(path);
-function StaticResource( aName, aParent, isDirectory, isResolved)
+CFBundle.prototype.path = function()
+{
+    CPLog.warn("CFBundle.prototype.path is deprecated, use CFBundle.prototype.bundlePath instead.");
+    return this.bundlePath.apply(this, arguments);
+}
+CFBundle.prototype.pathForResource = function(aResource)
+{
+    return this.resourceURL(aResource).absoluteString();
+}
+var rootResources = { };
+function StaticResource( aURL, aParent, isDirectory, isResolved)
 {
     this._parent = aParent;
     this._eventDispatcher = new EventDispatcher(this);
-    this._name = aName;
+    var name = aURL.absoluteURL().lastPathComponent() || aURL.schemeAndAuthority();
+    this._name = name;
+    this._URL = aURL;
     this._isResolved = !!isResolved;
-    this._path = FILE.join(aParent ? aParent.path() : "", aName);
+    if (isDirectory)
+        this._URL = this._URL.asDirectoryPathURL();
+    if (!aParent)
+        rootResources[name] = this;
     this._isDirectory = !!isDirectory;
     this._isNotFound = NO;
     if (aParent)
-        aParent._children[aName] = this;
+        aParent._children[name] = this;
     if (isDirectory)
         this._children = { };
     else
         this._contents = "";
+}
+StaticResource.rootResources = function()
+{
+    return rootResources;
 }
 exports.StaticResource = StaticResource;
 function resolveStaticResource( aResource)
@@ -2209,7 +2684,7 @@ StaticResource.prototype.resolve = function()
 {
     if (this.isDirectory())
     {
-        var bundle = new CFBundle(this.path());
+        var bundle = new CFBundle(this.URL());
         bundle.onerror = function() { };
         bundle.load(NO);
     }
@@ -2226,16 +2701,16 @@ StaticResource.prototype.resolve = function()
             self._isNotFound = YES;
             resolveStaticResource(self);
         }
-        new FileRequest(this.path(), onsuccess, onfailure);
+        new FileRequest(this.URL(), onsuccess, onfailure);
     }
 }
 StaticResource.prototype.name = function()
 {
     return this._name;
 }
-StaticResource.prototype.path = function()
+StaticResource.prototype.URL = function()
 {
-    return this._path;
+    return this._URL;
 }
 StaticResource.prototype.contents = function()
 {
@@ -2257,43 +2732,91 @@ StaticResource.prototype.write = function( aString)
 {
     this._contents += aString;
 }
-StaticResource.prototype.resolveSubPath = function( aPath, isDirectory, aCallback)
+function rootResourceForAbsoluteURL( anAbsoluteURL)
 {
-    aPath = FILE.normal(aPath);
-    if (aPath === "/")
-        return aCallback(rootResource);
-    if (!FILE.isAbsolute(aPath))
-        aPath = FILE.join(this.path(), aPath);
-    var components = FILE.split(aPath),
-        index = this === rootResource ? 1 : FILE.split(this.path()).length;
-    resolvePathComponents(this, isDirectory, components, index, aCallback);
+    var schemeAndAuthority = anAbsoluteURL.schemeAndAuthority(),
+        resource = rootResources[schemeAndAuthority];
+    if (!resource)
+        resource = new StaticResource(new CFURL(schemeAndAuthority), NULL, YES, YES);
+    return resource;
 }
-function resolvePathComponents( startResource, isDirectory, components, index, aCallback)
+StaticResource.resourceAtURL = function( aURL, resolveAsDirectoriesIfNecessary)
 {
-    var count = components.length,
-        parent = startResource;
-    function continueResolution()
+    aURL = makeAbsoluteURL(aURL).absoluteURL();
+    var resource = rootResourceForAbsoluteURL(aURL),
+        components = aURL.pathComponents(),
+        index = 0,
+        count = components.length;
+    for (; index < count; ++index)
     {
-        resolvePathComponents(parent, isDirectory, components, index, aCallback);
+        var name = components[index];
+        if (hasOwnProperty.call(resource._children, name))
+            resource = resource._children[name];
+        else if (resolveAsDirectoriesIfNecessary)
+            resource = new StaticResource(new CFURL(name, resource.URL()), resource, YES, YES);
+        else
+            throw new Error("Static Resource at " + aURL + " is not resolved (\"" + name + "\")");
     }
+    return resource;
+}
+StaticResource.prototype.resourceAtURL = function( aURL, resolveAsDirectoriesIfNecessary)
+{
+    return StaticResource.resourceAtURL(new CFURL(aURL, this.URL()), resolveAsDirectoriesIfNecessary);
+}
+StaticResource.resolveResourceAtURL = function( aURL, isDirectory, aCallback)
+{
+    aURL = makeAbsoluteURL(aURL).absoluteURL();
+    resolveResourceComponents(rootResourceForAbsoluteURL(aURL), isDirectory, aURL.pathComponents(), 0, aCallback);
+}
+StaticResource.prototype.resolveResourceAtURL = function( aURL, isDirectory, aCallback)
+{
+    StaticResource.resolveResourceAtURL(new CFURL(aURL, this.URL()).absoluteURL(), isDirectory, aCallback);
+}
+function resolveResourceComponents( aResource, isDirectory, components, index, aCallback)
+{
+    var count = components.length;
     for (; index < count; ++index)
     {
         var name = components[index],
-            child = parent._children[name];
+            child = hasOwnProperty.call(aResource._children, name) && aResource._children[name];
         if (!child)
         {
-            child = new StaticResource(name, parent, index + 1 < count || isDirectory , NO);
+            child = new StaticResource(new CFURL(name, aResource.URL()), aResource, index + 1 < count || isDirectory , NO);
             child.resolve();
         }
         if (!child.isResolved())
-            return child.addEventListener("resolve", continueResolution);
+            return child.addEventListener("resolve", function()
+            {
+                resolveResourceComponents(aResource, isDirectory, components, index, aCallback);
+            });
         if (child.isNotFound())
             return aCallback(null, new Error("File not found: " + components.join("/")));
         if ((index + 1 < count) && child.isFile())
             return aCallback(null, new Error("File is not a directory: " + components.join("/")));
-        parent = child;
+        aResource = child;
     }
-    return aCallback(parent);
+    aCallback(aResource);
+}
+function resolveResourceAtURLSearchingIncludeURLs( aURL, anIndex, aCallback)
+{
+    var includeURLs = StaticResource.includeURLs(),
+        searchURL = new CFURL(aURL, includeURLs[anIndex]).absoluteURL();
+    StaticResource.resolveResourceAtURL(searchURL, NO, function( aStaticResource)
+    {
+        if (!aStaticResource)
+        {
+            if (anIndex + 1 < includeURLs.length)
+                resolveResourceAtURLSearchingIncludeURLs(aURL, anIndex + 1, aCallback);
+            else
+                aCallback(NULL);
+            return;
+        }
+        aCallback(aStaticResource);
+    });
+}
+StaticResource.resolveResourceAtURLSearchingIncludeURLs = function( aURL, aCallback)
+{
+    resolveResourceAtURLSearchingIncludeURLs(aURL, 0, aCallback);
 }
 StaticResource.prototype.addEventListener = function( anEventName, anEventListener)
 {
@@ -2319,7 +2842,7 @@ StaticResource.prototype.toString = function( includeNotFounds)
 {
     if (this.isNotFound())
         return "<file not found: " + this.name() + ">";
-    var string = this.parent() ? this.name() : "/";
+    var string = this.name();
     if (this.isDirectory())
     {
         var children = this._children;
@@ -2333,51 +2856,21 @@ StaticResource.prototype.toString = function( includeNotFounds)
     }
     return string;
 }
-StaticResource.prototype.nodeAtSubPath = function( aPath, shouldResolveAsDirectories)
+var includeURLs = NULL;
+StaticResource.includeURLs = function()
 {
-    aPath = FILE.normal(aPath);
-    var components = FILE.split(FILE.isAbsolute(aPath) ? aPath : FILE.join(this.path(), aPath)),
-        index = 1,
-        count = components.length,
-        parent = rootResource;
-    for (; index < count; ++index)
-    {
-        var name = components[index];
-        if (hasOwnProperty.call(parent._children, name))
-            parent = parent._children[name];
-        else if (shouldResolveAsDirectories)
-            parent = new StaticResource(name, parent, YES, YES);
-        else
-            throw NULL;
-    }
-    return parent;
+    if (includeURLs)
+        return includeURLs;
+    var includeURLs = [];
+    if (!global.OBJJ_INCLUDE_PATHS && !global.OBJJ_INCLUDE_URLS)
+        includeURLs = ["Frameworks", "Frameworks/Debug"];
+    else
+        includeURLs = (global.OBJJ_INCLUDE_PATHS || []).concat(global.OBJJ_INCLUDE_URLS || []);
+    var count = includeURLs.length;
+    while (count--)
+        includeURLs[count] = new CFURL(includeURLs[count]).asDirectoryPathURL();
+    return includeURLs;
 }
-StaticResource.resolveStandardNodeAtPath = function( aPath, aCallback)
-{
-    var includePaths = StaticResource.includePaths(),
-        resolveStandardNodeAtPath = function( aPath, anIndex)
-        {
-            var searchPath = FILE.absolute(FILE.join(includePaths[anIndex], FILE.normal(aPath)));
-            rootResource.resolveSubPath(searchPath, NO, function( aStaticResource)
-            {
-                if (!aStaticResource)
-                {
-                    if (anIndex + 1< includePaths.length)
-                        resolveStandardNodeAtPath(aPath, anIndex + 1);
-                    else
-                        aCallback(NULL);
-                    return;
-                }
-                aCallback(aStaticResource);
-            });
-        };
-    resolveStandardNodeAtPath(aPath, 0);
-}
-StaticResource.includePaths = function()
-{
-    return global.OBJJ_INCLUDE_PATHS || ["Frameworks", "Frameworks/Debug"];
-}
-StaticResource.cwd = FILE.cwd();
 var TOKEN_ACCESSORS = "accessors",
     TOKEN_CLASS = "class",
     TOKEN_END = "end",
@@ -2472,22 +2965,22 @@ StringBuffer.prototype.toString = function()
 {
     return this.atoms.join("");
 }
-exports.preprocess = function( aString, aPath, flags)
+exports.preprocess = function( aString, aURL, flags)
 {
-    return new Preprocessor(aString, aPath, flags).executable();
+    return new Preprocessor(aString, aURL, flags).executable();
 }
 exports.eval = function( aString)
 {
     return eval(exports.preprocess(aString).code());
 }
-var Preprocessor = function( aString, aPath, flags)
+var Preprocessor = function( aString, aURL, flags)
 {
+    this._URL = new CFURL(aURL);
     aString = aString.replace(/^#[^\n]+\n/, "\n");
     this._currentSelector = "";
     this._currentClass = "";
     this._currentSuperClass = "";
     this._currentSuperMetaClass = "";
-    this._filePath = aPath;
     this._buffer = new StringBuffer();
     this._preprocessed = NULL;
     this._dependencies = [];
@@ -2504,7 +2997,7 @@ Preprocessor.Flags.IncludeTypeSignatures = 1 << 1;
 Preprocessor.prototype.executable = function()
 {
     if (!this._executable)
-        this._executable = new Executable(this._buffer.toString(), this._dependencies, this._filePath);
+        this._executable = new Executable(this._buffer.toString(), this._dependencies, this._URL);
     return this._executable;
 }
 Preprocessor.prototype.accessors = function(tokens)
@@ -2752,24 +3245,24 @@ Preprocessor.prototype.implementation = function(tokens, aStringBuffer)
 }
 Preprocessor.prototype._import = function(tokens)
 {
-    var path = "",
+    var URLString = "",
         token = tokens.skip_whitespace(),
-        isLocal = (token != TOKEN_LESS_THAN);
+        isQuoted = (token !== TOKEN_LESS_THAN);
     if (token === TOKEN_LESS_THAN)
     {
-        while((token = tokens.next()) && token != TOKEN_GREATER_THAN)
-            path += token;
+        while((token = tokens.next()) && token !== TOKEN_GREATER_THAN)
+            URLString += token;
         if(!token)
             throw new SyntaxError(this.error_message("*** Unterminated import statement."));
     }
-    else if (token.charAt(0) == TOKEN_DOUBLE_QUOTE)
-        path = token.substr(1, token.length - 2);
+    else if (token.charAt(0) === TOKEN_DOUBLE_QUOTE)
+        URLString = token.substr(1, token.length - 2);
     else
         throw new SyntaxError(this.error_message("*** Expecting '<' or '\"', found \"" + token + "\"."));
     this._buffer.atoms[this._buffer.atoms.length] = "objj_executeFile(\"";
-    this._buffer.atoms[this._buffer.atoms.length] = path;
-    this._buffer.atoms[this._buffer.atoms.length] = isLocal ? "\", true);" : "\", false);";
-    this._dependencies.push(new FileDependency(path, isLocal));
+    this._buffer.atoms[this._buffer.atoms.length] = URLString;
+    this._buffer.atoms[this._buffer.atoms.length] = isQuoted ? "\", YES);" : "\", NO);";
+    this._dependencies.push(new FileDependency(new CFURL(URLString), isQuoted));
 }
 Preprocessor.prototype.method = function( tokens)
 {
@@ -2942,7 +3435,7 @@ Preprocessor.prototype.preprocess = function(tokens, aStringBuffer, terminator, 
             buffer.atoms[buffer.atoms.length] = token;
     }
     if (tuple)
-        new SyntaxError(this.error_message("*** Expected ']' - Unterminated message send or array."));
+        throw new SyntaxError(this.error_message("*** Expected ']' - Unterminated message send or array."));
     if (!aStringBuffer)
         return buffer;
 }
@@ -2979,19 +3472,19 @@ Preprocessor.prototype.selector = function(tokens, aStringBuffer)
 }
 Preprocessor.prototype.error_message = function(errorMessage)
 {
-    return errorMessage + " <Context File: "+ this._filePath +
+    return errorMessage + " <Context File: "+ this._URL +
                                 (this._currentClass ? " Class: "+this._currentClass : "") +
                                 (this._currentSelector ? " Method: "+this._currentSelector : "") +">";
 }
-function FileDependency( aPath, isLocal)
+function FileDependency( aURL, isLocal)
 {
-    this._path = FILE.normal(aPath);
+    this._URL = aURL;
     this._isLocal = isLocal;
 }
 exports.FileDependency = FileDependency;
-FileDependency.prototype.path = function()
+FileDependency.prototype.URL = function()
 {
-    return this._path;
+    return this._URL;
 }
 FileDependency.prototype.isLocal = function()
 {
@@ -2999,26 +3492,33 @@ FileDependency.prototype.isLocal = function()
 }
 FileDependency.prototype.toMarkedString = function()
 {
+    var URLString = this.URL().absoluteString();
     return (this.isLocal() ? MARKER_IMPORT_LOCAL : MARKER_IMPORT_STD) + ";" +
-            this.path().length + ";" + this.path();
+            URLString.length + ";" + URLString;
 }
 FileDependency.prototype.toString = function()
 {
-    return (this.isLocal() ? "LOCAL: " : "STD: ") + this.path();
+    return (this.isLocal() ? "LOCAL: " : "STD: ") + this.URL();
 }
 var ExecutableUnloadedFileDependencies = 0,
     ExecutableLoadingFileDependencies = 1,
-    ExecutableLoadedFileDependencies = 2;
-function Executable( aCode, fileDependencies, aScope, aFunction)
+    ExecutableLoadedFileDependencies = 2,
+    AnonymousExecutableCount = 0;
+function Executable( aCode, fileDependencies, aURL, aFunction)
 {
     if (arguments.length === 0)
         return this;
     this._code = aCode;
     this._function = aFunction || NULL;
-    this._scope = aScope || "(Anonymous)";
+    this._URL = makeAbsoluteURL(aURL || new CFURL("(Anonymous" + (AnonymousExecutableCount++) + ")"));
     this._fileDependencies = fileDependencies;
-    this._fileDependencyLoadStatus = ExecutableUnloadedFileDependencies;
-    this._eventDispatcher = new EventDispatcher(this);
+    if (fileDependencies.length)
+    {
+        this._fileDependencyStatus = ExecutableUnloadedFileDependencies;
+        this._fileDependencyCallbacks = [];
+    }
+    else
+        this._fileDependencyStatus = ExecutableLoadedFileDependencies;
     if (this._function)
         return;
     this.setCode(aCode);
@@ -3026,228 +3526,259 @@ function Executable( aCode, fileDependencies, aScope, aFunction)
 exports.Executable = Executable;
 Executable.prototype.path = function()
 {
-    return FILE.join(FILE.cwd(), "(Anonymous)");
+    return this.URL().path();
 }
+Executable.prototype.URL = function()
+{
+    return this._URL;
+}
+Executable.prototype.URL.displayName = "Executable.prototype.URL";
 Executable.prototype.functionParameters = function()
 {
     var functionParameters = ["global", "objj_executeFile", "objj_importFile"];
     return functionParameters;
 }
+Executable.prototype.functionParameters.displayName = "Executable.prototype.functionParameters";
 Executable.prototype.functionArguments = function()
 {
     var functionArguments = [global, this.fileExecuter(), this.fileImporter()];
     return functionArguments;
 }
+Executable.prototype.functionArguments.displayName = "Executable.prototype.functionArguments";
 Executable.prototype.execute = function()
 {
     var oldContextBundle = CONTEXT_BUNDLE;
-    CONTEXT_BUNDLE = CFBundle.bundleContainingPath(this.path());
+    CONTEXT_BUNDLE = CFBundle.bundleContainingURL(this.URL());
     var result = this._function.apply(global, this.functionArguments());
     CONTEXT_BUNDLE = oldContextBundle;
     return result;
 }
+Executable.prototype.execute.displayName = "Executable.prototype.execute";
 Executable.prototype.code = function()
 {
     return this._code;
 }
+Executable.prototype.code.displayName = "Executable.prototype.code";
 Executable.prototype.setCode = function(code)
 {
     this._code = code;
     var parameters = this.functionParameters().join(",");
-        code += "/**/\n//@ sourceURL=" + this._scope;
+        var absoluteString = this.URL().absoluteString();
+        code += "/**/\n//@ sourceURL=" + absoluteString;
         this._function = new Function(parameters, code);
-    this._function.displayName = this._scope;
+    this._function.displayName = absoluteString;
 }
+Executable.prototype.setCode.displayName = "Executable.prototype.setCode";
 Executable.prototype.fileDependencies = function()
 {
     return this._fileDependencies;
 }
-Executable.prototype.scope = function()
-{
-    return this._scope;
-}
+Executable.prototype.fileDependencies.displayName = "Executable.prototype.fileDependencies";
 Executable.prototype.hasLoadedFileDependencies = function()
 {
-    return this._fileDependencyLoadStatus === ExecutableLoadedFileDependencies;
+    return this._fileDependencyStatus === ExecutableLoadedFileDependencies;
 }
-var globalIteration = 0;
-Executable.prototype.loadFileDependencies = function()
+Executable.prototype.hasLoadedFileDependencies.displayName = "Executable.prototype.hasLoadedFileDependencies";
+var fileDependencyLoadCount = 0,
+    fileDependencyExecutables = [],
+    fileDependencyMarkers = { };
+Executable.prototype.loadFileDependencies = function(aCallback)
 {
-    if (this._fileDependencyLoadStatus !== ExecutableUnloadedFileDependencies)
-        return;
-    this._fileDependencyLoadStatus = ExecutableLoadingFileDependencies;
-    var searchedPaths = [{ }, { }],
-        fileExecutableSearches = new CFMutableDictionary(),
-        incompleteFileExecutableSearches = new CFMutableDictionary(),
-        loadingExecutables = { };
-    function searchForFileDependencies( anExecutable)
+    var status = this._fileDependencyStatus;
+    if (status === ExecutableLoadedFileDependencies)
+        return aCallback();
+    this._fileDependencyCallbacks.push(aCallback)
+    if (status === ExecutableUnloadedFileDependencies)
     {
-        var executables = [anExecutable],
-            executableIndex = 0,
-            executableCount = executables.length;
-        for (; executableIndex < executableCount; ++executableIndex)
-        {
-            var executable = executables[executableIndex];
-            if (executable.hasLoadedFileDependencies())
-                continue;
-            var executablePath = executable.path();
-            loadingExecutables[executablePath] = executable;
-            var cwd = FILE.dirname(executablePath),
-                fileDependencies = executable.fileDependencies(),
-                fileDependencyIndex = 0,
-                fileDependencyCount = fileDependencies.length;
-            for (; fileDependencyIndex < fileDependencyCount; ++fileDependencyIndex)
-            {
-                var fileDependency = fileDependencies[fileDependencyIndex],
-                    isLocal = fileDependency.isLocal(),
-                    path = importablePath(fileDependency.path(), isLocal, cwd);
-                if (searchedPaths[isLocal ? 1 : 0][path])
-                    continue;
-                searchedPaths[isLocal ? 1 : 0][path] = YES;
-                var fileExecutableSearch = new FileExecutableSearch(path, isLocal),
-                    fileExecutableSearchUID = fileExecutableSearch.UID();
-                if (fileExecutableSearches.containsKey(fileExecutableSearchUID))
-                    continue;
-                fileExecutableSearches.setValueForKey(fileExecutableSearchUID, fileExecutableSearch);
-                if (fileExecutableSearch.isComplete())
-                {
-                    executables.push(fileExecutableSearch.result());
-                    ++executableCount;
-                }
-                else
-                {
-                    incompleteFileExecutableSearches.setValueForKey(fileExecutableSearchUID, fileExecutableSearch);
-                    fileExecutableSearch.addEventListener("complete", function( anEvent)
-                    {
-                        var fileExecutableSearch = anEvent.fileExecutableSearch;
-                        incompleteFileExecutableSearches.removeValueForKey(fileExecutableSearch.UID());
-                        searchForFileDependencies(fileExecutableSearch.result());
-                    });
-                }
-            }
-        }
-        if (incompleteFileExecutableSearches.count() > 0)
-            return;
-        for (var path in loadingExecutables)
-            if (hasOwnProperty.call(loadingExecutables, path))
-                loadingExecutables[path]._fileDependencyLoadStatus = ExecutableLoadedFileDependencies;
-        for (var path in loadingExecutables)
-            if (hasOwnProperty.call(loadingExecutables, path))
-            {
-                var executable = loadingExecutables[path];
-                executable._eventDispatcher.dispatchEvent(
-                {
-                    type:"dependenciesload",
-                    executable:executable
-                });
-            }
+        if (fileDependencyLoadCount)
+            throw "Can't load";
+        loadFileDependenciesForExecutable(this);
     }
-    searchForFileDependencies(this);
 }
-Executable.prototype.addEventListener = function( anEventName, aListener)
+Executable.prototype.loadFileDependencies.displayName = "Executable.prototype.loadFileDependencies";
+function loadFileDependenciesForExecutable( anExecutable)
 {
-    this._eventDispatcher.addEventListener(anEventName, aListener);
+    fileDependencyExecutables.push(anExecutable);
+    anExecutable._fileDependencyStatus = ExecutableLoadingFileDependencies;
+    var fileDependencies = anExecutable.fileDependencies(),
+        index = 0,
+        count = fileDependencies.length,
+        referenceURL = anExecutable.referenceURL(),
+        referenceURLString = referenceURL.absoluteString(),
+        fileExecutableSearcher = anExecutable.fileExecutableSearcher();
+    fileDependencyLoadCount += count;
+    for (; index < count; ++index)
+    {
+        var fileDependency = fileDependencies[index],
+            isQuoted = fileDependency.isLocal(),
+            URL = fileDependency.URL(),
+            marker = (isQuoted && (referenceURLString + " ") || "") + URL;
+        if (fileDependencyMarkers[marker])
+        {
+            if (--fileDependencyLoadCount === 0)
+                fileExecutableDependencyLoadFinished();
+            continue;
+        }
+        fileDependencyMarkers[marker] = YES;
+        fileExecutableSearcher(URL, isQuoted, fileExecutableSearchFinished);
+    }
 }
-Executable.prototype.removeEventListener = function( anEventName, aListener)
+function fileExecutableSearchFinished( aFileExecutable)
 {
-    this._eventDispatcher.removeEventListener(anEventName, aListener);
+    --fileDependencyLoadCount;
+    if (aFileExecutable._fileDependencyStatus === ExecutableUnloadedFileDependencies)
+        loadFileDependenciesForExecutable(aFileExecutable);
+    else if (fileDependencyLoadCount === 0)
+        fileExecutableDependencyLoadFinished();
 }
-function importablePath( aPath, isLocal, aCWD)
+function fileExecutableDependencyLoadFinished()
 {
-    aPath = FILE.normal(aPath);
-    if (FILE.isAbsolute(aPath))
-        return aPath;
-    if (isLocal)
-        aPath = FILE.normal(FILE.join(aCWD, aPath));
-    return aPath;
+    var executables = fileDependencyExecutables,
+        index = 0,
+        count = executables.length;
+    fileDependencyExecutables = [];
+    for (; index < count; ++index)
+        executables[index]._fileDependencyStatus = ExecutableLoadedFileDependencies;
+    for (index = 0; index < count; ++index)
+    {
+        var executable = executables[index],
+            callbacks = executable._fileDependencyCallbacks,
+            callbackIndex = 0,
+            callbackCount = callbacks.length;
+        for (; callbackIndex < callbackCount; ++callbackIndex)
+            callbacks[callbackIndex]();
+        executable._fileDependencyCallbacks = [];
+    }
 }
+Executable.prototype.referenceURL = function()
+{
+    if (this._referenceURL === undefined)
+        this._referenceURL = new CFURL(".", this.URL());
+    return this._referenceURL;
+}
+Executable.prototype.referenceURL.displayName = "Executable.prototype.referenceURL";
 Executable.prototype.fileImporter = function()
 {
-    return Executable.fileImporterForPath(FILE.dirname(this.path()));
+    return Executable.fileImporterForURL(this.referenceURL());
 }
+Executable.prototype.fileImporter.displayName = "Executable.prototype.fileImporter";
 Executable.prototype.fileExecuter = function()
 {
-    return Executable.fileExecuterForPath(FILE.dirname(this.path()));
+    return Executable.fileExecuterForURL(this.referenceURL());
 }
-var cachedFileExecutersForPaths = { };
-Executable.fileExecuterForPath = function( referencePath)
+Executable.prototype.fileExecuter.displayName = "Executable.prototype.fileExecuter";
+Executable.prototype.fileExecutableSearcher = function()
 {
-    referencePath = FILE.normal(referencePath);
-    var fileExecuter = cachedFileExecutersForPaths[referencePath];
-    if (!fileExecuter)
-    {
-        fileExecuter = function( aPath, isLocal, shouldForce)
-        {
-            aPath = importablePath(aPath, isLocal, referencePath);
-            var fileExecutableSearch = new FileExecutableSearch(aPath, isLocal),
-                fileExecutable = fileExecutableSearch.result();
-            if (0 && !fileExecutable.hasLoadedFileDependencies())
-                throw "No executable loaded for file at path " + aPath;
-            fileExecutable.execute(shouldForce);
-        }
-        cachedFileExecutersForPaths[referencePath] = fileExecuter;
-    }
-    return fileExecuter;
+    return Executable.fileExecutableSearcherForURL(this.referenceURL());
 }
-var cachedImportersForPaths = { };
-Executable.fileImporterForPath = function( referencePath)
+Executable.prototype.fileExecutableSearcher.displayName = "Executable.prototype.fileExecutableSearcher";
+var cachedFileExecuters = { };
+Executable.fileExecuterForURL = function( aURL)
 {
-    referencePath = FILE.normal(referencePath);
-    var cachedImporter = cachedImportersForPaths[referencePath];
-    if (!cachedImporter)
+    var referenceURL = makeAbsoluteURL(aURL),
+        referenceURLString = referenceURL.absoluteString(),
+        cachedFileExecuter = cachedFileExecuters[referenceURLString];
+    if (!cachedFileExecuter)
     {
-        cachedImporter = function( aPath, isLocal, aCallback)
+        cachedFileExecuter = function( aURL, isQuoted, shouldForce)
         {
-            aPath = importablePath(aPath, isLocal, referencePath);
-            var fileExecutableSearch = new FileExecutableSearch(aPath, isLocal);
-            function searchComplete( aFileExecutableSearch)
+            Executable.fileExecutableSearcherForURL(referenceURL)(aURL, isQuoted,
+            function( aFileExecutable)
             {
-                var fileExecutable = aFileExecutableSearch.result(),
-                    fileExecuter = Executable.fileExecuterForPath(referencePath),
-                    executeAndCallback = function ()
-                    {
-                        fileExecuter(aPath, isLocal);
-                        if (aCallback)
-                            aCallback();
-                    }
-                if (!fileExecutable.hasLoadedFileDependencies())
-                {
-                    fileExecutable.addEventListener("dependenciesload", executeAndCallback);
-                    fileExecutable.loadFileDependencies();
-                }
-                else
-                    executeAndCallback();
-            }
-            if (fileExecutableSearch.isComplete())
-                searchComplete(fileExecutableSearch);
-            else
-                fileExecutableSearch.addEventListener("complete", function( anEvent)
-                {
-                    searchComplete(anEvent.fileExecutableSearch);
-                });
+                if (!aFileExecutable.hasLoadedFileDependencies())
+                    throw "No executable loaded for file at URL " + aURL;
+                aFileExecutable.execute(shouldForce);
+            });
         }
-        cachedImportersForPaths[referencePath] = cachedImporter;
+        cachedFileExecuters[referenceURLString] = cachedFileExecuter;
     }
-    return cachedImporter;
+    return cachedFileExecuter;
 }
-var FileExecutablesForPaths = { };
-function FileExecutable( aPath)
+Executable.fileExecuterForURL.displayName = "Executable.fileExecuterForURL";
+var cachedFileImporters = { };
+Executable.fileImporterForURL = function( aURL)
 {
-    var existingFileExecutable = FileExecutablesForPaths[aPath];
+    var referenceURL = makeAbsoluteURL(aURL),
+        referenceURLString = referenceURL.absoluteString(),
+        cachedFileImporter = cachedFileImporters[referenceURLString];
+    if (!cachedFileImporter)
+    {
+        cachedFileImporter = function( aURL, isQuoted, aCallback)
+        {
+            enableCFURLCaching();
+            Executable.fileExecutableSearcherForURL(referenceURL)(aURL, isQuoted,
+            function( aFileExecutable)
+            {
+                aFileExecutable.loadFileDependencies(function()
+                {
+                    aFileExecutable.execute();
+                    disableCFURLCaching();
+                    if (aCallback)
+                        aCallback();
+                });
+            });
+        }
+        cachedFileImporters[referenceURLString] = cachedFileImporter;
+    }
+    return cachedFileImporter;
+}
+Executable.fileImporterForURL.displayName = "Executable.fileImporterForURL";
+var cachedFileExecutableSearchers = { },
+    cachedFileExecutableSearchResults = { };
+Executable.fileExecutableSearcherForURL = function( referenceURL)
+{
+    var referenceURLString = referenceURL.absoluteString(),
+        cachedFileExecutableSearcher = cachedFileExecutableSearchers[referenceURLString],
+        cachedSearchResults = { };
+    if (!cachedFileExecutableSearcher)
+    {
+        cachedFileExecutableSearcher = function( aURL, isQuoted, success)
+        {
+            var cacheUID = (isQuoted && referenceURL || "") + aURL,
+                cachedResult = cachedFileExecutableSearchResults[cacheUID];
+            if (cachedResult)
+                return completed(cachedResult);
+            var isAbsoluteURL = (aURL instanceof CFURL) && aURL.scheme();
+            if (isQuoted || isAbsoluteURL)
+            {
+                if (!isAbsoluteURL)
+                    aURL = new CFURL(aURL, referenceURL);
+                StaticResource.resolveResourceAtURL(aURL, NO, completed);
+            }
+            else
+                StaticResource.resolveResourceAtURLSearchingIncludeURLs(aURL, completed);
+            function completed( aStaticResource)
+            {
+                if (!aStaticResource)
+                    throw new Error("Could not load file at " + aURL);
+                cachedFileExecutableSearchResults[cacheUID] = aStaticResource;
+                success(new FileExecutable(aStaticResource.URL()));
+            }
+        };
+        cachedFileExecutableSearchers[referenceURLString] = cachedFileExecutableSearcher;
+    }
+    return cachedFileExecutableSearcher;
+}
+Executable.fileExecutableSearcherForURL.displayName = "Executable.fileExecutableSearcherForURL";
+var FileExecutablesForURLStrings = { };
+function FileExecutable( aURL)
+{
+    aURL = makeAbsoluteURL(aURL);
+    var URLString = aURL.absoluteString(),
+        existingFileExecutable = FileExecutablesForURLStrings[URLString];
     if (existingFileExecutable)
         return existingFileExecutable;
-    FileExecutablesForPaths[aPath] = this;
-    var fileContents = rootResource.nodeAtSubPath(aPath).contents(),
+    FileExecutablesForURLStrings[URLString] = this;
+    var fileContents = StaticResource.resourceAtURL(aURL).contents(),
         executable = NULL,
-        extension = FILE.extension(aPath);
+        extension = aURL.pathExtension();
     if (fileContents.match(/^@STATIC;/))
-        executable = decompile(fileContents, aPath);
-    else if (extension === ".j" || extension === "")
-        executable = exports.preprocess(fileContents, aPath, Preprocessor.Flags.IncludeDebugSymbols);
+        executable = decompile(fileContents, aURL);
+    else if (extension === "j" || !extension)
+        executable = exports.preprocess(fileContents, aURL, Preprocessor.Flags.IncludeDebugSymbols);
     else
-        executable = new Executable(fileContents, [], aPath);
-    Executable.apply(this, [executable.code(), executable.fileDependencies(), aPath, executable._function]);
-    this._path = aPath;
+        executable = new Executable(fileContents, [], aURL);
+    Executable.apply(this, [executable.code(), executable.fileDependencies(), aURL, executable._function]);
     this._hasExecuted = NO;
 }
 exports.FileExecutable = FileExecutable;
@@ -3259,15 +3790,13 @@ FileExecutable.prototype.execute = function( shouldForce)
     this._hasExecuted = YES;
     Executable.prototype.execute.call(this);
 }
-FileExecutable.prototype.path = function()
-{
-    return this._path;
-}
+FileExecutable.prototype.execute.displayName = "FileExecutable.prototype.execute";
 FileExecutable.prototype.hasExecuted = function()
 {
     return this._hasExecuted;
 }
-function decompile( aString, aPath)
+FileExecutable.prototype.hasExecuted.displayName = "FileExecutable.prototype.hasExecuted";
+function decompile( aString, aURL)
 {
     var stream = new MarkedStream(aString);
     var marker = NULL,
@@ -3279,72 +3808,25 @@ function decompile( aString, aPath)
         if (marker === MARKER_TEXT)
             code += text;
         else if (marker === MARKER_IMPORT_STD)
-            dependencies.push(new FileDependency(FILE.normal(text), NO));
+            dependencies.push(new FileDependency(new CFURL(text), NO));
         else if (marker === MARKER_IMPORT_LOCAL)
-            dependencies.push(new FileDependency(FILE.normal(text), YES));
+            dependencies.push(new FileDependency(new CFURL(text), YES));
     }
-    return new Executable(code, dependencies, aPath);
+    var fn = FileExecutable._lookupCachedFunction(aURL)
+    if (fn)
+        return new Executable(code, dependencies, aURL, fn);
+    return new Executable(code, dependencies, aURL);
 }
-var FileExecutableSearchesForPaths = [{ }, { }];
-function FileExecutableSearch( aPath, isLocal)
+var FunctionCache = { };
+FileExecutable._cacheFunction = function( aURL, fn)
 {
-    if (!FILE.isAbsolute(aPath) && isLocal)
-        throw "Local searches cannot be relative: " + aPath;
-    var existingSearch = FileExecutableSearchesForPaths[isLocal ? 1 : 0][aPath];
-    if (existingSearch)
-        return existingSearch;
-    FileExecutableSearchesForPaths[isLocal ? 1 : 0][aPath] = this;
-    this._UID = objj_generateObjectUID();
-    this._isComplete = NO;
-    this._eventDispatcher = new EventDispatcher(this);
-    this._path = aPath;
-    this._result = NULL;
-    var self = this;
-    function completed( aStaticResource)
-    {
-        if (!aStaticResource)
-            throw new Error("Could not load file at " + aPath);
-        self._result = new FileExecutable(aStaticResource.path());
-        self._isComplete = YES;
-        self._eventDispatcher.dispatchEvent(
-        {
-            type:"complete",
-            fileExecutableSearch:self
-        });
-    }
-    if (isLocal || FILE.isAbsolute(aPath))
-        rootResource.resolveSubPath(aPath, NO, completed);
-    else
-        StaticResource.resolveStandardNodeAtPath(aPath, completed);
+    aURL = typeof aURL === "string" ? aURL : aURL.absoluteString();
+    FunctionCache[aURL] = fn;
 }
-exports.FileExecutableSearch = FileExecutableSearch;
-FileExecutableSearch.prototype.path = function()
+FileExecutable._lookupCachedFunction = function( aURL)
 {
-    return this._path;
-}
-FileExecutableSearch.prototype.result = function()
-{
-    return this._result;
-}
-FileExecutableSearch.prototype.UID = function()
-{
-    return this._UID;
-}
-FileExecutableSearch.prototype.isComplete = function()
-{
-    return this._isComplete;
-}
-FileExecutableSearch.prototype.result = function()
-{
-    return this._result;
-}
-FileExecutableSearch.prototype.addEventListener = function( anEventName, aListener)
-{
-    this._eventDispatcher.addEventListener(anEventName, aListener);
-}
-FileExecutableSearch.prototype.removeEventListener = function( anEventName, aListener)
-{
-    this._eventDispatcher.removeEventListener(anEventName, aListener);
+    aURL = typeof aURL === "string" ? aURL : aURL.absoluteString();
+    return FunctionCache[aURL];
 }
 var CLS_CLASS = 0x1,
     CLS_META = 0x2,
@@ -3355,12 +3837,14 @@ objj_ivar = function( aName, aType)
     this.name = aName;
     this.type = aType;
 }
+objj_ivar.displayName = "objj_ivar";
 objj_method = function( aName, anImplementation, types)
 {
     this.name = aName;
     this.method_imp = anImplementation;
     this.types = types;
 }
+objj_method.displayName = "objj_method";
 objj_class = function()
 {
     this.isa = NULL;
@@ -3376,34 +3860,40 @@ objj_class = function()
     this.allocator = function() { };
     this._UID = -1;
 }
+objj_class.displayName = "objj_class";
 objj_object = function()
 {
     this.isa = NULL;
     this._UID = -1;
 }
+objj_object.displayName = "objj_object";
 class_getName = function( aClass)
 {
     if (aClass == Nil)
         return "";
     return aClass.name;
 }
+class_getName.displayName = "class_getName";
 class_isMetaClass = function( aClass)
 {
     if (!aClass)
         return NO;
     return ((aClass.info & (CLS_META)));
 }
+class_isMetaClass.displayName = "class_isMetaClass";
 class_getSuperclass = function( aClass)
 {
     if (aClass == Nil)
         return Nil;
     return aClass.super_class;
 }
+class_getSuperclass.displayName = "class_getSuperclass"
 class_setSuperclass = function( aClass, aSuperClass)
 {
     aClass.super_class = aSuperClass;
     aClass.isa.super_class = aSuperClass.isa;
 }
+class_setSuperclass.displayName = "class_setSuperclass";
 class_addIvar = function( aClass, aName, aType)
 {
     var thePrototype = aClass.allocator.prototype;
@@ -3413,6 +3903,7 @@ class_addIvar = function( aClass, aName, aType)
     thePrototype[aName] = NULL;
     return YES;
 }
+class_addIvar.displayName = "class_addIvar";
 class_addIvars = function( aClass, ivars)
 {
     var index = 0,
@@ -3429,10 +3920,12 @@ class_addIvars = function( aClass, ivars)
         }
     }
 }
+class_addIvars.displayName = "class_addIvars";
 class_copyIvarList = function( aClass)
 {
     return aClass.ivars.slice(0);
 }
+class_copyIvarList.displayName = "class_copyIvarList";
 class_addMethod = function( aClass, aName, anImplementation, types)
 {
     if (aClass.method_hash[aName])
@@ -3445,6 +3938,7 @@ class_addMethod = function( aClass, aName, anImplementation, types)
         class_addMethod((((aClass.info & (CLS_META))) ? aClass : aClass.isa), aName, anImplementation, types);
     return YES;
 }
+class_addMethod.displayName = "class_addMethod";
 class_addMethods = function( aClass, methods)
 {
     var index = 0,
@@ -3463,6 +3957,7 @@ class_addMethods = function( aClass, methods)
     if (!((aClass.info & (CLS_META))) && (((aClass.info & (CLS_META))) ? aClass : aClass.isa).isa === (((aClass.info & (CLS_META))) ? aClass : aClass.isa))
         class_addMethods((((aClass.info & (CLS_META))) ? aClass : aClass.isa), methods);
 }
+class_addMethods.displayName = "class_addMethods";
 class_getInstanceMethod = function( aClass, aSelector)
 {
     if (!aClass || !aSelector)
@@ -3470,6 +3965,7 @@ class_getInstanceMethod = function( aClass, aSelector)
     var method = aClass.method_dtable[aSelector];
     return method ? method : NULL;
 }
+class_getInstanceMethod.displayName = "class_getInstanceMethod";
 class_getClassMethod = function( aClass, aSelector)
 {
     if (!aClass || !aSelector)
@@ -3477,10 +3973,12 @@ class_getClassMethod = function( aClass, aSelector)
     var method = (((aClass.info & (CLS_META))) ? aClass : aClass.isa).method_dtable[aSelector];
     return method ? method : NULL;
 }
+class_getClassMethod.displayName = "class_getClassMethod";
 class_copyMethodList = function( aClass)
 {
     return aClass.method_list.slice(0);
 }
+class_copyMethodList.displayName = "class_copyMethodList";
 class_replaceMethod = function( aClass, aSelector, aMethodImplementation)
 {
     if (!aClass || !aSelector)
@@ -3492,6 +3990,7 @@ class_replaceMethod = function( aClass, aSelector, aMethodImplementation)
     method.method_imp = aMethodImplementation;
     return method_imp;
 }
+class_replaceMethod.displayName = "class_replaceMethod";
 var _class_initialize = function( aClass)
 {
     var meta = (((aClass.info & (CLS_META))) ? aClass : aClass.isa);
@@ -3515,6 +4014,7 @@ class_getMethodImplementation = function( aClass, aSelector)
     if (!((((aClass.info & (CLS_META))) ? aClass : aClass.isa).info & (CLS_INITIALIZED))) _class_initialize(aClass); var method = aClass.method_dtable[aSelector]; if (!method) method = _objj_forward; var implementation = method.method_imp;;
     return implementation;
 }
+class_getMethodImplementation.displayName = "class_getMethodImplementation";
 var REGISTERED_CLASSES = { };
 objj_allocateClassPair = function( superclass, aName)
 {
@@ -3546,6 +4046,7 @@ objj_allocateClassPair = function( superclass, aName)
     metaClassObject._UID = objj_generateObjectUID();
     return classObject;
 }
+objj_allocateClassPair.displayName = "objj_allocateClassPair";
 var CONTEXT_BUNDLE = nil;
 objj_registerClassPair = function( aClass)
 {
@@ -3553,6 +4054,7 @@ objj_registerClassPair = function( aClass)
     REGISTERED_CLASSES[aClass.name] = aClass;
     addClassToBundle(aClass, CONTEXT_BUNDLE);
 }
+objj_registerClassPair.displayName = "objj_registerClassPair";
 class_createInstance = function( aClass)
 {
     if (!aClass)
@@ -3562,6 +4064,7 @@ class_createInstance = function( aClass)
     object._UID = objj_generateObjectUID();
     return object;
 }
+class_createInstance.displayName = "class_createInstance";
 var prototype_bug = function() { }
 prototype_bug.prototype.member = false;
 with (new prototype_bug())
@@ -3596,11 +4099,13 @@ object_getClassName = function( anObject)
     var theClass = anObject.isa;
     return theClass ? class_getName(theClass) : "";
 }
+object_getClassName.displayName = "object_getClassName";
 objj_lookUpClass = function( aName)
 {
     var theClass = REGISTERED_CLASSES[aName];
     return theClass ? theClass : Nil;
 }
+objj_lookUpClass.displayName = "objj_lookUpClass";
 objj_getClass = function( aName)
 {
     var theClass = REGISTERED_CLASSES[aName];
@@ -3609,24 +4114,29 @@ objj_getClass = function( aName)
     }
     return theClass ? theClass : Nil;
 }
+objj_getClass.displayName = "objj_getClass";
 objj_getMetaClass = function( aName)
 {
     var theClass = objj_getClass(aName);
     return (((theClass.info & (CLS_META))) ? theClass : theClass.isa);
 }
+objj_getMetaClass.displayName = "objj_getMetaClass";
 ivar_getName = function(anIvar)
 {
     return anIvar.name;
 }
+ivar_getName.displayName = "ivar_getName";
 ivar_getTypeEncoding = function(anIvar)
 {
     return anIvar.type;
 }
+ivar_getTypeEncoding.displayName = "ivar_getTypeEncoding";
 objj_msgSend = function( aReceiver, aSelector)
 {
     if (aReceiver == nil)
         return nil;
-    if (!((((aReceiver.isa.info & (CLS_META))) ? aReceiver.isa : aReceiver.isa.isa).info & (CLS_INITIALIZED))) _class_initialize(aReceiver.isa); var method = aReceiver.isa.method_dtable[aSelector]; if (!method) method = _objj_forward; var implementation = method.method_imp;;
+    var isa = aReceiver.isa;
+    if (!((((isa.info & (CLS_META))) ? isa : isa.isa).info & (CLS_INITIALIZED))) _class_initialize(isa); var method = isa.method_dtable[aSelector]; if (!method) method = _objj_forward; var implementation = method.method_imp;;
     switch(arguments.length)
     {
         case 2: return implementation(aReceiver, aSelector);
@@ -3635,6 +4145,7 @@ objj_msgSend = function( aReceiver, aSelector)
     }
     return implementation.apply(aReceiver, arguments);
 }
+objj_msgSend.displayName = "objj_msgSend";
 objj_msgSendSuper = function( aSuper, aSelector)
 {
     var super_class = aSuper.super_class;
@@ -3642,20 +4153,24 @@ objj_msgSendSuper = function( aSuper, aSelector)
     if (!((((super_class.info & (CLS_META))) ? super_class : super_class.isa).info & (CLS_INITIALIZED))) _class_initialize(super_class); var method = super_class.method_dtable[aSelector]; if (!method) method = _objj_forward; var implementation = method.method_imp;;
     return implementation.apply(aSuper.receiver, arguments);
 }
+objj_msgSendSuper.displayName = "objj_msgSendSuper";
 method_getName = function( aMethod)
 {
     return aMethod.name;
 }
+method_getName.displayName = "method_getName";
 method_getImplementation = function( aMethod)
 {
     return aMethod.method_imp;
 }
+method_getImplementation.displayName = "method_getImplementation";
 method_setImplementation = function( aMethod, anImplementation)
 {
     var oldImplementation = aMethod.method_imp;
     aMethod.method_imp = anImplementation;
     return oldImplementation;
 }
+method_setImplementation.displayName = "method_setImplementation";
 method_exchangeImplementations = function( lhs, rhs)
 {
     var lhs_imp = method_getImplementation(lhs),
@@ -3663,29 +4178,34 @@ method_exchangeImplementations = function( lhs, rhs)
     method_setImplementation(lhs, rhs_imp);
     method_setImplementation(rhs, lhs_imp);
 }
+method_exchangeImplementations.displayName = "method_exchangeImplementations";
 sel_getName = function(aSelector)
 {
     return aSelector ? aSelector : "<null selector>";
 }
+sel_getName.displayName = "sel_getName";
 sel_getUid = function( aName)
 {
     return aName;
 }
+sel_getUid.displayName = "sel_getUid";
 sel_isEqual = function( lhs, rhs)
 {
     return lhs === rhs;
 }
+sel_isEqual.displayName = "sel_isEqual";
 sel_registerName = function( aName)
 {
     return aName;
 }
+sel_registerName.displayName = "sel_registerName";
 function objj_debug_object_format(aReceiver)
 {
-    return (aReceiver && aReceiver.isa) ? sprintf("<%s %#08x>", (((aReceiver.info & (CLS_META))) ? aReceiver : aReceiver.isa).name, aReceiver._UID) : String(aReceiver);
+    return (aReceiver && aReceiver.isa) ? exports.sprintf("<%s %#08x>", (((aReceiver.info & (CLS_META))) ? aReceiver : aReceiver.isa).name, aReceiver._UID) : String(aReceiver);
 }
 function objj_debug_message_format(aReceiver, aSelector)
 {
-    return sprintf("[%s %s]", objj_debug_object_format(aReceiver), aSelector);
+    return exports.sprintf("[%s %s]", objj_debug_object_format(aReceiver), aSelector);
 }
 var objj_msgSend_original = objj_msgSend,
     objj_msgSendSuper_original = objj_msgSendSuper;
@@ -3832,39 +4352,67 @@ objj_debug_typecheck = function(expectedType, object)
         actualType = typeof object;
     throw ("expected=" + expectedType + ", actual=" + actualType);
 }
-var cwd = FILE.cwd(),
-    rootResource = new StaticResource("", NULL, YES, cwd !== "/");
-StaticResource.root = rootResource;
+enableCFURLCaching();
+var pageURL = new CFURL(window.location.href),
+    DOMBaseElements = document.getElementsByTagName("base"),
+    DOMBaseElementsCount = DOMBaseElements.length;
+if (DOMBaseElementsCount > 0)
+{
+    var DOMBaseElement = DOMBaseElements[DOMBaseElementsCount - 1],
+        DOMBaseElementHref = DOMBaseElement && DOMBaseElement.getAttribute("href");
+    if (DOMBaseElementHref)
+        pageURL = new CFURL(DOMBaseElementHref, pageURL);
+}
+var mainFileURL = new CFURL(window.OBJJ_MAIN_FILE || "main.j"),
+    mainBundleURL = new CFURL(".", new CFURL(mainFileURL, pageURL)).absoluteURL(),
+    assumedResolvedURL = new CFURL("..", mainBundleURL).absoluteURL();
+if (mainBundleURL === assumedResolvedURL)
+    assumedResolvedURL = new CFURL(assumedResolvedURL.schemeAndAuthority());
+StaticResource.resourceAtURL(assumedResolvedURL, YES);
+exports.pageURL = pageURL;
 exports.bootstrap = function()
 {
-    if (rootResource.isResolved())
-    {
-        rootResource.nodeAtSubPath(FILE.dirname(cwd), YES);
-        resolveCWD();
-    }
-    else
-    {
-        rootResource.resolve();
-        rootResource.addEventListener("resolve", resolveCWD);
-    }
+    resolveMainBundleURL();
 }
-function resolveCWD()
+function resolveMainBundleURL()
 {
-    rootResource.resolveSubPath(cwd, YES, function( aResource)
+    StaticResource.resolveResourceAtURL(mainBundleURL, YES, function( aResource)
     {
-        var includePaths = StaticResource.includePaths(),
+        var includeURLs = StaticResource.includeURLs(),
             index = 0,
-            count = includePaths.length;
+            count = includeURLs.length;
         for (; index < count; ++index)
-            aResource.nodeAtSubPath(FILE.normal(includePaths[index]), YES);
-        if (typeof OBJJ_MAIN_FILE === "undefined")
-            OBJJ_MAIN_FILE = "main.j";
-        Executable.fileImporterForPath(cwd)(OBJJ_MAIN_FILE || "main.j", YES, function()
+            aResource.resourceAtURL(includeURLs[index], YES);
+        Executable.fileImporterForURL(mainBundleURL)(mainFileURL.lastPathComponent(), YES, function()
         {
-            afterDocumentLoad(main);
+            disableCFURLCaching();
+            afterDocumentLoad(function()
+            {
+                var hashString = window.location.hash.substring(1),
+                    args = [];
+                if (hashString.length)
+                {
+                    args = hashString.split("/");
+                    for (var i = 0, count = args.length; i < count; i++)
+                        args[i] = decodeURIComponent(args[i]);
+                }
+                var namedArgsArray = window.location.search.substring(1).split("&"),
+                    namedArgs = new CFMutableDictionary();
+                for (var i = 0, count = namedArgsArray.length; i < count; i++)
+                {
+                    var thisArg = namedArgsArray[i].split("=");
+                    if (!thisArg[0])
+                        continue;
+                    if (thisArg[1] == null)
+                        thisArg[1] = true;
+                    namedArgs.setValueForKey(decodeURIComponent(thisArg[0]), decodeURIComponent(thisArg[1]));
+                }
+                main(args, namedArgs);
+            });
         });
     });
 }
+var documentLoaded = NO;
 function afterDocumentLoad( aFunction)
 {
     if (documentLoaded)
@@ -3874,11 +4422,23 @@ function afterDocumentLoad( aFunction)
     else if (window.attachEvent)
         window.attachEvent("onload", aFunction);
 }
-var documentLoaded = NO;
 afterDocumentLoad(function()
 {
     documentLoaded = YES;
 });
 if (typeof OBJJ_AUTO_BOOTSTRAP === "undefined" || OBJJ_AUTO_BOOTSTRAP)
     exports.bootstrap();
+function makeAbsoluteURL( aURL)
+{
+    if (aURL instanceof CFURL && aURL.scheme())
+        return aURL;
+    return new CFURL(aURL, mainBundleURL);
+}
+objj_importFile = Executable.fileImporterForURL(mainBundleURL);
+objj_executeFile = Executable.fileExecuterForURL(mainBundleURL);
+objj_import = function()
+{
+    CPLog.warn("objj_import is deprecated, use objj_importFile instead");
+    objj_importFile.apply(this, arguments);
+}
 })(window, ObjectiveJ);

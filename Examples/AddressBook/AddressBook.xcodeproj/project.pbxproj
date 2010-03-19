@@ -25,11 +25,11 @@
 		64049FCF10FF1F40009C3AE2 /* EmailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmailsController.h; sourceTree = "<group>"; };
 		64049FD010FF1F40009C3AE2 /* EmailsController.j */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj; path = EmailsController.j; sourceTree = "<group>"; };
 		641D44E00FD437FB00EACBFF /* Frameworks */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Frameworks; sourceTree = SOURCE_ROOT; };
-		64200A490FD4250F005D41CE /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		64200A4A0FD4250F005D41CE /* main.j */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj; path = main.j; sourceTree = "<group>"; };
 		64200A4B0FD4250F005D41CE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64200A4C0FD4250F005D41CE /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		64200A4D0FD4250F005D41CE /* AppController.j */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj; path = AppController.j; sourceTree = "<group>"; };
+		642B60351153F65F00102350 /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		6430ADDF1104B7610003B777 /* AddressBook.eomodeld */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AddressBook.eomodeld; sourceTree = "<group>"; };
 		6430AE0C1104BA8E0003B777 /* DatePicker.j */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj; path = DatePicker.j; sourceTree = "<group>"; };
 		6430AE0D1104BA8E0003B777 /* Stepper.j */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj; path = Stepper.j; sourceTree = "<group>"; };
@@ -61,11 +61,11 @@
 		64200A470FD4250F005D41CE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				642B60351153F65F00102350 /* MainMenu.xib */,
 				6430ADDF1104B7610003B777 /* AddressBook.eomodeld */,
 				648D987D10F4F00D00D9B371 /* AddressBook.xcdatamodel */,
 				64FDDBE810EFB60E00B63414 /* DatePicker */,
 				64FDDBED10EFB60E00B63414 /* Stepper */,
-				64200A490FD4250F005D41CE /* MainMenu.xib */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
