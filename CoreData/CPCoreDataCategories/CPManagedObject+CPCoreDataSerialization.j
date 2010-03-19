@@ -37,9 +37,8 @@ CPchangedProperties = "CPchangedProperties";
  */
 + (id)deserializeFromXML:(CPData) data withContext:(CPManagedObjectContext) aContext
 {
-	var errorString;
 	var propertyListFromData = [CPPropertyListSerialization propertyListFromData:data
-															format:CPPropertyListXMLFormat_v1_0 errorDescription:errorString];
+															format:CPPropertyListXMLFormat_v1_0];
 	
 	return [CPManagedObject deserializeFromDictionary:propertyListFromData withContext:aContext];
 }
@@ -47,10 +46,9 @@ CPchangedProperties = "CPchangedProperties";
 
 - (CPData)serializeToXML:(BOOL) containsAllProperties containsChangedProperties:(BOOL)containsChangedProperties
 {
-	var errorString;
 	var result = [CPPropertyListSerialization dataFromPropertyList:
 				[self serializeToDictionary:containsAllProperties containsChangedProperties:containsChangedProperties] 
-															format:CPPropertyListXMLFormat_v1_0 errorDescription:errorString];
+															format:CPPropertyListXMLFormat_v1_0];
 									
 	return result;
 }
@@ -63,9 +61,8 @@ CPchangedProperties = "CPchangedProperties";
  */
 + (id)deserializeFrom280NPLIST:(CPData) data withContext:(CPManagedObjectContext) aContext
 {
-	var errorString;
 	var propertyListFromData = [CPPropertyListSerialization propertyListFromData:data
-															format:CPPropertyList280NorthFormat_v1_0 errorDescription:errorString];
+															format:CPPropertyList280NorthFormat_v1_0];
 	
 	return [CPManagedObject deserializeFromDictionary:propertyListFromData withContext:aContext];
 }
@@ -73,10 +70,9 @@ CPchangedProperties = "CPchangedProperties";
 
 - (CPData)serializeTo280NPLIST:(BOOL) containsAllProperties containsChangedProperties:(BOOL)containsChangedProperties
 {
-	var errorString;
 	var result = [CPPropertyListSerialization dataFromPropertyList:
 					[self serializeToDictionary:containsAllProperties containsChangedProperties:containsChangedProperties] 
-															format:CPPropertyList280NorthFormat_v1_0 errorDescription:errorString];
+															format:CPPropertyList280NorthFormat_v1_0];
 									
 	return result;
 }
