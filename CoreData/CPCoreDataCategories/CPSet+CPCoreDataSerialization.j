@@ -68,6 +68,8 @@
 {
 	var resultSet =  [[CPMutableSet alloc] init];
 	var i = 0;
+	
+	CPLog.info("deserializeFromJSON: " + [aArray className]);
 	for (i = 0; i < aArray.length; i++) 
 	{
 		var aObject = aArray[i];

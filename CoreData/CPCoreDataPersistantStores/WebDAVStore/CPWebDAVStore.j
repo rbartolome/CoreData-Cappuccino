@@ -85,7 +85,7 @@
 	}
 	else if([[self format] isEqualToString:CPCoreDataSerialization280NPLISTFormat])
 	{
-		[[self davManager] writeFileWithStringContent:[objects serializeTo280NPLIST:YES containsChangedProperties:YES] toPath:[self storeID]];
+		[[self davManager] writeFileWithStringContent:[[objects serializeTo280NPLIST:YES containsChangedProperties:YES] rawString] toPath:[self storeID]];
 	}
 	else if([[self format] isEqualToString:CPCoreDataSerializationJSONFormat])
 	{

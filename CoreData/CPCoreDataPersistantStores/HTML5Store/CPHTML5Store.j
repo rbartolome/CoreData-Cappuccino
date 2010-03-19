@@ -43,7 +43,7 @@
  */
 - (void) saveAll:(CPSet) objects error:({CPError}) error
 {
-	[[self dataStorage] setValue:[[objects serializeTo280NPLIST:YES containsChangedProperties:YES] description] forKey:[self storeName]+@"-Objects"];
+	[[self dataStorage] setValue:[[objects serializeTo280NPLIST:YES containsChangedProperties:YES] rawString] forKey:[self storeName]+@"-Objects"];
 }
 
 
@@ -53,7 +53,7 @@
 	var resultValue = [[self dataStorage] getValueForKey:[self storeName]+@"-Objects"];
 	if(resultValue == null)
 		return [CPSet new];
-		
+
 	return [CPSet deserializeFrom280NPLIST:[CPData dataWithRawString:resultValue] withContext:aContext];
 }
 
