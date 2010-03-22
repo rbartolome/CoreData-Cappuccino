@@ -227,6 +227,7 @@ CPDDeletedObjectsKey = "CPDDeletedObjectsKey";
 	var result = YES;
 	var error = nil;
 	
+	result = [self reset];
 	[[self store] saveAll:[self registeredObjects] error:error];
 	
 	[[CPNotificationCenter defaultCenter]
@@ -308,10 +309,10 @@ CPDDeletedObjectsKey = "CPDDeletedObjectsKey";
 						[[registeredObject objectID] setIsTemporary: [[objectFromResponse objectID] isTemporary]];
 					}
 				}
-			
-				result = [self reset];
 			}
-
+			if(error == nil)
+				result = [self reset];
+			
 			[[CPNotificationCenter defaultCenter]
 				postNotificationName: CPManagedObjectContextDidSaveNotification
 							  object: self

@@ -14,6 +14,9 @@
 + (id) modelByMergingModels: (CPArray) models; //Unimplemented
 - (void)addEntity:(CPEntityDescription) entity;
 - (CPEntityDescription)entityWithName:(CPString)name;
+- (CPArray) entitiesByName;
+- (CPFetchRequest)fetchRequestFromTemplateWithName:(CPString) aTemplateName;
+
 - (CPString)stringRepresentation;
 
 @end

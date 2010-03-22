@@ -43,7 +43,8 @@
  */
 - (void) saveAll:(CPSet) objects error:({CPError}) error
 {
-	[[self dataStorage] setValue:[[objects serializeTo280NPLIST:YES containsChangedProperties:YES] rawString] forKey:[self storeName]+@"-Objects"];
+	[[self dataStorage] setValue:[[objects serializeTo280NPLIST:YES containsChangedProperties:NO] rawString] forKey:[self storeName]+@"-Objects"];
+
 }
 
 
