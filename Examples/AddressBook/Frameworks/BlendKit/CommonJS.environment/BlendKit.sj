@@ -1,6 +1,6 @@
-@STATIC;1.0;p;22;BKShowcaseController.jt;15303;@STATIC;1.0;I;16;AppKit/CPTheme.jI;15;AppKit/CPView.jt;15242;
-objj_executeFile("AppKit/CPTheme.j",false);
-objj_executeFile("AppKit/CPView.j",false);
+@STATIC;1.0;p;22;BKShowcaseController.jt;15297;@STATIC;1.0;I;16;AppKit/CPTheme.jI;15;AppKit/CPView.jt;15236;
+objj_executeFile("AppKit/CPTheme.j",NO);
+objj_executeFile("AppKit/CPView.j",NO);
 var _1=176;
 var _2="BKLearnMoreToolbarItemIdentifier",_3="BKStateToolbarItemIdentifier",_4="BKBackgroundColorToolbarItemIdentifier";
 var _5=objj_allocateClassPair(CPObject,"BKShowcaseController"),_6=_5.isa;
@@ -282,8 +282,8 @@ with(_57){
 return _44;
 }
 })]);
-p;19;BKThemeDescriptor.jt;4282;@STATIC;1.0;I;21;Foundation/CPObject.jt;4237;
-objj_executeFile("Foundation/CPObject.j",false);
+p;19;BKThemeDescriptor.jt;4279;@STATIC;1.0;I;21;Foundation/CPObject.jt;4234;
+objj_executeFile("Foundation/CPObject.j",NO);
 var _1={},_2={},_3={},_4=nil,_5=nil,_6=nil;
 var _7=objj_allocateClassPair(CPObject,"BKThemeDescriptor"),_8=_7.isa;
 objj_registerClassPair(_7);
@@ -416,8 +416,8 @@ isLeadingCapital=NO;
 }
 return label;
 };
-p;24;BKThemedObjectTemplate.jt;914;@STATIC;1.0;I;15;AppKit/CPView.jt;876;
-objj_executeFile("AppKit/CPView.j",false);
+p;24;BKThemedObjectTemplate.jt;911;@STATIC;1.0;I;15;AppKit/CPView.jt;873;
+objj_executeFile("AppKit/CPView.j",NO);
 var _1=objj_allocateClassPair(CPView,"BKThemedObjectTemplate"),_2=_1.isa;
 class_addIvars(_1,[new objj_ivar("_label"),new objj_ivar("_themedObject")]);
 objj_registerClassPair(_1);
@@ -436,8 +436,8 @@ objj_msgSend(_8,"encodeObject:forKey:",_label,"BKThemedObjectTemplateLabel");
 objj_msgSend(_8,"encodeObject:forKey:",_themedObject,"BKThemedObjectTemplateThemedObject");
 }
 })]);
-p;17;BKThemeTemplate.jt;876;@STATIC;1.0;I;21;Foundation/CPObject.jt;832;
-objj_executeFile("Foundation/CPObject.j",false);
+p;17;BKThemeTemplate.jt;873;@STATIC;1.0;I;21;Foundation/CPObject.jt;829;
+objj_executeFile("Foundation/CPObject.j",NO);
 var _1=objj_allocateClassPair(CPObject,"BKThemeTemplate"),_2=_1.isa;
 class_addIvars(_1,[new objj_ivar("_name"),new objj_ivar("_description")]);
 objj_registerClassPair(_1);
@@ -456,9 +456,9 @@ objj_msgSend(_8,"encodeObject:forKey:",_name,"BKThemeTemplateName");
 objj_msgSend(_8,"encodeObject:forKey:",_description,"BKThemeTemplateDescription");
 }
 })]);
-p;10;BlendKit.jt;311;@STATIC;1.0;i;22;BKShowcaseController.ji;19;BKThemeDescriptor.ji;17;BKThemeTemplate.ji;24;BKThemedObjectTemplate.jt;191;
-objj_executeFile("BKShowcaseController.j",true);
-objj_executeFile("BKThemeDescriptor.j",true);
-objj_executeFile("BKThemeTemplate.j",true);
-objj_executeFile("BKThemedObjectTemplate.j",true);
+p;10;BlendKit.jt;307;@STATIC;1.0;i;22;BKShowcaseController.ji;19;BKThemeDescriptor.ji;17;BKThemeTemplate.ji;24;BKThemedObjectTemplate.jt;187;
+objj_executeFile("BKShowcaseController.j",YES);
+objj_executeFile("BKThemeDescriptor.j",YES);
+objj_executeFile("BKThemeTemplate.j",YES);
+objj_executeFile("BKThemedObjectTemplate.j",YES);
 e;

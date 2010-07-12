@@ -1,5 +1,5 @@
-@STATIC;1.0;p;22;BKShowcaseController.jt;20985;@STATIC;1.0;I;16;AppKit/CPTheme.jI;15;AppKit/CPView.jt;20924;objj_executeFile("AppKit/CPTheme.j", false);
-objj_executeFile("AppKit/CPView.j", false);
+@STATIC;1.0;p;22;BKShowcaseController.jt;20979;@STATIC;1.0;I;16;AppKit/CPTheme.jI;15;AppKit/CPView.jt;20918;objj_executeFile("AppKit/CPTheme.j", NO);
+objj_executeFile("AppKit/CPView.j", NO);
 var LEFT_PANEL_WIDTH = 176.0;
 var BKLearnMoreToolbarItemIdentifier = "BKLearnMoreToolbarItemIdentifier",
     BKStateToolbarItemIdentifier = "BKStateToolbarItemIdentifier",
@@ -317,7 +317,7 @@ class_addMethods(meta_class, [new objj_method(sel_getUid("setBackgroundColor:"),
 },["CPColor"])]);
 }
 
-p;19;BKThemeDescriptor.jt;6902;@STATIC;1.0;I;21;Foundation/CPObject.jt;6857;objj_executeFile("Foundation/CPObject.j", false);
+p;19;BKThemeDescriptor.jt;6899;@STATIC;1.0;I;21;Foundation/CPObject.jt;6854;objj_executeFile("Foundation/CPObject.j", NO);
 var ItemSizes = { },
     ThemedObjects = { },
     BackgroundColors = { },
@@ -476,7 +476,7 @@ BKLabelFromIdentifier= function(anIdentifier)
     return label;
 }
 
-p;24;BKThemedObjectTemplate.jt;1209;@STATIC;1.0;I;15;AppKit/CPView.jt;1170;objj_executeFile("AppKit/CPView.j", false);
+p;24;BKThemedObjectTemplate.jt;1206;@STATIC;1.0;I;15;AppKit/CPView.jt;1167;objj_executeFile("AppKit/CPView.j", NO);
 {var the_class = objj_allocateClassPair(CPView, "BKThemedObjectTemplate"),
 meta_class = the_class.isa;class_addIvars(the_class, [new objj_ivar("_label"), new objj_ivar("_themedObject")]);
 objj_registerClassPair(the_class);
@@ -500,7 +500,7 @@ class_addMethods(the_class, [new objj_method(sel_getUid("initWithCoder:"), funct
 },["void","CPCoder"])]);
 }
 
-p;17;BKThemeTemplate.jt;1157;@STATIC;1.0;I;21;Foundation/CPObject.jt;1112;objj_executeFile("Foundation/CPObject.j", false);
+p;17;BKThemeTemplate.jt;1154;@STATIC;1.0;I;21;Foundation/CPObject.jt;1109;objj_executeFile("Foundation/CPObject.j", NO);
 {var the_class = objj_allocateClassPair(CPObject, "BKThemeTemplate"),
 meta_class = the_class.isa;class_addIvars(the_class, [new objj_ivar("_name"), new objj_ivar("_description")]);
 objj_registerClassPair(the_class);
@@ -524,9 +524,9 @@ class_addMethods(the_class, [new objj_method(sel_getUid("initWithCoder:"), funct
 },["void","CPCoder"])]);
 }
 
-p;10;BlendKit.jt;315;@STATIC;1.0;i;22;BKShowcaseController.ji;19;BKThemeDescriptor.ji;17;BKThemeTemplate.ji;24;BKThemedObjectTemplate.jt;195;objj_executeFile("BKShowcaseController.j", true);
-objj_executeFile("BKThemeDescriptor.j", true);
-objj_executeFile("BKThemeTemplate.j", true);
-objj_executeFile("BKThemedObjectTemplate.j", true);
+p;10;BlendKit.jt;311;@STATIC;1.0;i;22;BKShowcaseController.ji;19;BKThemeDescriptor.ji;17;BKThemeTemplate.ji;24;BKThemedObjectTemplate.jt;191;objj_executeFile("BKShowcaseController.j", YES);
+objj_executeFile("BKThemeDescriptor.j", YES);
+objj_executeFile("BKThemeTemplate.j", YES);
+objj_executeFile("BKThemedObjectTemplate.j", YES);
 
 e;
