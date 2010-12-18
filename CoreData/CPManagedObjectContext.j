@@ -278,7 +278,7 @@ CPDDeletedObjectsKey = "CPDDeletedObjectsKey";
 {
 	var result = NO;
 
-	if([self hasChanges] &&  [[self store] respondsToSelector: @selector(saveObjectsUpdated:inserted:deleted:error:)])
+	if([self hasChanges] && [[self store] respondsToSelector: @selector(saveObjectsUpdated:inserted:deleted:inManagedObjectContext:error:)])
 	{
 		var error = nil;	
 		var updatedObjects = [self updatedObjects];
