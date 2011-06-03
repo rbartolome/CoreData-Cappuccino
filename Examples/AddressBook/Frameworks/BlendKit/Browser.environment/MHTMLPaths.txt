@@ -1,0 +1,1 @@
+@STATIC;1.0;u;27;Resources/dark-checkers.png67;mhtml:Browser.environment/MHTMLData.txt!Resources/dark-checkers.pngu;28;Resources/light-checkers.png68;mhtml:Browser.environment/MHTMLData.txt!Resources/light-checkers.pngu;23;Resources/selection.png63;mhtml:Browser.environment/MHTMLData.txt!Resources/selection.png
